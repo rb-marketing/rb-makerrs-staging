@@ -1,13 +1,13 @@
 import { SEO } from '@/components/shared/SEO'
 import { SolutionsSection, Marquee, VideoModal, RollupNumber, Testimonials } from '@/components/shared'
-import { Button } from '@/components/ui'
+import { Button, Accordion } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { LineHeading, RevealText } from '@/components/shared'
 import { useRef, useState, useEffect } from 'react'
 import { gsap } from 'gsap'
-import statstyles from '@/styles/sections/StatsSection.module.scss'
-
+import statsStyles from '@/styles/sections/StatsSection.module.scss'
 import styles from '@/styles/home.module.scss'
+import Link from 'next/link'
 const LandPage = () => {
   const groupIcons = [
     {
@@ -176,42 +176,66 @@ const LandPage = () => {
       alt: 'aarki',
     },
   ]
-   const stats = [
-    {
-      id: 0,
-      countUpProps: {
-        value: 60,
-        suffix: (
-          <div className="inline-flex">
-            {/* K <span className="text-rb-red">+</span> */}
-          </div>
-        ),
-      },
-      text: (
-        <span className="">
-          Change count of 
-          <br />
-          brands
+ 
+  const stats = [
+  {
+    id: 0,
+    countUpProps: {
+      value: 60,
+      suffix: <span className="text-rb-red"></span>,
+    },
+    text: (
+      <span className="md:max-w-[188px]">
+        Change count <br />
+        of brands
+      </span>
+    ),
+  },
+  {
+    id: 1,
+    countUpProps: {
+      value: 4,
+      suffix: (
+        <div className="inline-flex">
+          K <span className="text-rb-red">+</span>
+        </div>
+      ),
+    },
+    text: (
+      <>
+      Change video <br/>numbers
+      </>
+    ),
+  },
+  {
+    id: 2,
+    countUpProps: {
+      value: 40,
+      suffix: (
+        <span className="inline-flex">
+          <span className="text-rb-red">+</span>
         </span>
       ),
     },
-    {
-      id: 1,
-      countUpProps: {
-        value: 4,
-        suffix: (
-          <div className="inline-flex">
-            K <span className="text-rb-red">+</span>
-          </div>
-        ),
-      },
-      text: (
-        <>
-          Change video numbers
-        </>
-      ),
-    }
-  ]
+    text:
+      <>
+       thinkers <br />
+       and creators
+      </>,
+  },
+  {
+    id: 3,
+    countUpProps: {
+      value: 90,
+      suffix: <span className="text-rb-red">+</span>,
+    },
+    text: (
+      <>
+        country production network
+      </>
+    ),
+  },
+]
   const createTestimonialData = [
     {
     key: 0,
@@ -334,6 +358,208 @@ const LandPage = () => {
         `/img/testimonials/sunil-suresh.webp 533w, /img/testimonials/sunil-suresh.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
+  },
+]
+const TNC = [
+  {
+    key: 0,
+    title: 'What services does your global B2B agency offer?',
+    content: (
+      <>
+        <div>
+          Red Bangle offers a range of creative services to global businesses.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">1. Strategy:</h3>
+        <div>
+          We offer a range of strategy services - including brand environment
+          analysis, brand communication strategy, and video content strategy. We
+          blend data, insights and marketing expertise to craft strategies that
+          drive growth for your B2B enterprise.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">2. Design:</h3>
+        <div>
+          We offer a range of design services. From brand identity and
+          experiences, to mascots, print and editorial collateral, to wall
+          graphics for corporate offices. We help you build brand
+          differentiation, credibility and human connect through our design
+          solutions.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">3. Videos:</h3>
+        <div>
+          We offer a wide range of content services for brand growth. Whether it
+          is case study videos, thought leadership content, product explainer
+          videos, hiring and culture videos, or videos for corporate
+          communications and public relations. We offer end to end video
+          production services, including research, conceptualisation, anywhere
+          production, and endless versioning.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">4. Campaign:</h3>
+        <div>
+          From insightful communication strategies, to big campaign ideas and
+          creatives, exciting campaign plans, and flawless execution across
+          formats and locations – we provide comprehensive campaign solutions.
+          Whether it&apos;s for brand marketing, product and solution marketing,
+          employer branding, localisation or ESG campaigns – we support every
+          phase of enterprise growth.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">
+          5. Artificial Intelligence:
+        </h3>
+        <div>
+          From using GenAI to generate video and imagery for brand
+          communications and creating AI Influencers to developing AI models for
+          a global campaign - we’ve got what it takes to conceptualise, consult,
+          and develop AI-integrated communications for B2B brands.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">6. Experience:</h3>
+        <div>
+          From beautifully responsive corporate websites and private social apps
+          to immersive XR experiences and gamified content – we conceptualise,
+          design and develop custom technology solutions that help you achieve
+          your B2B brand communication goals.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">7. Crews:</h3>
+        <div>
+          With Red Bangle, you can get professional video crews on-demand in 100
+          countries. Be it a single-camera testimonial shoot or a multi-camera
+          event shoot - our curated video crew services scale to your brief, no
+          matter how many cities and continents.
+        </div>
+      </>
+    ),
+  },
+  {
+    key: 1,
+    title: 'How experienced is your team?',
+    content:
+      'We’ve been fuelling B2B communications with great creativity and technology for nearly a decade now. We are a team of over 50 people across design, videos, technology and more. We know what sticks in global B2B communications.',
+  },
+  {
+    key: 2,
+    title: ' Do you have a portfolio I can view?',
+    content: (
+      <>
+        Yes. Explore our Campaign portfolio{' '}
+        <Link
+          href="/work/b2b-brand-campaign-agency"
+          className="underline text-rb-red"
+        >
+          here
+        </Link>
+        {''}, Videos portfolio {''}
+        <Link
+          href="/work/b2b-video-production-agency"
+          className="underline text-rb-red"
+        >
+          here
+        </Link>
+        {''}, and our Experience portfolio{' '}
+        <Link
+          href="/work/b2b-brand-experience-agency"
+          className="underline text-rb-red"
+        >
+          here
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    key: 3,
+    title: 'Typically, what business verticals do you create videos for?',
+    content:
+      'Red Bangle produces a variety of videos and video content to meet the diverse needs of global B2B brands. This includes videos for marketing, corporate communications and public relations, employer branding, internal communications, sales and RFPs, and more. The formats range from corporate films to marketing explainers.',
+  },
+  {
+    key: 5,
+    title: 'What are your typical project turnaround times?',
+    content: (
+      <>
+        <div>
+          Project turnaround times vary based on the format, scale of production
+          as well as the type of service. Here’s a little guidance for each of
+          our services.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">1. Strategy</h3>
+        <div>
+          A smaller ask such as researching and defining your content strategy
+          could take up to 4 weeks, but a larger ask such as brand strategy
+          could take up to 2 months depending on the amount of research and
+          analysis required.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">2. Design</h3>
+        <div>
+          Depending on the requirement, the timeline varies. A simple brochure
+          may take a week. A branded tee may take a couple of days for an
+          existing brand. And a whole new brand identity system could take
+          anywhere between 2 and 6 months depending on the expanse of the brief.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">3. Videos</h3>
+        <div>
+          Depending on the format and the scale of the project, as well as
+          depending on how quickly we receive your feedback - we take anywhere
+          between 10 and 40 working days to turnaround a brief. When we are
+          making a longer-duration video (that’s not a simple testimonial video
+          or an interview video) or an interactive video, this timeline might
+          stretch to over 45 days. A short series of videos could be produced in
+          45 days and a larger requirement - for example, YouTube content to
+          grow subscribers and community - could be run as a year-long project.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">4. Campaign</h3>
+        <div>
+          Workflows and timelines are highly customized and responsive for this
+          service. A simple campaign could be created in 30 working days from
+          the formal contract or take up to 90 days - this is subject to the
+          brief, the scale of the requirement, as well as dependencies on the
+          client-side.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">
+          5. Artificial Intelligence
+        </h3>
+        <div>
+          From using GenAI to generate video and imagery for brand
+          communications and creating AI Influencers to developing AI models for
+          a global campaign - we’ve got what it takes to conceptualise, consult,
+          and develop AI-integrated communications for B2B brands.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">6. Experience</h3>
+        <div>
+          When it comes to experience, the conceptualisation, research,
+          consulting, design and development process could vary between as
+          little as 1 month for a microsite, 4 months for a website (including
+          all the graphics and content) and up to 12 months for a branded game.
+          Turnaround times similarly vary for other services such as augmented
+          reality, private social apps, etc.
+        </div>
+        <h3 className="mt-5 font-semibold  text-base">7. Crews</h3>
+        <div>
+          Typically, we can get a curated video crew in place in as little as 3
+          working days. And post the shoot, we could either handover the files
+          at the shoot on a hard disk or quality-check the footage and deliver
+          it online 28 hours post the shoot.
+        </div>
+      </>
+    ),
+  },
+  {
+    key: 9,
+    title:
+      'What are your policies around intellectual property rights and business data confidentiality?',
+    content:
+      'We take data security, privacy, confidentiality, and intellectual property rights very seriously. Our practices adhere to global standards. We license every single software and creative asset required, and ensure that necessary media release documents and service contracts are in place to explicitly call out the intellectual property rights assigned to the client.',
+  },
+  {
+    key: 10,
+    title: 'Which time zone does your company operate in?',
+    content: (
+      <>
+        Our global services team supports clients across time zones. So,{' '}
+        <Link href="/contact" className="underline text-rb-red">
+          send us a brief
+        </Link>{' '}
+        and we’ll set up a meeting at a mutually convenient time.
+      </>
+    ),
   },
 ]
   const heroSection = useRef()
@@ -625,21 +851,21 @@ const LandPage = () => {
         <SolutionsSection />
       </div>
 
-    <section className="bg-white overflow-hidden py-18 md:pt-30 md:pb-0">
+    <section className={`bg-white overflow-hidden py-18 md:pt-30 md:pb-0`}> 
         <div className="container">
           <LineHeading className="mb-6 md:mb-7.5">We are a borderless creative agency</LineHeading>
-          <div className="grid lg:flex grid-cols-1 md:grid-cols-2 gap-x-5 md:gap-x-[44px] gap-y-12 md:gap-y-6 max-w-[1200px] mx-auto w-full pl-6 md:px-6 ml-0 md:ml-5 md:ml-[3.1rem] transform transform -translate-x-[24px] sm:-translate-x-6 lg:-translate-x-6 xl:-translate-x-[7.9rem]">
+          <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none ml-5 transform transform -translate-x-5 sm:-translate-x-6 lg:-translate-x-6 xl:-translate-x-12">
             {stats.map((s, i) => (
               <div
-                className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${statstyles.statline} [&:nth-child(3)]:md:pr-[7px] [&:nth-child(1)]:md:pr-[26px] ${s.id === 3 ? 'md:!pr-[26px] md:!pl-6':''}`}
+                className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${statsStyles.statline}`}
                 key={s.id}
               >
-                <div>
-                  <div className={`lg:w-fit lg:mx-auto relative`}>
-                    <div>
+                <div className={`${i == 2 && 'lg:ml-[20%]'} ${s.id === 3 ? 'ipad-mini-ml':''}`}>
+                  <div className='lg:w-fit lg:mx-auto'>
+                    <div className={`${s.id === 1 ? '!-ml-[4px] md:!-ml-[8px]':''} ${s.id === 0 ? '!-ml-[4px] md:!-ml-[7px]':''} ${s.id === 2 ? '!-ml-[2px] md:!-ml-[3px]':''} ${s.id === 3 ? '!-ml-[3px] md:!-ml-[5px]':''}`}>
                         <RollupNumber {...s.countUpProps} />
                       </div>
-                    <div className={`text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett ${s.id === 0 ? 'md:ml-[5px]':''}`}>
+                    <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
                       {s.text}
                     </div>
                   </div>
@@ -650,12 +876,42 @@ const LandPage = () => {
         </div>
     </section>
 
-        <Testimonials
-          title={'WHAT OUR COLLABORATORS SAY'}
-          className="py-18 md:py-30"
-          testimonialData={createTestimonialData}
-          type="semi"
-        />
+    <Testimonials
+      title={'WHAT OUR COLLABORATORS SAY'}
+      className="py-18 md:py-30"
+      testimonialData={createTestimonialData}
+      type="semi"
+    />
+
+    <section className=" py-12 md:py-24">
+        <div className="container">
+          <div className="rb-row">
+            <div className="w-full md:w-5/12">
+              <div className="static md:sticky top-[100px]">
+                <h3 className="max-w-[400px] mb-8 text-title-md-tight font-everett text-rb-black !text-[26px] md:!text-[52px]">
+                  Frequently Asked Questions
+                </h3>
+                {/* <div className="text-[16px] md:text-[20px] leading-[1.5] text-rb-black/80 mb-10 md:mb-0">
+                  For any queries please contact us at{' '}
+                  <a className="text-rb-red" href="mailto:hello@redbangle.com">
+                    hello@redbangle.com
+                  </a>
+                </div> */}
+              </div>
+            </div>
+            <div className="w-full md:w-7/12">
+              <Accordion
+                data={TNC?.map((c) => ({
+                  key: `${c.key}`,
+                  heading: c?.title,
+                  content: c?.content,
+                }))}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <VideoModal
         open={herovideoOpen}
