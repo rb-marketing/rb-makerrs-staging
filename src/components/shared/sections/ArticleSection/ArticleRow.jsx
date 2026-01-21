@@ -9,7 +9,7 @@ export const ArticleRow = ({ article, ...rest }) => {
     >
       <div className="rb-row items-center">
         <div className="w-1/2">
-          <h4 className="text-2xl leading-10.5 font-semibold mb-1.5 tracking-[-0.2px] group-hover:text-rb-red transition-colors">
+          <h4 className="text-2xl leading-10.5 font-semibold mb-1.5 tracking-[-0.2px] group-hover:text-rb-link-green transition-colors">
             {title}
           </h4>
           {/* <div className="flex flex-wrap gap-5 text-sm leading-8 tracking-[-0.2px]">

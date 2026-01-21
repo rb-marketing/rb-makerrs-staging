@@ -338,7 +338,7 @@ const Campaign = ({ setisPopupOpen }) => {
         />
         <div
           ref={stickyButtonRef}
-          className={`hidden fixed top-20 right-8 z-20 md:min-w-[190px] transition-opacity duration-300 ease-in-out ${
+          className={`hidden fixed bottom-30 right-8 z-20 md:min-w-[190px] transition-opacity duration-300 ease-in-out ${
             isSticky ? 'lg:block' : ''
           } ${isOverlapping ? 'opacity-0' : 'opacity-100'}`}
         >
