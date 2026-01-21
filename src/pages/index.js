@@ -740,7 +740,7 @@ const LandPage = ({playWorks , articles}) => {
         testimonialData={createTestimonialData}
         type="semi"
       />
-      <ArticleSection articles={articles} className="md:pt-15 pb-18 md:pb-30" />
+      <ArticleSection articles={articles} className="md:pt-30 pt-18 pb-12 md:pb-30" />
       <section className=" py-12 md:py-24">
         <div className="container">
           <div className="rb-row">
