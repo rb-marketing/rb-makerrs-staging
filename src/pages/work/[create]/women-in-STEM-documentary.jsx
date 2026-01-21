@@ -116,6 +116,7 @@ function WeRise() {
       href: `https://www.linkedin.com/shareArticle?mini=true&url=${articleUrl}`,
       color: '#006699',
       icon: <Linkedin />,
+      type: 'linkedin',
     },
   ]
   return (

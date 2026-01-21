@@ -270,7 +270,7 @@ export const Header = () => {
                                   className="text-lg leading-6 flex items-center text-rb-black hover:text-rb-link-green transition-all"
                                 >
                                   {lItem.title}
-                                  <svg
+                                  {/* <svg
                                     width="21"
                                     height="20"
                                     viewBox="0 0 21 20"
@@ -292,11 +292,11 @@ export const Header = () => {
                                       strokeLinecap="round"
                                       strokeLinejoin="round"
                                     />
-                                  </svg>
+                                  </svg> */}
                                 </Link>
 
                                 {/* Submenu for Videos */}
-                                <div className="absolute top-0 left-full md:left-24 ml-4 md:ml-0 min-w-[225px] bg-white p-6 rounded-md shadow-lg opacity-0 group-hover/videos:opacity-100 pointer-events-none group-hover/videos:pointer-events-auto transition-all z-50">
+                                {/* <div className="absolute top-0 left-full md:left-24 ml-4 md:ml-0 min-w-[225px] bg-white p-6 rounded-md shadow-lg opacity-0 group-hover/videos:opacity-100 pointer-events-none group-hover/videos:pointer-events-auto transition-all z-50">
                                   {l?.subMenu
                                     ?.filter((sub) => sub.type === 'videos')
                                     .map((sub, si) => (
@@ -308,7 +308,7 @@ export const Header = () => {
                                         {sub.title}
                                       </Link>
                                     ))}
-                                </div>
+                                </div> */}
                               </div>
                             ) : isDesign ? (
                               <div
@@ -320,7 +320,7 @@ export const Header = () => {
                                   className="text-lg leading-6 flex items-center text-rb-black hover:text-rb-link-green transition-all"
                                 >
                                   {lItem.title}
-                                  <svg
+                                  {/* <svg
                                     width="21"
                                     height="20"
                                     viewBox="0 0 21 20"
@@ -342,11 +342,11 @@ export const Header = () => {
                                       strokeLinecap="round"
                                       strokeLinejoin="round"
                                     />
-                                  </svg>
+                                  </svg> */}
                                 </Link>
 
                                 {/* Submenu for Design */}
-                                <div className="absolute top-0 left-full md:left-24 ml-4 md:ml-0 min-w-[240px] bg-white p-6 rounded-md shadow-lg opacity-0 group-hover/design:opacity-100 pointer-events-none group-hover/design:pointer-events-auto transition-all z-50">
+                                {/* <div className="absolute top-0 left-full md:left-24 ml-4 md:ml-0 min-w-[240px] bg-white p-6 rounded-md shadow-lg opacity-0 group-hover/design:opacity-100 pointer-events-none group-hover/design:pointer-events-auto transition-all z-50">
                                   {l?.subMenu
                                     ?.filter((sub) => sub.type === 'design')
                                     .map((sub, si) => (
@@ -358,7 +358,7 @@ export const Header = () => {
                                         {sub.title}
                                       </Link>
                                     ))}
-                                </div>
+                                </div> */}
                               </div>
                             ) : lItem.title.includes('Coming soon') ? (
                               <span
@@ -714,28 +714,28 @@ export const Header = () => {
                         className="max-w-max !flex items-center gap-3"
                       >
                         <span>Design</span>
-                        <div className="dropdown-arrow rotate-90 mt-0.5">
+                        {/* <div className="dropdown-arrow rotate-90 mt-0.5">
                           {dropDownArrowMini}
-                        </div>
+                        </div> */}
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/brand-identity-design-services"
                         data-rb-cursor-state="invisible"
                         className="max-w-max ml-5 mt-[-5px]"
                       >
                         Brand Identity Design
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/video-production"
                         data-rb-cursor-state="invisible"
                         className="max-w-max !flex items-center gap-3"
                       >
                         <span>Video</span>
-                        <div className="dropdown-arrow rotate-90 mt-0.5">
+                        {/* <div className="dropdown-arrow rotate-90 mt-0.5">
                           {dropDownArrowMini}
-                        </div>
+                        </div> */}
                       </Link>
-                      <Link
+                      {/* <Link
                         href="/explainer-video-production-services"
                         data-rb-cursor-state="invisible"
                         className="max-w-max ml-5 mt-[-5px]"
@@ -769,7 +769,7 @@ export const Header = () => {
                         className="max-w-max ml-5 mt-[-5px]"
                       >
                         GenAI Videos
-                      </Link>
+                      </Link> */}
                       <Link href="/podcast-production-services">Podcast</Link>
                       <Link href="/advertising-agency">Campaign</Link>
                       <Link href="/video-production-near-me">Book a Crew</Link>

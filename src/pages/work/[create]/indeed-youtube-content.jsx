@@ -224,7 +224,7 @@ function IndeedYouTubeContent() {
     {
       type: 'linkedin',
       key: 1,
-      href: fullUrl,
+            href: `https://www.linkedin.com/shareArticle?mini=true&url=${fullUrl}`,
       color: '#006699',
       icon: <Linkedin />,
     },

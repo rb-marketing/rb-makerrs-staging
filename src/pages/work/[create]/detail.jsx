@@ -41,6 +41,7 @@ function Detail() {
       href: '/',
       color: '#006699',
       icon: <Linkedin />,
+      type: 'linkedin',
     },
   ]
   return (
