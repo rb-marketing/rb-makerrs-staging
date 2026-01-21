@@ -65,7 +65,7 @@ function TaneiraSanganeri() {
       <SEO
         title="Case Study: Taneira Sanganeri Print"
         description="Explore how Makerrs, a holistic marketing communication & creative advertising agency, crafted an impactful creative advertising campaign for Metro Wholesale using b2c marketing campaign strategy."
-        url="https://www.b2c.redbangle.com/work/video-production/fashion-taneira-sanganeri"
+        url="https://www.makerrs.com/work/video-production/fashion-taneira-sanganeri"
       />
       <WorkHeroSection
         title={'Capturing the Story of Sanganeri Craft with Taneira'}

@@ -21,6 +21,7 @@ import styles from '@/styles/home.module.scss'
 import { LineArrow } from '@/components/icons'
 import { useRouter } from 'next/router'
 import { corporateVideoProductionSchema } from '@/components/schema/corporate-video-production-services'
+import statsStyles from '@/styles/sections/StatsSection.module.scss'
 
 const INIT_MODAL = {
   open: false,
@@ -120,7 +121,7 @@ const CorporateVideoLandPage = () => {
           </div>
         ),
       },
-      text: <>corporate videos produced </>,
+      text: <>corporate videos <br />produced </>,
     },
     {
       id: 1,
@@ -128,7 +129,7 @@ const CorporateVideoLandPage = () => {
         value: 60,
         suffix: <span className="text-rb-red">+</span>,
       },
-      text: <>global businesses serviced</>,
+      text: <>global businesses <br />serviced</>,
     },
     {
       id: 2,
@@ -140,7 +141,7 @@ const CorporateVideoLandPage = () => {
           </div>
         ),
       },
-      text: <>global filmmakers </>,
+      text: <>global <br />filmmakers </>,
     },
     {
       id: 3,
@@ -148,7 +149,7 @@ const CorporateVideoLandPage = () => {
         value: 600,
         suffix: <span className="text-rb-red">+</span>,
       },
-      text: <>international productions</>,
+      text: <>international <br />productions</>,
     },
   ]
 
@@ -1268,7 +1269,7 @@ const CorporateVideoLandPage = () => {
             </div>
             <div
               ref={stickyButtonRef}
-              className={`hidden fixed top-20 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${
+              className={`hidden fixed bottom-30 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${
                 isSticky ? 'lg:block' : ''
               } ${isOverlapping ? 'opacity-0' : 'opacity-100'}`}
             >
@@ -1320,36 +1321,20 @@ const CorporateVideoLandPage = () => {
           <LineHeading className="mb-6 md:mb-7.5">
             Your Corporate Communication Video Experts
           </LineHeading>
-          <div className="grid grid-cols-2 gap-y-12 mx-0 md:flex md:flex-row ">
+         <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none ml-5 transform -translate-x-5 sm:-translate-x-6 lg:-translate-x-6 xl:-translate-x-12">
             {stats.map((s, i) => (
               <div
+                className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${statsStyles.statline}`}
                 key={s.id}
-                className={`text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative
-        ${statstyles.statlinecorporate}`}
               >
-                <div
-                  className={`w-fit ${
-                    s.id === 1
-                      ? 'md:ml-[80px] md:mr-[30px]'
-                      : s.id === 2
-                        ? 'md:ml-[80px] md:mr-[80px]'
-                        : i === 0
-                          ? 'md:ml-0 md:mr-[clamp(10px,5vw,10px)]'
-                          : 'md:mx-[clamp(10px,5vw,80px)]'
-                  }`}
-                >
-                  <RollupNumber
-                    {...s.countUpProps}
-                    className={`${
-                      s.countUpProps.value === 1 ? '-ml-3' : '-ml-[6px]'
-                    } ${s.id === 0 ? 'md:!-ml-[6px] !-ml-[3px]' : ''} ${
-                      s.id === 1 ? 'md:!-ml-[3px] !-ml-[2px]' : ''
-                    } ${s.id === 2 ? 'md:!-ml-[12px] !-ml-[4px]' : ''}${
-                      s.id === 3 ? 'md:!-ml-[6px] !-ml-[2px]' : ''
-                    }`}
-                  />
-                  <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
-                    {s.text}
+                <div className={`${i == 2 && 'lg:ml-[20%]'} ${s.id === 3 ? 'ipad-mini-ml' : ''}`}>
+                  <div className='lg:w-fit lg:mx-auto'>
+                    <div className={`${s.id === 1 ? '!-ml-[4px] md:!-ml-[8px]' : ''} ${s.id === 0 ? '!-ml-[4px] md:!-ml-[7px]' : ''} ${s.id === 2 ? '!-ml-[2px] md:!-ml-[3px]' : ''} ${s.id === 3 ? '!-ml-[3px] md:!-ml-[5px]' : ''}`}>
+                      <RollupNumber {...s.countUpProps} />
+                    </div>
+                    <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
+                      {s.text}
+                    </div>
                   </div>
                 </div>
               </div>

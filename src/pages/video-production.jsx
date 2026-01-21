@@ -199,20 +199,10 @@ const VideosServices = ({ setisPopupOpen }) => {
             (Note: our process for strategic, long-term video engagements are
             slightly different to this.)
           </p>
-          <h3 className="mt-4 font-semibold">1. Project Briefing</h3>
-          <p>
-            We start by understanding your business objectives, target audience,
-            and key messages. Our Client Servicing team collaborates closely
-            with you to outline project goals, ensuring a clear and actionable
-            direction from the start.
-          </p>
 
           <h3 className="mt-4 font-semibold">1. Project Briefing</h3>
           <p>
-            We start by understanding your business objectives, target audience,
-            and key messages. Our Client Servicing team collaborates closely
-            with you to outline project goals, ensuring a clear and actionable
-            direction from the start.
+            We start by understanding your business objectives, target audience, and key messages. Our Client Servicing team collaborates closely with you to outline project goals, ensuring a clear and actionable direction from the start.
           </p>
 
           <h3 className="mt-4 font-semibold">2. Research & Insights</h3>
@@ -962,7 +952,7 @@ const VideosServices = ({ setisPopupOpen }) => {
         />
         <div
           ref={stickyButtonRef}
-          className={`hidden fixed top-20 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${isSticky ? 'lg:block' : ''
+          className={`hidden fixed bottom-30 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${isSticky ? 'lg:block' : ''
             } ${isOverlapping ? 'opacity-0' : 'opacity-100'}`}
         >
           <Button

@@ -8,7 +8,10 @@ import { gsap } from 'gsap'
 import statsStyles from '@/styles/sections/StatsSection.module.scss'
 import styles from '@/styles/home.module.scss'
 import Link from 'next/link'
-const LandPage = () => {
+import { ArticleSection } from '@/components/shared/sections/ArticleSection'
+import { getLatestArticle, getPlaySliderData } from '@/utils/graphql'
+import { formateBlogPostFunc } from '@/utils/formate'
+const LandPage = ({playWorks , articles}) => {
   const groupIcons = [
     {
       id: 0,
@@ -737,7 +740,7 @@ const LandPage = () => {
         testimonialData={createTestimonialData}
         type="semi"
       />
-
+      <ArticleSection articles={articles} className="md:pt-15 pb-18 md:pb-30" />
       <section className=" py-12 md:py-24">
         <div className="container">
           <div className="rb-row">
@@ -761,7 +764,6 @@ const LandPage = () => {
         </div>
       </section>
 
-
       <VideoModal
         open={herovideoOpen}
         setOpen={setHerovideoOpen}
@@ -784,3 +786,30 @@ const LandPage = () => {
   )
 }
 export default LandPage
+
+export async function getStaticProps() {
+  const {
+    status,
+    data: { works },
+  } = await getPlaySliderData()
+  // console.log(status)
+  const playWorks = works?.nodes?.map((n) => ({
+    key: n?.slug,
+    type: 'play',
+    title: n?.title,
+    video: {
+      src: n?.workDetails?.previewLink?.mediaItemUrl ?? '',
+      width: n?.workDetails?.previewLink?.mediaDetails?.width ?? '',
+      height: n?.workDetails?.previewLink?.mediaDetails?.height ?? '',
+    },
+    // href: `/work/play?work=${n?.slug}`,
+    href: `?work=${n?.slug}`,
+  }))
+  const { data } = await getLatestArticle()
+  return {
+    props: {
+      playWorks,
+      articles: data?.posts?.nodes?.map(formateBlogPostFunc),
+    },
+  }
+}
