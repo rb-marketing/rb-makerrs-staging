@@ -1118,7 +1118,7 @@ const ExplainerVideoLandPage = () => {
       <SEO
         title="B2B Explainer Videos that Impress"
         description="B2B Explainer Videos that Impress"
-        url={`https://www.b2b.redbangle.com${router.asPath}`}
+        url={`https://www.makerrs.com${router.asPath}`}
         keywords="video animation services
           custom explainer videos,
           whiteboard animation,
