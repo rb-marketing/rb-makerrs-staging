@@ -256,7 +256,7 @@ const selectedSchema = slugToSchema[article.slug] || [];
       <SEO
         title={article?.seoTitle}
         description={article?.seoDesc}
-        image={ article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs.jpg'}
+        image={ article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs-og.jpg'}
         url={seoUrl}
       />
       <article>
