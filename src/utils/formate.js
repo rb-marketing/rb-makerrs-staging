@@ -70,9 +70,6 @@ export const formateBlogPostFunc = (node) => ({
   tags: node?.tags?.nodes ?? [],
   content: node?.content ?? null,
   readTime: node?.content ? getReadTime(node?.content) : null,
-  seoTitle: node?.blog_additional_data?.seoTitle,
-  seoDesc: node?.blog_additional_data?.seoDesc
-
 })
 export const formatBlogPosts = (edges) =>
   edges.map(({ node }) => formateBlogPostFunc(node))
