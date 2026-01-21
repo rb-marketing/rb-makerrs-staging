@@ -43,11 +43,11 @@ const Career = () => {
     {
       id: 2,
       countUpProps: {
-        value: 1000,
+        value: 1,
         suffix: (
-          <span className="inline-flex">
-            <span className="text-rb-red">+</span>
-          </span>
+          <div className="inline-flex">
+            K <span className="text-rb-red">+</span>
+          </div>
         ),
       },
       text:
@@ -59,10 +59,18 @@ const Career = () => {
      {
       id: 3,
       countUpProps: {
-        value: '',
-        suffix: '',
+        value: '30',
+        suffix: (
+          <span className="inline-flex">
+            <span className="text-rb-red">+</span>
+          </span>
+        ),
       },
-      text:''
+      text:
+        <>
+          amazing <br />
+          team members
+        </>,
     }
   ]
 
@@ -211,17 +219,17 @@ const Career = () => {
       <section className={`bg-white overflow-hidden pt-15 md:pt-30 md:pb-7.5`}>
         <div className="container">
           <LineHeading className="mb-6 md:mb-7.5">WE CRAFT BORDERLESS BRANDS & NARRATIVES</LineHeading>
-          <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none ml-5 transform -translate-x-5 sm:-translate-x-6 lg:-translate-x-6 xl:-translate-x-12">
+         <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none ml-5 transform transform -translate-x-5 sm:-translate-x-6 lg:-translate-x-6 xl:-translate-x-12">
             {stats.map((s, i) => (
               <div
-                className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${statsStyles.statline} careers-stat`}
+                className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${statsStyles.statline}`}
                 key={s.id}
               >
-                <div className={`${i == 2 && 'lg:ml-[20%]'} ${s.id === 3 ? 'ipad-mini-ml' : ''}`}>
+                <div className={`${i == 2 && 'lg:ml-[20%]'} ${s.id === 3 ? 'ipad-mini-ml':''}`}>
                   <div className='lg:w-fit lg:mx-auto'>
-                    <div className={`${s.id === 1 ? '!-ml-[4px] md:!-ml-[8px]' : ''} ${s.id === 0 ? '!-ml-[4px] md:!-ml-[7px]' : ''} ${s.id === 2 ? '!-ml-[2px] md:!-ml-[3px]' : ''} ${s.id === 3 ? '!-ml-[3px] md:!-ml-[5px]' : ''}`}>
-                      <RollupNumber {...s.countUpProps} />
-                    </div>
+                    <div className={`${s.id === 1 ? '!-ml-[4px] md:!-ml-[8px]':''} ${s.id === 0 ? '!-ml-[4px] md:!-ml-[7px]':''} ${s.id === 2 ? '!-ml-[2px] md:!-ml-[3px]':''} ${s.id === 3 ? '!-ml-[3px] md:!-ml-[5px]':''}`}>
+                        <RollupNumber {...s.countUpProps} />
+                      </div>
                     <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
                       {s.text}
                     </div>
@@ -394,7 +402,7 @@ const Career = () => {
                 id: 3,
                 title: 'In-person Work',
                 description:
-                  'For those in the same city, there’s ‘Together Thursdays’ - where we work together once a week at a coworking space.',
+                  'For those in the same city, there’s ‘Together Tuesdays’ - where we work together once a week at a coworking space.',
               },
               {
                 id: 4,
@@ -428,7 +436,7 @@ const Career = () => {
               },
               {
                 id: 9,
-                title: 'Mental Health',
+                title: 'Emotional Wellbeing',
                 description:
                   'Life has its ups and downs, and so do we. Should you need a professional counselor, we have a curated service provider we can refer you to.',
               }

@@ -30,7 +30,7 @@ const slides = [
     excerpt:
       'We take a strategic approach to planning, crafting and scaling video content for brands – be it for a product launch or for YouTube channel growth. We also support on-demand end-to-end video production requirements around customer testimonial videos, hiring and culture videos, and more.',
     video: {
-      src: '/img/case_study_banner_video.mp4',
+      src: '/img/services/videos/hero.mp4',
       poster: '/img/services/videos/hero.png',
       width: '1440',
       height: '810',

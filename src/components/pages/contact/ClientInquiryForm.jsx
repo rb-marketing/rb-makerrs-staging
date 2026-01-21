@@ -293,7 +293,7 @@ export const ClientInquiryForm = ({ isPopop = false, content = false }) => {
         >
           {!content ? (
             <p>
-              We are always looking to work on exciting briefs.
+              We love working on new briefs.
               <br />
               Let&apos;s start a conversation today!
             </p>

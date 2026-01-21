@@ -60,17 +60,20 @@ const Contact = () => {
         url="https://www.makerrs.com/contact"
       />
 
-      <section
+
+            <section className="py-14 md:py-24 bg-rb-mercury">
+              <div className="container">
+                <h1 className="uppercase mb-0 font-everett font-medium text-[45px] leading-[1.07] tracking-[-0.89px] md:text-[110px] md:leading-[122px] md:tracking-[-1.76px] ">
+               Get in touch
+                </h1>
+              </div>
+            </section>
+
+      {/* <section
         className={`py-18 md:pt-23 md:pb-23 overflow-hidden bg-rb-service-grey`}
       >
         <h1 className="invisible pointer-events-none absolute">CONTACT US</h1>
-        <div style={{ display: 'none' }}>
-          <h2>Contact your Holistic Marketing Agency</h2>
-          <h2>Meet your Content Production Agency</h2>
-          <h2>Contact your Brand Strategy Solutions provider</h2>
-          <h2>Reach your Content Production Services provider</h2>
-          <h2>Contact your Content Production Solutions provider</h2>
-        </div>
+       
         <Marquee duration={20}>
           <div className="flex items-center uppercase text-[48px] leading-none md:text-[120px] md:leading-[148px] mr-6 md:mr-10 font-medium">
             Let&apos;s talk
@@ -93,7 +96,16 @@ const Contact = () => {
             />
           </div>
         </Marquee>
-      </section>
+      </section> */}
+
+        <div style={{ display: 'none' }}>
+          <h2>Contact your Holistic Marketing Agency</h2>
+          <h2>Meet your Content Production Agency</h2>
+          <h2>Contact your Brand Strategy Solutions provider</h2>
+          <h2>Reach your Content Production Services provider</h2>
+          <h2>Contact your Content Production Solutions provider</h2>
+        </div>
+
       <section className="bg-white" id='id'>
         <div className="container">
           <ul className="flex gap-4 md:gap-15 py-5  md:py-8 text-sm leading-4 font-medium whitespace-nowrap md:text-5xl font-everett overflow-x-auto">
