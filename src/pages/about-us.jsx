@@ -86,8 +86,7 @@ const WhoWeAre = () => {
     {
       name: 'Lakshmi Rebecca',
       title: 'CEO, Bangalore & San Francisco',
-      img: '/img/our-team/lakshmi-rebecca.webp',
-      lgimg: '/img/our-team/lakshmi-rebecca_2x.webp',
+      img: '/img/our-team/lakshmi-rebecca.png',
       content: (
         <>
           Storyteller, visionary, award-winning YouTuber and ex-model.
@@ -116,8 +115,7 @@ const WhoWeAre = () => {
     {
       name: 'Sunil Patrapati',
       title: 'CTO, Bangalore & Chennai',
-      img: '/img/our-team/sunil-patrapati.webp',
-      lgimg: '/img/our-team/sunil-patrapati_2x.webp',
+      img: '/img/our-team/sunil-patrapati.png',
       content: (
         <>
           22 years of building technology innovations across gaming, content
@@ -141,40 +139,11 @@ const WhoWeAre = () => {
       ),
       linkedIn: 'https://www.linkedin.com/in/sunil-patrapati-020023a/',
     },
-    // {
-    //   name: 'Ankur Bora',
-    //   title: 'Senior Vice President - Client Services',
-    //   img: '/img/our-team/ankur-bora.webp',
-    //   alt: 'Ankur Bora',
-    //   lgimg: '/img/our-team/ankur-bora_2x.webp',
-    //   content: (
-    //     <>
-    //       Full of warmth and ambition. A dedicated and intuitive leader, and a
-    //       great conflict manager.
-    //       <br />
-    //       <br />
-    //       Ankur has a wealth of experience in marketing communications. He has
-    //       helped solution for clients ranging from Coca-Cola and Samsung
-    //       Electronics to Yamaha, Maruti Suzuki, Uber, Airtel and more. He
-    //       thrives on the dynamic landscape of consumer and tech trends.
-    //       <br />
-    //       <br />
-    //       He grew up living all over the world, and is passionate about keeping
-    //       the narrative relevant.
-    //       <br />
-    //       <br />
-    //       He loves client servicing because he loves meeting new people,
-    //       building new relationships and creating breakthrough solutions.
-    //     </>
-    //   ),
-    //   linkedIn: 'https://www.linkedin.com/in/ankur-bora-73bb4515/',
-    // },
 
     {
       name: 'Raj Dutta',
       title: 'Consulting Creative Director, Bangalore',
-      img: '/img/our-team/raj_dutta.jpg',
-      lgimg: '/img/our-team/raj_dutta.jpg',
+      img: '/img/our-team/raj_dutta.png',
       content: (
         <>
           A creative leader and writer with 23 years in the business, Raj has
@@ -194,8 +163,7 @@ const WhoWeAre = () => {
     {
       name: 'Mandira Naidoo',
       title: 'Head of Design, Bangalore',
-      img: '/img/our-team/mandira-naidoo.webp',
-      lgimg: '/img/our-team/mandira-naidoo_2x.webp',
+      img: '/img/our-team/mandira-naidoo.png',
       content: (
         <>
           The force behind continuous creative quality improvement. She’s always
@@ -223,8 +191,7 @@ const WhoWeAre = () => {
     {
       name: 'Ayesha Mir',
       title: 'Group Account Director, Bangalore',
-      img: '/img/our-team/ayesha-mir.jpg',
-      lgimg: '/img/our-team/ayesha-mir.jpg',
+      img: '/img/our-team/ayesha-mir.png',
       content: (
         <>
           A thoughtful connector of people, clients, and growth, Ayesha brings structure, empathy, and momentum to every challenge she takes on.
@@ -239,14 +206,13 @@ const WhoWeAre = () => {
           When she’s not solving client challenges, Ayesha enjoys baking, building Lego sets, and solving puzzles.
         </>
       ),
-      linkedIn: 'https://www.linkedin.com/in/jayaloganathan/',
+      linkedIn: 'https://www.linkedin.com/in/ayeshamir94/',
     },
 
     {
       name: 'Tejasvi Mani',
       title: 'Partner - Post Production, Bangalore',
-      img: '/img/our-team/tejasvi-mani.webp',
-      lgimg: '/img/our-team/tejasvi-mani_2x.webp',
+      img: '/img/our-team/tejasvi-mani.png',
       content: (
         <>
           A problem-solver, a quiet and confident leader, and always a learner.
@@ -273,8 +239,7 @@ const WhoWeAre = () => {
     {
       name: 'Debarti Banerjee',
       title: 'VP Production & Operations, Mumbai',
-      img: '/img/our-team/debarti-banerjee.webp',
-      lgimg: '/img/our-team/debarti-banerjee_2x.webp',
+      img: '/img/our-team/debarti-banerjee.png',
       content: (
         <>
           Deeply passionate about organisational culture, processes and animal

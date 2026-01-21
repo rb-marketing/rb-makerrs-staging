@@ -763,10 +763,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
         ):( */}
 
         {selectedTag === 'podcast' ? (
-          <div className='flex justify-center items-center'>
-            <h2 className='mt-10 mb-10 text-3xl font-bold'>Coming Soon!</h2>
-
-          </div>
+            <h2 className='w-full text-sm leading-[21px] max-w-[1100px] md:text-[32px] md:leading-9.5 mt-8 md:!mt-16 cap-trim font-semibold !tracking-[-0.56px] md:!tracking-[-0.08rem]'>Coming Soon!</h2>
         ) : (
 
           <div className="container work-posts-section">
