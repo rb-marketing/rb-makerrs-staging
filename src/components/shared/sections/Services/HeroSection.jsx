@@ -56,7 +56,7 @@ export const ServiceHeroSection = ({
             src="/img/home/showreel-1.mp4"
             poster="/img/home/home-video-p.png"
             {...video}
-            className="w-[150%] -translate-x-1/4 max-w-max md:max-w-full md:w-full md:translate-x-0"
+            className="w-[150%] max-w-full md:w-full md:translate-x-0"
           ></video>
           <div className="absolute bottom-4 right-4 z-10 backdrop-blur-2xl bg-rb-black/50 rounded-[32px] py-[17px] px-4.5 pl-[20px] overflow-hidden md:hidden block">
             <svg
