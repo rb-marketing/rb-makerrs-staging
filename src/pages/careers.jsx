@@ -402,7 +402,7 @@ const Career = () => {
                 id: 3,
                 title: 'In-person Work',
                 description:
-                  'For those in the same city, there’s ‘Together Thursdays’ - where we work together once a week at a coworking space.',
+                  'For those in the same city, there’s ‘Together Tuesdays’ - where we work together once a week at a coworking space.',
               },
               {
                 id: 4,
@@ -436,7 +436,7 @@ const Career = () => {
               },
               {
                 id: 9,
-                title: 'Mental Health',
+                title: 'Emotional Wellbeing',
                 description:
                   'Life has its ups and downs, and so do we. Should you need a professional counselor, we have a curated service provider we can refer you to.',
               }

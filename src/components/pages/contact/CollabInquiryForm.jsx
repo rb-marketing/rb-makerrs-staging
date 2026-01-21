@@ -299,7 +299,7 @@ export const CollabInquiryForm = () => {
   return (
     <div>
       <p className="text-rb-black/90 font-normal text-sm md:text-2xl mb-6 md:mb-21 md:mt-4">
-        We are always looking to build new relationships.
+        We love collaborating with amazingly creative people. 
         <br />
         Let&apos;s start a conversation today!
       </p>
