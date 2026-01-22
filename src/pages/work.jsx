@@ -2,22 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { workPosts } from '@/utils/dummy'
 import {
-  SEO, TrustedBrandsSection, WorkListHeroSection
+  SEO,
+  TrustedBrandsSection,
+  WorkListHeroSection,
 } from '@/components/shared'
 import { ContentPostCard } from '@/components/shared/Cards/ContentPostCard'
 import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { aboutSchema } from '@/components/schema/about-schema'
 
-
 const getCountryFromCookie = () => {
-  if (typeof document === 'undefined') return null;
+  if (typeof document === 'undefined') return null
 
-  const match = document.cookie.match(/user-country=([^;]+)/);
-  return match ? match[1] : null;
-};
-
-
+  const match = document.cookie.match(/user-country=([^;]+)/)
+  return match ? match[1] : null
+}
 
 export default function WorkPage({ selectedvalue = 'featured' }) {
   const router = useRouter()
@@ -43,29 +42,32 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
     {
       name: 'Campaign',
       url: 'campaign',
-    }
+    },
   ]
 
   const [selectedTag, setSelectedTag] = useState(null)
   const [visiblePosts, setVisiblePosts] = useState(9)
   const scrollRef = React.useRef(null)
-  const [country, setCountry] = useState(null);
+  const [country, setCountry] = useState(null)
 
   useEffect(() => {
-    const detectedCountry = getCountryFromCookie();
-    setCountry(detectedCountry);
-  }, []);
-
-
+    const detectedCountry = getCountryFromCookie()
+    setCountry(detectedCountry)
+  }, [])
 
   useEffect(() => {
     const storedVisible = sessionStorage.getItem('work-visiblePosts')
     const storedTag = sessionStorage.getItem('work-selectedTag')
 
-    if (storedVisible) setVisiblePosts(parseInt(storedVisible, 10))
+    if (storedTag === selectedTag && storedVisible) {
+      setVisiblePosts(parseInt(storedVisible, 10))
+    }
     if (storedTag) setSelectedTag(storedTag)
     if (!router.query.work) {
-      if (selectedvalue && caseStudyTags.some(tag => tag.url === selectedvalue)) {
+      if (
+        selectedvalue &&
+        caseStudyTags.some((tag) => tag.url === selectedvalue)
+      ) {
         setSelectedTag(selectedvalue)
       } else if (!storedTag) {
         setSelectedTag('featured')
@@ -76,7 +78,8 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
   }, [router.query.work, selectedvalue])
 
   const saveState = (scrollOverride) => {
-    const scroll = scrollOverride !== undefined ? scrollOverride : window.scrollY
+    const scroll =
+      scrollOverride !== undefined ? scrollOverride : window.scrollY
     sessionStorage.setItem('work-scroll', String(scroll))
     sessionStorage.setItem('work-visiblePosts', String(visiblePosts))
     sessionStorage.setItem('work-selectedTag', selectedTag || 'featured')
@@ -85,20 +88,23 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
   useEffect(() => {
     const scrollToPosts = () => {
       //after hard refresh we need to scrolls tabs section right..for that
-      const postsGrid = document.querySelector(".work-posts-section")
-      const stickyTabs = document.querySelector(".sticky-tab-section")
+      const postsGrid = document.querySelector('.work-posts-section')
+      const stickyTabs = document.querySelector('.sticky-tab-section')
       if (postsGrid) {
         const gridTop = postsGrid.getBoundingClientRect().top + window.scrollY
         const stickyHeight = stickyTabs?.offsetHeight || 0
-        window.scrollTo({ top: gridTop - stickyHeight - 70, behavior: "smooth" })
+        window.scrollTo({
+          top: gridTop - stickyHeight - 70,
+          behavior: 'smooth',
+        })
       }
     }
 
     const restore = () => {
-      const navEntries = performance.getEntriesByType("navigation")
-      const isReload = navEntries.length && navEntries[0].type === "reload"
-      const storedTag = sessionStorage.getItem("work-selectedTag")
-      const storedScroll = sessionStorage.getItem("work-scroll")
+      const navEntries = performance.getEntriesByType('navigation')
+      const isReload = navEntries.length && navEntries[0].type === 'reload'
+      const storedTag = sessionStorage.getItem('work-selectedTag')
+      const storedScroll = sessionStorage.getItem('work-scroll')
 
       if (storedTag) {
         setSelectedTag(storedTag)
@@ -107,11 +113,11 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       if (isReload) {
         // Hard refresh → reset to 6 posts & scroll to tabs
         setVisiblePosts(9)
-        sessionStorage.setItem("work-visiblePosts", "9")
+        sessionStorage.setItem('work-visiblePosts', '9')
         scrollToPosts()
       } else if (storedScroll && !isNaN(parseInt(storedScroll, 10))) {
         // Back/forward navigation → restore posts & scroll
-        const storedVisible = sessionStorage.getItem("work-visiblePosts")
+        const storedVisible = sessionStorage.getItem('work-visiblePosts')
         if (storedVisible) setVisiblePosts(parseInt(storedVisible, 10))
 
         setTimeout(() => {
@@ -120,13 +126,11 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       } else {
         // First visit → reset to 6 posts (NO SCROLL)
         setVisiblePosts(9)
-        sessionStorage.setItem("work-visiblePosts", "9")
+        sessionStorage.setItem('work-visiblePosts', '9')
       }
     }
     restore()
-
   }, [])
-
 
   useEffect(() => {
     setVisiblePosts(9)
@@ -136,6 +140,9 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
     // Reset visible posts to 9 when switching tab
     setVisiblePosts(9)
     setSelectedTag(tagUrl)
+
+    sessionStorage.setItem('work-visiblePosts', '9')
+    sessionStorage.setItem('work-selectedTag', tagUrl)
 
     // Shallow route update
     router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
@@ -147,7 +154,10 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       if (postsGrid) {
         const topOffset = postsGrid.getBoundingClientRect().top + window.scrollY
         const stickyHeight = stickyTabs?.offsetHeight || 0
-        window.scrollTo({ top: topOffset - stickyHeight - 70, behavior: 'smooth' })
+        window.scrollTo({
+          top: topOffset - stickyHeight - 70,
+          behavior: 'smooth',
+        })
       }
     }, 50)
   }
@@ -161,45 +171,48 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
   const handleSeeLess = () => {
     setVisiblePosts(9)
     setTimeout(() => {
-      const postsGrid = document.querySelector(".work-posts-section")
-      const stickyTabs = document.querySelector(".sticky-tab-section")
+      const postsGrid = document.querySelector('.work-posts-section')
+      const stickyTabs = document.querySelector('.sticky-tab-section')
       if (postsGrid) {
         const gridTop = postsGrid.getBoundingClientRect().top + window.scrollY
         const stickyHeight = stickyTabs?.offsetHeight || 0
-        window.scrollTo({ top: gridTop - stickyHeight - 70, behavior: 'smooth' })
+        window.scrollTo({
+          top: gridTop - stickyHeight - 70,
+          behavior: 'smooth',
+        })
       }
     }, 100)
   }
 
   const filteredPosts = _posts
-    .filter(post => {
+    .filter((post) => {
       // 1️⃣ Region filter
       if (post.region?.length && country && !post.region.includes(country)) {
-        return false;
+        return false
       }
 
       // 2️⃣ Tag filter
       if (selectedTag) {
         return post.tabs?.some(
-          tab =>
+          (tab) =>
             typeof tab === 'string' &&
             tab.toLowerCase() === selectedTag.toLowerCase()
-        );
+        )
       }
 
       // 3️⃣ No tag selected → show post
-      return true;
+      return true
     })
-    .slice(0, visiblePosts);
+    .slice(0, visiblePosts)
 
-
-return (
+  return (
     <>
       <SEO
         title="Top Branding, Video Production & Podcast Solutions | Makerrs"
         description="Get great brand design, scalable video production, branded podcast production, and winning creative campaigns for your borderless business."
         url={`https://www.makerrs.com/work/${selectedTag || 'featured'}`}
-        keywords="B2B Brands, Brand solutions, B2B Business, Work, Portfolio, Big Ideas, Projects, Work Showcase, Case Study, Case Studies, Creativity, Innovation, B2C Brands, B2C Business" />
+        keywords="B2B Brands, Brand solutions, B2B Business, Work, Portfolio, Big Ideas, Projects, Work Showcase, Case Study, Case Studies, Creativity, Innovation, B2C Brands, B2C Business"
+      />
 
       <section className="py-14 md:py-24 overflow-hidden bg-rb-mercury text-rb-black ">
         <WorkListHeroSection
@@ -210,7 +223,13 @@ return (
           pillImg="/img/who-we-are/about-pill.webp"
           marqueType="img"
           contentClassName="max-w-[1100px] w-full leading-[21px] md:text-[32px] md:leading-9.5 mt-8 md:!mt-16 cap-trim font-semibold !tracking-[-0.56px] md:!tracking-[-0.08rem]"
-          content={<>Big ideas, captivating design, campaign magic and flawless global video production. We&apos;re the creative engine behind unstoppable brand growth.</>}
+          content={
+            <>
+              Big ideas, captivating design, campaign magic and flawless global
+              video production. We&apos;re the creative engine behind
+              unstoppable brand growth.
+            </>
+          }
           duration={25}
         />
       </section>
@@ -219,11 +238,21 @@ return (
         {/* Tags */}
         <div className="sticky top-0 bg-white z-[2] p-2 md:p-0 border-b border-gray-300 sticky-tab-section">
           <div className="relative mt-0 py-6">
-            <div ref={scrollRef} className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:justify-center md:gap-12">
-              {caseStudyTags.map(tag => (
-                <a key={tag.url} href="#" onClick={e => { e.preventDefault(); handleTagClick(tag.url) }}
+            <div
+              ref={scrollRef}
+              className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:justify-center md:gap-12"
+            >
+              {caseStudyTags.map((tag) => (
+                <a
+                  key={tag.url}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleTagClick(tag.url)
+                  }}
                   className={`inline-block align-top leading-[1] p-0 m-0 !mr-[9px] text-[32px] font-medium font-everett relative whitespace-nowrap
-                   ${selectedTag === tag.url ? 'text-rb-link-green after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[7px]' : 'text-[#11101080] hover:text-rb-link-green'}`}>
+                   ${selectedTag === tag.url ? 'text-rb-link-green after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[7px]' : 'text-[#11101080] hover:text-rb-link-green'}`}
+                >
                   {tag.name}
                 </a>
               ))}
@@ -232,15 +261,20 @@ return (
         </div>
 
         {selectedTag === 'podcast' ? (
-            <h2 className='w-full text-sm leading-[21px] max-w-[1100px] md:text-[32px] md:leading-9.5 mt-8 md:!mt-16 cap-trim font-semibold !tracking-[-0.56px] md:!tracking-[-0.08rem]'>Coming Soon!</h2>
+          <h2 className="w-full text-sm leading-[21px] max-w-[1100px] md:text-[32px] md:leading-9.5 mt-8 md:!mt-16 cap-trim font-semibold !tracking-[-0.56px] md:!tracking-[-0.08rem]">
+            Coming Soon!
+          </h2>
         ) : (
-
           <div className="container work-posts-section">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-16 md:mt-18">
               {filteredPosts.length > 0 ? (
-                filteredPosts.map(p => (
+                filteredPosts.map((p) => (
                   <div key={p.key} onPointerDown={() => saveState()}>
-                    <ContentPostCard href={`/${selectedTag}/${p.case_study_title}`} page="work" {...p} />
+                    <ContentPostCard
+                      href={`/${selectedTag}/${p.case_study_title}`}
+                      page="work"
+                      {...p}
+                    />
                   </div>
                 ))
               ) : (
@@ -249,56 +283,16 @@ return (
                 </p>
               )}
             </div>
-          </div >
-        )
-        }
-
-
+          </div>
+        )}
 
         {/* See More / See Less */}
-        {
-          filteredPosts.length > 0 && (
-            <div className="text-center">
-              {(() => {
-                // If no tag selected → total is filteredPosts length
-                if (!selectedTag) {
-                  const total = filteredPosts.length;
-
-                  if (total > 9 && visiblePosts < total) {
-                    return (
-                      <Button
-                        className="w-fit mx-auto mt-[30px] md:mt-15"
-                        onClick={handleSeeMore}
-                        suffix={<LineArrow />}
-                      >
-                        SEE MORE
-                      </Button>
-                    );
-                  }
-
-                  if (total > 9 && visiblePosts >= total) {
-                    return (
-                      <Button
-                        className="w-fit mx-auto mt-[30px] md:mt-15"
-                        onClick={handleSeeLess}
-                        suffix={<LineArrow />}
-                      >
-                        SEE LESS
-                      </Button>
-                    );
-                  }
-
-                  return null;
-                }
-
-                // Tag selected → count safely
-                const total = _posts.filter(post =>
-                  post.tabs?.some(
-                    tab =>
-                      typeof tab === 'string' &&
-                      tab.toLowerCase() === selectedTag.toLowerCase()
-                  )
-                ).length;
+        {filteredPosts.length > 0 && (
+          <div className="text-center">
+            {(() => {
+              // If no tag selected → total is filteredPosts length
+              if (!selectedTag) {
+                const total = filteredPosts.length
 
                 if (total > 9 && visiblePosts < total) {
                   return (
@@ -309,7 +303,7 @@ return (
                     >
                       SEE MORE
                     </Button>
-                  );
+                  )
                 }
 
                 if (total > 9 && visiblePosts >= total) {
@@ -321,19 +315,52 @@ return (
                     >
                       SEE LESS
                     </Button>
-                  );
+                  )
                 }
 
-                return null;
-              })()}
-            </div>
-          )
-        }
+                return null
+              }
 
-      </div >
+              // Tag selected → count safely
+              const total = _posts.filter((post) =>
+                post.tabs?.some(
+                  (tab) =>
+                    typeof tab === 'string' &&
+                    tab.toLowerCase() === selectedTag.toLowerCase()
+                )
+              ).length
+
+              if (total > 9 && visiblePosts < total) {
+                return (
+                  <Button
+                    className="w-fit mx-auto mt-[30px] md:mt-15"
+                    onClick={handleSeeMore}
+                    suffix={<LineArrow />}
+                  >
+                    SEE MORE
+                  </Button>
+                )
+              }
+
+              if (total > 9 && visiblePosts >= total) {
+                return (
+                  <Button
+                    className="w-fit mx-auto mt-[30px] md:mt-15"
+                    onClick={handleSeeLess}
+                    suffix={<LineArrow />}
+                  >
+                    SEE LESS
+                  </Button>
+                )
+              }
+
+              return null
+            })()}
+          </div>
+        )}
+      </div>
 
       <TrustedBrandsSection className="py-12 md:pt-24 md:pb-12" />
-
 
       <script
         type="application/ld+json"
