@@ -106,8 +106,8 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
 
       if (isReload) {
         // Hard refresh → reset to 6 posts & scroll to tabs
-        setVisiblePosts(6)
-        sessionStorage.setItem("work-visiblePosts", "6")
+        setVisiblePosts(9)
+        sessionStorage.setItem("work-visiblePosts", "9")
         scrollToPosts()
       } else if (storedScroll && !isNaN(parseInt(storedScroll, 10))) {
         // Back/forward navigation → restore posts & scroll
@@ -119,8 +119,8 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
         }, 50)
       } else {
         // First visit → reset to 6 posts (NO SCROLL)
-        setVisiblePosts(6)
-        sessionStorage.setItem("work-visiblePosts", "6")
+        setVisiblePosts(9)
+        sessionStorage.setItem("work-visiblePosts", "9")
       }
     }
     restore()
@@ -129,12 +129,12 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
 
 
   useEffect(() => {
-    setVisiblePosts(6)
+    setVisiblePosts(9)
   }, [selectedTag])
 
   const handleTagClick = (tagUrl) => {
-    // Reset visible posts to 6 when switching tab
-    setVisiblePosts(6)
+    // Reset visible posts to 9 when switching tab
+    setVisiblePosts(9)
     setSelectedTag(tagUrl)
 
     // Shallow route update
@@ -159,7 +159,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
   }
 
   const handleSeeLess = () => {
-    setVisiblePosts(6)
+    setVisiblePosts(9)
     setTimeout(() => {
       const postsGrid = document.querySelector(".work-posts-section")
       const stickyTabs = document.querySelector(".sticky-tab-section")
@@ -264,7 +264,7 @@ return (
                 if (!selectedTag) {
                   const total = filteredPosts.length;
 
-                  if (total > 6 && visiblePosts < total) {
+                  if (total > 9 && visiblePosts < total) {
                     return (
                       <Button
                         className="w-fit mx-auto mt-[30px] md:mt-15"
@@ -276,7 +276,7 @@ return (
                     );
                   }
 
-                  if (total > 6 && visiblePosts >= total) {
+                  if (total > 9 && visiblePosts >= total) {
                     return (
                       <Button
                         className="w-fit mx-auto mt-[30px] md:mt-15"
@@ -300,7 +300,7 @@ return (
                   )
                 ).length;
 
-                if (total > 6 && visiblePosts < total) {
+                if (total > 9 && visiblePosts < total) {
                   return (
                     <Button
                       className="w-fit mx-auto mt-[30px] md:mt-15"
@@ -312,7 +312,7 @@ return (
                   );
                 }
 
-                if (total > 6 && visiblePosts >= total) {
+                if (total > 9 && visiblePosts >= total) {
                   return (
                     <Button
                       className="w-fit mx-auto mt-[30px] md:mt-15"
