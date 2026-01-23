@@ -15,18 +15,25 @@ export const createTestimonialData = [
   ,
   {
     key: 1,
-    quote:
+    quote: (
       <>
         <div>
-          Makerrs captured the very essence of our brand –the vibrant energy, the quirky charm, and the pure joy of gathering around delicious food. What was especially impressive was the creative strategy that led to the curation of design and copy. They took the colors, the iconic signages, the energy of the local markets, and transformed them into a fresh, modern expression. We&apos;ve seen a tremendous response since the launch. People are drawn to the unique identity. We couldn&apos;t be happier.
+          Makerrs captured the very essence of our brand –the vibrant energy,
+          the quirky charm, and the pure joy of gathering around delicious food.
+          What was especially impressive was the creative strategy that led to
+          the curation of design and copy. They took the colors, the iconic
+          signages, the energy of the local markets, and transformed them into a
+          fresh, modern expression. We&apos;ve seen a tremendous response since
+          the launch. People are drawn to the unique identity. We couldn&apos;t
+          be happier.
         </div>
-      </>,
+      </>
+    ),
     name: 'KUNCHERIA MARATTUKALAM',
     designation: 'FOUNDER & DIRECTOR',
     company: 'MARATT GROUP',
     image: {
-      srcSet:
-        '/img/testimonials/kuncheria_marattukalam.jpg',
+      srcSet: '/img/testimonials/kuncheria_marattukalam.jpg',
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -55,7 +62,7 @@ export const createTestimonialData = [
         '/img/testimonials/bharat.webp 533w, /img/testimonials/bharat.webp 1066w',
       sizes: '(max-width:768px) 533px, 1066px',
     },
-  }
+  },
 ]
 
 export const scs = {
@@ -217,9 +224,15 @@ export const similarPosts = [
     company: 'L74 Craft Cider',
     image: '/img/works/l74-strategy.jpg',
     alt: 'metro wholesale ad',
-    tags: ['Brand Strategy', 'Campaign Strategy', 'Creative Concepts', 'Content Production', 'Alcobev'],
+    tags: [
+      'Brand Strategy',
+      'Campaign Strategy',
+      'Creative Concepts',
+      'Content Production',
+      'Alcobev',
+    ],
     href: '/work/l74-case-study',
-  }
+  },
   // {
   //   key: 0,
   //   name: '5 STAR QUALITY',
@@ -247,7 +260,6 @@ export const similarPosts = [
   //   tags: ['Creative Ideation', 'Content Production'],
   //   href: '/work/create/swiggy-winter-jacket-case-study',
   // },
-
 ]
 export const campaignSimilarPosts = [
   {
@@ -256,16 +268,21 @@ export const campaignSimilarPosts = [
     name: 'Trip Different',
     company: 'L74 Craft Cider',
     image: '/img/works/l74-strategy.jpg',
-    tags: ['Brand Strategy', 'Campaign Strategy', 'Creative Concepts', 'Content Production', 'Alcobev'],
+    tags: [
+      'Brand Strategy',
+      'Campaign Strategy',
+      'Creative Concepts',
+      'Content Production',
+      'Alcobev',
+    ],
     alt: 'Trip Different with L74 Cider',
-
 
     thumbnail: {
       src: '/img/works/l74-placeholder.jpg',
       width: '606',
       height: '874',
     },
-    href: '/work/l74-case-study'
+    href: '/work/l74-case-study',
   },
   {
     key: 1,
@@ -280,7 +297,7 @@ export const campaignSimilarPosts = [
       width: '606',
       height: '874',
     },
-    href: '/work/create/indeed-case-study'
+    href: '/work/create/indeed-case-study',
   },
   {
     key: 2,
@@ -292,7 +309,6 @@ export const campaignSimilarPosts = [
     tags: ['Creative Ideation', 'Content Production', 'Content Production'],
     href: '/work/create/metro-wholesale-case-study',
   },
-
 ]
 
 export const scsPosts = [
@@ -320,41 +336,77 @@ export const scsPosts = [
 ]
 
 export const campaignPosts = [
+  {
+    key: 0,
+    name: 'Transforming how Indian SMBs Hire',
+    company: 'Indeed',
+    image: '/img/works/indeed.jpg',
+    alt: 'Indeed',
+    tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
+    href: '/brand-campaign/indeed-india-radhika-apte',
+  },
 
   {
-  key: 0,
-  name: 'Transforming how Indian SMBs Hire',
-  company: 'Indeed',
-  image: '/img/works/indeed.jpg',
-  alt: 'Indeed',
-  tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
-  href: '/brand-campaign/indeed-india-radhika-apte'
-},
+    key: 1,
+    name: 'Action-packed campaign film for Redmi Buds 6',
+    image: '/img/works/xiaomi_buds_6_work_thumbnail.png',
+    company: 'Xiaomi',
+    alt: 'Redmi Buds 6',
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    href: '/brand-campaign/xiaomi-buds-6',
+  },
 
-{
-  key: 1,
-  name: 'Action-packed campaign film for Redmi Buds 6',
-  image: '/img/works/xiaomi_buds_6_work_thumbnail.png',
-  company: 'Xiaomi',
-  alt: 'Redmi Buds 6',
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  href: '/brand-campaign/xiaomi-buds-6'
-},
-
-{
-  key: 2,
-  name: 'Transforming relationships for SME banks in U.S.A',
-  company: 'VYMO',
-  alt: 'VYMO',
-  image: '/img/works/vymo_sme.webp',
-  tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
-  href: '/brand-campaign/vymo-usa-banking',
-}
+  {
+    key: 2,
+    name: 'Transforming relationships for SME banks in U.S.A',
+    company: 'VYMO',
+    alt: 'VYMO',
+    image: '/img/works/vymo_sme.webp',
+    tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
+    href: '/brand-campaign/vymo-usa-banking',
+  },
+  {
+    key: 3,
+    name: 'Global Leaders: a Hiring Campaign',
+    image: '/img/case-study/infosys-global-leaders.webp',
+    company: 'Infosys',
+    alt: 'infosys-global-leaders',
+    tags: [
+      'Technology',
+      'Campaign',
+      'Employer Branding Video',
+      'Global Video Production',
+    ],
+    href: '/brand-campaign/infosys-global-employer-brand',
+  },
+  {
+    key: 4,
+    name: 'Branding and Launch Campaign for a Dessert Cafe',
+    company: 'P.U. Dingding',
+    alt: 'P.U. Dingding',
+    tags: [
+      'F&B',
+      'Brand Visual Identity',
+      'Launch Campaign',
+      'Social Media Content',
+    ],
+    image: '/img/works/pdd_intergrated_work_thumbnail.jpg',
+    href: '/brand-campaign/pudingding-cafe-design-launch',
+  },
+  {
+    key: 5,
+    name: "Campaign films: Season's EXTRA Earnings",
+    company: 'Swiggy',
+    image: '/img/works/Swiggy_NYE.png',
+    alt: 'Swiggy NYE',
+    tags: ['Digital Campaign', 'Ad Film', 'Quick Commerce'],
+    href: '/brand-campaign/swiggy-extra-earnings',
+  },
 ]
 
 export const contentSolutionPosts = [
@@ -364,8 +416,14 @@ export const contentSolutionPosts = [
     image: '/img/works/jewels_thumbnail.jpg',
     company: 'Taneira',
     alt: 'Jewels Of India',
-    tags: ['Short Film', 'Interview', 'Web Series', 'Handcrafted Jewellery', 'Craftsmanship'],
-    href: '/work/create/jewels-case-study'
+    tags: [
+      'Short Film',
+      'Interview',
+      'Web Series',
+      'Handcrafted Jewellery',
+      'Craftsmanship',
+    ],
+    href: '/work/create/jewels-case-study',
   },
   // {
   //   key: 1,
@@ -403,8 +461,14 @@ export const contentWorkPosts = [
     image: '/img/works/jewels_thumbnail.jpg',
     company: 'Taneira',
     alt: 'Jewels Of India',
-    tags: ['Short Film', 'Interview', 'Web Series', 'Handcrafted Jewellery', 'Craftsmanship'],
-    href: '/work/create/jewels-case-study'
+    tags: [
+      'Short Film',
+      'Interview',
+      'Web Series',
+      'Handcrafted Jewellery',
+      'Craftsmanship',
+    ],
+    href: '/work/create/jewels-case-study',
   },
   // {
   //   key: 1,
@@ -441,13 +505,19 @@ export const ccsPosts = [
     image: '/img/works/l74_strategy_service_work page.jpg',
     company: 'L74 Craft Cider',
     alt: 'Trip Different with L74 Cider',
-    tags: ['Brand Strategy', 'Campaign Strategy', 'Creative Concepts', 'Content Production', 'Alcobev'],
+    tags: [
+      'Brand Strategy',
+      'Campaign Strategy',
+      'Creative Concepts',
+      'Content Production',
+      'Alcobev',
+    ],
     thumbnail: {
       src: '/img/works/l74_strategy_service_work page.jpg',
       width: '606',
       height: '874',
     },
-    href: '/work/l74-case-study'
+    href: '/work/l74-case-study',
   },
   // {
   //   key: 0,
@@ -1424,13 +1494,18 @@ export const strategyPosts = [
     company: 'Lillia Care',
     image: '/img/works/lillia_img.jpg',
     alt: 'Lillia Care',
-    tags: ['Healthtech', 'Brand Identity', 'Website Design', 'Website Development'],
-    href: '/brand-designs/lillia-care-brand-launch'
+    tags: [
+      'Healthtech',
+      'Brand Identity',
+      'Website Design',
+      'Website Development',
+    ],
+    href: '/brand-designs/lillia-care-brand-launch',
   },
 
   {
     key: 1,
-    name: "Exicom Brand Refresh: Choose Smart. Charge Smart.",
+    name: 'Exicom Brand Refresh: Choose Smart. Charge Smart.',
     company: 'Exicom',
     image: '/img/case-study/exicom_brand_refresh_work.jpg',
     alt: 'Exicom',
@@ -1438,14 +1513,49 @@ export const strategyPosts = [
     href: '/brand-designs/exicom-EV-charger-rebrand',
   },
 
-
   {
     key: 2,
     name: 'Branding for an Indulgent Dessert Café',
     company: 'P.U. Dingding',
     image: '/img/works/pudingding-thumbnail.jpg',
-    tags: ['Brand Identity', 'Design Collateral', 'Film & Video Content', 'F&B'],
+    tags: [
+      'Brand Identity',
+      'Design Collateral',
+      'Film & Video Content',
+      'F&B',
+    ],
     href: '/brand-designs/pu-dingding-cafe',
+  },
+  {
+    key: 3,
+    name: 'Crafting a Symbol of Success in Hospitality',
+    company: 'Medalio',
+    image: '/img/case-study/medalio_thumbnail.webp',
+    tags: ['Hospitality', 'Brand Identity', 'Logo Design'],
+    href: '/brand-designs/medalio-hotel-brand-identity',
+  },
+  {
+    key: 4,
+    name: 'Branding for a Desi Street Food Restaurant',
+    company: 'Thelagram',
+    image: '/img/works/thelagram.jpg',
+    tags: [
+      'Brand Visual Identity',
+      'Pacakaging Design',
+      'Logo Design',
+      'Wall Branding',
+      'Digital Campaign',
+      'F&B',
+    ],
+    href: '/brand-design/thelagram-restaurant',
+  },
+  {
+    key: 5,
+    name: 'Augmented Reality that brought the automobile alive',
+    company: 'Bajaj Auto',
+    image: '/img/works/bajaj_pulsar_work_age.webp',
+    tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
+    href: '/brand-design/bajaj-pulsar-augmented-reality',
   },
   // {
   //   key: 2,
@@ -1462,18 +1572,18 @@ export const featuredPlay = ecs.slice(0, 8)
 
 export const workPosts = [
   {
-  key: 96,
-  name: 'Transforming how Indian SMBs Hire',
-  company: 'Indeed',
-  image: '/img/works/indeed.jpg',
-  alt: 'Indeed',
-  tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
-  tabs: ['Featured'],
-  case_study_title: 'indeed-india-radhika-apte',
-  href: '/brand-campaign/indeed-india-radhika-apte',
-  region: ['IN'] // only visible for India
-},
-{
+    key: 96,
+    name: 'Transforming how Indian SMBs Hire',
+    company: 'Indeed',
+    image: '/img/works/indeed.jpg',
+    alt: 'Indeed',
+    tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
+    tabs: ['Featured'],
+    case_study_title: 'indeed-india-radhika-apte',
+    href: '/brand-campaign/indeed-india-radhika-apte',
+    region: ['IN'], // only visible for India
+  },
+  {
     key: 97,
     name: '220% Organic YouTube Subscriber Growth in India',
     company: 'Indeed',
@@ -1483,7 +1593,7 @@ export const workPosts = [
     image: '/img/works/indeed_youtube_content_main_thumbnail.png',
     case_study_title: 'indeed-youtube-content',
     href: '/video-production/indeed-youtube-content',
-    region: ['IN'] // only visible for India
+    region: ['IN'], // only visible for India
   },
   {
     key: 0,
@@ -1492,10 +1602,15 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'infosys-global-leaders',
     tabs: ['Featured'],
-    tags: ['Technology', 'Campaign', 'Employer Branding Video', 'Global Video Production'],
+    tags: [
+      'Technology',
+      'Campaign',
+      'Employer Branding Video',
+      'Global Video Production',
+    ],
     case_study_title: 'infosys-global-employer-brand',
     href: '/brand-campaign/infosys-global-employer-brand',
-    region: []
+    region: [],
   },
   {
     key: 1,
@@ -1512,43 +1627,48 @@ export const workPosts = [
     ],
     case_study_title: 'xiaomi-buds',
     href: '/brand-campaign/xiaomi-buds',
-    region: []
+    region: [],
   },
   {
-  key: 98,
-  name: 'Never sweat the first game Campaign Films',
-  company: ' My 11 Circle',
-  image: '/img/works/my-11-circle.jpg',
-  alt: 'my 11 circle ',
-  tags: ['Digital Campaign', 'Ad Film', 'Fantasy Games'],
-  tabs: ['Featured'],
-  case_study_title: 'my11circle-case-study',
-  href: '/brand-campaign/my11circle-digital-ad-film',
-  region: ['IN'] // only visible for India
-},
-{
-  key: 99,
-  name: "Campaign: When you can't resist buying more",
-  company: 'Metro Wholesale',
-  alt: 'Swiggy',
-  tags: ['Retail', 'TV Campaign', 'Ad Film'],
-  tabs: ['Featured'],
-  image: '/img/works/metro-wholesale-one-minute.webp',
-  case_study_title: 'metro-wholesale-one-minute',
-  href: '/brand-campaign/metro-wholesale-one-more',
-  region: ['IN']
-},
+    key: 98,
+    name: 'Never sweat the first game Campaign Films',
+    company: ' My 11 Circle',
+    image: '/img/works/my-11-circle.jpg',
+    alt: 'my 11 circle ',
+    tags: ['Digital Campaign', 'Ad Film', 'Fantasy Games'],
+    tabs: ['Featured'],
+    case_study_title: 'my11circle-case-study',
+    href: '/brand-campaign/my11circle-digital-ad-film',
+    region: ['IN'], // only visible for India
+  },
+  {
+    key: 99,
+    name: "Campaign: When you can't resist buying more",
+    company: 'Metro Wholesale',
+    alt: 'Swiggy',
+    tags: ['Retail', 'TV Campaign', 'Ad Film'],
+    tabs: ['Featured'],
+    image: '/img/works/metro-wholesale-one-minute.webp',
+    case_study_title: 'metro-wholesale-one-minute',
+    href: '/brand-campaign/metro-wholesale-one-more',
+    region: ['IN'],
+  },
   {
     key: 2,
     name: 'Launching an AI-powered healthcare brand in record time',
     company: 'Lillia Care',
     image: '/img/works/lillia_img.jpg',
     alt: 'Lillia Care',
-    tags: ['Healthtech', 'Brand Identity', 'Website Design', 'Website Development'],
+    tags: [
+      'Healthtech',
+      'Brand Identity',
+      'Website Design',
+      'Website Development',
+    ],
     tabs: ['Featured'],
     case_study_title: 'lillia-care-brand-launch',
-    href: "/brand-designs/lillia-care-brand-launch",
-    region: []
+    href: '/brand-designs/lillia-care-brand-launch',
+    region: [],
   },
   {
     key: 3,
@@ -1565,13 +1685,12 @@ export const workPosts = [
     image: '/img/works/pdd_intergrated_work_thumbnail.jpg',
     case_study_title: 'pdd-integrated',
     href: '/brand-campaign/pudingding-cafe-design-launch',
-        region: []
-
+    region: [],
   },
 
   {
     key: 4,
-    name: "Powering education in war-torn Ukraine, with Street Child",
+    name: 'Powering education in war-torn Ukraine, with Street Child',
     company: 'Infosys',
     image: '/img/works/infosys_springboard.webp',
     alt: 'Infosys',
@@ -1579,8 +1698,7 @@ export const workPosts = [
     tabs: ['Featured'],
     case_study_title: 'csr-video-infosys-street-child',
     href: '/video-production/csr-video-infosys-street-child',
-        region: []
-
+    region: [],
   },
   {
     key: 5,
@@ -1589,38 +1707,45 @@ export const workPosts = [
     company: 'SLB',
     alt: 'slb',
     tabs: ['Featured'],
-    tags: ['Engineering', 'Campaign', 'Explainer Video', 'Demo Video', 'Interactive Video'],
+    tags: [
+      'Engineering',
+      'Campaign',
+      'Explainer Video',
+      'Demo Video',
+      'Interactive Video',
+    ],
     case_study_title: 'interactive-explainer-slb',
     href: '/brand-campaign/interactive-explainer-slb',
-        region: []
-
-
+    region: [],
   },
   {
     key: 6,
-    name: "Exicom Brand Refresh: Choose Smart. Charge Smart.",
+    name: 'Exicom Brand Refresh: Choose Smart. Charge Smart.',
     company: 'Exicom',
     image: '/img/case-study/exicom_brand_refresh_work.jpg',
     tags: ['E-Mobility', 'Design', 'Brand Transformation', 'Visual Identity'],
     tabs: ['Featured'],
     case_study_title: 'exicom-EV-charger-rebrand',
     href: '/brand-designs/exicom-EV-charger-rebrand',
-        region: []
-
+    region: [],
   },
 
   {
     key: 7,
-    name: "Gordon Ritter on the Future of Software",
+    name: 'Gordon Ritter on the Future of Software',
     company: 'Vymo',
     image: '/img/works/vymo_gordon_ritter.webp',
     alt: 'Vymo',
-    tags: ['SaaS', 'Thought Leadership Video', 'Corporate Film', 'Interview Video'],
+    tags: [
+      'SaaS',
+      'Thought Leadership Video',
+      'Corporate Film',
+      'Interview Video',
+    ],
     tabs: ['Featured'],
     case_study_title: 'vymo-gordon-ritter-thought-leadership-video',
     href: '/video-production/thought-leadership-vymo-gordon-ritter',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1633,9 +1758,7 @@ export const workPosts = [
     tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
     case_study_title: 'bajaj-pulsar-augmented-reality',
     href: '/brand-design/bajaj-pulsar-augmented-reality',
-        region: []
-
-
+    region: [],
   },
 
   {
@@ -1645,12 +1768,15 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'Immersive 3D Walkthrough for Infosys Topaz',
     tabs: ['Featured'],
-    tags: ['Technology', 'Interactive Experience', '3D Animation Video', 'Marketing Video'],
+    tags: [
+      'Technology',
+      'Interactive Experience',
+      '3D Animation Video',
+      'Marketing Video',
+    ],
     case_study_title: 'infosys-topaz-3d-interactive-experience',
     href: '/brand-design/3d-interactive-experience-infosys-topaz',
-        region: []
-
-
+    region: [],
   },
 
   {
@@ -1662,22 +1788,25 @@ export const workPosts = [
     tabs: ['Featured'],
     case_study_title: 'vymo-sme-bank-explainer-video',
     href: '/brand-campaign/vymo-usa-banking',
-        region: []
-
+    region: [],
   },
 
   {
     key: 11,
-    name: "Crafting a Unified Employer Brand Across Continents",
+    name: 'Crafting a Unified Employer Brand Across Continents',
     company: 'Infosys',
     image: '/img/works/infosys_eb_campaign_work_thumbnail.png',
     alt: 'Infosys',
-    tags: ['Technology', 'Employer Branding Campaign', 'Global Video Production', 'Interview Video'],
+    tags: [
+      'Technology',
+      'Employer Branding Campaign',
+      'Global Video Production',
+      'Interview Video',
+    ],
     tabs: ['Featured'],
     case_study_title: 'infosys-employer-branding',
     href: '/video-production/global-employer-branding',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1685,31 +1814,38 @@ export const workPosts = [
     name: 'Explainer Video for HRM SAAS product',
     company: 'MULTIPLIER',
     image: '/img/works/multiplier_work.webp',
-    tags: ['SaaS', 'Lead Gen Campaign', 'Product Launch Video', 'Explainer Video', '2D Animation Video'],
+    tags: [
+      'SaaS',
+      'Lead Gen Campaign',
+      'Product Launch Video',
+      'Explainer Video',
+      '2D Animation Video',
+    ],
     tabs: ['Featured'],
     case_study_title: 'multiplier-hr-saas-explainer-video',
     href: '/video-production/multiplier-explainer-video',
-        region: []
-
+    region: [],
   },
 
   {
     key: 13,
-    name: "AI-Powered Campaign That Inspires Employees To Imagine Their Best Selves",
+    name: 'AI-Powered Campaign That Inspires Employees To Imagine Their Best Selves',
     image: '/img/case-study/infosys_thrive_main_new.jpg',
     // company: 'Infosys',
     alt: 'AI-Powered Campaign - Employees Imagine their Best Selves',
     tabs: ['Featured'],
-    tags: ['Technology', 'AI', 'Digital Campaign', 'Hyper-Personalized Campaign'],
+    tags: [
+      'Technology',
+      'AI',
+      'Digital Campaign',
+      'Hyper-Personalized Campaign',
+    ],
     case_study_title: 'infosys-thrive-ai-powered-campaign',
     href: '/brand-campaign/employee-wellbeing-ai-experience',
-        region: []
-
+    region: [],
   },
 
-
   // Design starts
-
 
   {
     key: 14,
@@ -1717,25 +1853,28 @@ export const workPosts = [
     company: 'Lillia Care',
     image: '/img/works/lillia_img.jpg',
     alt: 'Lillia Care',
-    tags: ['Healthtech', 'Brand Identity', 'Website Design', 'Website Development'],
+    tags: [
+      'Healthtech',
+      'Brand Identity',
+      'Website Design',
+      'Website Development',
+    ],
     tabs: ['design'],
     case_study_title: 'lillia-care-brand-launch',
     href: '/brand-designs/lillia-care-brand-launch',
-        region: []
-
+    region: [],
   },
 
   {
     key: 15,
-    name: "Exicom Brand Refresh: Choose Smart. Charge Smart.",
+    name: 'Exicom Brand Refresh: Choose Smart. Charge Smart.',
     company: 'Exicom',
     image: '/img/case-study/exicom_brand_refresh_work.jpg',
     tags: ['E-Mobility', 'Design', 'Brand Transformation', 'Visual Identity'],
     tabs: ['design'],
     case_study_title: 'exicom-EV-charger-rebrand',
     href: '/brand-designs/exicom-EV-charger-rebrand',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1747,8 +1886,7 @@ export const workPosts = [
     tabs: ['design'],
     case_study_title: 'pu-dingding-cafe',
     href: '/brand-designs/pu-dingding-cafe',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1761,10 +1899,8 @@ export const workPosts = [
     tags: ['Hospitality', 'Brand Identity', 'Logo Design'],
     case_study_title: 'medalio-hotel-brand-identity',
     href: '/brand-designs/medalio-hotel-brand-identity',
-        region: []
-
+    region: [],
   },
-
 
   {
     key: 18,
@@ -1783,8 +1919,7 @@ export const workPosts = [
     ],
     case_study_title: 'thelagram',
     href: '/brand-design/thelagram-restaurant',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1797,9 +1932,7 @@ export const workPosts = [
     tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
     case_study_title: 'bajaj-pulsar-augmented-reality',
     href: '/brand-design/bajaj-pulsar-augmented-reality',
-        region: []
-
-
+    region: [],
   },
 
   {
@@ -1809,25 +1942,27 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'Immersive 3D Walkthrough for Infosys Topaz',
     tabs: ['design'],
-    tags: ['Technology', 'Interactive Experience', '3D Animation Video', 'Marketing Video'],
+    tags: [
+      'Technology',
+      'Interactive Experience',
+      '3D Animation Video',
+      'Marketing Video',
+    ],
     case_study_title: 'infosys-topaz-3d-interactive-experience',
     href: '/brand-design/infosys-topaz-3d-interactive-experience',
-        region: []
-
-
+    region: [],
   },
 
   {
     key: 21,
-    name: "Nationwide Activation Celebrating Customer Obsession",
+    name: 'Nationwide Activation Celebrating Customer Obsession',
     company: 'Axis Bank',
     image: '/img/case-study/axis_bank_work_thumbnail.jpg',
     tags: ['Finance', 'Internal Communications Campaign', 'Marketing Campaign'],
     tabs: ['design'],
     case_study_title: 'axis-bank-activation-campaign',
     href: '/brand-design/axis-bank-activation-campaign',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1835,12 +1970,16 @@ export const workPosts = [
     name: 'Social Media Campaign: Meet the AI-First Employees',
     company: 'Infosys',
     image: '/img/works/infy-ai-first-work.webp',
-    tags: ['Technology', 'Digital Campaign', 'Employer Branding video', 'Social Media Content'],
+    tags: [
+      'Technology',
+      'Digital Campaign',
+      'Employer Branding video',
+      'Social Media Content',
+    ],
     tabs: ['design'],
     case_study_title: 'animated-case-study-videos-infosys-employees',
     href: '/brand-campaign/animated-case-study-videos-infosys-employees',
-        region: []
-
+    region: [],
   },
 
   {
@@ -1853,22 +1992,24 @@ export const workPosts = [
     tags: ['Sports', '3D Billboard Animation'],
     case_study_title: '3d-logo-animation-mumbai-indians',
     href: '/video-production/3d-logo-animation-mumbai-indians',
-        region: []
-
-
+    region: [],
   },
   {
     key: 24,
-    name: "A Design Gallery on Sustainability",
+    name: 'A Design Gallery on Sustainability',
     image: '/img/works/infosys-living-labs-gallery.jpg',
     company: 'Infosys',
     alt: 'infosys-living-labs-gallery',
     tabs: ['design'],
-    tags: ['Technology', 'Integrated Design Services', 'Brand Experience', 'ESG'],
+    tags: [
+      'Technology',
+      'Integrated Design Services',
+      'Brand Experience',
+      'ESG',
+    ],
     case_study_title: 'infosys-sustainability-gallery',
-    href: '/brand-design/infosys-sustainability-gallery',    
-        region: []
-
+    href: '/brand-design/infosys-sustainability-gallery',
+    region: [],
   },
 
   {
@@ -1876,15 +2017,16 @@ export const workPosts = [
     name: "Office Branding for Biocon's Global Headquarters",
     company: 'Biocon',
     image: '/img/case-study/biocon_work_thumbnail.png',
-    tags: ['Biopharmaceutical', 'Integrated Design Services', 'Brand Experience'],
+    tags: [
+      'Biopharmaceutical',
+      'Integrated Design Services',
+      'Brand Experience',
+    ],
     tabs: ['design'],
     case_study_title: 'biocon-office-branding',
     href: '/brand-design/biocon-office-branding',
-        region: []
-
+    region: [],
   },
-
-
 
   // Videos starts
 
@@ -1895,11 +2037,15 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'infosys-global-leaders',
     tabs: ['videos'],
-    tags: ['Technology', 'Campaign', 'Employer Branding Video', 'Global Video Production'],
+    tags: [
+      'Technology',
+      'Campaign',
+      'Employer Branding Video',
+      'Global Video Production',
+    ],
     case_study_title: 'infosys-global-leaders-employer-branding',
     href: '/brand-campaign/infosys-global-employer-brand',
-        region: []
-
+    region: [],
   },
   {
     key: 27,
@@ -1911,33 +2057,41 @@ export const workPosts = [
     image: '/img/works/indeed_youtube_content_main_thumbnail.png',
     case_study_title: 'indeed-youtube-content',
     href: '/video-production/indeed-youtube-content',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 28,
     name: 'Campaign Explainer Video for HRM SAAS product',
     company: 'MULTIPLIER',
     image: '/img/works/multiplier_work.webp',
-    tags: ['SaaS', 'Lead Gen Campaign', 'Product Launch Video', 'Explainer Video', '2D Animation Video'],
+    tags: [
+      'SaaS',
+      'Lead Gen Campaign',
+      'Product Launch Video',
+      'Explainer Video',
+      '2D Animation Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'multiplier-hr-saas-explainer-video',
     href: '/video-production/multiplier-explainer-video',
-        region: []
-
+    region: [],
   },
   {
     key: 29,
-    name: "Gordon Ritter on the Future of Software",
+    name: 'Gordon Ritter on the Future of Software',
     company: 'Vymo',
     image: '/img/works/vymo_gordon_ritter.webp',
     alt: 'Vymo',
-    tags: ['SaaS', 'Thought Leadership Video', 'Corporate Film', 'Interview Video'],
+    tags: [
+      'SaaS',
+      'Thought Leadership Video',
+      'Corporate Film',
+      'Interview Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'vymo-gordon-ritter-thought-leadership-video',
     href: '/video-production/thought-leadership-vymo-gordon-ritter',
-        region: []
-
+    region: [],
   },
   {
     key: 30,
@@ -1949,63 +2103,77 @@ export const workPosts = [
     image: '/img/works/taneira_main_thumbnail.png',
     case_study_title: 'taneira-sanganeri',
     href: '/video-production/fashion-taneira-sanganeri',
-        region: []
-
+    region: [],
   },
   {
     key: 31,
     name: "Celebrating Rural Women in India's Auto Manufacturing",
     company: 'Tata Motors',
     alt: " Celebrating Rural Women in India's Auto Manufacturing",
-    tags: ['Manufacturing', 'Employer Branding', 'Corporate Communication', 'Diversity & Inclusion'],
+    tags: [
+      'Manufacturing',
+      'Employer Branding',
+      'Corporate Communication',
+      'Diversity & Inclusion',
+    ],
     tabs: ['videos'],
     image: '/img/works/womens-at-tata-autocamp.webp',
     case_study_title: 'women-in-auto-manufacturing',
     href: '/video-production/tata-inclusion-auto-comp',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 32,
-    name: "Unveiling Harmony Direct 2.0 - Electric Fleet Charger",
+    name: 'Unveiling Harmony Direct 2.0 - Electric Fleet Charger',
     company: 'Exicom',
     image: '/img/works/exicom_work_thumbnail.png',
     alt: 'Exicom',
-    tags: ['Mobility', 'Product Launch Video', 'Marketing Video', '3D Animation Video'],
+    tags: [
+      'Mobility',
+      'Product Launch Video',
+      'Marketing Video',
+      '3D Animation Video',
+    ],
     tabs: ['videos'],
     case_study_title: '3d-product-reveal-video-exicom',
     href: '/video-production/3d-product-reveal-video-exicom',
-        region: []
-
+    region: [],
   },
   {
     key: 33,
-    name: "Global Case Study Videos for Infosys",
+    name: 'Global Case Study Videos for Infosys',
     company: 'Infosys',
     image: '/img/works/wsj-thumbnail.png',
     alt: 'Infosys',
-    tags: ['Technology', 'Case Study Video', 'Testimonial Video', 'Global Video Production'],
+    tags: [
+      'Technology',
+      'Case Study Video',
+      'Testimonial Video',
+      'Global Video Production',
+    ],
     tabs: ['videos'],
     case_study_title: 'infosys-wsj-global-case-study-video',
     href: '/video-production/case-study-videos-infosys-wsj',
-        region: []
-
+    region: [],
   },
   {
     key: 34,
     name: 'HIRING STEM EDUCATORS FOR INDONESIA',
     company: 'COLEARN',
     image: '/img/works/stem-educators-wanted.png',
-    tags: ['Ed-tech', 'Employer Branding & Recruitment Campaign', 'Hiring Video'],
+    tags: [
+      'Ed-tech',
+      'Employer Branding & Recruitment Campaign',
+      'Hiring Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'colearn-stem-educators-recruitment-video',
     href: '/video-production/recruitment-video-colearn-education',
-        region: []
-
+    region: [],
   },
   {
     key: 35,
-    name: "Powering education in war-torn Ukraine, with Street Child",
+    name: 'Powering education in war-torn Ukraine, with Street Child',
     company: 'Infosys',
     image: '/img/works/infosys_springboard.webp',
     alt: 'Infosys',
@@ -2013,22 +2181,24 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'csr-video-infosys-street-child',
     href: '/video-production/csr-video-infosys-street-child',
-        region: []
-
+    region: [],
   },
   {
     key: 36,
     name: 'Social Media Campaign: Meet the AI-First Employees',
     company: 'Infosys',
     image: '/img/works/infy-ai-first-work.webp',
-    tags: ['Technology', 'Digital Campaign', 'Employer Branding video', 'Social Media Content'],
+    tags: [
+      'Technology',
+      'Digital Campaign',
+      'Employer Branding video',
+      'Social Media Content',
+    ],
     tabs: ['videos'],
     case_study_title: 'animated-case-study-videos-infosys-employees',
     href: '/brand-campaign/animated-case-study-videos-infosys-employees',
-        region: []
-
-  }
-  ,
+    region: [],
+  },
   {
     key: 37,
     name: 'Launching a Sports Brand logo with a 3D Billboard',
@@ -2039,21 +2209,19 @@ export const workPosts = [
     tags: ['Sports', '3D Billboard Animation'],
     case_study_title: '3d-logo-animation-mumbai-indians',
     href: '/video-production/3d-logo-animation-mumbai-indians',
-        region: []
-
+    region: [],
   },
   {
     key: 38,
     name: 'A GenAI Microdrama for Bharat',
     image: '/img/works/class-room-poster.jpg',
-    company: 'Red Bangle',
-    alt: 'Red Bangle',
+    company: 'Makerrs',
+    alt: 'Makerrs',
     tabs: ['videos'],
     tags: ['Gen AI Videos', 'Short-form Content', 'Digital Storytelling'],
     case_study_title: 'shaanu-ka-viva',
     href: '/video-production/microdrama-shaanu-ka-viva',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 39,
@@ -2065,21 +2233,24 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'mygate-case-study',
     href: '/video-production/poetic-video-mygate',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 40,
     name: 'A Campaign film for Xiaomi Pocket Power Bank',
     company: 'Xiaomi',
     alt: 'A Campaign film for Xiaomi Pocket Power Bank',
-    tags: ['Consumer Electronics', 'Ad Film', 'Digital Campaign', 'Product Launch Campaign'],
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
     tabs: ['videos'],
     image: '/img/works/xiaomi-thumnail.webp',
     case_study_title: 'xiaomi-pocket-power-bank',
     href: '/video-production/3d-product-video-xiaomi-mini-power-bank',
-        region: []
-
+    region: [],
   },
   {
     key: 41,
@@ -2088,11 +2259,15 @@ export const workPosts = [
     alt: 'Cobalt Community Launch',
     tabs: ['videos'],
     image: '/img/works/cobalt_community.jpg',
-    tags: ['Technology', 'Digital Campaign', 'Platform Launch Video', '2D Animation Video'],
+    tags: [
+      'Technology',
+      'Digital Campaign',
+      'Platform Launch Video',
+      '2D Animation Video',
+    ],
     case_study_title: 'infosys-cobalt-community-launch-video',
     href: '/video-production/abstract-animation-video-infosys-cobalt-launch',
-        region: []
-
+    region: [],
   },
   {
     key: 42,
@@ -2104,8 +2279,7 @@ export const workPosts = [
     image: '/img/works/mygate_rewards_Thumbnail.png',
     case_study_title: 'mygate-rewards-recognition',
     href: '/video-production/mygate-rewards-recognition',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 43,
@@ -2117,8 +2291,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'wipro-australia-corporate-film',
     href: '/video-production/wipro-australia-corporate-film',
-        region: []
-
+    region: [],
   },
   {
     key: 44,
@@ -2130,8 +2303,7 @@ export const workPosts = [
     tags: ['Quick Commerce', 'Gen AI Video', 'Ad Film'],
     case_study_title: 'ai-video-swiggy',
     href: '/video-production/ai-video-swiggy',
-        region: []
-
+    region: [],
   },
   {
     key: 45,
@@ -2143,8 +2315,7 @@ export const workPosts = [
     tags: ['Video Content', 'Employer Branding', 'Sports League', 'Featured'],
     case_study_title: 'tata-womens-cricket-league',
     href: '/video-production/rap-video-tata-womens-cricket-league',
-        region: []
-
+    region: [],
   },
   {
     key: 46,
@@ -2156,8 +2327,7 @@ export const workPosts = [
     image: '/img/works/swiggy-thumbnail.webp',
     case_study_title: 'app-walkthrough-swiggy-delivery',
     href: '/brand-campaign/app-walkthrough-swiggy-delivery',
-        region: ['IN']
-
+    region: ['IN'],
   },
   {
     key: 47,
@@ -2166,11 +2336,15 @@ export const workPosts = [
     company: 'Hansel',
     alt: 'How Hansel Helps Brands Boost Conversions',
     tabs: ['videos'],
-    tags: ['SaaS', 'Explainer Video', 'Marketing Video', 'Product Launch Video'],
+    tags: [
+      'SaaS',
+      'Explainer Video',
+      'Marketing Video',
+      'Product Launch Video',
+    ],
     case_study_title: 'hansel-saas-explainer-video',
     href: '/video-production/saas-explainer-video-hansel',
-        region: []
-
+    region: [],
   },
   {
     key: 48,
@@ -2179,11 +2353,16 @@ export const workPosts = [
     company: 'SLB',
     alt: 'slb',
     tabs: ['videos'],
-    tags: ['Engineering', 'Campaign', 'Explainer Video', 'Demo Video', 'Interactive Video'],
+    tags: [
+      'Engineering',
+      'Campaign',
+      'Explainer Video',
+      'Demo Video',
+      'Interactive Video',
+    ],
     case_study_title: 'interactive-explainer-slb',
     href: '/brand-campaign/interactive-explainer-slb',
-        region: []
-
+    region: [],
   },
   {
     key: 49,
@@ -2195,8 +2374,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'infosys-business-agility-solution',
     href: '/video-production/stock-footage-video-infosys-business-agility',
-        region: []
-
+    region: [],
   },
   {
     key: 50,
@@ -2208,8 +2386,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'ge-aerospace-corporate-film',
     href: '/video-production/ge-aerospace-corporate-film',
-        region: []
-
+    region: [],
   },
   {
     key: 51,
@@ -2221,8 +2398,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'project-loom',
     href: '/video-production/documentary-taneira-fashion',
-        region: []
-
+    region: [],
   },
   {
     key: 52,
@@ -2230,12 +2406,16 @@ export const workPosts = [
     company: 'Treebo Hotels',
     image: '/img/works/treebo_img.webp',
     alt: 'Treebo Hotels',
-    tags: ['Hospitality Tech', 'Hiring Video', 'Employer Branding', 'Testimonial Video'],
+    tags: [
+      'Hospitality Tech',
+      'Hiring Video',
+      'Employer Branding',
+      'Testimonial Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'hotel-superhero-saas-hiring-video',
     href: '/video-production/hiring-video-hotel-superhero',
-        region: []
-
+    region: [],
   },
   {
     key: 53,
@@ -2244,11 +2424,15 @@ export const workPosts = [
     company: 'HealthifyMe App',
     alt: 'How a Healthtech Startup Gamified Workplace Wellness',
     tabs: ['videos'],
-    tags: ['Health & Fitness', 'Marketing Campaign', 'Product Launch Video', 'Testimonial and Case Study Videos'],
+    tags: [
+      'Health & Fitness',
+      'Marketing Campaign',
+      'Product Launch Video',
+      'Testimonial and Case Study Videos',
+    ],
     case_study_title: 'healthifyme-employee-wellness-app-video',
     href: '/video-production/employee-wellness-healthifyme-app-video',
-    region: []
-
+    region: [],
   },
   {
     key: 54,
@@ -2260,20 +2444,23 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'documentary-tanishq-jewels',
     href: '/video-production/documentary-tanishq-jewels',
-        region: []
-
+    region: [],
   },
   {
     key: 55,
     name: 'HEALTHTECH AND INSURTECH CASE STUDY VIDEOS FOR HIMSS',
     company: 'WIPRO',
     image: '/img/works/casestudy-for-himss.webp',
-    tags: ['Healthtech', 'Case Study Video', 'Explainer Video', '2D Animation Video'],
+    tags: [
+      'Healthtech',
+      'Case Study Video',
+      'Explainer Video',
+      '2D Animation Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'wipro-healthtech-case-study-videos',
     href: '/video-production/healthcare-case-study-video-wipro',
-        region: []
-
+    region: [],
   },
   {
     key: 56,
@@ -2285,8 +2472,7 @@ export const workPosts = [
     tags: ['MedTech', 'PR Video', 'Video Report'],
     case_study_title: 'dozee-beds-healthcare-video-report',
     href: '/video-production/video-report-dozee-public-health',
-        region: []
-
+    region: [],
   },
   {
     key: 57,
@@ -2295,11 +2481,15 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'Immersive 3D Walkthrough for Infosys Topaz',
     tabs: ['videos'],
-    tags: ['Technology', 'Interactive Experience', '3D Animation Video', 'Marketing Video'],
+    tags: [
+      'Technology',
+      'Interactive Experience',
+      '3D Animation Video',
+      'Marketing Video',
+    ],
     case_study_title: 'infosys-topaz-3d-interactive-experience',
     href: '/brand-design/3d-interactive-experience-infosys-topaz',
-        region: []
-
+    region: [],
   },
   {
     key: 58,
@@ -2311,8 +2501,7 @@ export const workPosts = [
     tags: ['Social Network', 'Explainer Video', '2D Animation Video'],
     case_study_title: 'koo-self-verification-explainer-video',
     href: '/video-production/explainer-video-koo',
-        region: []
-
+    region: [],
   },
   {
     key: 59,
@@ -2324,8 +2513,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'darwinbox-hiring-video',
     href: '/video-production/hiring-video-darwinbox',
-        region: []
-
+    region: [],
   },
   {
     key: 60,
@@ -2337,8 +2525,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'taneira-cyanotype',
     href: '/video-production/fashion-taneira-cyanotype',
-        region: []
-
+    region: [],
   },
   {
     key: 61,
@@ -2349,8 +2536,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'explainer-video-vymo-USA-banking',
     href: '/brand-campaign/explainer-video-vymo-USA-banking',
-        region: []
-
+    region: [],
   },
   {
     key: 62,
@@ -2358,12 +2544,16 @@ export const workPosts = [
     company: 'Texas Instruments',
     image: '/img/works/ti_main_work_thumbnail.png',
     alt: 'Texas Instruments',
-    tags: ['Semiconductor Manufacturing', 'Employer Branding', 'Corporate Commuication', 'Culture Video'],
+    tags: [
+      'Semiconductor Manufacturing',
+      'Employer Branding',
+      'Corporate Commuication',
+      'Culture Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'people-first-brand-films-for-ti',
     href: '/video-production/culture-videos-texas-instruments',
-        region: []
-
+    region: [],
   },
   {
     key: 63,
@@ -2371,12 +2561,16 @@ export const workPosts = [
     company: 'Infosys',
     image: '/img/works/life_infosys_work_thumbnail.png',
     alt: 'Infosys',
-    tags: ['Technology', 'Hiring Video', 'Employer Branding Video`', 'Culture Video'],
+    tags: [
+      'Technology',
+      'Hiring Video',
+      'Employer Branding Video`',
+      'Culture Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'infosys-campus-recruitment-video',
     href: '/video-production/recruitment-video-infosys-campus',
-        region: []
-
+    region: [],
   },
   {
     key: 64,
@@ -2388,8 +2582,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'women-in-STEM-documentary',
     href: '/video-production/women-in-STEM-documentary',
-        region: []
-
+    region: [],
   },
   {
     key: 65,
@@ -2401,8 +2594,7 @@ export const workPosts = [
     tags: ['Video Content', 'YouTube Series'],
     case_study_title: 'lakshmi-rebecca-show',
     href: '/video-podcast/podcast-lakshmi-rebecca',
-        region: []
-
+    region: [],
   },
   {
     key: 66,
@@ -2410,12 +2602,16 @@ export const workPosts = [
     company: 'Infosys',
     image: '/img/works/infosys_eb_campaign_work_thumbnail.png',
     alt: 'Infosys',
-    tags: ['Technology', 'Employer Branding Campaign', 'Global Video Production', 'Interview Video'],
+    tags: [
+      'Technology',
+      'Employer Branding Campaign',
+      'Global Video Production',
+      'Interview Video',
+    ],
     tabs: ['videos'],
     case_study_title: 'infosys-employer-branding',
     href: '/video-production/employer-branding-videos-infosys',
-        region: []
-
+    region: [],
   },
   {
     key: 67,
@@ -2424,11 +2620,16 @@ export const workPosts = [
     company: 'Infosys Equinox',
     alt: 'infy-equinox',
     tabs: ['videos'],
-    tags: ['SaaS', 'Marketing Campaign', 'Brand Launch', 'Video', 'Thought Leadership'],
+    tags: [
+      'SaaS',
+      'Marketing Campaign',
+      'Brand Launch',
+      'Video',
+      'Thought Leadership',
+    ],
     case_study_title: 'infosys-equinox-brand-launch',
     href: '/brand-campaign/launch-infosys-equinox',
-        region: []
-
+    region: [],
   },
   {
     key: 68,
@@ -2440,8 +2641,7 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'werise-sustainable-housing-documentary',
     href: '/video-production/sustainable-housing-documentary',
-        region: []
-
+    region: [],
   },
   {
     key: 69,
@@ -2453,440 +2653,425 @@ export const workPosts = [
     tabs: ['videos'],
     case_study_title: 'ashirvad-plumbing-school-csr-video',
     href: '/video-production/csr-video-ashirvad',
-        region: []
-
+    region: [],
+  },
+  {
+    key: 111,
+    name: 'Case Study Video: Tech for Safe Mining',
+    company: 'Infosys',
+    // image: '/img/case-study/shirvad_pipes.png',
+    alt: 'covid',
+    tags: ['2.5D Animation', 'Mining', 'Case Study Video', 'Tech Marketing Video', 'Pandemic'],
+    tabs: ['videos'],
+    case_study_title: 'Case Study Video: Tech for Safe Mining',
+    href: '/video-production/covid-19',
+    region: [],
   },
 
   // Campaign starts
 
- {
-  key: 70,
-  name: 'Transforming how Indian SMBs Hire',
-  company: 'Indeed',
-  image: '/img/works/indeed.jpg',
-  alt: 'Indeed',
-  tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
-  tabs: ['campaign'],
-  case_study_title: 'indeed-india-radhika-apte',
-  href: '/brand-campaign/indeed-india-radhika-apte',
-      region: ['IN']
+  {
+    key: 70,
+    name: 'Transforming how Indian SMBs Hire',
+    company: 'Indeed',
+    image: '/img/works/indeed.jpg',
+    alt: 'Indeed',
+    tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
+    tabs: ['campaign'],
+    case_study_title: 'indeed-india-radhika-apte',
+    href: '/brand-campaign/indeed-india-radhika-apte',
+    region: ['IN'],
+  },
 
-},
+  {
+    key: 71,
+    name: 'Action-packed campaign film for Redmi Buds 6',
+    image: '/img/works/xiaomi_buds_6_work_thumbnail.png',
+    company: 'Xiaomi',
+    alt: 'Redmi Buds 6',
+    tabs: ['campaign'],
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    case_study_title: 'xiaomi-buds',
+    href: '/brand-campaign/xiaomi-buds-6',
+    region: [],
+  },
 
-{
-  key: 71,
-  name: 'Action-packed campaign film for Redmi Buds 6',
-  image: '/img/works/xiaomi_buds_6_work_thumbnail.png',
-  company: 'Xiaomi',
-  alt: 'Redmi Buds 6',
-  tabs: ['campaign'],
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  case_study_title: 'xiaomi-buds',
-  href: '/brand-campaign/xiaomi-buds-6',
-      region: []
+  {
+    key: 72,
+    name: 'Transforming relationships for SME banks in U.S.A',
+    company: 'VYMO',
+    image: '/img/works/vymo_sme.webp',
+    tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
+    tabs: ['campaign'],
+    case_study_title: 'vymo-sme-bank-explainer-video',
+    href: '/brand-campaign/vymo-usa-banking',
+    region: [],
+  },
 
-},
+  {
+    key: 73,
+    name: 'Global Leaders: a Hiring Campaign',
+    image: '/img/case-study/infosys-global-leaders.webp',
+    company: 'Infosys',
+    alt: 'infosys-global-leaders',
+    tabs: ['campaign'],
+    tags: [
+      'Technology',
+      'Campaign',
+      'Employer Branding Video',
+      'Global Video Production',
+    ],
+    case_study_title: 'infosys-global-leaders-employer-branding',
+    href: '/brand-campaign/infosys-global-employer-brand',
+    region: [],
+  },
 
-{
-  key: 72,
-  name: 'Transforming relationships for SME banks in U.S.A',
-  company: 'VYMO',
-  image: '/img/works/vymo_sme.webp',
-  tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
-  tabs: ['campaign'],
-  case_study_title: 'vymo-sme-bank-explainer-video',
-  href: '/brand-campaign/vymo-usa-banking',
-      region: []
+  {
+    key: 74,
+    name: 'Branding and Launch Campaign for a Dessert Cafe',
+    company: 'P.U. Dingding',
+    alt: 'P.U. Dingding',
+    tags: [
+      'F&B',
+      'Brand Visual Identity',
+      'Launch Campaign',
+      'Social Media Content',
+    ],
+    tabs: ['campaign'],
+    image: '/img/works/pdd_intergrated_work_thumbnail.jpg',
+    case_study_title: 'pdd-integrated',
+    href: '/brand-campaign/pudingding-cafe-design-launch',
+    region: [],
+  },
 
-},
+  {
+    key: 75,
+    name: "Campaign films: Season's EXTRA Earnings",
+    company: 'Swiggy',
+    image: '/img/works/Swiggy_NYE.png',
+    alt: 'Swiggy NYE',
+    tags: ['Digital Campaign', 'Ad Film', 'Quick Commerce'],
+    tabs: ['campaign'],
+    case_study_title: 'swiggy-extra-earning-case-study',
+    href: '/brand-campaign/swiggy-extra-earnings',
+    region: ['IN'],
+  },
 
-{
-  key: 73,
-  name: 'Global Leaders: a Hiring Campaign',
-  image: '/img/case-study/infosys-global-leaders.webp',
-  company: 'Infosys',
-  alt: 'infosys-global-leaders',
-  tabs: ['campaign'],
-  tags: [
-    'Technology',
-    'Campaign',
-    'Employer Branding Video',
-    'Global Video Production'
-  ],
-  case_study_title: 'infosys-global-leaders-employer-branding',
-  href: '/brand-campaign/infosys-global-employer-brand',
-      region: []
+  {
+    key: 76,
+    name: 'Launching a brand that makes commerce human',
+    image: '/img/case-study/infy-equinox.webp',
+    company: 'Infosys Equinox',
+    alt: 'infy-equinox',
+    tabs: ['campaign'],
+    tags: [
+      'SaaS',
+      'Marketing Campaign',
+      'Brand Launch',
+      'Video',
+      'Thought Leadership',
+    ],
+    case_study_title: 'infosys-equinox-brand-launch',
+    href: '/brand-campaign/infosys-equinox-launch',
+    region: [],
+  },
 
-},
+  {
+    key: 77,
+    name: 'Launch Campaign for Redmi A4 5G',
+    company: 'Xiaomi',
+    image: '/img/works/xiaomi-a4-5g.png',
+    alt: 'Launch Campaign for Redmi A4 5G',
+    tabs: ['campaign'],
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    case_study_title: 'xiaomi-a4-5g',
+    href: '/brand-campaign/xiaomi-a4-5g-phone',
+    region: ['IN'],
+  },
 
-{
-  key: 74,
-  name: 'Branding and Launch Campaign for a Dessert Cafe',
-  company: 'P.U. Dingding',
-  alt: 'P.U. Dingding',
-  tags: [
-    'F&B',
-    'Brand Visual Identity',
-    'Launch Campaign',
-    'Social Media Content'
-  ],
-  tabs: ['campaign'],
-  image: '/img/works/pdd_intergrated_work_thumbnail.jpg',
-  case_study_title: 'pdd-integrated',
-  href: '/brand-campaign/pudingding-cafe-design-launch',
-      region: []
+  {
+    key: 78,
+    name: 'Campaign film for Door Step Gold Loans',
+    image: '/img/works/indiagold_thumbanail.webp',
+    company: 'IndiaGold',
+    alt: 'IndiaGold',
+    tabs: ['campaign'],
+    tags: ['Digital Campaign', 'Ad Film', 'Fintech'],
+    case_study_title: 'indiagold',
+    href: '/brand-campaign/indiagold',
+    region: ['IN'],
+  },
 
-},
+  {
+    key: 79,
+    name: 'Crafting a Unified Employer Brand Across Continents',
+    company: 'Infosys',
+    image: '/img/works/infosys_eb_campaign_work_thumbnail.png',
+    alt: 'Infosys',
+    tabs: ['campaign'],
+    tags: [
+      'Technology',
+      'Employer Branding Campaign',
+      'Global Video Production',
+      'Interview Video',
+    ],
+    case_study_title: 'infosys-employer-branding',
+    href: '/video-production/global-employer-branding',
+    region: [],
+  },
 
-{
-  key: 75,
-  name: "Campaign films: Season's EXTRA Earnings",
-  company: 'Swiggy',
-  image: '/img/works/Swiggy_NYE.png',
-  alt: 'Swiggy NYE',
-  tags: ['Digital Campaign', 'Ad Film', 'Quick Commerce'],
-  tabs: ['campaign'],
-  case_study_title: 'swiggy-extra-earning-case-study',
-  href: '/brand-campaign/swiggy-extra-earnings',
-      region: ['IN']
+  {
+    key: 80,
+    name: 'Trip Different with L74 Ciders',
+    company: 'L74 Craft Cider',
+    alt: 'Trip Different with L74 Cider',
+    tags: [
+      'Brand Strategy',
+      'Brand Postioning',
+      'Brand Launch Strategy',
+      'Digital Campaign',
+      'Social Media Content',
+      'Alcobev',
+    ],
+    tabs: ['campaign'],
+    image: '/img/works/l74_strategy_service_work page.jpg',
+    case_study_title: 'l74-case-study',
+    href: '/brand-campaign/l74-ciders-social-media',
+    region: [],
+  },
 
-},
+  {
+    key: 81,
+    name: 'Never sweat the first game Campaign Films',
+    company: ' My 11 Circle',
+    image: '/img/works/my-11-circle.jpg',
+    alt: 'my 11 circle ',
+    tags: ['Digital Campaign', 'Ad Film', 'Fantasy Games'],
+    tabs: ['campaign'],
+    case_study_title: 'my11circle-case-study',
+    href: '/brand-campaign/my11circle-digital-ad-film',
+    region: ['IN'],
+  },
 
-{
-  key: 76,
-  name: 'Launching a brand that makes commerce human',
-  image: '/img/case-study/infy-equinox.webp',
-  company: 'Infosys Equinox',
-  alt: 'infy-equinox',
-  tabs: ['campaign'],
-  tags: [
-    'SaaS',
-    'Marketing Campaign',
-    'Brand Launch',
-    'Video',
-    'Thought Leadership'
-  ],
-  case_study_title: 'infosys-equinox-brand-launch',
-  href: '/brand-campaign/infosys-equinox-launch',
-      region: []
+  {
+    key: 82,
+    name: 'Social Media Campaign: Meet the AI-First Employees',
+    company: 'Infosys',
+    image: '/img/works/infy-ai-first-work.webp',
+    tags: [
+      'Technology',
+      'Digital Campaign',
+      'Employer Branding video',
+      'Social Media Content',
+    ],
+    tabs: ['campaign'],
+    case_study_title: 'animated-case-study-videos-Infosys-employees',
+    href: '/brand-campaign/animated-case-study-videos',
+    region: [],
+  },
 
-},
+  {
+    key: 83,
+    name: 'A Trimmer Launch Campaign that’s as Sharp as the Product',
+    company: 'Xiaomi',
+    alt: 'A Trimmer Launch Campaign that’s as Sharp as the Product',
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    tabs: ['campaign'],
+    image: '/img/works/xiaomi-bread-trimmer.webp',
+    case_study_title: 'xiaomi-beard-trimmer',
+    href: '/brand-campaign/xiaomi-beard-trimmer',
+    region: [],
+  },
 
-{
-  key: 77,
-  name: 'Launch Campaign for Redmi A4 5G',
-  company: 'Xiaomi',
-  image: '/img/works/xiaomi-a4-5g.png',
-  alt: 'Launch Campaign for Redmi A4 5G',
-  tabs: ['campaign'],
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  case_study_title: 'xiaomi-a4-5g',
-  href: '/brand-campaign/xiaomi-a4-5g-phone',
-      region: ['IN']
+  {
+    key: 84,
+    name: 'Digital Campaign videos for E-learning courses',
+    company: 'Jigsaw',
+    image: '/img/works/jigsaw_work.webp',
+    tags: [
+      'Ed-tech',
+      'Digital Campaign',
+      'Marketing Video',
+      'Product Launch Video',
+    ],
+    tabs: ['campaign'],
+    case_study_title: 'jigsaw-e-learning-explainer-video',
+    href: '/brand-campaign/unext-course-marketing',
+    region: [],
+  },
 
-},
+  {
+    key: 85,
+    name: 'AI-Powered Campaign That Inspires Employees To Imagine Their Best Selves',
+    image: '/img/case-study/infosys_thrive_main_new.jpg',
+    alt: 'AI-Powered Campaign - Employees Imagine their Best Selves',
+    tabs: ['campaign'],
+    tags: [
+      'Technology',
+      'AI',
+      'Digital Campaign',
+      'Hyper-Personalized Campaign',
+    ],
+    case_study_title: 'infosys-thrive-ai-powered-campaign',
+    href: '/brand-campaign/employee-wellbeing-ai-experience',
+    region: [],
+  },
 
-{
-  key: 78,
-  name: 'Campaign film for Door Step Gold Loans',
-  image: '/img/works/indiagold_thumbanail.webp',
-  company: 'IndiaGold',
-  alt: 'IndiaGold',
-  tabs: ['campaign'],
-  tags: ['Digital Campaign', 'Ad Film', 'Fintech'],
-  case_study_title: 'indiagold',
-  href: '/brand-campaign/indiagold',
-      region: ['IN']
+  {
+    key: 86,
+    name: 'Launch Campaign for Redmi Buds 5C',
+    image: '/img/works/xiaomi_buds_5c_main_thumbnail.webp',
+    company: 'XIAOMI',
+    alt: 'Xiaomi Redmi Buds 5C',
+    tabs: ['campaign'],
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    case_study_title: 'xiaomi-buds-5c',
+    href: '/brand-campaign/xiaomi-buds-5c',
+    region: [],
+  },
 
-},
+  {
+    key: 87,
+    name: 'Augmented Reality that brought the automobile alive',
+    image: '/img/works/bajaj_pulsar_work_age.webp',
+    company: 'Bajaj Auto',
+    alt: 'Augmented Reality that brought the automobile alive',
+    tabs: ['campaign'],
+    tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
+    case_study_title: 'bajaj-pulsar-augmented-reality',
+    href: '/brand-design/bajaj-pulsar-augmented-reality',
+    region: [],
+  },
 
-{
-  key: 79,
-  name: 'Crafting a Unified Employer Brand Across Continents',
-  company: 'Infosys',
-  image: '/img/works/infosys_eb_campaign_work_thumbnail.png',
-  alt: 'Infosys',
-  tabs: ['campaign'],
-  tags: [
-    'Technology',
-    'Employer Branding Campaign',
-    'Global Video Production',
-    'Interview Video'
-  ],
-  case_study_title: 'infosys-employer-branding',
-  href: '/video-production/global-employer-branding',
-      region: []
+  {
+    key: 88,
+    name: 'Campaign on Inclusive Lingerie',
+    image: '/img/works/zivame_work.webp',
+    company: 'Zivame',
+    alt: 'Campaign on Inclusive Lingerie',
+    tags: ['Digital Campaign', 'Product Video', 'Video Content', 'E-commerce'],
+    tabs: ['campaign'],
+    href: '/brand-campaign/zivame-lingerie',
+    region: [],
+  },
 
-},
+  {
+    key: 89,
+    name: '5 Star Quality at Wholesale Prices',
+    company: 'Metro Wholesale',
+    image: '/img/works/metro-wholesale.jpg',
+    alt: 'metro wholesale ad',
+    tags: ['Retail', 'TV Campaign', 'Ad Film'],
+    tabs: ['campaign'],
+    case_study_title: 'metro-wholesale-case-study',
+    href: '/brand-campaign/metro-wholesale-5-star-quality',
+    region: ['IN'],
+  },
 
-{
-  key: 80,
-  name: 'Trip Different with L74 Ciders',
-  company: 'L74 Craft Cider',
-  alt: 'Trip Different with L74 Cider',
-  tags: [
-    'Brand Strategy',
-    'Brand Postioning',
-    'Brand Launch Strategy',
-    'Digital Campaign',
-    'Social Media Content',
-    'Alcobev'
-  ],
-  tabs: ['campaign'],
-  image: '/img/works/l74_strategy_service_work page.jpg',
-  case_study_title: 'l74-case-study',
-  href: '/brand-campaign/l74-ciders-social-media',
-      region: []
+  {
+    key: 90,
+    name: 'A Lead Management Product for Financial Services',
+    image: '/img/case-study/vymo-lead-management.webp',
+    company: 'Vymo',
+    alt: 'vymo-lead-management ',
+    tabs: ['campaign'],
+    tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
+    case_study_title: 'vymo-lead-management',
+    href: '/brand-campaign/vymo-lead-management',
+    region: [],
+  },
 
-},
+  {
+    key: 91,
+    name: 'A Campaign film for Xiaomi Pocket Power Bank',
+    company: 'Xiaomi',
+    alt: 'A Campaign film for Xiaomi Pocket Power Bank',
+    tags: [
+      'Consumer Electronics',
+      'Ad Film',
+      'Digital Campaign',
+      'Product Launch Campaign',
+    ],
+    tabs: ['campaign'],
+    image: '/img/works/xiaomi-thumnail.webp',
+    case_study_title: 'xiaomi-pocket-power-bank',
+    href: '/video-production/xiaomi-pocket-power-bank',
+    region: [],
+  },
 
-{
-  key: 81,
-  name: 'Never sweat the first game Campaign Films',
-  company: ' My 11 Circle',
-  image: '/img/works/my-11-circle.jpg',
-  alt: 'my 11 circle ',
-  tags: ['Digital Campaign', 'Ad Film', 'Fantasy Games'],
-  tabs: ['campaign'],
-  case_study_title: 'my11circle-case-study',
-  href: '/brand-campaign/my11circle-digital-ad-film',
-      region: ['IN']
+  {
+    key: 92,
+    name: 'AI-powered Singalong Campaign that united a Global Workforce',
+    image: '/img/case-study/singalong.jpg',
+    alt: 'AI-powered Singalong Campaign that united a Global Workforce',
+    tabs: ['campaign'],
+    tags: [
+      'Technology',
+      'AI',
+      'Digital Campaign',
+      'Hyper-Personalized Campaign',
+      'Global Video Production',
+    ],
+    case_study_title: 'infosys-ai-powered-singalong-campaign',
+    href: '/brand-campaign/ai-powered-singalong',
+    region: [],
+  },
 
-},
+  {
+    key: 93,
+    name: "Campaign: When you can't resist buying more",
+    company: 'Metro Wholesale',
+    alt: 'Swiggy',
+    tags: ['Retail', 'TV Campaign', 'Ad Film'],
+    tabs: ['campaign'],
+    image: '/img/works/metro-wholesale-one-minute.webp',
+    case_study_title: 'metro-wholesale-one-minute',
+    href: '/brand-campaign/metro-wholesale-one-more',
+    region: ['IN'],
+  },
 
-{
-  key: 82,
-  name: 'Social Media Campaign: Meet the AI-First Employees',
-  company: 'Infosys',
-  image: '/img/works/infy-ai-first-work.webp',
-  tags: [
-    'Technology',
-    'Digital Campaign',
-    'Employer Branding video',
-    'Social Media Content'
-  ],
-  tabs: ['campaign'],
-  case_study_title: 'animated-case-study-videos-Infosys-employees',
-  href: '/brand-campaign/animated-case-study-videos',
-      region: []
+  {
+    key: 94,
+    name: 'Campaign films: Winter Jackets',
+    company: 'Swiggy',
+    image: '/img/works/Swiggy_Wali_Jacket.png',
+    alt: 'Campaign films: Winter Jackets',
+    tags: ['Digital Campaign', 'Ad Film', 'Quick Commerce'],
+    tabs: ['campaign'],
+    href: '/brand-campaign/swiggy-winter-jackets',
+    region: ['IN'],
+  },
 
-},
-
-{
-  key: 83,
-  name: 'A Trimmer Launch Campaign that’s as Sharp as the Product',
-  company: 'Xiaomi',
-  alt: 'A Trimmer Launch Campaign that’s as Sharp as the Product',
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  tabs: ['campaign'],
-  image: '/img/works/xiaomi-bread-trimmer.webp',
-  case_study_title: 'xiaomi-beard-trimmer',
-  href: '/brand-campaign/xiaomi-beard-trimmer',
-      region: []
-
-},
-
-{
-  key: 84,
-  name: 'Digital Campaign videos for E-learning courses',
-  company: 'Jigsaw',
-  image: '/img/works/jigsaw_work.webp',
-  tags: [
-    'Ed-tech',
-    'Digital Campaign',
-    'Marketing Video',
-    'Product Launch Video'
-  ],
-  tabs: ['campaign'],
-  case_study_title: 'jigsaw-e-learning-explainer-video',
-  href: '/brand-campaign/unext-course-marketing',
-      region: []
-
-},
-
-{
-  key: 85,
-  name: 'AI-Powered Campaign That Inspires Employees To Imagine Their Best Selves',
-  image: '/img/case-study/infosys_thrive_main_new.jpg',
-  alt: 'AI-Powered Campaign - Employees Imagine their Best Selves',
-  tabs: ['campaign'],
-  tags: [
-    'Technology',
-    'AI',
-    'Digital Campaign',
-    'Hyper-Personalized Campaign'
-  ],
-  case_study_title: 'infosys-thrive-ai-powered-campaign',
-  href: '/brand-campaign/employee-wellbeing-ai-experience',
-      region: []
-
-},
-
-{
-  key: 86,
-  name: 'Launch Campaign for Redmi Buds 5C',
-  image: '/img/works/xiaomi_buds_5c_main_thumbnail.webp',
-  company: 'XIAOMI',
-  alt: 'Xiaomi Redmi Buds 5C',
-  tabs: ['campaign'],
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  case_study_title: 'xiaomi-buds-5c',
-  href: '/brand-campaign/xiaomi-buds-5c',
-      region: []
-
-},
-
-{
-  key: 87,
-  name: 'Augmented Reality that brought the automobile alive',
-  image: '/img/works/bajaj_pulsar_work_age.webp',
-  company: 'Bajaj Auto',
-  alt: 'Augmented Reality that brought the automobile alive',
-  tabs: ['campaign'],
-  tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
-  case_study_title: 'bajaj-pulsar-augmented-reality',
-  href: '/brand-design/bajaj-pulsar-augmented-reality',
-      region: []
-
-},
-
-{
-  key: 88,
-  name: 'Campaign on Inclusive Lingerie',
-  image: '/img/works/zivame_work.webp',
-  company: 'Zivame',
-  alt: 'Campaign on Inclusive Lingerie',
-  tags: ['Digital Campaign', 'Product Video', 'Video Content', 'E-commerce'],
-  tabs: ['campaign'],
-  href: '/brand-campaign/zivame-lingerie',
-      region: []
-
-},
-
-{
-  key: 89,
-  name: '5 Star Quality at Wholesale Prices',
-  company: 'Metro Wholesale',
-  image: '/img/works/metro-wholesale.jpg',
-  alt: 'metro wholesale ad',
-  tags: ['Retail', 'TV Campaign', 'Ad Film'],
-  tabs: ['campaign'],
-  case_study_title: 'metro-wholesale-case-study',
-  href: '/brand-campaign/metro-wholesale-5-star-quality',
-      region: ['IN']
-
-},
-
-{
-  key: 90,
-  name: 'A Lead Management Product for Financial Services',
-  image: '/img/case-study/vymo-lead-management.webp',
-  company: 'Vymo',
-  alt: 'vymo-lead-management ',
-  tabs: ['campaign'],
-  tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
-  case_study_title: 'vymo-lead-management',
-  href: '/brand-campaign/vymo-lead-management',
-      region: []
-
-},
-
-{
-  key: 91,
-  name: 'A Campaign film for Xiaomi Pocket Power Bank',
-  company: 'Xiaomi',
-  alt: 'A Campaign film for Xiaomi Pocket Power Bank',
-  tags: [
-    'Consumer Electronics',
-    'Ad Film',
-    'Digital Campaign',
-    'Product Launch Campaign'
-  ],
-  tabs: ['campaign'],
-  image: '/img/works/xiaomi-thumnail.webp',
-  case_study_title: 'xiaomi-pocket-power-bank',
-  href: '/video-production/xiaomi-pocket-power-bank',
-      region: []
-
-},
-
-{
-  key: 92,
-  name: 'AI-powered Singalong Campaign that united a Global Workforce',
-  image: '/img/case-study/singalong.jpg',
-  alt: 'AI-powered Singalong Campaign that united a Global Workforce',
-  tabs: ['campaign'],
-  tags: [
-    'Technology',
-    'AI',
-    'Digital Campaign',
-    'Hyper-Personalized Campaign',
-    'Global Video Production'
-  ],
-  case_study_title: 'infosys-ai-powered-singalong-campaign',
-  href: '/brand-campaign/ai-powered-singalong',
-      region: []
-
-},
-
-{
-  key: 93,
-  name: "Campaign: When you can't resist buying more",
-  company: 'Metro Wholesale',
-  alt: 'Swiggy',
-  tags: ['Retail', 'TV Campaign', 'Ad Film'],
-  tabs: ['campaign'],
-  image: '/img/works/metro-wholesale-one-minute.webp',
-  case_study_title: 'metro-wholesale-one-minute',
-  href: '/brand-campaign/metro-wholesale-one-more',
-      region: ['IN']
-
-},
-
-{
-  key: 94,
-  name: 'Campaign films: Winter Jackets',
-  company: 'Swiggy',
-  image: '/img/works/Swiggy_Wali_Jacket.png',
-  alt: 'Campaign films: Winter Jackets',
-  tags: ['Digital Campaign', 'Ad Film', 'Quick Commerce'],
-  tabs: ['campaign'],
-  href: '/brand-campaign/swiggy-winter-jackets',
-      region: ['IN']
-
-},
-
-{
-  key: 95,
-  name: 'Transforming Field Sales for Insurance Wholesalers in USA',
-  image: '/img/case-study/vymo-wholesale.webp',
-  company: 'Vymo',
-  alt: 'vymo-wholesalers',
-  tabs: ['campaign'],
-  tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
-  case_study_title: 'vymo-wholesalers-explainer-video',
-  href: '/brand-campaign/vymo-insurance-wholesale',
-      region: []
-
-}
+  {
+    key: 95,
+    name: 'Transforming Field Sales for Insurance Wholesalers in USA',
+    image: '/img/case-study/vymo-wholesale.webp',
+    company: 'Vymo',
+    alt: 'vymo-wholesalers',
+    tabs: ['campaign'],
+    tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
+    case_study_title: 'vymo-wholesalers-explainer-video',
+    href: '/brand-campaign/vymo-insurance-wholesale',
+    region: [],
+  },
 ]
