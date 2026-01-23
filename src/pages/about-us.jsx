@@ -200,7 +200,7 @@ const WhoWeAre = () => {
           She began her journey in B2B as a content writer, gradually evolving into account leadership, sales, and client services. Along the way, she’s worked with mainline agencies across sectors including IT, tech, FMCG, manufacturing, and F&B. This breadth of experience gives her a grounded understanding of business goals and how to help brands tell their stories.
           <br />
           <br />
-          Currently a Group Account Director at Red Bangle, she drives growth through strong client partnerships, operational clarity, and a collaborative approach that brings out the best in both her teams and her clients.
+          Currently a Group Account Director at Makerrs, she drives growth through strong client partnerships, operational clarity, and a collaborative approach that brings out the best in both her teams and her clients.
           <br />
           <br />
           When she’s not solving client challenges, Ayesha enjoys baking, building Lego sets, and solving puzzles.
