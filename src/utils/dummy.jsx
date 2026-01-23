@@ -2655,6 +2655,18 @@ export const workPosts = [
     href: '/video-production/csr-video-ashirvad',
     region: [],
   },
+  {
+    key: 111,
+    name: 'Case Study Video: Tech for Safe Mining',
+    company: 'Infosys',
+    // image: '/img/case-study/shirvad_pipes.png',
+    alt: 'covid',
+    tags: ['2.5D Animation', 'Mining', 'Case Study Video', 'Tech Marketing Video', 'Pandemic'],
+    tabs: ['videos'],
+    case_study_title: 'Case Study Video: Tech for Safe Mining',
+    href: '/video-production/covid-19',
+    region: [],
+  },
 
   // Campaign starts
 
