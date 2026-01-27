@@ -202,6 +202,24 @@ const Design = ({ setisPopupOpen }) => {
     },
     {
       key: 4,
+      title: 'Do you handle both digital and physical brand experiences?',
+      content:
+        'Yes, we design for both digital and physical brand experiences. Our work ranges from environmental graphics for corporate offices to interactive experiences at events.',
+    },
+    {
+      key: 5,
+      title: 'Can you help with packaging design?',
+      content:
+        'Yes, our packaging design services take you from initial concept development to final production-ready designs, no matter which industry.',
+    },
+    {
+      key: 6,
+      title: 'How long does it take you to develop a brand identity?',
+      content:
+        'Depending on the complexity and scope of work, the process can take anywhere from one month to a year. A limited-scope project consisting of logo design, font, and colors may be completed in a few weeks. While a more comprehensive brand identity–covering strategy, brand identity, design collateral, and launch execution–may take a few months.',
+    },
+    {
+      key: 7,
       title: 'What’s your process for creating a brand identity?',
       content: (
         <>
@@ -252,20 +270,20 @@ const Design = ({ setisPopupOpen }) => {
     },
 
     {
-      key: 5,
+      key: 8,
       title: 'Do you work on retainers for ongoing design support?',
       content:
         'Yes, we work on retainers for brands that require ongoing design support. This could be for marketing collateral or communications, packaging, or other requirements. We strive to deliver on-brand consistency and align with your evolving business goals.',
     },
     {
-      key: 6,
+      key: 9,
       title:
         'What industries do you specialize in for brand identity and design?',
       content:
         'With experience in technology, FMCG, healthcare, F&B, manufacturing, aerospace, education, energy, engineering, and pharma-we understand industry-specific demands, design cultures, and market dynamics. We craft compelling brand identities and design solutions with an adaptable approach.',
     },
     {
-      key: 7,
+      key: 10,
       title: 'Do you use AI or other technology in your design process?',
       content: (
         <>
@@ -287,7 +305,7 @@ const Design = ({ setisPopupOpen }) => {
       ),
     },
     {
-      key: 8,
+      key: 11,
       title: 'Do you handle experiential design for physical spaces?',
       content: (
         <>
@@ -302,7 +320,7 @@ const Design = ({ setisPopupOpen }) => {
       ),
     },
     {
-      key: 9,
+      key: 12,
       title: 'What’s included in your design collateral services?',
       content: (
         <>
@@ -315,7 +333,7 @@ const Design = ({ setisPopupOpen }) => {
       ),
     },
     {
-      key: 10,
+      key: 13,
       title: 'How do you approach brand storytelling through design?',
       content: (
         <>
@@ -330,7 +348,7 @@ const Design = ({ setisPopupOpen }) => {
       ),
     },
     {
-      key: 11,
+      key: 14,
       title: 'How do you store and deliver final design assets?',
       content: (
         <>
@@ -353,14 +371,18 @@ const Design = ({ setisPopupOpen }) => {
       ),
     },
     {
-      key: 12,
+      key: 15,
       title: 'How do you handle copyright and ownership of design assets?',
       content: (
         <>
           <div>
             With the majority of our work, as stipulated in pre-agreed
             contracts, copyright for creative assets is assigned to the client
-            upon receipt of final payment for the commissioned work.
+            upon receipt of final payment for the commissioned work. However, in
+            certain instances, copyright is not transferred in perpetuity.
+            Clients may extend such rights for additional durations and
+            distribution channels through Makerrs, subject to future
+            negotiations and additional licensing fees.
           </div>
         </>
       ),
@@ -472,7 +494,7 @@ const Design = ({ setisPopupOpen }) => {
           posts={_posts}
           href="/work/design"
           title="Explore Our Design Work"
-          btnposition = 'bottom'
+          btnposition="bottom"
         />
       </div>
 

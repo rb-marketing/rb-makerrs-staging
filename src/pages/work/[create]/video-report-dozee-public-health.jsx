@@ -13,36 +13,41 @@ import { CommercialSection } from '@/components/pages/work'
 export const similarPostsData = [
   {
     key: 0,
-    name: "Supporting young women in pursuit of a Future in STEM",
+    name: 'Supporting young women in pursuit of a Future in STEM',
     company: 'WeRise',
     image: '/img/works/we_rise.webp',
     alt: 'WeRise',
     tags: ['Non-profit', 'CSR Video', 'Documentary'],
     tabs: ['Videos'],
-    case_study_title:'werise-women-in-science-documentary',
+    case_study_title: 'werise-women-in-science-documentary',
     href: '/work/b2b-video-production-agency/werise-women-in-science-documentary',
   },
-    {
-  key: 1,
-  name: "Corporate Film for Aerospace Manufacturing giant in India",
-  company: 'GE Aerospace',
-  image: '/img/works/ge_aerospace.webp',
-  alt: 'GE Aerospace',
-  tags: ['Manufacturing', 'Aerospace', 'Corporate Films & Videos'],
-  tabs: ['Videos'],
-  case_study_title:'ge-aerospace-corporate-film',
-      href: '/work/b2b-video-production-agency/ge-aerospace-corporate-film',
+  {
+    key: 1,
+    name: 'Corporate Film for Aerospace Manufacturing giant in India',
+    company: 'GE Aerospace',
+    image: '/img/works/ge_aerospace.webp',
+    alt: 'GE Aerospace',
+    tags: ['Manufacturing', 'Aerospace', 'Corporate Films & Videos'],
+    tabs: ['Videos'],
+    case_study_title: 'ge-aerospace-corporate-film',
+    href: '/work/b2b-video-production-agency/ge-aerospace-corporate-film',
   },
   {
-  key: 2,
-  name: "Global Case Study and Client Testimonial Videos on WSJ",
-  company: 'Infosys',
-  image: '/img/works/infosys_x_wsj.webp',
-  alt: 'Infosys',
-  tags: ['Case Study Videos', 'Testimonial Videos', 'Multi-location Video Production', 'IT Consulting'],
-  tabs: ['Videos'],
-  case_study_title:'infosys-wsj',
-   href: '/work/b2b-video-production-agency/infosys-wsj',
+    key: 2,
+    name: 'Global Case Study and Client Testimonial Videos on WSJ',
+    company: 'Infosys',
+    image: '/img/works/infosys_x_wsj.webp',
+    alt: 'Infosys',
+    tags: [
+      'Case Study Videos',
+      'Testimonial Videos',
+      'Multi-location Video Production',
+      'IT Consulting',
+    ],
+    tabs: ['Videos'],
+    case_study_title: 'infosys-wsj',
+    href: '/work/b2b-video-production-agency/infosys-wsj',
   },
 ]
 
@@ -53,9 +58,9 @@ const pageData = {
     height: '90',
   },
   specifyWidth: 'md:!w-[80px] !w-[60px]',
-  image:"/img/case-study/dozee-banner.webp",
-    tags: ['MedTech', 'PR Video', 'Video Report'],
- 
+  image: '/img/case-study/dozee-banner.webp',
+  tags: ['MedTech', 'PR Video', 'Video Report'],
+
   commercials: {
     title: (
       <>
@@ -70,7 +75,7 @@ const pageData = {
       {
         key: 0,
         duration: 130,
-        vimeoId:'896417033/9c440dc1f5',
+        vimeoId: '896417033/9c440dc1f5',
         name: 'Dozee Sattva Report',
         company: 'Infosys',
         thumbnail: {
@@ -79,7 +84,6 @@ const pageData = {
           src: '/img/case-study/dozee-video-banner.webp',
         },
       },
-
     ],
   },
 }
@@ -88,7 +92,15 @@ function Colearn() {
   const router = useRouter()
   const articleUrl = `https://www.makerrs.com${router.pathname}`
 
-  const { logo, tags, commercials, desktopVideo, mobileVideo, image, specifyWidth } = pageData
+  const {
+    logo,
+    tags,
+    commercials,
+    desktopVideo,
+    mobileVideo,
+    image,
+    specifyWidth,
+  } = pageData
   const socials = [
     {
       key: 0,
@@ -107,10 +119,10 @@ function Colearn() {
   ]
   return (
     <>
-      <SEO 
-      title="Dozee Beds Healthcare Video | Makerrs" 
-      description="Our video for Dozee Beds and Sattva Consulting showcased how smart hospital beds elevate care and drive large-scale public health impact in India."
-      url="https://www.makerrs.com/work/video-production/video-report-dozee-public-health"
+      <SEO
+        title="Dozee Beds Healthcare Video | Makerrs"
+        description="Our video for Dozee Beds and Sattva Consulting showcased how smart hospital beds elevate care and drive large-scale public health impact in India."
+        url="https://www.makerrs.com/work/video-production/video-report-dozee-public-health"
       />
       <WorkHeroSection
         logo={logo}
@@ -126,25 +138,24 @@ function Colearn() {
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div className="mt-9 md:mb-20">
-              
-
-              <p className=" mb-6 md:mb-7.5">
-       An impact study conducted by Sattva Consulting shows that India can potentially save 110,000+ more lives every year by upgrading hospital beds to Dozee Beds across public healthcare facilities. Our video presents the data from the study along with heart-warming and inspiring footage and testimonials on this innovative medical technology.
-
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
+                An impact study conducted by Sattva Consulting shows that India
+                can potentially save 110,000+ more lives every year by upgrading
+                hospital beds to Dozee Beds across public healthcare facilities.
+                Our video presents the data from the study along with
+                heart-warming and inspiring footage and testimonials on this
+                innovative medical technology.
               </p>
-              
             </div>
-          
           </div>
         </div>
 
-        <CommercialSection 
+        <CommercialSection
           sources={commercials?.sources}
           type={commercials?.type}
         />
       </section>
 
-    
       {/* <SimilarPosts
          tag="explore more case studies"
         className="py-15 md:pb-30"

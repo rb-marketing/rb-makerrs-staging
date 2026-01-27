@@ -131,7 +131,7 @@ function Vymo() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 At the heart of the US financial landscape lies a network of
                 regional and community banks — Commercial banks. These are
                 institutions that have built enduring relationships, that span
@@ -139,7 +139,7 @@ function Vymo() {
                 into the SME market present a challenge to the very existence of
                 these smaller, community-centric Commercial banks.
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Enter Vymo, a sales engagement platform that can help Commercial
                 banks get closer to their SME customers and build long-term
                 loyalty. Now, all Vymo needed was a great marketing video
@@ -151,14 +151,14 @@ function Vymo() {
                 Creative approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Vymo had a clear vision on the characters the film should have,
                 what product features to show off and how. They even had a
                 script in place. We began by collaborating with Vymo to sharpen
                 the script. We then defined the visual style - both on set and
                 in terms of graphics.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 While the story needed to have a global appeal and cast, we
                 needed to bring it to life at far lower prices than it would
                 cost to produce in Los Angeles or Chicago. So, we filmed this in

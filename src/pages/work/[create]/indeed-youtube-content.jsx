@@ -14,7 +14,6 @@ import { useRouter } from 'next/router'
 import styles from '@/styles/sections/StatsSection.module.scss'
 import { VideoGallery } from '@/components/pages/work/VideoGallery'
 
-
 const pageData = {
   logo: {
     src: '/img/logos/indeed.webp',
@@ -84,7 +83,7 @@ const pageData = {
         },
         // url: 'https://vimeo.com/1075654763/8a9b3f855b?share=copy',
       },
-       {
+      {
         key: 4,
         duration: 15,
         vimeoId: '1103083748',
@@ -96,7 +95,7 @@ const pageData = {
           src: '/img/case-study/career-tip-2.png',
         },
       },
-       {
+      {
         key: 5,
         duration: 15,
         vimeoId: '1103087935',
@@ -108,7 +107,7 @@ const pageData = {
           src: '/img/case-study/career-jurney-2.png',
         },
       },
-       {
+      {
         key: 6,
         duration: 15,
         vimeoId: '1103091847',
@@ -120,7 +119,7 @@ const pageData = {
           src: '/img/case-study/product-overview-2.png',
         },
       },
-       {
+      {
         key: 7,
         duration: 15,
         vimeoId: '1103085437',
@@ -132,7 +131,7 @@ const pageData = {
           src: '/img/case-study/career-tip-3.png',
         },
       },
-       {
+      {
         key: 8,
         duration: 15,
         vimeoId: '1103088940',
@@ -144,7 +143,7 @@ const pageData = {
           src: '/img/case-study/career-journey-3.png',
         },
       },
-       {
+      {
         key: 9,
         duration: 15,
         vimeoId: '1103092674',
@@ -224,7 +223,7 @@ function IndeedYouTubeContent() {
     {
       type: 'linkedin',
       key: 1,
-            href: `https://www.linkedin.com/shareArticle?mini=true&url=${fullUrl}`,
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${fullUrl}`,
       color: '#006699',
       icon: <Linkedin />,
     },
@@ -292,12 +291,13 @@ function IndeedYouTubeContent() {
                   href="https://kstatic.googleusercontent.com/files/45fedbf71b2dd6e7a59b4990a731b6b8067a434accfdc9c6c15df18177e63b4a2f454fe1a165ca47b78412325386c1a101d950355e4811d5e09cb363cb9f3d77"
                   className="text-blue-600 hover:text-blue-800"
                   target="_blank"
-                > {' '} 59% of Indian job seekers {' '}
+                >
+                  {' '}
+                  59% of Indian job seekers{' '}
                 </a>
-                  
-                use YouTube to build new skills, and 63% rely on it to learn practical,
-                hands-on tasks. For light-skilled workers, YouTube is a default
-                learning space.
+                use YouTube to build new skills, and 63% rely on it to learn
+                practical, hands-on tasks. For light-skilled workers, YouTube is
+                a default learning space.
               </p>
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
                 This behaviour made the platform a natural choice for what
@@ -428,10 +428,7 @@ function IndeedYouTubeContent() {
           </div>
         </div>
 
-       
-        <section
-          className={`bg-white overflow-hidden mt-6 md:mt-20`}
-        >
+        <section className={`bg-white overflow-hidden mt-6 md:mt-20`}>
           <div className="container px-0 md:block hidden">
             <LineHeading className="mb-6 md:mb-7.5">IMPACT</LineHeading>
             <div className="grid lg:flex grid-cols-1 gap-x-5 md:gap-x-[240px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none">
@@ -496,17 +493,14 @@ function IndeedYouTubeContent() {
               ))}
             </div>
           </div>
-        <div className='md:mt-28'>
-               <VideoGallery sources={commercials?.sources} type={commercials?.type} />
-             </div>
-       
+          <div className="md:mt-20">
+            <VideoGallery
+              sources={commercials?.sources}
+              type={commercials?.type}
+            />
+          </div>
         </section>
-
-        
-
-      
       </section>
-
     </>
   )
 }

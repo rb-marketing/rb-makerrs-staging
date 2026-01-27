@@ -129,7 +129,7 @@ function Multiplier() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 For ambitious companies, the call of global expansion is
                 undeniable. Accessing diverse talent pools and expanding market
                 reach holds immense potential. However, the reality on the
@@ -138,7 +138,7 @@ function Multiplier() {
                 local legal nuances often become a significant barrier to entry.
                 These are the set of problems that Multiplier solves.
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 And communicating the complex set of problems as well as the
                 solutions that Multiplier offers in a contemporary way – is the
                 challenge posed to Makerrs. It was time for Multiplier to
@@ -151,7 +151,7 @@ function Multiplier() {
                 Creative approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Our globally-appealing marketing explainer video showed how
                 Multiplier streamlined the complexities of international
                 employment and paved the way for effortless global expansion.

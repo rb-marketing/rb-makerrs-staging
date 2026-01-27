@@ -180,12 +180,12 @@ function Colearn() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Established in 1981 in India, Infosys has evolved into
                 a global IT consulting powerhouse with operations in 54
                 countries and over 300,000 employees.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Today, Infosys is at the forefront of AI-driven transformation.
                 With a global ambition to establish themselves as an AI-first company,
                 not just by developing cutting-edge AI solutions for clients but by embedding
@@ -197,15 +197,15 @@ function Colearn() {
                 The Opportunity
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
               In the past, Infosys had created several case study
               videos showcasing AI-powered client success stories.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
               But these narratives followed a familiar pattern, 
               focusing on business outcomes, pain points, and results.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
               We saw an opportunity to amp up the human element. Our goal 
               was to create a global narrative by bringing to life the stories 
               of the employees who developed these AI solutions every day. 
@@ -216,12 +216,12 @@ function Colearn() {
               Creative Approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We flipped the script of the typical case study video. Rather than simply narrating 
                 business outcomes, we placed Infosys employees at the center of the story, giving 
                 them the spotlight as creators, problem-solvers, and enablers in AI adoption.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We developed a series of 5 employee-perspective case studies, using an innovative 
                 mixed-media format to bring these AI adoption stories to life.
               </p>

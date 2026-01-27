@@ -153,7 +153,7 @@ function Colearn() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 In the vibrant Southeast Asian market, where the demand for
                 quality STEM education was soaring, CoLearn identified a
                 critical challenge. Talented STEM grads were steering clear of
@@ -162,17 +162,17 @@ function Colearn() {
                 aging school infrastructure, long hours, modest pay, and a
                 perception problem.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Hesitation among skilled young STEM educators left
                 forward-thinking EdTech disruptors like CoLearn in a fix.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 CoLearn’s brief to us: show talented, young SouthEast Asians
                 that teaching with CoLearn would be a fulfilling journey both
                 professionally and personally, and the teaching space - wherever
                 they chose!
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We addressed this brief by collaboratively hand-picking the
                 right teachers, and crafting stories to lead the hiring campaign
                 with.
@@ -183,21 +183,21 @@ function Colearn() {
                 Creative approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 The heart of our creative approach lay in presenting a vibrant
                 and engaging portrayal of the daily lives of CoLearn&apos;s star
                 teachers, emphasizing that teaching was not confined to dreary
                 classrooms but could unfold in inspiring environments, impacting
                 hundreds of young learners across Indonesia.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Our work extended beyond borders, producing films in two
                 different countries. The result was a powerful recruitment tool
                 that not only addressed the immediate supply gap but also
                 reshaped social perceptions around teachers who wanted to
                 nurture Indonesia’s next generation.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Through lively conversations, captivating b-roll footage, and a
                 cinematic edit, we crafted hiring videos that showcased the
                 fulfillment, flexibility, and immense potential for personal and

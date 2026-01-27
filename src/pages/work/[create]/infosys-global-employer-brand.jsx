@@ -162,7 +162,7 @@ function GlobalLeaders() {
                         <div className="mt-9 md:mb-20">
 
 
-                            <p className=" mb-6 md:mb-7.5">
+                            <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                                 The Infosys Global Leaders series celebrates diverse talent from across the globe, driving the organization forward. Featuring leaders who&apos;ve navigated remarkable careers within Infosys, the series showcases how their EVP &quot;Move Forward. Take The World With You&quot;, empowers growth and success. Each story blends personal journeys with region–specific cultural nuances to connect with local talent, highlighting Infosys&apos; inclusive, innovative workplace. More than insights, it&apos;s an invitation to join a company where diversity, collaboration, and career growth define the path to leadership. At Infosys, you don&apos;t just grow–you lead.
 
                             </p>

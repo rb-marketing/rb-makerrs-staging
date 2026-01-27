@@ -97,7 +97,7 @@ function AIPoweredCampaign() {
               <LineHeading className="mb-6 md:mb-9">
                 Context
               </LineHeading>
-              <p className=" mb-9 md:mb-7.5">
+              <p className=" mb-9 md:mb-7.5 !leading-[150%]">
                 Our client, a Fortune 500 company with a diverse global workforce of 200,000 people, had recently launched Flourish - an organisation-wide employee wellness program. Flourish had a few key pillars under it - balance, opportunity, potential, etc - all focused on enabling individual employees to unlock their best careers and life with the organisation.
               </p>
 
@@ -108,7 +108,7 @@ function AIPoweredCampaign() {
                 The Challenge
               </LineHeading>
 
-              <p className=" mb-9 md:mb-7.5">
+              <p className=" mb-9 md:mb-7.5 !leading-[150%]">
                 Create engagement around the organisation-wide program using AI. Make it belong with every single individual and not just the employer branding and communications teams.
               </p>
 
@@ -117,7 +117,7 @@ function AIPoweredCampaign() {
               <LineHeading className="mb-6 md:mb-9">
                 The Campaign
               </LineHeading>
-              <p className="mb-[30px] md:mb-7.5">
+              <p className="mb-[30px] md:mb-7.5 !leading-[150%]">
                 We created <span className='font-bold text-[#111010]'>Imagine Me Flourish</span>, an AI-powered campaign that wrapped the Flourish program around every employee’s dreams and pursuits. We designed and developed an AI image generator and invited every employee to visit a dedicated campaign microsite to generate their Flourish moment with just a few clicks and a selfie.
               </p>
               <div className="relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)]  md:w-[78.7rem] -mx-4 md:mx-0 md:mt-16">
@@ -131,7 +131,7 @@ function AIPoweredCampaign() {
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[24px] md:mb-[30px]">
                 We didn’t want to give employees a generic, one-size-fits-all Flourish image. Therefore, we carefully crafted seven unique scenarios for each of the four Flourish pillars.
               </p>
-              <p className="mb-6 md:mb-7.5 ">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 <ul className="list-disc pl-6 leading-7 mb-9 md:mb-0">
                   <li className="list-disc pl-6 leading-7 mb-[24px] md:mb-[30px]">
                     <span className='font-bold text-[#111010]'>Wellness:</span> Employees could picture themselves meditating in nature, finding time for fitness, and focusing on their physical & mental wellness.
@@ -152,7 +152,7 @@ function AIPoweredCampaign() {
               <LineHeading className="mb-6 md:mb-9">
                 The AI Model
               </LineHeading>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We then trained and fine-tuned the AI model to ensure accuracy and compliance with data privacy standards. We optimized the AI to generate the right attires and visually rich backgrounds for all of the 28 scenarios under these pillars. 
               </p>
               <div className="flex justify-center  hidden md:block md:flex  space-x-4 md:w-[79.7rem]  md:my-16 ">
@@ -212,7 +212,7 @@ function AIPoweredCampaign() {
               <LineHeading className="mb-6 md:mb-9">
                 The Experience
               </LineHeading>
-              <p className="mb-9 md:mb-7.5">
+              <p className="mb-9 md:mb-7.5 !leading-[150%]">
                 When employees visited the dedicated Imagine Me Flourish microsite, they could choose a Flourish pillar, click a selfie and instantly generate a personalized AI image of their Flourish moment. This could be participating in a pottery class, enjoying me-time in a Parisian café, or being recognized for professional growth. Employees could download the images, and share them on social media - all in just a few clicks.
               </p>
 
@@ -222,10 +222,10 @@ function AIPoweredCampaign() {
               <LineHeading className="mb-6 md:mb-9">
                 The Outcome
               </LineHeading>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 More than a campaign, Imagine Me Flourish turned awareness into ownership. Employees rushed to the dedicated Flourish microsite as soon as it went live, embracing the program as their own and sharing their Flourish moments with the world. 
               </p>
-               <p className="mb-9 md:mb-7.5">
+               <p className="mb-9 md:mb-7.5 !leading-[150%]">
                 For the brand, our AI-first campaign transformed Flourish from an HR program into an employee-driven experience. We gave Flourish what every company-wide initiative needs to succeed: personal relevance and emotional engagement.
                </p>
 

@@ -16,41 +16,45 @@ import { CommercialSection } from '@/components/pages/work'
 // // import { createTestimonialData } from '@/pages/services/create'
 
 export const similarPostsData = [
-    {
+  {
     key: 0,
-    name: "Supporting young women in pursuit of a Future in STEM",
+    name: 'Supporting young women in pursuit of a Future in STEM',
     company: 'WeRise',
     image: '/img/works/we_rise.webp',
     alt: 'WeRise',
-     tags: ['Non-profit', 'CSR Video', 'Documentary'],
+    tags: ['Non-profit', 'CSR Video', 'Documentary'],
     tabs: ['Videos'],
-    case_study_title:'werise-women-in-science-documentary',
+    case_study_title: 'werise-women-in-science-documentary',
     href: '/work/b2b-video-production-agency/werise-women-in-science-documentary',
   },
-    {
-  key: 1,
-  name: "Corporate Film for Aerospace Manufacturing giant in India",
-  company: 'GE Aerospace',
-  image: '/img/works/ge_aerospace.webp',
-  alt: 'GE Aerospace',
-  tags: ['Manufacturing', 'Aerospace', 'Corporate Films & Videos'],
-  tabs: ['Videos'],
-  case_study_title:'ge-aerospace-corporate-film',
-      href: '/work/b2b-video-production-agency/ge-aerospace-corporate-film',
+  {
+    key: 1,
+    name: 'Corporate Film for Aerospace Manufacturing giant in India',
+    company: 'GE Aerospace',
+    image: '/img/works/ge_aerospace.webp',
+    alt: 'GE Aerospace',
+    tags: ['Manufacturing', 'Aerospace', 'Corporate Films & Videos'],
+    tabs: ['Videos'],
+    case_study_title: 'ge-aerospace-corporate-film',
+    href: '/work/b2b-video-production-agency/ge-aerospace-corporate-film',
   },
-   {
-  key: 2,
-  name: "Gordon Ritter on the Future of Software",
-  company: 'Infosys',
-  image: '/img/works/vymo_gordon_ritter.webp',
-  alt: 'Infosys',
-  tags: ['SaaS', 'Thought Leadership Video', 'Corporate Film', 'Interview Video'],
-  tabs: ['featured','Videos'],
-  case_study_title:'vymo-gordon-ritter-thought-leadership-video',
-   href: '/work/b2b-video-production-agency/vymo-gordon-ritter-thought-leadership-video',
+  {
+    key: 2,
+    name: 'Gordon Ritter on the Future of Software',
+    company: 'Infosys',
+    image: '/img/works/vymo_gordon_ritter.webp',
+    alt: 'Infosys',
+    tags: [
+      'SaaS',
+      'Thought Leadership Video',
+      'Corporate Film',
+      'Interview Video',
+    ],
+    tabs: ['featured', 'Videos'],
+    case_study_title: 'vymo-gordon-ritter-thought-leadership-video',
+    href: '/work/b2b-video-production-agency/vymo-gordon-ritter-thought-leadership-video',
   },
 ]
-
 
 const pageData = {
   logo: {
@@ -59,7 +63,12 @@ const pageData = {
     height: '105',
   },
   image: '/img/case-study/wipro_himss_banner_visual.png',
-  tags: ['Healthtech', 'Case Study Video', 'Explainer Video', '2D Animation Video'],
+  tags: [
+    'Healthtech',
+    'Case Study Video',
+    'Explainer Video',
+    '2D Animation Video',
+  ],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
   // featured: {
@@ -165,10 +174,10 @@ function Wipro() {
   ]
   return (
     <>
-      <SEO 
-      title="Wipro Healthtech Case Study Videos for HIMSS | Makerrs" 
-      description="We crafted healthtech and insurtech case study films for Wipro, revealing complex solutions with innovation and strengthening their presence at HIMSS."
-      url="https://www.makerrs.com/work/video-production/healthcare-case-study-video-wipro"
+      <SEO
+        title="Wipro Healthtech Case Study Videos for HIMSS | Makerrs"
+        description="We crafted healthtech and insurtech case study films for Wipro, revealing complex solutions with innovation and strengthening their presence at HIMSS."
+        url="https://www.makerrs.com/work/video-production/healthcare-case-study-video-wipro"
       />
       <WorkHeroSection
         logo={logo}
@@ -185,7 +194,7 @@ function Wipro() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 The healthcare industry grapples with constant change, demanding
                 efficient solutions to manage data, improve patient care, and
                 streamline operations. HIMSS, the annual Healthcare Information
@@ -193,7 +202,7 @@ function Wipro() {
                 healthcare professionals and organizations seeking cutting-edge
                 technology solutions.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Standing out amongst the multitude of technology providers at
                 HIMSS, presented a significant challenge for Wipro. They needed
                 to effectively communicate their diverse healthcare solutions
@@ -207,7 +216,7 @@ function Wipro() {
                 Creative approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We harnessed the power of animation to stand out from the sea of
                 technology service providers at HIMSS, and produced 9 business
                 impact stories in about 45 days. Each video had a custom

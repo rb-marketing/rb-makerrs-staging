@@ -149,7 +149,7 @@ function Biocon() {
                                 The Opportunity
 
                             </LineHeading>
-                            <p className=" mb-6 md:mb-7.5">
+                            <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                                 Biocon Biologics Ltd had transformed from an Indian biotech brand to a global player with a footprint in over 120 countries. As they prepared to inaugurate Biocon House in Bangalore as their new global headquarters, the task was clear: refresh their HQ branding and make it a powerful visual canvas that reflects Biocon’s global presence and highlights their brand personality and tone. Across four floors, we would design wall graphics to bring growth stories, vision statements, and more to life. 
                             </p>
                         </div>
