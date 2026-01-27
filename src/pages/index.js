@@ -657,7 +657,7 @@ const LandPage = ({playWorks , articles}) => {
           >
             <div>
               <div className="text-rb-black text-[16px] md:text-[24px] leading-[1.5] md:leading-[1.33] tracking-[-0.64px] md:tracking-[-0.96px] font-semibold max-w-[900px]">
-                We are a creative agency and collaborative helping global businesses craft brands and narratives through design, videos, podcasts and campaigns.              </div>
+                We are a creative partner and collaborative helping global businesses craft brands and narratives through design, videos, podcasts and campaigns.              </div>
               <div className="flex items-center justify-center md:flex-row flex-col md:mt-10 mt-9 md:gap-5 gap-4">
                 <Button
                   href="/contact?type=client"
