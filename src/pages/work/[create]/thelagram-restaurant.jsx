@@ -557,7 +557,7 @@ function Thelagram() {
           </div>
         </div>
 
-        <div className="md:pb-0 pb-[64px]">
+        <div className="md:pb-0">
           <VideoGallery
             sources={commercials?.sources}
             type={commercials?.type}
@@ -568,7 +568,7 @@ function Thelagram() {
         <Testimonials
           title={'WHAT OUR CLIENT SAYS'}
           testimonialData={thelagramData}
-          className="pt-14 md:pt-40 md:pb-30 pb-15"
+          className="pt-[124px] md:pt-40 md:pb-30 pb-15"
         />
       </section>
       {/* <SimilarPosts

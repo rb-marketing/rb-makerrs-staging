@@ -126,18 +126,18 @@ function Colearn() {
             <div className="mt-9 md:mb-20">
 
 
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Infosys, an ambitious IT consulting enterprise, had recently developed pathbreaking AI Assistants. These AI Assistants were an offering from Infosys’ Topaz – a suite of AI-first offerings that accelerate business value.
 
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 The first 6 AI Assistants were already revolutionizing how Infosys was worked and solutioned for its clients. It was time now to showcase these AI Assistants to the world, invite clients to explore them, and unlock opportunities for the custom-development and roll out of AI Assistants across industries. The content we develop was to be visually clutter-breaking, engaging right through, and be highly modular to allow for the addition of more AI Assistants in the future. We got to work!
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 We crafted a futuristic, virtual world of Topaz. The walkthrough experience built on the Unreal Engine pushes the boundaries of enterprise demonstrations. The custom framework integrates AI bot functionality with intuitive user navigation, while sophisticated media visualization brings inviting environments to life. In keeping with the futuristic look and AI-first approach, the characters and the voices used in the experience were Meta Humans and AI voice overs. Through meticulous optimization and rigorous testing, this offline application delivers a seamless, high-performance showcase of Infosys Topaz&apos;s AI Assistants—setting a new standard for interactive product and solution demonstrations.
 
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Preview a section of the interactive experience below.
 
               </p>

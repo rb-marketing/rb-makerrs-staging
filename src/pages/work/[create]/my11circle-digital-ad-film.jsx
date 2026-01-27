@@ -165,7 +165,7 @@ function My11Circle() {
                 zero losses to every new player.
               </p>
             </div>
-            <div className="mt-6 md:mt-20">
+            <div className="mt-6 md:mt-20 md:mb-20">
               <LineHeading className="mb-6 md:mb-9">
                 Creative approach
               </LineHeading>

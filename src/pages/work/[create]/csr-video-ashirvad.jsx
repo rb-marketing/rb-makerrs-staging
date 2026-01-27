@@ -16,11 +16,10 @@ import { ccs, similarPosts } from '@/utils/dummy'
 import { CommercialSection } from '@/components/pages/work'
 // // import { createTestimonialData } from '@/pages/services/create'
 
-
 export const similarPostsData = [
   {
     key: 23,
-    name: "Corporate Film for Aerospace Manufacturing giant in India",
+    name: 'Corporate Film for Aerospace Manufacturing giant in India',
     company: 'GE Aerospace',
     image: '/img/works/ge_aerospace.webp',
     alt: 'GE Aerospace',
@@ -28,7 +27,6 @@ export const similarPostsData = [
     tabs: ['Featured'],
     case_study_title: 'ge-aerospace-corporate-film',
     href: '/work/b2b-brand-experience-agency/ge-aerospace-corporate-film',
-
   },
   {
     key: 0,
@@ -36,14 +34,19 @@ export const similarPostsData = [
     image: '/img/works/slb_work.webp',
     company: 'SLB',
     alt: 'slb',
-    tags: ['Engineering', 'Campaign', 'Explainer Video', 'Demo Video', 'Interactive Video'],
+    tags: [
+      'Engineering',
+      'Campaign',
+      'Explainer Video',
+      'Demo Video',
+      'Interactive Video',
+    ],
     case_study_title: 'slb-interactive-explainer',
     href: '/work/b2b-brand-campaign-agency/slb-interactive-explainer',
-
   },
   {
     key: 2,
-    name: "Gordon Ritter on the Future of Software",
+    name: 'Gordon Ritter on the Future of Software',
     company: 'Vymo',
     image: '/img/works/vymo_gordon_ritter.webp',
     alt: 'Vymo',
@@ -60,7 +63,7 @@ const pageData = {
     height: '105',
   },
   image: '/img/case-study/ashirvad_pipes_1.png',
-tags: ['Manufacturing', 'CSR Video'],
+  tags: ['Manufacturing', 'CSR Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
   // featured: {
@@ -91,7 +94,6 @@ tags: ['Manufacturing', 'CSR Video'],
           src: '/img/case-study/ashirvad_pipes_2.png',
         },
       },
-    
     ],
   },
 }
@@ -137,66 +139,97 @@ function Colearn() {
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div className="mt-9 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                Background
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">Background</LineHeading>
 
-              <p className=" mb-6 md:mb-7.5">
-                Plumbing is one of India’s most essential yet underdeveloped trades. At the time of making this film in 2019, less than five percent of India’s 487 million workers had received any formal skills training, and in the plumbing sector alone, nearly eight lakh people were employed, of which almost 90 percent were untrained. This gap had resulted in low employability, poor job satisfaction, and a lack of dignity of labor for thousands of young workers.
-
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
+                Plumbing is one of India’s most essential yet underdeveloped
+                trades. At the time of making this film in 2019, less than five
+                percent of India’s 487 million workers had received any formal
+                skills training, and in the plumbing sector alone, nearly eight
+                lakh people were employed, of which almost 90 percent were
+                untrained. This gap had resulted in low employability, poor job
+                satisfaction, and a lack of dignity of labor for thousands of
+                young workers.
               </p>
-              <p className="mb-6 md:mb-7.5">
-                As a leader in water management solutions, Ashirvad Pipes saw an opportunity to address this skills gap as part of its commitment to corporate social responsibility. The company launched the Ashirvad Plumbing School - a one-of-its-kind, Gurukul-style institution offering practical training, technical knowledge, and holistic personality development for aspiring plumbing engineers. Designed to uplift the profession and create sustainable livelihood opportunities, the initiative aligned business expertise with social impact.
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                As a leader in water management solutions, Ashirvad Pipes saw an
+                opportunity to address this skills gap as part of its commitment
+                to corporate social responsibility. The company launched the
+                Ashirvad Plumbing School - a one-of-its-kind, Gurukul-style
+                institution offering practical training, technical knowledge,
+                and holistic personality development for aspiring plumbing
+                engineers. Designed to uplift the profession and create
+                sustainable livelihood opportunities, the initiative aligned
+                business expertise with social impact.
               </p>
-              <p className="mb-6 md:mb-7.5">
-                In its initial years, the school had already completed five batches, trained 154 plumbing engineers, and facilitated placements in leading companies such as Sobha, Shapoorji Pallonji, and Prestige.
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                In its initial years, the school had already completed five
+                batches, trained 154 plumbing engineers, and facilitated
+                placements in leading companies such as Sobha, Shapoorji
+                Pallonji, and Prestige.
               </p>
-
             </div>
             <div className="mt-6 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                Brief
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">Brief</LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
-
-                Ashirvad approached us with a clear brief: create a film that captures the essence of this pioneering CSR initiative. But more than that, the brand wanted a narrative that would humanize the school’s impact and go beyond the expected CSR reel. The challenge lay in making the story resonate with diverse stakeholders while staying authentic and aspirational. We needed to create a piece that was both a compelling human story and a credible representation of Ashirvad’s commitment to the plumbing ecosystem.
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                Ashirvad approached us with a clear brief: create a film that
+                captures the essence of this pioneering CSR initiative. But more
+                than that, the brand wanted a narrative that would humanize the
+                school’s impact and go beyond the expected CSR reel. The
+                challenge lay in making the story resonate with diverse
+                stakeholders while staying authentic and aspirational. We needed
+                to create a piece that was both a compelling human story and a
+                credible representation of Ashirvad’s commitment to the plumbing
+                ecosystem.
               </p>
-
             </div>
             <div className="mt-6 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                Our Approach
+              <LineHeading className="mb-6 md:mb-9">Our Approach</LineHeading>
 
-              </LineHeading>
-
-              <p className="mb-6 md:mb-7.5">
-
-                Our solution was to transform this institutional success story into a deeply human one. We began by conducting in‑depth pre‑interviews with several students and alumni, uncovering the personal stories that best reflected the school’s transformative impact. Through this process, we identified Sunil and Siva as the strongest voices to bring the narrative to life. Sunil, an engineering graduate who struggled to find meaningful employment, and Siva, a BCom graduate who had drifted through multiple unsatisfying jobs, embodied the aspirations of thousands of young Indians seeking dignity and growth in their careers. Their journeys became the emotional core of the film, taking viewers on a before‑and‑after journey - from career dissatisfaction to newfound purpose and opportunity.
-
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                Our solution was to transform this institutional success story
+                into a deeply human one. We began by conducting in‑depth
+                pre‑interviews with several students and alumni, uncovering the
+                personal stories that best reflected the school’s transformative
+                impact. Through this process, we identified Sunil and Siva as
+                the strongest voices to bring the narrative to life. Sunil, an
+                engineering graduate who struggled to find meaningful
+                employment, and Siva, a BCom graduate who had drifted through
+                multiple unsatisfying jobs, embodied the aspirations of
+                thousands of young Indians seeking dignity and growth in their
+                careers. Their journeys became the emotional core of the film,
+                taking viewers on a before‑and‑after journey - from career
+                dissatisfaction to newfound purpose and opportunity.
               </p>
-              <p className="mb-6 md:mb-7.5">
-                To balance this emotional storytelling with authority, we featured Rajiv Pandya, CFO of Ashirvad Pipes, who articulated the vision behind the Plumbing School and the company’s commitment to uplifting the trade. We complemented these narratives with on‑ground visuals of the school’s infrastructure, hands-on training sessions, and interactive classrooms, bringing the Gurukul‑style approach to life on screen. The film interwove these human stories with compelling statistics, creating a narrative that was both emotionally resonant and anchored in measurable impact.
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                To balance this emotional storytelling with authority, we
+                featured Rajiv Pandya, CFO of Ashirvad Pipes, who articulated
+                the vision behind the Plumbing School and the company’s
+                commitment to uplifting the trade. We complemented these
+                narratives with on‑ground visuals of the school’s
+                infrastructure, hands-on training sessions, and interactive
+                classrooms, bringing the Gurukul‑style approach to life on
+                screen. The film interwove these human stories with compelling
+                statistics, creating a narrative that was both emotionally
+                resonant and anchored in measurable impact.
               </p>
-
             </div>
             <div className="mt-6 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-             The Outcome
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">The Outcome</LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
-
-        The film successfully delivered on two fronts -  engaging audiences emotionally through real student journeys while simultaneously meeting the needs of corporate storytelling with clarity and credibility. The project resulted in a 3.5 minute film used across digital platforms and offline presentations to communicate the Ashirvad Plumbing School initiative. It documented the school’s early milestones - five batches completed, 154 plumbing engineers trained, and placements in leading companies - providing a clear, data‑driven snapshot of the program’s scale and purpose.
-
-
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                The film successfully delivered on two fronts - engaging
+                audiences emotionally through real student journeys while
+                simultaneously meeting the needs of corporate storytelling with
+                clarity and credibility. The project resulted in a 3.5 minute
+                film used across digital platforms and offline presentations to
+                communicate the Ashirvad Plumbing School initiative. It
+                documented the school’s early milestones - five batches
+                completed, 154 plumbing engineers trained, and placements in
+                leading companies - providing a clear, data‑driven snapshot of
+                the program’s scale and purpose.
               </p>
-
             </div>
           </div>
         </div>
@@ -207,7 +240,6 @@ function Colearn() {
         />
       </section>
 
-     
       {/* <SimilarPosts
        tag="explore more case studies"
         className="py-15 md:pb-30"

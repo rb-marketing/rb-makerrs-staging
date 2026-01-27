@@ -81,14 +81,14 @@ function TaneiraSanganeri() {
               <LineHeading className="mb-6 md:mb-9">
                 Background & Brief
               </LineHeading>
-              <p className="text-base md:text-2xl text-rb-black/80 leading-7 mb-7.5">
+              <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-7.5">
                 Sanganeri block printing, with its delicate floral motifs and
                 400-year legacy, remains one of India’s most treasured crafts.
                 Rooted in the migration stories of the Chippa community and
                 enriched by royal patronage, Sanganeri textiles are celebrated
                 for their intricate Buta, Buti, Bel, and Jaal patterns.
               </p>
-              <p className="text-base md:text-2xl text-rb-black/80 leading-7">
+              <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">
                 Taneira, known for championing Indian weaves and techniques,
                 wanted to showcase the heritage, history, and cultural context
                 of Sanganeri printing in detail, while also showing how
@@ -99,7 +99,7 @@ function TaneiraSanganeri() {
             </div>
             <div className="mt-6 md:mt-20">
               <LineHeading className="mb-6 md:mb-9">Our Approach</LineHeading>
-              <p className="text-base md:text-2xl text-rb-black/80 leading-7 mb-7.5">
+              <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-7.5">
                 The film focused on the craft itself. Its rich history and
                 evolution, along with detailed sequences of block carving, dye
                 preparation, pinning, printing, and finishing. Guided by
@@ -111,7 +111,7 @@ function TaneiraSanganeri() {
                 interventions that keep Sanganeri prints relevant for today’s
                 customers.
               </p>
-              <p className="text-base md:text-2xl text-rb-black/80 leading-7 mb-7.5">
+              <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-7.5">
                 With a lean crew and a tight one-day schedule, the project was
                 directed virtually - an approach that kept production agile
                 without compromising on detail or warmth. Each frame was planned
@@ -121,7 +121,7 @@ function TaneiraSanganeri() {
                 keep the process smooth and unobtrusive, allowing authentic
                 moments to unfold naturally.
               </p>
-              <p className="text-base md:text-2xl text-rb-black/80 leading-7">
+              <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">
                 A warm folk score layered with natural sounds of the printing
                 process made the experience feel both immersive and
                 contemporary. We filmed on location in Sanganer and at Taneira’s

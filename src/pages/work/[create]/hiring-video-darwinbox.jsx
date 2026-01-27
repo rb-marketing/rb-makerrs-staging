@@ -20,7 +20,7 @@ export const similarPostsData = [
     key: 1,
     name: 'Transforming relationships for SME banks in U.S.A',
     company: 'VYMO',
-   image: '/img/works/vymo_sme.webp',
+    image: '/img/works/vymo_sme.webp',
     tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
     href: '/work/b2b-brand-campaign-agency/vymo-sme-bank-explainer-video',
   },
@@ -29,7 +29,12 @@ export const similarPostsData = [
     name: 'HEALTHTECH AND INSURTECH CASE STUDY VIDEOS FOR HIMSS',
     company: 'WIPRO',
     image: '/img/casestudy-for-himss.webp',
-    tags: ['Healthtech', 'Case Study Video', 'Explainer Video', '2D Animation Video'],
+    tags: [
+      'Healthtech',
+      'Case Study Video',
+      'Explainer Video',
+      '2D Animation Video',
+    ],
     href: '/work/b2b-video-production-agency/wipro-healthtech-case-study-videos',
   },
   {
@@ -37,9 +42,15 @@ export const similarPostsData = [
     name: 'PROJECT LOOM',
     company: 'TANEIRA',
     image: '/img/project-loom.webp',
-    tags: ['Fashion',' Short Films',' Documentaries','Web Series','Interviews'],
+    tags: [
+      'Fashion',
+      ' Short Films',
+      ' Documentaries',
+      'Web Series',
+      'Interviews',
+    ],
     href: '/work/b2b-video-production-agency/taneira',
-  }
+  },
 ]
 
 const pageData = {
@@ -89,7 +100,15 @@ function DarWinBox() {
   const router = useRouter()
   const articleUrl = `https://www.makerrs.com${router.pathname}`
 
-  const { logo, tags, commercials, desktopVideo, mobileVideo, image, specifyWidth } = pageData
+  const {
+    logo,
+    tags,
+    commercials,
+    desktopVideo,
+    mobileVideo,
+    image,
+    specifyWidth,
+  } = pageData
   const socials = [
     {
       key: 0,
@@ -108,60 +127,74 @@ function DarWinBox() {
   ]
   return (
     <>
-      <SEO 
-      title="Darwinbox Recruitment Video | Makerrs" 
-      description="We made a recruitment video for Darwinbox with humor, authenticity, and founder-led storytelling to showcase their vibrant workplace culture."
-      url="https://www.makerrs.com/work/video-production/hiring-video-darwinbox"
+      <SEO
+        title="Darwinbox Recruitment Video | Makerrs"
+        description="We made a recruitment video for Darwinbox with humor, authenticity, and founder-led storytelling to showcase their vibrant workplace culture."
+        url="https://www.makerrs.com/work/video-production/hiring-video-darwinbox"
       />
       <WorkHeroSection
         logo={logo}
         socials={socials}
         tags={tags}
-        title="A hiring video with humor and heart" 
+        title="A hiring video with humor and heart"
         // desktopVideo={desktopVideo}
         // mobileVideo={mobileVideo}
         image={image}
         specifyWidth={specifyWidth}
       />
-    <section className="bg-white  overflow-hidden md:pb-14 pb-[24px]">
+      <section className="bg-white  overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div className="mt-9 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                The Challenge
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">The Challenge</LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
-                Darwinbox, one of the world&apos;s fastest-growing AI-powered Human Capital Management (HCM) platforms, needed a way to attract top talent. The mission was to create an employer branding video that captured their vibrant and innovative culture, not just another standard corporate film. The goal was to excite, entertain, and inspire prospective talent by showing Darwinbox as an aspirational workplace where innovation, opportunity, and passion all come together.
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                Darwinbox, one of the world&apos;s fastest-growing AI-powered
+                Human Capital Management (HCM) platforms, needed a way to
+                attract top talent. The mission was to create an employer
+                branding video that captured their vibrant and innovative
+                culture, not just another standard corporate film. The goal was
+                to excite, entertain, and inspire prospective talent by showing
+                Darwinbox as an aspirational workplace where innovation,
+                opportunity, and passion all come together.
               </p>
             </div>
             <div className="mt-6 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                Our Solution
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">Our Solution</LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
-                Instead of a typical testimonial or a predictable montage of stock footage, we built a story-driven narrative that used humor and authenticity to showcase what life at Darwinbox is really like. The film reimagined the evolution of HR, from clunky old desktops and outdated processes to Darwinbox&apos;s modern, mobile-first world. With the founders leading the story, we humanized the brand and made the culture feel relatable. We showed employees as they actually are; cycling through hallways, quizzing in libraries, or volunteering together. Capturing the everyday energy of the Darwinbox team.
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                Instead of a typical testimonial or a predictable montage of
+                stock footage, we built a story-driven narrative that used humor
+                and authenticity to showcase what life at Darwinbox is really
+                like. The film reimagined the evolution of HR, from clunky old
+                desktops and outdated processes to Darwinbox&apos;s modern,
+                mobile-first world. With the founders leading the story, we
+                humanized the brand and made the culture feel relatable. We
+                showed employees as they actually are; cycling through hallways,
+                quizzing in libraries, or volunteering together. Capturing the
+                everyday energy of the Darwinbox team.
               </p>
             </div>
             <div className="mt-6 md:mb-20">
-              <LineHeading className="mb-6 md:mb-9">
-                The Result
-              </LineHeading>
+              <LineHeading className="mb-6 md:mb-9">The Result</LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
-                The film cut through the noise of generic hiring videos, and established Darwinbox as a destination workplace for ambitious talent. By blending founder-led storytelling with witty, authentic moments. Today, as Darwinbox continues its incredible growth, the film is used as a recruitment tool encouraging people to join a workplace like no other.
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
+                The film cut through the noise of generic hiring videos, and
+                established Darwinbox as a destination workplace for ambitious
+                talent. By blending founder-led storytelling with witty,
+                authentic moments. Today, as Darwinbox continues its incredible
+                growth, the film is used as a recruitment tool encouraging
+                people to join a workplace like no other.
               </p>
             </div>
           </div>
         </div>
 
-        <CommercialSection 
+        <CommercialSection
           sources={commercials?.sources}
           type={commercials?.type}
         />
       </section>
-
     </>
   )
 }

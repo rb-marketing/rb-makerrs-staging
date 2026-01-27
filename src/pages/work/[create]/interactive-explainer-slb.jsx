@@ -128,7 +128,7 @@ function Slb() {
         specifyWidth = {specifyWidth}
         image={image}
       />
-      <section className="bg-white  overflow-hidden md:pb-14 pb-[24px]">
+      <section className="bg-white  overflow-hidden md:pb-30 pb-15">
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div className="mt-9 md:mb-20">
@@ -136,12 +136,12 @@ function Slb() {
                 Background & Problem Statement
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 SLB is a global company driving innovation in oilfield services.
                 And even as they were delivering technology-based solutions for
                 their clients, they were ramping up digitization internally.
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 SLB was in the process of digitizing sales, manufacturing, and
                 product engineering workflows in order to deliver a better
                 customer experience and to enhance efficiency. While the tool
@@ -149,13 +149,13 @@ function Slb() {
                 was time to plan for technology adoption amongst key stakeholder
                 groups.
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Their ask to Makerrs: equip internal teams with a
                 comprehensive understanding of their evolving digital toolkit.
                 The starting point for us: detailed user journeys built for the
                 tech team!
               </p>
-              <p className=" mb-6 md:mb-7.5">
+              <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 The challenge: build the stories from an internal marketing POV,
                 introduce the tool kit in an exciting manner and drive
                 technology user adoption.
@@ -166,19 +166,19 @@ function Slb() {
                 Creative approach
               </LineHeading>
 
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 Multiple in-depth discovery calls helped us change the brief
                 from a 1-hour walkthrough requirement to a cool 10-minute,
                 interactive and engaging explainer video.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 We created a modular video structure, sat down with the client
                 in Houston and hashed out all the key information for each
                 module. Our approach ensured that each module unfolded like a
                 mini-story that was not based on dry, technical jargon, but as
                 personas-specific narratives.
               </p>
-              <p className="mb-6 md:mb-7.5">
+              <p className="mb-6 md:mb-7.5 !leading-[150%]">
                 The magic truly came alive in the custom-designed storyboard.
                 The visual language was relatable to the oilfield industry and
                 the stakeholders, supported the core messaging and positioned

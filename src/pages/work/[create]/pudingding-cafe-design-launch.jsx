@@ -119,7 +119,7 @@ function PDDIntegrated() {
       />
       <section className="bg-white overflow-hidden">
         <div className="container">
-          <div className="cs-content max-w-[914px]">
+          <div className="cs-content max-w-[914px] md:mb-20">
             <div className="mt-9 md:mb-20">
               <LineHeading className="mb-6 md:mb-9">
                 The Opportunity
