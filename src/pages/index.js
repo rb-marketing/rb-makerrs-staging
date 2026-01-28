@@ -340,7 +340,7 @@ const LandPage = ({playWorks , articles}) => {
     {
       key: 7,
       quote:
-        'Despite difficulties faced in shooting in 2 countries, we created these awesome videos, while keeping everyone safe during Covid-19.',
+        'Despite difficulties faced in shooting in 2 countries, we created these awesome videos while keeping everyone safe during Covid-19.',
       name: 'MARC IRAWAN',
       designation: 'Founder',
       company: 'COLEARN',
@@ -353,7 +353,7 @@ const LandPage = ({playWorks , articles}) => {
     {
       key: 8,
       quote:
-        'It’s never easy creating great videos for a fast-growing business like ours. We struggled, till we came across Makerrs.',
+        'It’s never easy creating great videos for a fast-growing business like ours. We struggled till we came across Makerrs.',
       name: 'SUNIL SURESH',
       designation: 'CHIEF MARKETING AND STRATEGY OFFICER',
       company: 'CAPILLARY TECHNOLOGIES',
@@ -421,7 +421,7 @@ const LandPage = ({playWorks , articles}) => {
           >
             www.makerrs.com/work
           </Link>
-          {''}, Visit the link to explore our best work.
+          {''}. Visit the link to explore our best work.
         </>
       ),
     },

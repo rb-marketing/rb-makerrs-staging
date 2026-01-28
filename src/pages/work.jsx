@@ -32,7 +32,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       url: 'design',
     },
     {
-      name: 'Videos',
+      name: 'Video',
       url: 'videos',
     },
     {

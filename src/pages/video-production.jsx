@@ -202,7 +202,10 @@ const VideosServices = ({ setisPopupOpen }) => {
 
           <h3 className="mt-4 font-semibold">1. Project Briefing</h3>
           <p>
-            We start by understanding your business objectives, target audience, and key messages. Our Client Servicing team collaborates closely with you to outline project goals, ensuring a clear and actionable direction from the start.
+            We start by understanding your business objectives, target audience,
+            and key messages. Our Client Servicing team collaborates closely
+            with you to outline project goals, ensuring a clear and actionable
+            direction from the start.
           </p>
 
           <h3 className="mt-4 font-semibold">2. Research & Insights</h3>
@@ -296,7 +299,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       key: 2,
       quote:
-        'We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends, are always experimental and open to feedback. They are amazing to work with!',
+        'We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends, are always experimental and open to feedback. They’re an amazing lot to work with!',
 
       designation: 'VP INTERNAL COMMUNICATIONS',
       company: 'FORTUNE 100 ITES ENTERPRISE',
@@ -663,7 +666,7 @@ const VideosServices = ({ setisPopupOpen }) => {
         workDetails: {
           videolink:
             // 'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-            'https://vimeo.com/1008706015?share=copy'
+            'https://vimeo.com/1008706015?share=copy',
         },
         content:
           'SLB was digitizing its sales, manufacturing, and product engineering workflows. And this interactive explainer helped their IT team launch and drive adoption across the organisation.',
@@ -765,7 +768,7 @@ const VideosServices = ({ setisPopupOpen }) => {
           duration: '02:34',
         },
       ],
-    }
+    },
   ]
 
   const gridData = [
@@ -845,60 +848,81 @@ const VideosServices = ({ setisPopupOpen }) => {
 
   const _posts = [
     {
-    key: 0,
-    name: 'Global Leaders: a Hiring Campaign',
-    image: '/img/case-study/infosys-global-leaders.webp',
-    company: 'Infosys',
-    alt: 'infosys-global-leaders',
-    tags: ['Technology', 'Campaign', 'Employer Branding Video', 'Global Video Production'],
-    href: '/brand-campaign/infosys-global-employer-brand',
-  },
-  {
-    key: 1,
-    name: '220% Organic YouTube Subscriber Growth in India',
-    company: 'Indeed',
-    alt: 'Indeed YouTube Content',
-    tags: ['Hiring Platform', 'YouTube Content'],
-    image: '/img/works/indeed_youtube_content_main_thumbnail.png',
-    href: '/video-production/indeed-youtube-content',
-  },
-  {
-    key: 2,
-    name: 'Campaign Explainer Video for HRM SAAS product',
-    company: 'MULTIPLIER',
-    image: '/img/works/multiplier_work.webp',
-    alt: 'MULTIPLIER',
-    tags: ['SaaS', 'Lead Gen Campaign', 'Product Launch Video', 'Explainer Video', '2D Animation Video'],
-    href: '/video-production/multiplier-explainer-video',
-  },
-  {
-    key: 3,
-    name: "Gordon Ritter on the Future of Software",
-    company: 'Vymo',
-    image: '/img/works/vymo_gordon_ritter.webp',
-    alt: 'Vymo',
-    tags: ['SaaS', 'Thought Leadership Video', 'Corporate Film', 'Interview Video'],
-    href: '/video-production/thought-leadership-vymo-gordon-ritter',
-  },
-  {
-    key: 4,
-    name: 'Capturing the Story of Sanganeri Craft for Taneira',
-    company: 'Taneira',
-    alt: 'Sanganeri Craft with Taneira',
-    tags: ['Textile and Apparel', 'Documentary Film'],
-    image: '/img/works/taneira_main_thumbnail.png',
-    href: '/video-production/fashion-taneira-sanganeri',
-  },
-  {
-    key: 31,
-    name: "Celebrating Rural Women in India's Auto Manufacturing",
-    company: 'Tata Motors',
-    alt: " Celebrating Rural Women in India's Auto Manufacturing",
-    tags: ['Manufacturing', 'Employer Branding', 'Corporate Communication', 'Diversity & Inclusion'],
-    image: '/img/works/womens-at-tata-autocamp.webp',
-    href: '/video-production/tata-inclusion-auto-comp',
-  },
-]
+      key: 0,
+      name: 'Global Leaders: a Hiring Campaign',
+      image: '/img/case-study/infosys-global-leaders.webp',
+      company: 'Infosys',
+      alt: 'infosys-global-leaders',
+      tags: [
+        'Technology',
+        'Campaign',
+        'Employer Branding Video',
+        'Global Video Production',
+      ],
+      href: '/brand-campaign/infosys-global-employer-brand',
+    },
+    {
+      key: 1,
+      name: '220% Organic YouTube Subscriber Growth in India',
+      company: 'Indeed',
+      alt: 'Indeed YouTube Content',
+      tags: ['Hiring Platform', 'YouTube Content'],
+      image: '/img/works/indeed_youtube_content_main_thumbnail.png',
+      href: '/video-production/indeed-youtube-content',
+    },
+    {
+      key: 2,
+      name: 'Campaign Explainer Video for HRM SAAS product',
+      company: 'MULTIPLIER',
+      image: '/img/works/multiplier_work.webp',
+      alt: 'MULTIPLIER',
+      tags: [
+        'SaaS',
+        'Lead Gen Campaign',
+        'Product Launch Video',
+        'Explainer Video',
+        '2D Animation Video',
+      ],
+      href: '/video-production/multiplier-explainer-video',
+    },
+    {
+      key: 3,
+      name: 'Gordon Ritter on the Future of Software',
+      company: 'Vymo',
+      image: '/img/works/vymo_gordon_ritter.webp',
+      alt: 'Vymo',
+      tags: [
+        'SaaS',
+        'Thought Leadership Video',
+        'Corporate Film',
+        'Interview Video',
+      ],
+      href: '/video-production/thought-leadership-vymo-gordon-ritter',
+    },
+    {
+      key: 4,
+      name: 'Capturing the Story of Sanganeri Craft for Taneira',
+      company: 'Taneira',
+      alt: 'Sanganeri Craft with Taneira',
+      tags: ['Textile and Apparel', 'Documentary Film'],
+      image: '/img/works/taneira_main_thumbnail.png',
+      href: '/video-production/fashion-taneira-sanganeri',
+    },
+    {
+      key: 31,
+      name: "Celebrating Rural Women in India's Auto Manufacturing",
+      company: 'Tata Motors',
+      alt: " Celebrating Rural Women in India's Auto Manufacturing",
+      tags: [
+        'Manufacturing',
+        'Employer Branding',
+        'Corporate Communication',
+        'Diversity & Inclusion',
+      ],
+      image: '/img/works/womens-at-tata-autocamp.webp',
+      href: '/video-production/tata-inclusion-auto-comp',
+    },
+  ]
 
   const handleRelatedVideoClick = (videolink) => {
     const clickedVideoData = workData.find(
@@ -979,8 +1003,9 @@ const VideosServices = ({ setisPopupOpen }) => {
         />
         <div
           ref={stickyButtonRef}
-          className={`hidden fixed bottom-30 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${isSticky ? 'lg:block' : ''
-            } ${isOverlapping ? 'opacity-0' : 'opacity-100'}`}
+          className={`hidden fixed bottom-30 right-8 z-20 md:min-w-[180px] transition-opacity duration-300 ease-in-out ${
+            isSticky ? 'lg:block' : ''
+          } ${isOverlapping ? 'opacity-0' : 'opacity-100'}`}
         >
           <Button
             onClick={() => {
@@ -995,7 +1020,7 @@ const VideosServices = ({ setisPopupOpen }) => {
                 )
               }, 100)
             }}
-          className="w-full md:!px-4 md:!h-11 md:text-[0.9rem]"
+            className="w-full md:!px-4 md:!h-11 md:text-[0.9rem]"
             suffix={<LineArrow hover />}
           >
             Video with us
@@ -1050,7 +1075,7 @@ const VideosServices = ({ setisPopupOpen }) => {
           posts={_posts}
           href="/work/videos"
           title="Explore Our Video Portfolio"
-          btnposition='bottom'
+          btnposition="bottom"
         />
       </div>
 
@@ -1197,14 +1222,17 @@ const VideosServices = ({ setisPopupOpen }) => {
         </div>
       </section>
 
+      <TrustedBrandsSection
+        className="bg-white py-7.5 md:py-15"
+        heading="Our Clients"
+      />
+
       <Testimonials
         title={'WHAT CLIENTS SAY'}
         className="pt-18 pb-7.5 md:pt-30 md:pb-15"
         testimonialData={testimonialData}
         type="semi"
       />
-
-      <TrustedBrandsSection className="bg-white py-7.5 md:py-15" />
 
       <div id="leap-explore" className="py-6 md:py-12">
         <ExploreMoreSection
