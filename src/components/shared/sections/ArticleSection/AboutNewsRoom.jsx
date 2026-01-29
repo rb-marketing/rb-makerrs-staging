@@ -28,7 +28,7 @@ const articles = [
     id: 0,
     href: 'https://brandequity.economictimes.indiatimes.com/news/the-pitch-report/red-bangle-wins-the-strategic-and-creative-mandate-for-mccain-foods-india/115562258',
     title:
-      'Makerrs wins the strategic and creative mandate for McCain Foods India',
+      'Red Bangle wins the strategic and creative mandate for McCain Foods India',
     author: 'ET Brand Equity | Business Development',
     // date: formateDate(1644085800000),
     image: '/img/articles/mc-cain.jpg',
@@ -50,7 +50,7 @@ const articles = [
     id: 2,
     href: 'https://brandequity.economictimes.indiatimes.com/news/the-people-report/rimona-ganapathy-joins-red-bangle-as-senior-vice-president-creative-services/107489863',
     title:
-      'Rimona Ganapathy joins Makerrs as Senior Vice President - Creative Services',
+      'Rimona Ganapathy joins Red Bangle as Senior Vice President - Creative Services',
     author: 'ET Brand Equity | Leadership',
     // date: formateDate(1644085800000),
     image: '/img/articles/Rimona_Ganapathy.webp',
@@ -108,7 +108,7 @@ const articles = [
     id: 7,
     href: 'https://cxotoday.com/interviews/red-bangles-technological-innovations-navigating-video-demand-in-a-dynamic-landscape/',
     title:
-      'Makerrs Technological Innovations Navigating Video Demand and Brand Content space in a Dynamic Landscape',
+      'Red Bangle Technological Innovations Navigating Video Demand and Brand Content space in a Dynamic Landscape',
     author: 'CXOToday| Interview',
     image: '/img/articles/Lakshmi_Rebecca.webp',
     alt: 'Lakshmi Rebecca',
@@ -151,11 +151,11 @@ const articles = [
     id: 11,
     href: 'https://www.afaqs.com/news/media/red-bangle-gears-up-for-growth-repositions-and-expands-to-serve-indian-brands',
     title:
-      'Makerrs gears up for Growth, Repositions and Expands to serve Indian Brands',
+      'Red Bangle gears up for Growth, Repositions and Expands to serve Indian Brands',
     author: 'Afaqs | Launch Announcement',
     // date: formateDate(1644085800000),
     image: '/img/articles/Red_Bangle_gears_up.webp',
-    alt: 'Makerrs gears up',
+    alt: 'Red Bangle gears up',
     excerpt:
       'Market research firm Gartner predicts that by 2026 one-fourth of people will spend at least 1 hour a day in metaverse worlds. We list 5 key steps to help you take your brand into the metaverse.',
   },
@@ -174,7 +174,7 @@ const articles = [
     id: 13,
     href: 'https://www.storyboard18.com/brand-makers/red-bangle-strengthens-hires-ankur-bora-as-svp-business-development-and-client-servicing-13614.htm',
     title:
-      'Makerrs hires Ankur Bora as SVP – Business Development and Client Servicing',
+      'Red Bangle hires Ankur Bora as SVP – Business Development and Client Servicing',
     author: 'Storyboard18 | Leadership',
     image: '/img/articles/Ankur-Bora.webp',
     alt: 'Ankur Bora',
@@ -185,7 +185,7 @@ const articles = [
     id: 14,
     href: 'https://www.afaqs.com/people-spotting/red-bangle-appoints-vivek-chandra-shenoy-as-vp-of-marketing-and-strategy',
     title:
-      'Makerrs appoints Vivek Chandra Shenoy as VP of Marketing and Strategy',
+      'Red Bangle appoints Vivek Chandra Shenoy as VP of Marketing and Strategy',
     author: 'Afaqs | Leadership',
     image: '/img/articles/Vivek_Chandra.webp',
     alt: 'Vivek Chandra',
