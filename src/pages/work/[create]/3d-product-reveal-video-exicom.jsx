@@ -50,7 +50,7 @@ const pageData = {
     width: '150',
     height: '105',
   },
-  image: '/img/case-study/exicom_banner.png',
+  // image: '/img/case-study/exicom_banner.png',
   specifyWidth: 'md:!w-[200px] !w-[180px]',
   tags: ['Mobility', 'Product Launch Video', 'Marketing Video', '3D Animation Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
@@ -128,7 +128,7 @@ function Exicom() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
               <LineHeading className="mb-6 md:mb-9">
                 Background & Problem Statement
               </LineHeading>

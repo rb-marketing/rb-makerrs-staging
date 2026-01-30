@@ -50,7 +50,7 @@ const pageData = {
     width: '150',
     height: '70',
   },
-  image: '/img/case-study/life_nfosys_banner_visual.png',
+  // image: '/img/case-study/life_nfosys_banner_visual.png',
   tags: ['Technology', 'Hiring Video', 'Employer Branding Video', 'Culture Video'],
   commercials: {
     title: (
@@ -117,7 +117,7 @@ function LifeInfosys() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-6 md:mb-7.5">
                Infosys wanted a warm culture/recruitment video to present its employee-driven policies which 
                promote work-life balance, facilitate growth opportunities, role progression, reskilling, etc.

@@ -52,7 +52,7 @@ const pageData = {
    width: '150',
     height: '109',
   },
-  image: '/img/case-study/hansel_banner_visual.png',
+  // image: '/img/case-study/hansel_banner_visual.png',
   tags: ['SaaS', 'Explainer Video', 'Marketing Video', 'Product Launch Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -128,7 +128,7 @@ function HanselSaasExplainer() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
                 <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[36px]">
                     Hansel — a user drop-off management platform — needed a marketing explainer video. Several 
                     conversations later, we figured the best way to pitch Hansel is by showing a Product Marketer 

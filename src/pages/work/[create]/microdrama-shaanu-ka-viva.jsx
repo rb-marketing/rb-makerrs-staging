@@ -18,7 +18,7 @@ const pageData = {
     height: '50',
   },
   specifyWidth: 'md:!w-[70px] !w-[50px]',
-  image: '/img/case-study/copy-of-banner.jpg',
+  // image: '/img/case-study/copy-of-banner.jpg',
   tags: ['Gen AI Videos', 'Short-form Content', 'Digital Storytelling'],
   commercials: {
     type: 'projectLoom',
@@ -156,7 +156,7 @@ function XiaomiBuds() {
                 .
               </p>
             </div> */}
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
               {/* <LineHeading className="mb-6 md:mb-9">
                 Making a microdrama series with GenAI
               </LineHeading> */}

@@ -18,7 +18,7 @@ const pageData = {
     width: '260',
     height: '105',
   },
-  image: '/img/works/xiaomi-banner-1.webp',
+  // image: '/img/works/xiaomi-banner-1.webp',
     tags: [
       'Consumer Electronics', 'Ad Film', 'Digital Campaign', 'Product Launch Campaign'
     ],
@@ -82,7 +82,7 @@ function XiaomiPocketPowerBank() {
         <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
         <div className="container ">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
 
 
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">

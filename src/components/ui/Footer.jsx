@@ -203,8 +203,7 @@ const offices = [
     location: (
       <>
         <div>
-          1401 21st ST #<br />
-          Sacramento, CA 95811
+          1401, 21st Street<br />
         </div>
       </>
     ),

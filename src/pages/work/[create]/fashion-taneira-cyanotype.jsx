@@ -18,7 +18,7 @@ const pageData = {
         width: '260',
         height: '105',
     },
- image: '/img/works/taneria-cyanotype-banner.webp',
+//  image: '/img/works/taneria-cyanotype-banner.webp',
     tags: ['Textile and Apparel', ' Documentary Film'],
     commercials: {
         type: 'video',
@@ -80,7 +80,7 @@ function TaneiraCyanotype() {
             <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
                 <div className="container ">
                     <div className="cs-content max-w-[914px]">
-                        <div className="mt-9 md:mb-20">
+                        <div className="mt-0 md:mb-20">
 
 
                             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">
