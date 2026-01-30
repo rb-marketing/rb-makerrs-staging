@@ -22,7 +22,7 @@ export const WorkHeroSection = ({
   }
 
   return (
-    <section className="bg-white pt-10 md:pt-16 pb-7.5 overflow-hidden">
+    <section className={`bg-white pt-10 md:pt-16 overflow-hidden ${image ? 'pb-7.5' : ''}`}>
       <div className="container">
         <div className="rb-row md:mt-8.5 mb-12 md:mb-16">
           <div className="w-full md:w-9/12 text-2xl md:leading-9.5 text-rb-black/80">

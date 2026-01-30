@@ -48,7 +48,7 @@ const pageData = {
     width: '150',
     height: '105',
   },
-  image: '/img/case-study/multiplier_banner.webp',
+  // image: '/img/case-study/multiplier_banner.webp',
   tags: ['SaaS', 'Lead Gen Campaign', 'Product Launch Video', 'Explainer Video', '2D Animation Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -124,7 +124,7 @@ function Multiplier() {
     <section className="bg-white  overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
               <LineHeading className="mb-6 md:mb-9">
                 Background & Problem Statement
               </LineHeading>

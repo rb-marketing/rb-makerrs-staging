@@ -53,7 +53,7 @@ const pageData = {
     height: '109',
   },
   specifyWidth: 'md:!w-[80px] !w-[60px]',
-  image: '/img/case-study/koo_self_verification_banner_visual.png',
+  // image: '/img/case-study/koo_self_verification_banner_visual.png',
   tags: ['Social Network', 'Explainer Video', '2D Animation Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -130,7 +130,7 @@ function KooSelfVerification() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
                 <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[36px]">
                     Koo became the first social media platform to empower Indians to authenticate and secure 
                     their identity on the Twitter-like local-language app. So when Koo approached us to make a 

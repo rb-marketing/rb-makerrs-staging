@@ -51,7 +51,7 @@ const pageData = {
     width: '150',
     height: '105',
   },
-  image: '/img/case-study/werise_banner.webp',
+  // image: '/img/case-study/werise_banner.webp',
   tags: ['Non-profit', 'CSR Video', 'Documentary'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -138,7 +138,7 @@ function WeRise() {
       <section className="bg-white overflow-hidden md:pb-[84px] pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
                 <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[36px]">
               This documentary short explores the promising journey of young women in science. It highlights their aspirations, challenges, and the bright future they envision, inspiring the world with their determination and innovation.
                 </p>

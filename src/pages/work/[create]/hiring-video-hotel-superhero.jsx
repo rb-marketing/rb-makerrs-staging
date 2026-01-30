@@ -60,7 +60,7 @@ const pageData = {
     height: '105',
   },
   specifyWidth: 'md:!w-[200px] !gw-[180px]',
-  image: '/img/case-study/treebo_banner.webp',
+  // image: '/img/case-study/treebo_banner.webp',
   tags: ['Hospitality Tech', 'Hiring Video', 'Employer Branding', 'Testimonial Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -137,7 +137,7 @@ function Treebo() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
          <div className="container">
             <div className="cs-content max-w-[914px]">
-                <div className="mt-9 md:mb-20">
+                <div className="mt-0 md:mb-20">
                     <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">
                     Spotless linen, free Wi-Fi, complimentary breakfast—who wouldn’t
                     love world-class hospitality at an affordable price? This video, 

@@ -52,7 +52,7 @@ const pageData = {
    width: '150',
     height: '109',
   },
-  image: '/img/case-study/vymo_gordon_ritter_banner.webp',
+  // image: '/img/case-study/vymo_gordon_ritter_banner.webp',
   tags: ['SaaS', 'Thought Leadership Video', 'Corporate Film', 'Interview Video'],
   // desktopVideo: '/img/works/metro-wholesale-big.mp4',
   // mobileVideo: '/img/works/metro-wholesale.mp4',
@@ -128,7 +128,7 @@ function VymoLeadManagement() {
       <section className="bg-white overflow-hidden md:pb-14 pb-[24px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
                 <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[36px]">
                 Emergence Capital&apos;s Gordon Ritter, a leading investor in next-generation enterprise
                 software like Vymo, brings decades of software investment expertise to a groundbreaking 

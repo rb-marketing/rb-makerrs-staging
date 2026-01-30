@@ -19,7 +19,7 @@ const pageData = {
         height: '150',
     },
     specifyWidth: 'md:!w-[220px] !w-[200px]',
-    image: '/img/works/women-at- Tata-autocomp-banner.webp',
+    // image: '/img/works/women-at- Tata-autocomp-banner.webp',
     tags: [
         'Manufacturing', 'Employer Branding', 'Corporate Communication', 'Diversity & Inclusion'
     ],
@@ -84,7 +84,7 @@ function TataMotors() {
         <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
                 <div className="container ">
                     <div className="cs-content max-w-[914px]">
-                        <div className="mt-9 md:mb-20">
+                        <div className="mt-0 md:mb-20">
 
 
                             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">

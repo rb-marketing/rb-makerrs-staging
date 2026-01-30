@@ -49,7 +49,7 @@ const pageData = {
     height: '10px',
   },
   specifyWidth: 'md:!w-[100px] !w-[80px]',
-  image: '/img/case-study/mumbai_indians_banner.webp',
+  // image: '/img/case-study/mumbai_indians_banner.webp',
   tags: ['Sports', 'Animated Video', 'Logo Reveal'],
   featured: {
     src: '/img/works/ccs_2x.webp',
@@ -120,7 +120,7 @@ function MumbaiIndian() {
       <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
         <div className="container">
           <div className="cs-content max-w-[914px]">
-            <div className="mt-9 md:mb-20">
+            <div className="mt-0 md:mb-20">
             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[36px]">
                 Using a cutting–edge suite of 3D animation tools, we created a stunning 3D billboard animation 
                 for Mumbai Indians that pushes creative boundaries. Set against the Gateway of India for amplified 
