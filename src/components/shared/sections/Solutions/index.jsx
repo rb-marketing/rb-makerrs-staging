@@ -63,7 +63,7 @@ const slides = [
     excerpt:
       'From brand awareness campaigns and product launch campaigns to employer branding campaigns and ESG campaigns–we take our cues from people and culture, and turn real insights into relatable campaigns that align perfectly with your business goals.',
     video: {
-      src: '/img/makers_campaign.mp4',
+      src: '/img/services/campaign/hero.mp4',
       poster: '/img/services/campaign/hero.png',
       width: '1440',
       height: '810',

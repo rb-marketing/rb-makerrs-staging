@@ -487,8 +487,8 @@ export const ClientInquiryForm = ({ isPopop = false, content = false }) => {
             <div className={`${isBlogRoute && 'col-span-1 lg:col-span-2'}`}>
               <Input
                 name="Designation"
-                label="Designation"
-                placeholder={isBlogRoute ? 'Designation' : 'Your designation'}
+                label="Job Title"
+                placeholder={isBlogRoute ? 'Job Title' : 'Your job title'}
                 required
                 borderedInput={isBlogRoute}
               />
