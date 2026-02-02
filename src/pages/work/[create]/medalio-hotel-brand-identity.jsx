@@ -119,9 +119,9 @@ function Medalio() {
                             </LineHeading>
 
                             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%]">
-                                <a href="https://www.business-standard.com/industry/news/indian-mid-segment-hotels-enjoy-competitive-edge-against-int-l-peers-124121001052_1.html" className="text-blue-600 hover:text-blue-800">
+                                <a href="https://www.business-standard.com/industry/news/indian-mid-segment-hotels-enjoy-competitive-edge-against-int-l-peers-124121001052_1.html" className="underline">
                                     The Indian hospitality sector
-                                </a> is experiencing unprecedented <a href="https://hospitality.economictimes.indiatimes.com/news/hotels/home-grown-mid-segment-hotel-brands-have-competitive-edge-in-india-study/116207844" className="text-blue-600 hover:text-blue-800">
+                                </a> is experiencing unprecedented <a href="https://hospitality.economictimes.indiatimes.com/news/hotels/home-grown-mid-segment-hotel-brands-have-competitive-edge-in-india-study/116207844" className="underline">
                                     growth
                                 </a>, driven by a surge in domestic and international tourism. The time was right for a new-age brand to emerge—one that isn’t just another hotel but a sanctuary that celebrates the ambitions of its guests while offering them an oasis of comfort. An elegant and modern space with thoughtfully curated services and amenities, Medalio stands out as a pitstop catering to those on a journey to fulfill their dreams. It inculcates a sense of pride and honours guests who have arrived in life as well as those who are on their way.
                             </p>

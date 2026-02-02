@@ -138,7 +138,7 @@ function MygateRewards() {
                                 </p>
                                                             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
                                 The campaign helped build stronger emotional connections with MyGate’s audience and strengthened its positioning as a trusted, community-focused brand. The impact was reflected in national coverage by the 
-                                <a href="https://www.financialexpress.com/business/brandwagon-mygate-launches-heroesatmygate-campaign-to-honour-the-security-guards-from-around-the-country-1897272/" target="_blank" class="text-blue-500 hover:text-blue-700"> Financial Express</a>,
+                                <a href="https://www.financialexpress.com/business/brandwagon-mygate-launches-heroesatmygate-campaign-to-honour-the-security-guards-from-around-the-country-1897272/" target="_blank" class="underline"> Financial Express</a>,
                                 featuring the campaign and highlighting MyGate’s efforts to recognise and celebrate the country’s security workforce.
                             </p>
                         </div>

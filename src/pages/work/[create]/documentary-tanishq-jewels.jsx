@@ -192,7 +192,7 @@ function Jewels() {
                             <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
                                 Over the course of a few months, we  developed powerful narratives and captured beautiful
                                 footage that would charm customers in Tanishq&apos;s retail environments as well as engage a
-                                broader online audience on <a href="http://www.jewelsofindia.org" target="_blank" className='text-blue-500'>www.jewelsofindia.org.</a>
+                                broader online audience on <a href="http://www.jewelsofindia.org" target="_blank" className='underline'>www.jewelsofindia.org.</a>
                             </p>
                         </div>
                         <div className="mt-6 md:mt-12">
