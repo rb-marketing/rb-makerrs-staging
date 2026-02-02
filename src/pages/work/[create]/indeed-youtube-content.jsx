@@ -254,25 +254,25 @@ function IndeedYouTubeContent() {
               </h3>
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
                 India’s light-skilled workforce is one of the country’s
-                fastest-growing talent pools.
+                fastest-growing talent pools. {' '}
                 <a
                   href="https://www.cnbctv18.com/education/blue-and-grey-collar-job-vacancies-see-4x-growth-in-2022-trend-to-continue-quesscorp-report-15603231.htm"
                   target="_blank"
                   className="underline"
                 >
-                  {' '}
+                  
                   Vacancies grew 4x{' '}
                 </a>{' '}
-                in 2022 alone, and by 2030,
+                in 2022 alone, and by 2030,  {' '}
                 <a
                   href="https://economictimes.indiatimes.com/jobs/hr-policies-trends/blue-collar-jobs-to-drive-70-pc-of-indias-new-job-growth-by-2030-report/articleshow/109433609.cms?from=mdr"
                   target="_blank"
                   className="underline"
                 >
-                  {' '}
-                  70% of all new jobs{' '}
+                 
+                  70% of all new jobs {' '}
                 </a>
-                in the country are expected to fall in this category. While
+                {' '} in the country are expected to fall in this category. While
                 demand for talent continues to rise, this segment of job seekers
                 still lacks structured career support.
               </p>
@@ -293,7 +293,7 @@ function IndeedYouTubeContent() {
                   target="_blank"
                 >
                   {' '}
-                  59% of Indian job seekers{' '}
+                  59% of Indian job seekers {' '}
                 </a>
                 use YouTube to build new skills, and 63% rely on it to learn
                 practical, hands-on tasks. For light-skilled workers, YouTube is
@@ -363,11 +363,12 @@ function IndeedYouTubeContent() {
                       target="_blank"
                       className="underline"
                     >
-                      Career Tips{' '}
+                      Career Tips {' '}
                     </a>
-                    – crisp, practical advice to help job seekers overcome
+                    {' '} 
+                    <span className='md:pl-[4px]'>– crisp, practical advice to help job seekers overcome
                     common challenges across different job profiles and take the
-                    next step with confidence.
+                    next step with confidence.</span>
                   </li>
                   <li className="font-opensans text-[20px] text-rb-black/80 leading-[28px] max-md:text-[16px] max-md:leading-[150%] max-md:tracking-[-0.5px] md:!mt-0 !mb-7.5  pl-2">
                     <a
@@ -375,10 +376,10 @@ function IndeedYouTubeContent() {
                       target="_blank"
                       className="underline"
                     >
-                      Career Journeys{' '}
+                      Career Journeys {' '}
                     </a>
-                    – real stories that gave viewers a window into different
-                    professions and what growth actually looks like.
+                    <span className='md:pl-[4px]'>– real stories that gave viewers a window into different
+                    professions and what growth actually looks like.</span>
                   </li>
                   <li className="font-opensans text-[20px] text-rb-black/80 leading-[28px] max-md:text-[16px] max-md:leading-[150%] max-md:tracking-[-0.5px] md:!mt-0 !mb-7.5 pl-2">
                     <a
@@ -386,10 +387,10 @@ function IndeedYouTubeContent() {
                       target="_blank"
                       className="underline"
                     >
-                      App How-Tos{' '}
+                      App How-Tos {' '}
                     </a>
-                    – quick, focused Youtube Shorts that showed how to use
-                    Indeed’s features to find relevant jobs, faster.
+                    <span className='md:pl-[4px]'>– quick, focused Youtube Shorts that showed how to use
+                    Indeed’s features to find relevant jobs, faster.</span>
                   </li>
                 </ol>
                 <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
