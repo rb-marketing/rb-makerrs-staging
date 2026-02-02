@@ -222,7 +222,7 @@ function Jewels() {
                         data= {stats}
                     /> */}
 
-                  <section className="bg-white overflow-hidden pt-2 md:pt-6 pb-0 md:pb-2">
+                  <section className="bg-white overflow-hidden pt-2 md:pt-6 pb-0 md:pb-[44px]">
                     <div className="container">
                       <LineHeading className="mb-6 md:mb-7.5">Impact and Reach</LineHeading>
                       <p className="text-base lg:w-2/3 md:!text-[20px] text-rb-black/80 !leading-[150%] mb-[30px]">
@@ -256,7 +256,6 @@ function Jewels() {
                     </div>
                   </section>  
 
-
                 <CommercialSection
                     sources={commercials?.sources}
                     type={commercials?.type}
@@ -264,7 +263,7 @@ function Jewels() {
                 <Testimonials
                     title={'WHAT OUR CLIENT SAYS'}
                     testimonialData={jewelsTestimonialData}
-                    className="pt-30 md:pt-[10rem] md:pb-30 pb-15"
+                    className="pt-30 md:pt-[84px] md:pb-30 pb-15"
                 />
             </section>
 
