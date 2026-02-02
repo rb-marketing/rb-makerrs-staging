@@ -110,7 +110,7 @@ function Colearn() {
                 <a
                   href="https://www.sciencedirect.com/science/article/pii/S0264275125000794"
                   target="_blank"
-                  className="text-blue-500"
+                  className="underline"
                 >
                   ScienceDirect, 2025
                 </a>

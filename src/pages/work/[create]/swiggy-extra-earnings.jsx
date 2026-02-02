@@ -237,7 +237,7 @@ function MetroWholesale() {
               <div className="text-base md:text-xl text-rb-black/80 mb-8 md:mb-[30px] leading-7">
                 Remember Pyaare Pankaj and Sweety from our{' '}
                 <a
-                  href="/work//brand-campaign/swiggy-winter-jackets"
+                  href="/work/brand-campaign/swiggy-winter-jackets"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

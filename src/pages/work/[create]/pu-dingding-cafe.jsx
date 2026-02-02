@@ -181,7 +181,7 @@ function Colearn() {
                 With India’s dessert industry growing at nearly{' '}
                 <a
                   href="https://www.indianretailer.com/restaurant/article/what-s-trending-in-desserts-for-2025-a-sweet-revolution-ahead.12118"
-                  className="text-blue-500"
+                  className="underline"
                 >
                   double-digit CAGRs
                 </a>

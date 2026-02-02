@@ -129,7 +129,7 @@ function PDDIntegrated() {
                 India’s F&B scene is{' '}
                 <a
                   href="https://www.indianretailer.com/restaurant/article/what-s-trending-in-desserts-for-2025-a-sweet-revolution-ahead.12118"
-                  className="text-blue-600 hover:text-blue-800" target='_blank'
+                  className="underline" target='_blank'
                 >
                   {' '}
                   buzzing

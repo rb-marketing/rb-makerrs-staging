@@ -258,7 +258,7 @@ function IndeedYouTubeContent() {
                 <a
                   href="https://www.cnbctv18.com/education/blue-and-grey-collar-job-vacancies-see-4x-growth-in-2022-trend-to-continue-quesscorp-report-15603231.htm"
                   target="_blank"
-                  className="text-blue-600 hover:text-blue-800"
+                  className="underline"
                 >
                   {' '}
                   Vacancies grew 4x{' '}
@@ -267,7 +267,7 @@ function IndeedYouTubeContent() {
                 <a
                   href="https://economictimes.indiatimes.com/jobs/hr-policies-trends/blue-collar-jobs-to-drive-70-pc-of-indias-new-job-growth-by-2030-report/articleshow/109433609.cms?from=mdr"
                   target="_blank"
-                  className="text-blue-600 hover:text-blue-800"
+                  className="underline"
                 >
                   {' '}
                   70% of all new jobs{' '}
@@ -289,7 +289,7 @@ function IndeedYouTubeContent() {
               <p className="text-base md:text-2xl text-rb-black/80 !leading-[150%] mb-[30px]">
                 <a
                   href="https://kstatic.googleusercontent.com/files/45fedbf71b2dd6e7a59b4990a731b6b8067a434accfdc9c6c15df18177e63b4a2f454fe1a165ca47b78412325386c1a101d950355e4811d5e09cb363cb9f3d77"
-                  className="text-blue-600 hover:text-blue-800"
+                  className="underline"
                   target="_blank"
                 >
                   {' '}
@@ -361,7 +361,7 @@ function IndeedYouTubeContent() {
                     <a
                       href="https://www.youtube.com/watch?v=maBibk9EFmQ&list=PLcvQzcJ5HTR7146Jx-YOCnzl8QTgaB_95&index=1"
                       target="_blank"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="underline"
                     >
                       Career Tips{' '}
                     </a>
@@ -373,7 +373,7 @@ function IndeedYouTubeContent() {
                     <a
                       href="https://www.youtube.com/watch?v=tYgJnlta2TI&list=PLcvQzcJ5HTR58s0RMrdutB7B4QWmHdjmP&index=1"
                       target="_blank"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="underline"
                     >
                       Career Journeys{' '}
                     </a>
@@ -384,7 +384,7 @@ function IndeedYouTubeContent() {
                     <a
                       href="https://www.youtube.com/playlist?list=PLcvQzcJ5HTR6QUX5L-LQhvAizx4rjLUIp"
                       target="_blank"
-                      className="text-blue-600 hover:text-blue-800"
+                      className="underline"
                     >
                       App How-Tos{' '}
                     </a>
