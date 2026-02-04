@@ -10,6 +10,7 @@ import { ContentPostCard } from '@/components/shared/Cards/ContentPostCard'
 import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { aboutSchema } from '@/components/schema/about-schema'
+import { WorkDropdown } from '@/components/dropdown/work-dropdown'
 
 const getCountryFromCookie = () => {
   if (typeof document === 'undefined') return null
@@ -20,6 +21,7 @@ const getCountryFromCookie = () => {
 
 export default function WorkPage({ selectedvalue = 'featured' }) {
   const router = useRouter()
+  const { category } = router.query;
   const _posts = workPosts
 
   const caseStudyTags = [
@@ -44,8 +46,13 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       url: 'campaign',
     },
   ]
-
+  const categoryOptions = [
+    {name: 'ALL', slug: 'all'},
+    {name: 'B2B', slug: 'b2b'},
+    {name: 'B2C', slug: 'b2c'},
+  ]
   const [selectedTag, setSelectedTag] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [visiblePosts, setVisiblePosts] = useState(9)
   const scrollRef = React.useRef(null)
   const [country, setCountry] = useState(null)
@@ -83,6 +90,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
     sessionStorage.setItem('work-scroll', String(scroll))
     sessionStorage.setItem('work-visiblePosts', String(visiblePosts))
     sessionStorage.setItem('work-selectedTag', selectedTag || 'featured')
+    sessionStorage.setItem('work-selectedCategory', selectedCategory || 'all')
   }
 
   useEffect(() => {
@@ -105,9 +113,13 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       const isReload = navEntries.length && navEntries[0].type === 'reload'
       const storedTag = sessionStorage.getItem('work-selectedTag')
       const storedScroll = sessionStorage.getItem('work-scroll')
+      const storedCategory = sessionStorage.getItem('work-selectedCategory')
 
       if (storedTag) {
         setSelectedTag(storedTag)
+      }
+      if (storedCategory) {
+        setSelectedCategory(storedCategory)
       }
 
       if (isReload) {
@@ -160,7 +172,21 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
         })
       }
     }, 50)
+    setSelectedCategory('all')
   }
+
+  const handleCategoryChange = (category) => {
+    if (category.slug === 'all') {
+      router.push(`/work/featured?category=${category.slug}`, undefined, { shallow: true });
+      setSelectedCategory(category.slug);
+    } else {
+      router.push(`/work/${selectedTag}?category=${category.slug}`, undefined, {shallow: true,});
+      setSelectedCategory(category.slug);
+    }
+
+    setVisiblePosts(6);
+    // reset visible count when filtering
+  };
 
   const handleSeeMore = () => {
     const newVisible = visiblePosts + 6
@@ -259,13 +285,22 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
             </div>
           </div>
         </div>
-
         {selectedTag === 'podcast' ? (
           <h2 className="w-full text-sm leading-[21px] max-w-[1100px] md:text-[32px] md:leading-9.5 mt-8 md:!mt-16 cap-trim font-semibold !tracking-[-0.56px] md:!tracking-[-0.08rem]">
             Coming Soon!
           </h2>
         ) : (
           <div className="container work-posts-section">
+            {['featured','videos','campaign'].includes(selectedTag) && (
+                <div className='blogs-dd mt-4'>
+                  <WorkDropdown
+                    placeholder={selectedCategory || 'all'}
+                    options={categoryOptions}
+                    onChange={handleCategoryChange} // Handle the value change
+                  />
+                </div>
+            )}
+              
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-16 md:mt-18">
               {filteredPosts.length > 0 ? (
                 filteredPosts.map((p) => (
