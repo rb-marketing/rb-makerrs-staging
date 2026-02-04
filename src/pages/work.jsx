@@ -220,7 +220,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
       }
 
       if (selectedCategory !== 'all') {
-        if (!post.filterType?.includes(selectedCategory)) {
+        if (!post.filter_type?.includes(selectedCategory)) {
           return false
         }
       }
@@ -265,7 +265,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
           <div className="relative mt-0 py-6">
             <div
               ref={scrollRef}
-              className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:justify-center md:gap-12"
+              className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:gap-12"
             >
               {caseStudyTags.map((tag) => (
                 <a
@@ -291,7 +291,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
         ) : (
           <div className="container work-posts-section">
             {['featured', 'videos', 'campaign'].includes(selectedTag) && (
-              <div className='blogs-dd mt-4'>
+              <div className='blogs-dd mt-6 md:mt-9'>
                 <WorkDropdown
                   placeholder={selectedCategory || 'all'}
                   options={categoryOptions}
@@ -300,7 +300,7 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-16 md:mt-18">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-8">
               {filteredPosts.length > 0 ? (
                 filteredPosts.map((p) => (
                   <div key={p.key} onPointerDown={() => saveState()}>
