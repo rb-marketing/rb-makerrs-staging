@@ -2744,7 +2744,7 @@ export const workPosts = [
     case_study_title: 'indeed-india-radhika-apte',
     href: '/brand-campaign/indeed-india-radhika-apte',
     region: ['IN'],
-    filter_type : ['b2c'],
+    filter_type : ['b2c','b2b'],
   },
 
   {
@@ -3068,7 +3068,7 @@ export const workPosts = [
     case_study_title: 'metro-wholesale-case-study',
     href: '/brand-campaign/metro-wholesale-5-star-quality',
     region: ['IN'],
-    filter_type : ['b2c'],
+    filter_type : ['b2c','b2b'],
   },
 
   {
@@ -3134,7 +3134,7 @@ export const workPosts = [
     case_study_title: 'metro-wholesale-one-minute',
     href: '/brand-campaign/metro-wholesale-one-more',
     region: ['IN'],
-    filter_type : ['b2c'],
+    filter_type : ['b2c','b2b'],
   },
 
   {
