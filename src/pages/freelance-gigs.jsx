@@ -547,7 +547,7 @@ const Collab = () => {
     <>
       <SEO
         title="Freelance Gigs for Videographers, Graphic Designers | Makerrs"
-        description="Are you a freelance writer, filmmaker or graphic designer? Join our global creative collaborative and craft brands, videos, campaigns and more for global brands"
+        description="Are you a freelance writer, filmmaker or graphic designer? Join our global creative collaborative and craft brands, videos, campaigns and more for global brands."
         url={fullUrl}
       />
       <section className="py-14 md:py-24 bg-rb-mercury">

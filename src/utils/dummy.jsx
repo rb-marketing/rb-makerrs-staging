@@ -1579,7 +1579,7 @@ export const workPosts = [
     alt: 'Indeed',
     tags: ['Digital Campaign', 'Ad Film', ' Jobs'],
     tabs: ['Featured'],
-    filterType: ['b2b','b2c'],
+    filter_type : ['b2b','b2c'],
     case_study_title: 'indeed-india-radhika-apte',
     href: '/brand-campaign/indeed-india-radhika-apte',
     region: ['IN'], // only visible for India
@@ -1591,7 +1591,7 @@ export const workPosts = [
     alt: 'Indeed YouTube Content',
     tags: ['Hiring Platform', 'YouTube Content'],
     tabs: ['Featured'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     image: '/img/works/indeed_youtube_content_main_thumbnail.png',
     case_study_title: 'indeed-youtube-content',
     href: '/video-production/indeed-youtube-content',
@@ -1604,7 +1604,7 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'infosys-global-leaders',
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Technology',
       'Campaign',
@@ -1622,7 +1622,7 @@ export const workPosts = [
     company: 'Xiaomi',
     alt: 'Redmi Buds 6',
     tabs: ['Featured'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tags: [
       'Consumer Electronics',
       'Ad Film',
@@ -1641,7 +1641,7 @@ export const workPosts = [
     alt: 'my 11 circle ',
     tags: ['Digital Campaign', 'Ad Film', 'Fantasy Games'],
     tabs: ['Featured'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     case_study_title: 'my11circle-case-study',
     href: '/brand-campaign/my11circle-digital-ad-film',
     region: ['IN'], // only visible for India
@@ -1653,7 +1653,7 @@ export const workPosts = [
     alt: 'Swiggy',
     tags: ['Retail', 'TV Campaign', 'Ad Film'],
     tabs: ['Featured'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     image: '/img/works/metro-wholesale-one-minute.webp',
     case_study_title: 'metro-wholesale-one-minute',
     href: '/brand-campaign/metro-wholesale-one-more',
@@ -1672,7 +1672,7 @@ export const workPosts = [
       'Website Development',
     ],
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'lillia-care-brand-launch',
     href: '/brand-designs/lillia-care-brand-launch',
     region: [],
@@ -1689,7 +1689,7 @@ export const workPosts = [
       'Social Media Content',
     ],
     tabs: ['Featured'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     image: '/img/works/pdd_intergrated_work_thumbnail.jpg',
     case_study_title: 'pdd-integrated',
     href: '/brand-campaign/pudingding-cafe-design-launch',
@@ -1702,7 +1702,7 @@ export const workPosts = [
     company: 'Infosys',
     image: '/img/works/infosys_springboard.webp',
     alt: 'Infosys',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['Technology', 'Non-profit', 'CSR Video', 'Corporate Film'],
     tabs: ['Featured'],
     case_study_title: 'csr-video-infosys-street-child',
@@ -1716,7 +1716,7 @@ export const workPosts = [
     company: 'SLB',
     alt: 'slb',
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Engineering',
       'Campaign',
@@ -1735,7 +1735,7 @@ export const workPosts = [
     image: '/img/case-study/exicom_brand_refresh_work.jpg',
     tags: ['E-Mobility', 'Design', 'Brand Transformation', 'Visual Identity'],
     tabs: ['Featured'],
-    filterType: ['b2b','b2c'],
+    filter_type : ['b2b','b2c'],
     case_study_title: 'exicom-EV-charger-rebrand',
     href: '/brand-designs/exicom-EV-charger-rebrand',
     region: [],
@@ -1754,7 +1754,7 @@ export const workPosts = [
       'Interview Video',
     ],
     tabs: ['Featured'],
-     filterType: ['b2b'],
+     filter_type : ['b2b'],
     case_study_title: 'vymo-gordon-ritter-thought-leadership-video',
     href: '/video-production/thought-leadership-vymo-gordon-ritter',
     region: [],
@@ -1767,7 +1767,7 @@ export const workPosts = [
     company: 'Bajaj Auto',
     alt: 'Augmented Reality that brought the automobile alive',
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['Automotive', 'XR Solution (AR/VR/MR)', 'Gamified Experience'],
     case_study_title: 'bajaj-pulsar-augmented-reality',
     href: '/brand-design/bajaj-pulsar-augmented-reality',
@@ -1781,7 +1781,7 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'Immersive 3D Walkthrough for Infosys Topaz',
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Technology',
       'Interactive Experience',
@@ -1800,7 +1800,7 @@ export const workPosts = [
     image: '/img/works/vymo_sme.webp',
     tags: ['SaaS', 'Digital Campaign', 'Explainer Video', 'Marketing Video'],
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'vymo-sme-bank-explainer-video',
     href: '/brand-campaign/vymo-usa-banking',
     region: [],
@@ -1819,7 +1819,7 @@ export const workPosts = [
       'Interview Video',
     ],
     tabs: ['Featured'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'infosys-employer-branding',
     href: '/video-production/global-employer-branding',
     region: [],
@@ -1838,7 +1838,7 @@ export const workPosts = [
       '2D Animation Video',
     ],
     tabs: ['Featured'],
-     filterType: ['b2b'],
+     filter_type : ['b2b'],
     case_study_title: 'multiplier-hr-saas-explainer-video',
     href: '/video-production/multiplier-explainer-video',
     region: [],
@@ -1857,7 +1857,7 @@ export const workPosts = [
       'Digital Campaign',
       'Hyper-Personalized Campaign',
     ],
-     filterType: ['b2b'],
+     filter_type : ['b2b'],
     case_study_title: 'infosys-thrive-ai-powered-campaign',
     href: '/brand-campaign/employee-wellbeing-ai-experience',
     region: [],
@@ -2055,7 +2055,7 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'infosys-global-leaders',
     tabs: ['videos'],
-     filterType: ['b2b'],
+     filter_type : ['b2b'],
     tags: [
       'Technology',
       'Campaign',
@@ -2077,14 +2077,14 @@ export const workPosts = [
     case_study_title: 'indeed-youtube-content',
     href: '/video-production/indeed-youtube-content',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 28,
     name: 'Campaign Explainer Video for HRM SAAS product',
     company: 'MULTIPLIER',
     image: '/img/works/multiplier_work.webp',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'SaaS',
       'Lead Gen Campaign',
@@ -2103,7 +2103,7 @@ export const workPosts = [
     company: 'Vymo',
     image: '/img/works/vymo_gordon_ritter.webp',
     alt: 'Vymo',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'SaaS',
       'Thought Leadership Video',
@@ -2126,7 +2126,7 @@ export const workPosts = [
     case_study_title: 'taneira-sanganeri',
     href: '/video-production/fashion-taneira-sanganeri',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 31,
@@ -2144,7 +2144,7 @@ export const workPosts = [
     case_study_title: 'women-in-auto-manufacturing',
     href: '/video-production/tata-inclusion-auto-comp',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 32,
@@ -2158,7 +2158,7 @@ export const workPosts = [
       'Marketing Video',
       '3D Animation Video',
     ],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tabs: ['videos'],
     case_study_title: '3d-product-reveal-video-exicom',
     href: '/video-production/3d-product-reveal-video-exicom',
@@ -2170,7 +2170,7 @@ export const workPosts = [
     company: 'Infosys',
     image: '/img/works/wsj-thumbnail.png',
     alt: 'Infosys',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Technology',
       'Case Study Video',
@@ -2193,7 +2193,7 @@ export const workPosts = [
       'Hiring Video',
     ],
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'colearn-stem-educators-recruitment-video',
     href: '/video-production/recruitment-video-colearn-education',
     region: [],
@@ -2206,7 +2206,7 @@ export const workPosts = [
     alt: 'Infosys',
     tags: ['Technology', 'Non-profit', 'CSR Video', 'Corporate Film'],
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'csr-video-infosys-street-child',
     href: '/video-production/csr-video-infosys-street-child',
     region: [],
@@ -2223,7 +2223,7 @@ export const workPosts = [
       'Social Media Content',
     ],
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'animated-case-study-videos-infosys-employees',
     href: '/brand-campaign/animated-case-study-videos-infosys-employees',
     region: [],
@@ -2233,7 +2233,7 @@ export const workPosts = [
     name: 'Launching a Sports Brand logo with a 3D Billboard',
     image: '/img/works/mumbai-indians.webp',
     company: 'Mumbai Indians',
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     alt: 'Launching a Sports Brand logo with a 3D Billboard',
     tabs: ['videos'],
     tags: ['Sports', '3D Billboard Animation'],
@@ -2247,7 +2247,7 @@ export const workPosts = [
     image: '/img/works/class-room-poster.jpg',
     company: 'Makerrs',
     alt: 'Makerrs',
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tabs: ['videos'],
     tags: ['Gen AI Videos', 'Short-form Content', 'Digital Storytelling'],
     case_study_title: 'shaanu-ka-viva',
@@ -2265,7 +2265,7 @@ export const workPosts = [
     case_study_title: 'mygate-case-study',
     href: '/video-production/poetic-video-mygate',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 40,
@@ -2283,7 +2283,7 @@ export const workPosts = [
     case_study_title: 'xiaomi-pocket-power-bank',
     href: '/video-production/3d-product-video-xiaomi-mini-power-bank',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 41,
@@ -2291,7 +2291,7 @@ export const workPosts = [
     company: 'Infosys',
     alt: 'Cobalt Community Launch',
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     image: '/img/works/cobalt_community.jpg',
     tags: [
       'Technology',
@@ -2310,7 +2310,7 @@ export const workPosts = [
     alt: 'Mygate Rewards and Recognition',
     tags: ['B2C SaaS', 'Digital Campaign', 'Video Content'],
     tabs: ['videos'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     image: '/img/works/mygate_rewards_Thumbnail.png',
     case_study_title: 'mygate-rewards-recognition',
     href: '/video-production/mygate-rewards-recognition',
@@ -2322,7 +2322,7 @@ export const workPosts = [
     company: 'Wipro',
     image: '/img/works/wipro_img.webp',
     alt: 'Wipro',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['Technology', 'Corporate Film', 'Corporate Communication Campaign'],
     tabs: ['videos'],
     case_study_title: 'wipro-australia-corporate-film',
@@ -2335,7 +2335,7 @@ export const workPosts = [
     image: '/img/works/swiggy_insanely_good_video_thumbnail.png',
     company: 'Swiggy',
     alt: 'Swiggy',
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tabs: ['videos'],
     tags: ['Quick Commerce', 'Gen AI Video', 'Ad Film'],
     case_study_title: 'ai-video-swiggy',
@@ -2353,7 +2353,7 @@ export const workPosts = [
     case_study_title: 'tata-womens-cricket-league',
     href: '/video-production/rap-video-tata-womens-cricket-league',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 46,
@@ -2366,7 +2366,7 @@ export const workPosts = [
     case_study_title: 'app-walkthrough-swiggy-delivery',
     href: '/brand-campaign/app-walkthrough-swiggy-delivery',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 47,
@@ -2384,7 +2384,7 @@ export const workPosts = [
     case_study_title: 'hansel-saas-explainer-video',
     href: '/video-production/saas-explainer-video-hansel',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 48,
@@ -2403,7 +2403,7 @@ export const workPosts = [
     case_study_title: 'interactive-explainer-slb',
     href: '/brand-campaign/interactive-explainer-slb',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 49,
@@ -2413,7 +2413,7 @@ export const workPosts = [
     alt: 'Infosys',
     tags: ['Technology', 'Marketing Video'],
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'infosys-business-agility-solution',
     href: '/video-production/stock-footage-video-infosys-business-agility',
     region: [],
@@ -2424,7 +2424,7 @@ export const workPosts = [
     company: 'GE Aerospace',
     image: '/img/works/ge_aerospace.webp',
     alt: 'GE Aerospace',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['Manufacturing', 'Aerospace', 'Corporate Films & Videos'],
     tabs: ['videos'],
     case_study_title: 'ge-aerospace-corporate-film',
@@ -2442,7 +2442,7 @@ export const workPosts = [
     case_study_title: 'project-loom',
     href: '/video-production/documentary-taneira-fashion',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 52,
@@ -2460,7 +2460,7 @@ export const workPosts = [
     case_study_title: 'hotel-superhero-saas-hiring-video',
     href: '/video-production/hiring-video-hotel-superhero',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 53,
@@ -2469,7 +2469,7 @@ export const workPosts = [
     company: 'HealthifyMe App',
     alt: 'How a Healthtech Startup Gamified Workplace Wellness',
     tabs: ['videos'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Health & Fitness',
       'Marketing Campaign',
@@ -2485,7 +2485,7 @@ export const workPosts = [
     name: ' Documentaries: Indian Handcrafted Jewellery and Craftspeople ',
     image: '/img/works/jewels_thumbnail.jpg',
     company: 'Taneira',
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     alt: 'Jewels Of India',
     tags: ['Digital Campaign', 'Video Content', 'Jewellery'],
     tabs: ['videos'],
@@ -2508,7 +2508,7 @@ export const workPosts = [
     case_study_title: 'wipro-healthtech-case-study-videos',
     href: '/video-production/healthcare-case-study-video-wipro',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 56,
@@ -2521,7 +2521,7 @@ export const workPosts = [
     case_study_title: 'dozee-beds-healthcare-video-report',
     href: '/video-production/video-report-dozee-public-health',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 57,
@@ -2539,7 +2539,7 @@ export const workPosts = [
     case_study_title: 'infosys-topaz-3d-interactive-experience',
     href: '/brand-design/3d-interactive-experience-infosys-topaz',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 58,
@@ -2547,7 +2547,7 @@ export const workPosts = [
     image: '/img/case-study/koo_work_thumbnail.png',
     company: 'Koo',
     alt: 'Koo',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tabs: ['videos'],
     tags: ['Social Network', 'Explainer Video', '2D Animation Video'],
     case_study_title: 'koo-self-verification-explainer-video',
@@ -2560,7 +2560,7 @@ export const workPosts = [
     company: 'Darwinbox',
     image: '/img/works/darwinbox_main_thumbnail.png',
     alt: 'Darwinbox',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['HR Tech', 'Hiring Video', 'Employer Branding', 'Culture Video'],
     tabs: ['videos'],
     case_study_title: 'darwinbox-hiring-video',
@@ -2578,7 +2578,7 @@ export const workPosts = [
     case_study_title: 'taneira-cyanotype',
     href: '/video-production/fashion-taneira-cyanotype',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
   {
     key: 61,
@@ -2590,7 +2590,7 @@ export const workPosts = [
     case_study_title: 'explainer-video-vymo-USA-banking',
     href: '/brand-campaign/explainer-video-vymo-USA-banking',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 62,
@@ -2608,7 +2608,7 @@ export const workPosts = [
     case_study_title: 'people-first-brand-films-for-ti',
     href: '/video-production/culture-videos-texas-instruments',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 63,
@@ -2626,7 +2626,7 @@ export const workPosts = [
     case_study_title: 'infosys-campus-recruitment-video',
     href: '/video-production/recruitment-video-infosys-campus',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 64,
@@ -2634,7 +2634,7 @@ export const workPosts = [
     company: 'WeRise',
     image: '/img/works/we_rise.webp',
     alt: 'WeRise',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: ['Non-profit', 'CSR Video', 'Documentary'],
     tabs: ['videos'],
     case_study_title: 'women-in-STEM-documentary',
@@ -2648,7 +2648,7 @@ export const workPosts = [
     company: 'Lakshmi Rebecca',
     alt: 'The Lakshmi Rebecca Show',
     tabs: ['videos'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tags: ['Video Content', 'YouTube Series'],
     case_study_title: 'lakshmi-rebecca-show',
     href: '/video-podcast/podcast-lakshmi-rebecca',
@@ -2666,7 +2666,7 @@ export const workPosts = [
       'Global Video Production',
       'Interview Video',
     ],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tabs: ['videos'],
     case_study_title: 'infosys-employer-branding',
     href: '/video-production/employer-branding-videos-infosys',
@@ -2678,7 +2678,7 @@ export const workPosts = [
     image: '/img/case-study/infy-equinox.webp',
     company: 'Infosys Equinox',
     alt: 'infy-equinox',
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tabs: ['videos'],
     tags: [
       'SaaS',
@@ -2702,7 +2702,7 @@ export const workPosts = [
     case_study_title: 'werise-sustainable-housing-documentary',
     href: '/video-production/sustainable-housing-documentary',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 69,
@@ -2715,7 +2715,7 @@ export const workPosts = [
     case_study_title: 'ashirvad-plumbing-school-csr-video',
     href: '/video-production/csr-video-ashirvad',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
   {
     key: 111,
@@ -2728,7 +2728,7 @@ export const workPosts = [
     case_study_title: 'Case Study Video: Tech for Safe Mining',
     href: '/video-production/covid-19',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   // Campaign starts
@@ -2744,7 +2744,7 @@ export const workPosts = [
     case_study_title: 'indeed-india-radhika-apte',
     href: '/brand-campaign/indeed-india-radhika-apte',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2763,7 +2763,7 @@ export const workPosts = [
     case_study_title: 'xiaomi-buds',
     href: '/brand-campaign/xiaomi-buds-6',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2776,7 +2776,7 @@ export const workPosts = [
     case_study_title: 'vymo-sme-bank-explainer-video',
     href: '/brand-campaign/vymo-usa-banking',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -2792,7 +2792,7 @@ export const workPosts = [
       'Employer Branding Video',
       'Global Video Production',
     ],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     case_study_title: 'infosys-global-leaders-employer-branding',
     href: '/brand-campaign/infosys-global-employer-brand',
     region: [],
@@ -2814,7 +2814,7 @@ export const workPosts = [
     case_study_title: 'pdd-integrated',
     href: '/brand-campaign/pudingding-cafe-design-launch',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2828,7 +2828,7 @@ export const workPosts = [
     case_study_title: 'swiggy-extra-earning-case-study',
     href: '/brand-campaign/swiggy-extra-earnings',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2848,7 +2848,7 @@ export const workPosts = [
     case_study_title: 'infosys-equinox-brand-launch',
     href: '/brand-campaign/infosys-equinox-launch',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -2867,7 +2867,7 @@ export const workPosts = [
     case_study_title: 'xiaomi-a4-5g',
     href: '/brand-campaign/xiaomi-a4-5g-phone',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2881,7 +2881,7 @@ export const workPosts = [
     case_study_title: 'indiagold',
     href: '/brand-campaign/indiagold',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2900,7 +2900,7 @@ export const workPosts = [
     case_study_title: 'infosys-employer-branding',
     href: '/video-production/global-employer-branding',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -2916,7 +2916,7 @@ export const workPosts = [
       'Social Media Content',
       'Alcobev',
     ],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tabs: ['campaign'],
     image: '/img/works/l74_strategy_service_work page.jpg',
     case_study_title: 'l74-case-study',
@@ -2935,7 +2935,7 @@ export const workPosts = [
     case_study_title: 'my11circle-case-study',
     href: '/brand-campaign/my11circle-digital-ad-film',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2949,7 +2949,7 @@ export const workPosts = [
       'Employer Branding video',
       'Social Media Content',
     ],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tabs: ['campaign'],
     case_study_title: 'animated-case-study-videos-Infosys-employees',
     href: '/brand-campaign/animated-case-study-videos',
@@ -2972,7 +2972,7 @@ export const workPosts = [
     case_study_title: 'xiaomi-beard-trimmer',
     href: '/brand-campaign/xiaomi-beard-trimmer',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -2990,7 +2990,7 @@ export const workPosts = [
     case_study_title: 'jigsaw-e-learning-explainer-video',
     href: '/brand-campaign/unext-course-marketing',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -3008,7 +3008,7 @@ export const workPosts = [
     case_study_title: 'infosys-thrive-ai-powered-campaign',
     href: '/brand-campaign/employee-wellbeing-ai-experience',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -3018,7 +3018,7 @@ export const workPosts = [
     company: 'XIAOMI',
     alt: 'Xiaomi Redmi Buds 5C',
     tabs: ['campaign'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
     tags: [
       'Consumer Electronics',
       'Ad Film',
@@ -3041,7 +3041,7 @@ export const workPosts = [
     case_study_title: 'bajaj-pulsar-augmented-reality',
     href: '/brand-design/bajaj-pulsar-augmented-reality',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -3054,7 +3054,7 @@ export const workPosts = [
     tabs: ['campaign'],
     href: '/brand-campaign/zivame-lingerie',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -3068,7 +3068,7 @@ export const workPosts = [
     case_study_title: 'metro-wholesale-case-study',
     href: '/brand-campaign/metro-wholesale-5-star-quality',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -3082,7 +3082,7 @@ export const workPosts = [
     case_study_title: 'vymo-lead-management',
     href: '/brand-campaign/vymo-lead-management',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 
   {
@@ -3101,7 +3101,7 @@ export const workPosts = [
     case_study_title: 'xiaomi-pocket-power-bank',
     href: '/video-production/xiaomi-pocket-power-bank',
     region: [],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -3110,7 +3110,7 @@ export const workPosts = [
     image: '/img/case-study/singalong.jpg',
     alt: 'AI-powered Singalong Campaign that united a Global Workforce',
     tabs: ['campaign'],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
     tags: [
       'Technology',
       'AI',
@@ -3134,7 +3134,7 @@ export const workPosts = [
     case_study_title: 'metro-wholesale-one-minute',
     href: '/brand-campaign/metro-wholesale-one-more',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -3147,7 +3147,7 @@ export const workPosts = [
     tabs: ['campaign'],
     href: '/brand-campaign/swiggy-winter-jackets',
     region: ['IN'],
-    filterType: ['b2c'],
+    filter_type : ['b2c'],
   },
 
   {
@@ -3161,6 +3161,6 @@ export const workPosts = [
     case_study_title: 'vymo-wholesalers-explainer-video',
     href: '/brand-campaign/vymo-insurance-wholesale',
     region: [],
-    filterType: ['b2b'],
+    filter_type : ['b2b'],
   },
 ]
