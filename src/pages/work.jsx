@@ -177,7 +177,8 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category.slug);
-    // setVisiblePosts(6);
+    setVisiblePosts(9)   // ✅ RESET pagination
+    sessionStorage.setItem('work-visiblePosts', '9')
   };
 
   const handleSeeMore = () => {
