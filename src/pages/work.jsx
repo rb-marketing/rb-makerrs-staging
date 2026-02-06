@@ -356,13 +356,30 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
               }
 
               // Tag selected → count safely
-              const total = _posts.filter((post) =>
-                post.tabs?.some(
+              const total = _posts.filter((post) => {
+                // region filter
+                if (post.region?.length && country && !post.region.includes(country)) {
+                  return false
+                }
+
+                // tab filter
+                const tagMatch = post.tabs?.some(
                   (tab) =>
                     typeof tab === 'string' &&
                     tab.toLowerCase() === selectedTag.toLowerCase()
                 )
-              ).length
+                if (!tagMatch) return false
+
+                // dropdown category filter
+                if (selectedCategory !== 'all') {
+                  if (!post.filter_type?.includes(selectedCategory)) {
+                    return false
+                  }
+                }
+
+                return true
+              }).length
+
 
               if (total > 9 && visiblePosts < total) {
                 return (
