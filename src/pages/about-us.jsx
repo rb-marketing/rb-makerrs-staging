@@ -416,7 +416,7 @@ const WhoWeAre = () => {
     {
       key: 7,
       quote:
-        'Despite difficulties faced in shooting in 2 countries, we created these awesome videos, while keeping everyone safe during Covid-19.',
+        'Despite difficulties faced in shooting in 2 countries, we created these awesome videos while keeping everyone safe during Covid-19.',
       name: 'MARC IRAWAN',
       designation: 'Founder',
       company: 'COLEARN',
@@ -796,7 +796,7 @@ const WhoWeAre = () => {
         <ExploreMoreSection
           className="pb-15 md:pb-30"
           cards={explorecards}
-          title="Explore our services"
+          title="Explore Our Services"
         />
       </div>
 

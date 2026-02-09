@@ -327,7 +327,7 @@ const CorporateVideoLandPage = () => {
         content:
           'Wipro Australia’s corporate film delves into the business unit’s profound impact and seamless integration in the land Down Under. It’s a testament to their local commitment as well as growth.',
       },
-      popUpTitle: 'Australia-region Wipro Australia',
+      popUpTitle: 'Australia-region Corporate Film for an IT Giant',
       popUpPoints: [
         '01. Concept',
         '02. Script',

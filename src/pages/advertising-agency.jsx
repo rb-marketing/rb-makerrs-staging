@@ -115,7 +115,7 @@ const Campaign = ({ setisPopupOpen }) => {
       id: 1,
       serviceTitle: 'GET VIDEO',
       serviceDescription:
-        'Get marketing explainer videos, video case studies, corporate videos, hiring and culture videos and more. Makerrs offers end to end video production services across locations and formats. Get scalable video production services for your B2B brand.',
+        'We plan, conceptualise, produce and scale video content - be it for your next product or your YouTube channel. We also offer on-demand video production services for customer testimonial videos, recruitment videos, corporate videos and more. Explore our video production services.',
       bgColor: '#ffffff',
       textColor: '#13c33f',
       href: '/video-production',
@@ -124,7 +124,7 @@ const Campaign = ({ setisPopupOpen }) => {
       id: 2,
       serviceTitle: 'GET PODCAST',
       serviceDescription:
-        'Bowl your audience over with our AI-first campaigns, content, experiences and more. Take your brand into the future with our end-to-end AI solutions: concept, design, curation, development, AI training and more.',
+        'Looking to lead industry conversations, build community and drive ROI? Go from content research, podcast concept and positioning, to podcast branding, production, distribution and amplification with one agency. Make a successful podcast today.',
       bgColor: '#ffffff',
       textColor: '#13c33f',
       href: '/podcast-production-services',
@@ -133,7 +133,7 @@ const Campaign = ({ setisPopupOpen }) => {
       id: 3,
       serviceTitle: 'BOOK A CREW',
       serviceDescription:
-        'Book professional video crews on-demand in 100 countries. Our team of experienced producers curate video crews for every brief and location, manage the shoots and quality-check the footage for you. Shoot video testimonials, events, drone footage, and more wherever you need them!',
+        'Get on-demand professional video crews anywhere in the world. Be it a one-camera shoot or a multi-camera multi-location production-we curate and manage the production, and quality-check the footage for you. Hire a professional video crew today!',
       bgColor: '#ffffff',
       textColor: '#13c33f',
       href: '/video-production-near-me',
