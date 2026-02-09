@@ -77,23 +77,26 @@ const pageData = {
 
 
 function Medalio() {
-    const { logo, tags, commercials, desktopVideo, mobileVideo, image } = pageData
-    const socials = [
-        {
-            key: 0,
-            href: 'https://twitter.com/intent/post?url=makerrs.com%2Fwork%2Fcreate%2Fjewels-case-study',
-            color: '#000',
-            icon: <Twitter />,
-        },
+    const router = useRouter()
+  const articleUrl = `https://www.makerrs.com${router.pathname}`
 
-        {
-            type: 'linkedin',
-            key: 1,
-            href: 'https://www.makerrs.com/work/create/jewels-case-study',
-            color: '#006699',
-            icon: <Linkedin />,
-        },
-    ]
+  const { logo, tags, commercials, desktopVideo, mobileVideo, image } = pageData
+  const socials = [
+    {
+      key: 0,
+      href: `https://twitter.com/intent/tweet?text=${articleUrl}`,
+      color: '#000',
+      icon: <Twitter />,
+    },
+
+    {
+      key: 1,
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${articleUrl}`,
+      color: '#006699',
+      icon: <Linkedin />,
+      type: 'linkedin',
+    },
+  ]
     return (
         <>
             <SEO

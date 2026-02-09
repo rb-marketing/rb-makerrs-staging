@@ -263,7 +263,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
     {
       key: 4,
       quote:
-        'We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends, are always experimental and open to feedback. They are amazing to work with!',
+        'Testimonial - VP international - replace content - We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends and are always experimental and open to feedback. They’re an amazing lot to work with!',
 
       designation: 'VP INTERNAL COMMUNICATIONS',
       company: 'FORTUNE 100 ITES ENTERPRISE',
@@ -275,7 +275,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
     {
       key: 5,
       quote:
-        'It’s never easy creating great videos for a fast-growing business like ours. We struggled, till we came across Makerrs.',
+        'It’s never easy creating great videos for a fast-growing business like ours. We struggled till we came across Makerrs.',
       name: 'SUNIL SURESH',
       designation: 'CHIEF MARKETING AND STRATEGY OFFICER',
       company: 'CAPILLARY TECHNOLOGIES',

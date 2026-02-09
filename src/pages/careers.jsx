@@ -412,15 +412,15 @@ const Career = () => {
               },
               {
                 id: 5,
-                title: 'Family & Recovery Leave',
-                description:
-                  'We offer paid maternity, paternity, adoption leave to full time employees.',
-              },
-              {
-                id: 6,
                 title: 'Holidays',
                 description:
                   'We offer 25 personal days off in a year and 10 public holidays.',
+              },
+              {
+                id: 6,
+                 title: 'Family & Recovery Leave',
+                description:
+                  'We offer paid maternity, paternity, adoption leave to full time employees.',
               },
               {
                 id: 7,
