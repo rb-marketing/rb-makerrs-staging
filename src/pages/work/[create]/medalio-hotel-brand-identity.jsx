@@ -1,5 +1,6 @@
 import { SCSLayout } from '@/components/Layout'
 import { Twitter, Linkedin } from '@/components/icons'
+import { useRouter } from 'next/router';
 import {
     LineHeading,
     SEO,
