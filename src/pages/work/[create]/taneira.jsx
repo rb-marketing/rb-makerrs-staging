@@ -1,5 +1,5 @@
 import { SCSLayout } from '@/components/Layout'
-// import { Telegram, Whatsapp, Twitter, Linkedin } from '@/components/icons'
+import { Telegram, Whatsapp, Twitter, Linkedin } from '@/components/icons'
 import {
   LineHeading,
   PostContent,
