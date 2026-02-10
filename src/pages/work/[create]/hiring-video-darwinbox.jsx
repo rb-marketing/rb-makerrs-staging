@@ -98,7 +98,7 @@ const pageData = {
 
 function DarWinBox() {
   const router = useRouter()
-  const articleUrl = `https://www.makerrs.com${router.pathname}`
+  const articleUrl = `https://www.makerrs.com${router.asPath}`
 
   const {
     logo,

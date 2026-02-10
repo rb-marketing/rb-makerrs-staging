@@ -107,7 +107,7 @@ const pageData = {
 
 function InfosysLivingLabs() {
     const router = useRouter()
-    const articleUrl = `https://www.makerrs.com${router.pathname}`
+    const articleUrl = `https://www.makerrs.com${router.asPath}`
     const { logo, tags, featured, commercials, stats, press, image } = pageData
     const socials = [
         // {
