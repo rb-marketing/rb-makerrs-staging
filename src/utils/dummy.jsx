@@ -1518,12 +1518,7 @@ export const strategyPosts = [
     name: 'Branding for an Indulgent Dessert Café',
     company: 'P.U. Dingding',
     image: '/img/works/pudingding-thumbnail.jpg',
-    tags: [
-      'Brand Identity',
-      'Design Collateral',
-      'Film & Video Content',
-      'F&B',
-    ],
+   tags: ['F&B', 'Cafe', 'Brand Identity', 'Launch Video'],
     href: '/brand-designs/pu-dingding-cafe',
   },
   {
@@ -1567,6 +1562,84 @@ export const strategyPosts = [
   //   href: '/brand-designs/exicom-EV-charger-rebrand'
   // },
 ]
+
+export const videoPosts = [
+    {
+      key: 0,
+      name: 'Global Leaders: a Hiring Campaign',
+      image: '/img/case-study/infosys-global-leaders.webp',
+      company: 'Infosys',
+      alt: 'infosys-global-leaders',
+      tags: [
+        'Technology',
+        'Campaign',
+        'Employer Branding Video',
+        'Global Video Production',
+      ],
+      href: '/brand-campaign/infosys-global-employer-brand',
+    },
+    {
+      key: 1,
+      name: '220% Organic YouTube Subscriber Growth in India',
+      company: 'Indeed',
+      alt: 'Indeed YouTube Content',
+      tags: ['Hiring Platform', 'YouTube Content'],
+      image: '/img/works/indeed_youtube_content_main_thumbnail.png',
+      href: '/video-production/indeed-youtube-content',
+    },
+    {
+      key: 2,
+      name: 'Campaign Explainer Video for HRM SAAS product',
+      company: 'MULTIPLIER',
+      image: '/img/works/multiplier_work.webp',
+      alt: 'MULTIPLIER',
+      tags: [
+        'SaaS',
+        'Lead Gen Campaign',
+        'Product Launch Video',
+        'Explainer Video',
+        '2D Animation Video',
+      ],
+      href: '/video-production/multiplier-explainer-video',
+    },
+    {
+      key: 3,
+      name: 'Gordon Ritter on the Future of Software',
+      company: 'Vymo',
+      image: '/img/works/vymo_gordon_ritter.webp',
+      alt: 'Vymo',
+      tags: [
+        'SaaS',
+        'Thought Leadership Video',
+        'Corporate Film',
+        'Interview Video',
+      ],
+      href: '/video-production/thought-leadership-vymo-gordon-ritter',
+    },
+    {
+      key: 4,
+      name: 'Capturing the Story of Sanganeri Craft for Taneira',
+      company: 'Taneira',
+      alt: 'Sanganeri Craft with Taneira',
+      tags: ['Textile and Apparel', 'Documentary Film'],
+      image: '/img/works/taneira_main_thumbnail.png',
+      href: '/video-production/fashion-taneira-sanganeri',
+    },
+    {
+      key: 31,
+      name: "Celebrating Rural Women in India's Auto Manufacturing",
+      company: 'Tata Motors',
+      alt: " Celebrating Rural Women in India's Auto Manufacturing",
+      tags: [
+        'Manufacturing',
+        'Employer Branding',
+        'Corporate Communication',
+        'Diversity & Inclusion',
+      ],
+      image: '/img/works/womens-at-tata-autocamp.webp',
+      href: '/video-production/tata-inclusion-auto-comp',
+    },
+  ]
 
 export const featuredPlay = ecs.slice(0, 8)
 
