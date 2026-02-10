@@ -15,7 +15,7 @@ import {
   serviceVideos,
   campaignCards2,
 } from '@/content/services'
-import { campaignPosts } from '@/utils/dummy'
+import { campaignPosts, explorecards } from '@/utils/dummy'
 import { postsMapper } from '@/utils/mapper'
 import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
@@ -100,45 +100,7 @@ const Campaign = ({ setisPopupOpen }) => {
       },
     },
   ]
-
-  const cards = [
-     {
-      id: 0,
-      serviceTitle: 'GET DESIGN',
-      serviceDescription:
-        'Get brand identity systems, event branding, editorial design, illustrations, and motion graphics. Build brand differentiation and human connect with Makerrs. Explore our branding and design services.',
-      bgColor: '#ffffff',
-      textColor: '#13c33f',
-      href: '/brand-design-agency',
-    },
-    {
-      id: 1,
-      serviceTitle: 'GET VIDEO',
-      serviceDescription:
-        'We plan, conceptualise, produce and scale video content - be it for your next product or your YouTube channel. We also offer on-demand video production services for customer testimonial videos, recruitment videos, corporate videos and more. Explore our video production services.',
-      bgColor: '#ffffff',
-      textColor: '#13c33f',
-      href: '/video-production',
-    },
-    {
-      id: 2,
-      serviceTitle: 'GET PODCAST',
-      serviceDescription:
-        'Looking to lead industry conversations, build community and drive ROI? Go from content research, podcast concept and positioning, to podcast branding, production, distribution and amplification with one agency. Make a successful podcast today.',
-      bgColor: '#ffffff',
-      textColor: '#13c33f',
-      href: '/podcast-production-services',
-    },
-    {
-      id: 3,
-      serviceTitle: 'BOOK A CREW',
-      serviceDescription:
-        'Get on-demand professional video crews anywhere in the world. Be it a one-camera shoot or a multi-camera multi-location production-we curate and manage the production, and quality-check the footage for you. Hire a professional video crew today!',
-      bgColor: '#ffffff',
-      textColor: '#13c33f',
-      href: '/video-production-near-me',
-    },
-  ]
+  const filteredCards = explorecards.filter(card => card.href !== router.pathname);
 
   const TNC = [
     {
@@ -432,7 +394,7 @@ const Campaign = ({ setisPopupOpen }) => {
         <ExploreMoreSection
           type="think"
           className="pt-7.5 md:pt-15 pb-15 md:pb-30"
-          cards={cards}
+          cards={filteredCards}
         />
       </div>
       <section className="md:pt-12 pt-6 md:pb-24 pb-12">

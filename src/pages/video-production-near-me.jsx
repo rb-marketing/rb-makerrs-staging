@@ -11,7 +11,7 @@ import { LineArrow } from '@/components/icons'
 import { SEO } from '@/components/shared/SEO'
 import { Button } from '@/components/ui'
 
-import { similarPosts } from '@/utils/dummy'
+import { similarPosts, explorecards } from '@/utils/dummy'
 import { postsMapper } from '@/utils/mapper'
 import Script from 'next/script'
 import { Accordion } from '@/components/ui'
@@ -328,79 +328,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
     },
   ]
 
-  const cards = [
-    {
-      id: 0,
-      imgsrc: '/img/services/crew/card1.png',
-      title: 'Commercial Shoot',
-    },
-    {
-      id: 1,
-      imgsrc: '/img/services/crew/card2.png',
-      title: 'Corporate Film',
-    },
-
-    {
-      id: 2,
-      imgsrc: '/img/services/crew/card3.png',
-      title: 'Case Study Video',
-    },
-    {
-      id: 3,
-      imgsrc: '/img/services/crew/card4.png',
-      title: 'Testimonial Video Shoot',
-    },
-    {
-      id: 4,
-      imgsrc: '/img/services/crew/card5.png',
-      title: 'Podcast Production',
-    },
-    {
-      id: 5,
-      imgsrc: '/img/services/crew/card6.png',
-      title: 'Drone footage',
-    },
-    {
-      id: 6,
-      imgsrc: '/img/services/crew/card7.webp',
-      title: 'Office Video Shoot',
-    },
-    {
-      id: 7,
-      imgsrc: '/img/services/crew/card8.png',
-      title: 'Event Shoot',
-    },
-    {
-      id: 8,
-      imgsrc: '/img/services/crew/card9.png',
-      title: 'Multi-location Shoot',
-    },
-    {
-      id: 9,
-      imgsrc: '/img/services/crew/card10.png',
-      title: 'Product Shoot',
-    },
-    {
-      id: 10,
-      imgsrc: '/img/services/crew/card11.webp',
-      title: 'Leadership Video',
-    },
-    {
-      id: 11,
-      imgsrc: '/img/services/crew/card12.webp',
-      title: 'Studio and Chroma',
-    },
-    {
-      id: 12,
-      imgsrc: '/img/services/crew/card13.png',
-      title: 'Documentary Footage',
-    },
-    {
-      id: 13,
-      imgsrc: '/img/services/crew/card14.png',
-      title: 'BTS Footage',
-    },
-  ]
+ const filteredCards = explorecards.filter(card => card.href !== router.pathname);
 
   const explorecards = [
     {
@@ -748,7 +676,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
         <ExploreMoreSection
           type="think"
           className="pt-7.5 md:pt-15 pb-15 md:pb-30"
-          cards={explorecards}
+          cards={filteredCards}
         />
       </div>
 
