@@ -3237,3 +3237,51 @@ export const workPosts = [
     filter_type : ['b2b'],
   },
 ]
+
+export const explorecards = [
+    {
+      id: 0,
+      serviceTitle: 'GET DESIGN',
+      serviceDescription:
+        'Get brand identity systems, event branding, editorial design, illustrations, and motion graphics. Build brand differentiation and human connect with Makerrs. Explore our branding and design services.',
+      bgColor: '#ffffff',
+      textColor: '#13c33f',
+      href: '/brand-design-agency',
+    },
+    {
+      id: 1,
+      serviceTitle: 'GET VIDEO',
+      serviceDescription:
+        'We plan, conceptualise, produce and scale video content – be it for your next product or your YouTube channel. We also offer on-demand video production services for customer testimonial videos, recruitment videos, corporate videos and more. Explore our video production services.',
+      bgColor: '#ffffff',
+      textColor: '#13c33f',
+      href: '/video-production',
+    },
+    {
+      id: 2,
+      serviceTitle: 'GET PODCAST',
+      serviceDescription:
+        'Looking to lead industry conversations, build community and drive ROI? Go from content research, podcast concept and positioning, to podcast branding, production, distribution and amplification with one agency. Make a successful podcast today.',
+      bgColor: '#ffffff',
+      textColor: '#13c33f',
+      href: '/podcast-production-services',
+    },
+    {
+      id: 3,
+      serviceTitle: 'GET CAMPAIGN',
+      serviceDescription:
+        'From digital campaigns and integrated campaigns, to outdoor and print campaigns – our creative strategy is rooted in a simple yet powerful human insight unique to your brand and product or service. Send us a campaign brief today.',
+      bgColor: '#ffffff',
+      textColor: '#13c33f',
+      href: '/advertising-agency',
+    },
+    {
+      id: 4,
+      serviceTitle: 'BOOK A CREW',
+      serviceDescription:
+        'Get on-demand professional video crews anywhere in the world. Be it a one-camera shoot or a multi-camera multi-location production–we curate and manage the production, and quality-check the footage for you. Hire a professional video crew today!',
+      bgColor: '#ffffff',
+      textColor: '#13c33f',
+      href: '/video-production-near-me',
+    },
+  ]
