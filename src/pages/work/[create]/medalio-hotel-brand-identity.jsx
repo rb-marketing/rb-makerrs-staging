@@ -77,25 +77,24 @@ const pageData = {
 
 
 
-function Medalio() {
-    const router = useRouter()
-  const articleUrl = `https://www.makerrs.com${router.pathname}`
-
-  const { logo, tags, commercials, desktopVideo, mobileVideo, image } = pageData
+function Medalio() { 
+  const router = useRouter()
+  const fullUrl = `https://www.makerrs.com${router.asPath}`
+ const { logo, tags, commercials, desktopVideo, mobileVideo, image } = pageData
   const socials = [
     {
       key: 0,
-      href: `https://twitter.com/intent/tweet?text=${articleUrl}`,
+      href: `https://twitter.com/intent/tweet?text=${fullUrl}`,
       color: '#000',
       icon: <Twitter />,
     },
 
     {
+      type: 'linkedin',
       key: 1,
-      href: `https://www.linkedin.com/shareArticle?mini=true&url=${articleUrl}`,
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${fullUrl}`,
       color: '#006699',
       icon: <Linkedin />,
-      type: 'linkedin',
     },
   ]
     return (

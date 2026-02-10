@@ -90,7 +90,7 @@ specifyWidth: 'md:!w-[220px] !w-[200px]',
 
 function Lilliacare() {
   const router = useRouter()
-  const articleUrl = `https://www.makerrs.com${router.pathname}`
+  const articleUrl = `https://www.makerrs.com${router.asPath}`
   const { logo, tags, featured, commercials, stats, press, image, specifyWidth } = pageData
   const socials = [
     // {

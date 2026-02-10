@@ -84,7 +84,7 @@ const pageData = {
 
 function ExicomMobility() {
     const router = useRouter()
-    const articleUrl = `https://www.makerrs.com${router.pathname}`
+    const articleUrl = `https://www.makerrs.com${router.asPath}`
 
     const { logo, tags, commercials, desktopVideo, mobileVideo, image, specifyWidth } = pageData
     const socials = [
