@@ -263,7 +263,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
     {
       key: 4,
       quote:
-        'Testimonial - VP international - replace content - We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends and are always experimental and open to feedback. They’re an amazing lot to work with!',
+        'We partnered with Makerrs to create internal campaigns. They get the brief to the tee, every time and deliver at lightning speed! They’re clued in on the latest trends and are always experimental and open to feedback. They’re an amazing lot to work with!',
 
       designation: 'VP INTERNAL COMMUNICATIONS',
       company: 'FORTUNE 100 ITES ENTERPRISE',
@@ -576,7 +576,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
             </div>
             <div className="w-full md:w-3/5 px-4">
               <video
-                src="/img/services/crew/worldmap.mp4"
+                src="/img/services/crew/world_map_new.mp4"
                 autoPlay
                 loop
                 muted

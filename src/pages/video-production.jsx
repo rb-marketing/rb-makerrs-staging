@@ -27,6 +27,7 @@ import { useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { serviceVideos, videosCards } from '@/content/services'
 import statsStyles from '@/styles/sections/StatsSection.module.scss'
+import { videoPosts } from '@/utils/dummy'
 
 const INIT_MODAL = {
   open: false,
@@ -42,6 +43,7 @@ const VideosServices = ({ setisPopupOpen }) => {
   const router = useRouter()
   const [modal, setModal] = useState(INIT_MODAL)
   const [stopVisible, setstopVisible] = useState(false)
+  const _posts = videoPosts.map(postsMapper)
 
   const [isSticky, setSticky] = useState(false)
   const [isOverlapping, setIsOverlapping] = useState(false)
@@ -846,83 +848,6 @@ const VideosServices = ({ setisPopupOpen }) => {
     },
   ]
 
-  const _posts = [
-    {
-      key: 0,
-      name: 'Global Leaders: a Hiring Campaign',
-      image: '/img/case-study/infosys-global-leaders.webp',
-      company: 'Infosys',
-      alt: 'infosys-global-leaders',
-      tags: [
-        'Technology',
-        'Campaign',
-        'Employer Branding Video',
-        'Global Video Production',
-      ],
-      href: '/brand-campaign/infosys-global-employer-brand',
-    },
-    {
-      key: 1,
-      name: '220% Organic YouTube Subscriber Growth in India',
-      company: 'Indeed',
-      alt: 'Indeed YouTube Content',
-      tags: ['Hiring Platform', 'YouTube Content'],
-      image: '/img/works/indeed_youtube_content_main_thumbnail.png',
-      href: '/video-production/indeed-youtube-content',
-    },
-    {
-      key: 2,
-      name: 'Campaign Explainer Video for HRM SAAS product',
-      company: 'MULTIPLIER',
-      image: '/img/works/multiplier_work.webp',
-      alt: 'MULTIPLIER',
-      tags: [
-        'SaaS',
-        'Lead Gen Campaign',
-        'Product Launch Video',
-        'Explainer Video',
-        '2D Animation Video',
-      ],
-      href: '/video-production/multiplier-explainer-video',
-    },
-    {
-      key: 3,
-      name: 'Gordon Ritter on the Future of Software',
-      company: 'Vymo',
-      image: '/img/works/vymo_gordon_ritter.webp',
-      alt: 'Vymo',
-      tags: [
-        'SaaS',
-        'Thought Leadership Video',
-        'Corporate Film',
-        'Interview Video',
-      ],
-      href: '/video-production/thought-leadership-vymo-gordon-ritter',
-    },
-    {
-      key: 4,
-      name: 'Capturing the Story of Sanganeri Craft for Taneira',
-      company: 'Taneira',
-      alt: 'Sanganeri Craft with Taneira',
-      tags: ['Textile and Apparel', 'Documentary Film'],
-      image: '/img/works/taneira_main_thumbnail.png',
-      href: '/video-production/fashion-taneira-sanganeri',
-    },
-    {
-      key: 31,
-      name: "Celebrating Rural Women in India's Auto Manufacturing",
-      company: 'Tata Motors',
-      alt: " Celebrating Rural Women in India's Auto Manufacturing",
-      tags: [
-        'Manufacturing',
-        'Employer Branding',
-        'Corporate Communication',
-        'Diversity & Inclusion',
-      ],
-      image: '/img/works/womens-at-tata-autocamp.webp',
-      href: '/video-production/tata-inclusion-auto-comp',
-    },
-  ]
 
   const handleRelatedVideoClick = (videolink) => {
     const clickedVideoData = workData.find(
@@ -1078,6 +1003,7 @@ const VideosServices = ({ setisPopupOpen }) => {
           btnposition="bottom"
         />
       </div>
+      
 
       {/* <section className={`overflow-hidden pb-18 pt-18 md:pb-18`}>
         <div className="container">
