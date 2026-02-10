@@ -38,7 +38,7 @@ export const WorkDropdown = ({ placeholder, options = [], onChange }) => {
     return (
         <div className='relative w-fit' ref={dropdownRef}>
             <div
-                className='w-56 cursor-pointer rb-select-blogs border border-rb-black/40 bg-rb-white pt-2 pb-8 px-4 rounded-6xl h-7.5 text-rb-black uppercase font-medium dd-field !min-w-[120px]'
+                className='w-56 cursor-pointer rb-select-blogs border border-rb-black/40 bg-rb-white pt-2 pb-8 px-4 rounded-6xl h-7.5 text-rb-black uppercase font-medium dd-field'
                 onClick={toggleDropdown}
             >
                 {selected_options}
@@ -46,7 +46,7 @@ export const WorkDropdown = ({ placeholder, options = [], onChange }) => {
             {isOpen && (
                 <ul
                     onWheel={(event) => event.stopPropagation()}
-                    className=' cursor-pointer absolute w-32 bg-white border border-stone-300 rounded-lg max-h-60 overflow-y-auto mt-2 z-10 custom-scrollbar'
+                    className=' cursor-pointer absolute w-56 bg-white border border-stone-300 rounded-lg max-h-60 overflow-y-auto mt-2 z-10 custom-scrollbar'
                 >
 
                     {options.map((option) => (
