@@ -500,7 +500,7 @@ export const Footer = ({ hasContactForm }) => {
                         Design
                       </Link>
                       <Link
-                        href="/work/video"
+                        href="/work/videos"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >

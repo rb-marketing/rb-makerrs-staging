@@ -47,9 +47,9 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
     },
   ]
   const categoryOptions = [
-    { name: 'ALL', slug: 'all' },
-    { name: 'B2B', slug: 'b2b' },
-    { name: 'B2C', slug: 'b2c' },
+    { name: 'ALL WORK', slug: 'all' },
+    { name: 'B2B WORK', slug: 'b2b' },
+    { name: 'B2C WORK', slug: 'b2c' },
   ]
   const [selectedTag, setSelectedTag] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState('all');
