@@ -1,4 +1,6 @@
 import { TwitterShareButton, LinkedinShareButton } from 'react-share';
+import { useRouter } from 'next/router'
+import { Twitter, Linkedin} from '@/components/icons'
 
 export const WorkHeroSection = ({
   logo,
@@ -10,6 +12,8 @@ export const WorkHeroSection = ({
   title = null,
   image = null,
 }) => {
+  const router = useRouter()
+  const articleUrl = `https://www.makerrs.com${router.asPath}`
   const copyPageUrl = () => {
     navigator.clipboard.writeText(window.location.href)
     const copyPopup = document.querySelector('.copy-link-popup')
@@ -60,31 +64,33 @@ export const WorkHeroSection = ({
                   <div key={key}>
                     {
                       href.includes('twitter') &&
-                      <TwitterShareButton url={href}>
-                        <a
-                          data-rb-cursor-state="invisible"
-                          href={href}
-                          style={{ '--text-color': color }}
-                          key={key}
-                          className={`w-10 h-10 rounded-full overflow-hidden bg-white border border-rb-dune/80 text-rb-dune/80 hover:text-[var(--text-color)] hover:border-[var(--text-color)] transition-all grid place-content-center`}
+                       <TwitterShareButton
+                          url={`https://twitter.com/intent/tweet?text=${articleUrl}`}
                         >
-                          {icon}
-                        </a>
-                      </TwitterShareButton>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://twitter.com/intent/tweet?text=${articleUrl}`}
+                            className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#000] hover:border-[#000]"
+                          >
+                            <Twitter />
+                          </a>
+                        </TwitterShareButton>
                     }
                     {
                       type === 'linkedin' &&
-                      <LinkedinShareButton url={href}>
-                        <a
-                          data-rb-cursor-state="invisible"
-                          href={href}
-                          style={{ '--text-color': color }}
-                          key={key}
-                          className={`w-10 h-10 rounded-full overflow-hidden bg-white border border-rb-dune/80 text-rb-dune/80 hover:text-[var(--text-color)] hover:border-[var(--text-color)] transition-all grid place-content-center`}
+                        <LinkedinShareButton
+                          url={articleUrl}
                         >
-                          {icon}
-                        </a>
-                      </LinkedinShareButton>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={articleUrl}
+                            className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#006699] hover:border-[#006699]"
+                          >
+                            <Linkedin />
+                          </a>
+                        </LinkedinShareButton>
                     }
                   </div>
                 ))}
