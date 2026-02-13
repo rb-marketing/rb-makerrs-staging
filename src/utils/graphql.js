@@ -374,6 +374,9 @@ export const getLatestArticle = () =>
         featuredImage {
           ${FEATURED_IMAGE_QUERY}
         }
+        tags {
+          ${TAXANOMY_QUERY}
+        }
       }
     }
   }
