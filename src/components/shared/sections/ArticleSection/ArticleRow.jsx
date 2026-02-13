@@ -1,8 +1,8 @@
 export const ArticleRow = ({ article, ...rest }) => {
-  const { title, slug, author, date, excerpt } = article
+  const { title, slug, author, date, excerpt, tags } = article
   return (
     <a
-      href={`/blog/${slug}`}
+      href={`/${tags[0].slug}/${slug}`}
       data-rb-cursor-state="invisible"
       className="justify-between mb-5 last:mb-0 py-16 px-10 border rounded-xl data-[selected=true]:text-rb-black border-rb-stroke hover:border-rb-stroke-dark transition-all group"
       {...rest}

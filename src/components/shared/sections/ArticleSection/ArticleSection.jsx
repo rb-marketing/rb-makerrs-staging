@@ -107,11 +107,16 @@ export const ArticleSection = ({
           spaceBetween={24}
           slidesPerView={1.1}
         >
-          {articles.map(({ ...article }, id) => (
-            <SwiperSlide className="relative" key={id}>
-              <ArticleCard {...article} href={`/blog/${article?.slug}`} />
-            </SwiperSlide>
-          ))}
+          {articles.map((article, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <ArticleCard
+                  {...article}
+                  href={`/${article?.tags[0].slug || 'blog'}/${article.slug}`}
+                />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
         <div
           data-enter={enter}
