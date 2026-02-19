@@ -19,8 +19,6 @@ import { postsMapper } from '@/utils/mapper'
 import { Accordion } from '@/components/ui'
 import { Testimonials } from '@/components/shared'
 import { useState } from 'react'
-import { getPlayWorks } from '@/utils/graphql'
-import { formatPlayPosts } from '@/utils/formate'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { useRef, useEffect } from 'react'
@@ -1176,16 +1174,5 @@ const VideosServices = ({ setisPopupOpen }) => {
       </Script> */}
     </>
   )
-}
-export async function getStaticProps() {
-  const { data } = await getPlayWorks()
-
-  const works = formatPlayPosts(data?.works?.nodes)
-
-  return {
-    props: {
-      works,
-    },
-  }
 }
 export default VideosServices

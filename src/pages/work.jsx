@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { getPlayWorks } from '@/utils/graphql'
+import { formatPlayPosts } from '@/utils/formate'
 import { useRouter } from 'next/router'
 import { workPosts } from '@/utils/dummy'
 import {
@@ -19,7 +21,7 @@ const getCountryFromCookie = () => {
   return match ? match[1] : null
 }
 
-export default function WorkPage({ selectedvalue = 'featured' }) {
+const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const router = useRouter()
   const { category } = router.query;
   const _posts = workPosts
@@ -421,3 +423,15 @@ export default function WorkPage({ selectedvalue = 'featured' }) {
     </>
   )
 }
+export async function getStaticProps() {
+  const { data } = await getPlayWorks()
+
+  const works = formatPlayPosts(data?.works?.nodes)
+
+  return {
+    props: {
+      works,
+    },
+  }
+}
+export default WorkPage;

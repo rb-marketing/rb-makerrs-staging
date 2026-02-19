@@ -17,8 +17,6 @@ import Script from 'next/script'
 import { Accordion } from '@/components/ui'
 import { Testimonials, WorkListHeroSection } from '@/components/shared'
 import { useState } from 'react'
-import { getPlayWorks } from '@/utils/graphql'
-import { formatPlayPosts } from '@/utils/formate'
 import Link from 'next/link'
 import { logoIcons } from '.'
 import { Navigation } from 'swiper/modules'
@@ -767,16 +765,5 @@ const CrewsServices = ({ setisPopupOpen }) => {
       </Script> */}
     </>
   )
-}
-export async function getStaticProps() {
-  const { data } = await getPlayWorks()
-
-  const works = formatPlayPosts(data?.works?.nodes)
-
-  return {
-    props: {
-      works,
-    },
-  }
 }
 export default CrewsServices
