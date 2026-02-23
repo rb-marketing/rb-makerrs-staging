@@ -53,6 +53,7 @@ const pageData = {
         width: '150',
         height: '200',
     },
+    specifyWidth: '!w-[60px]',
     image: '/img/case-study/abis case_study_banner.jpg',
     tags: ['FMCG', 'brand-identity'],
     commercials: {
@@ -80,7 +81,7 @@ const pageData = {
 function Abis() { 
   const router = useRouter()
   const fullUrl = `https://www.makerrs.com${router.asPath}`
- const { logo, tags, commercials, desktopVideo, mobileVideo, image } = pageData
+ const { logo, tags, commercials, desktopVideo, mobileVideo, image, specifyWidth } = pageData
   const socials = [
     {
       key: 0,
@@ -112,6 +113,7 @@ function Abis() {
                 desktopVideo={desktopVideo}
                 mobileVideo={mobileVideo}
                 image={image}
+                specifyWidth={specifyWidth}
             />
      <section className="bg-white overflow-hidden  ">
                 <div className="container">
