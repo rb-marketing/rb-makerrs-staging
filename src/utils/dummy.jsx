@@ -2012,6 +2012,18 @@ export const workPosts = [
     href: '/brand-design/thelagram-restaurant',
     region: [],
   },
+  {
+    key: 100,
+    name: 'ABIS Pro Brand Identity: Goodness. Guaranteed.',
+    image: '/img/works/abis_pro_work_thumbnail.jpg',
+    company: 'Abis Pro',
+    alt: 'ABIS Pro',
+    tabs: ['design'],
+    tags: ['FMCG', 'brand-identity'],
+    case_study_title: 'abis-pro-meats',
+    href: '/brand-design/abis-pro-meats',
+    region: ['IN'],
+  },
 
   {
     key: 19,
