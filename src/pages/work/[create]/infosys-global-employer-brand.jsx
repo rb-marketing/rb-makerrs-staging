@@ -67,18 +67,6 @@ const pageData = {
             {
                 key: 0,
                 duration: 130,
-                vimeoId: '1031815235',
-                name: 'Andrea Hendrickx',
-                company: 'Infosys',
-                thumbnail: {
-                    width: 446,
-                    height: 265,
-                    src: '/img/case-study/andrea-hendrickx.webp',
-                },
-            },
-            {
-                key: 1,
-                duration: 130,
                 vimeoId: '1030711146',
                 name: 'Ralf Gehrig',
                 company: 'Infosys',
@@ -86,6 +74,18 @@ const pageData = {
                     width: 446,
                     height: 265,
                     src: '/img/case-study/ralf-gehrig.webp',
+                },
+            },
+            {
+                key: 1,
+                duration: 130,
+                vimeoId: '1031815235',
+                name: 'Andrea Hendrickx',
+                company: 'Infosys',
+                thumbnail: {
+                    width: 446,
+                    height: 265,
+                    src: '/img/case-study/andrea-hendrickx.webp',
                 },
             },
             {
