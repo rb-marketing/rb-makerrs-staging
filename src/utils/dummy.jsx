@@ -2019,7 +2019,7 @@ export const workPosts = [
     company: 'Abis Pro',
     alt: 'ABIS Pro',
     tabs: ['design'],
-    tags: ['FMCG', 'brand-identity'],
+    tags: ['FMCG', 'Brand Identity'],
     case_study_title: 'abis-pro-meats',
     href: '/brand-design/abis-pro-meats',
     region: ['IN'],
