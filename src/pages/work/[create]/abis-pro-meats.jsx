@@ -101,8 +101,8 @@ function Abis() {
     return (
         <>
             <SEO
-                title="Meta title should be 'Abis Pro FMCG Brand Identity Design | Makerrs'"
-                description="Meta descriptions should be 'See how we designed ABIS Pro’s brand identity. From packaging, retail and digital to making traceability and clean meat practices visible, modern, and trustworthy."
+                title="Abis Pro FMCG Brand Identity Design | Makerrs"
+                description="See how we designed ABIS Pro’s brand identity. From packaging, retail and digital to making traceability and clean meat practices visible, modern, and trustworthy."
                 url="https://www.makerrs.com/work/brand-designs/abis-pro-meats"
             />
             <div className='md:pt-[16px]'>
@@ -188,14 +188,14 @@ function Abis() {
                                     The tone is :
                                 </p>
                                 <p className="mb-6 md:mb-7.5 ">
-                                    <ul className="list-disc pl-6 leading-7 mb-[30px]">
-                                    <li className="list-disc pl-6 leading-7 mb-[30px]">
+                                    <ul className="list-disc pl-6 leading-7 ">
+                                    <li className="list-disc pl-6 leading-7">
                                         Confident, but never flashy
                                     </li>
-                                     <li className="list-disc pl-6 leading-7 mb-[30px]">
+                                     <li className="list-disc pl-6 leading-7">
                                         Clear, not cluttered with jargon
                                     </li>
-                                     <li className="list-disc pl-6 leading-7 mb-[30px]">
+                                     <li className="list-disc pl-6 leading-7">
                                         Meticulous, respecting consumers who check every label
                                     </li>
                                     <li className="list-disc pl-6 leading-7 mb-[30px]">
