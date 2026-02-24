@@ -53,9 +53,9 @@ const pageData = {
         width: '150',
         height: '200',
     },
-    specifyWidth: '!w-[60px]',
+    specifyWidth: '!w-[75px]',
     image: '/img/case-study/abis case_study_banner.jpg',
-    tags: ['FMCG', 'brand-identity'],
+    tags: ['FMCG', 'Brand Identity'],
     commercials: {
         type: 'video',
         sources: [
@@ -101,11 +101,12 @@ function Abis() {
     return (
         <>
             <SEO
-                title="ABIS Pro Brand Identity: Goodness. Guaranteed | Makerrs"
-                description="We created a hospitality brand identity for Medalio that unites elegance and warmth, symbolizing progress and offering a sanctuary for travelers."
+                title="Meta title should be 'Abis Pro FMCG Brand Identity Design | Makerrs'"
+                description="Meta descriptions should be 'See how we designed ABIS Pro’s brand identity. From packaging, retail and digital to making traceability and clean meat practices visible, modern, and trustworthy."
                 url="https://www.makerrs.com/work/brand-designs/abis-pro-meats"
             />
-            <WorkHeroSection
+            <div className='md:pt-[16px]'>
+                <WorkHeroSection
                 title={'ABIS Pro Brand Identity: Goodness. Guaranteed.'}
                 logo={logo}
                 socials={socials}
@@ -115,11 +116,13 @@ function Abis() {
                 image={image}
                 specifyWidth={specifyWidth}
             />
+            </div>
+            
      <section className="bg-white overflow-hidden  ">
                 <div className="container">
                     <div className="cs-content max-w-[914px]">
                         <div className="mt-9 md:mb-20">
-                            <LineHeading className="mb-6 md:mb-9 ">
+                            <LineHeading className="mb-[24px] md:mb-[30px] ">
                                 Background
                             </LineHeading>
 
@@ -136,7 +139,7 @@ function Abis() {
                         </div>
 
                          <div className="mt-9 md:mb-20">
-                            <LineHeading className="mb-6 md:mb-9 ">
+                            <LineHeading className="mb-[24px] md:mb-[30px] ">
                                 Challenge
                             </LineHeading>
 
@@ -176,12 +179,12 @@ function Abis() {
                                 </LineHeading>
                               
                             </div>
-                                <p className="md:text-xl text-rb-black/70 !leading-[170%]">
+                                <p className="md:text-xl text-rb-black/70 !leading-[170%] mb-[30px]">
                                     With the persona defined, the voice followed naturally. ABIS Pro speaks like someone who knows 
                                     their craft, and doesn’t need to shout about it. The language mirrors the product: clean, traceable,
                                     and quietly reassuring.  At the heart of it all sits the brand promise: Goodness. Guaranteed.
                                 </p>
-                                <p className="text-base md:text-2xl text-rb-black/70 !leading-[150%] mb-[30px]">
+                                <p className="text-base md:text-2xl text-rb-black/70 !leading-[150%] mb-[24px]">
                                     The tone is :
                                 </p>
                                 <p className="mb-6 md:mb-7.5 ">
@@ -308,7 +311,7 @@ function Abis() {
                                     The ABIS Pro brand identity has emerged as a visual system rooted in honesty and care. We created 
                                     a distinctive brand world that balances modernity with warmth, with a confident, meticulous voice 
                                     that respects Indian consumers. Built clean. Built clear. Built on protein. Delivering the promise 
-                                    of ‘Goodness. Guaranteed.
+                                    of &apos;Goodness. Guaranteed&apos;.
                                 </p>
                         </div>
                     </div>
