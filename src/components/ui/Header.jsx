@@ -215,7 +215,7 @@ export const Header = () => {
                     className={`hidden md:flex items-end md:h-[45px] top-0 right-0`}
                   >
                     <Link
-                      href="/work/featured"
+                      href="/work"
                       className="mr-8 uppercase flex md:h-auto items-center text-sm font-semibold text-rb-black hover:text-rb-link-green transition-all w-full md:w-auto py-4 md:py-0"
                     >
                       Work
