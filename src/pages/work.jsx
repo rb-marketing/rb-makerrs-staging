@@ -24,8 +24,7 @@ const getCountryFromCookie = () => {
 const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const router = useRouter()
   const { category } = router.query;
-  const _posts = workPosts
-
+  const _posts = works
   const caseStudyTags = [
     {
       name: 'Featured',
@@ -159,7 +158,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
     sessionStorage.setItem('work-selectedTag', tagUrl)
 
     // Shallow route update
-    router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
+    // router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
 
     // Scroll to posts
     setTimeout(() => {
@@ -208,7 +207,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const filteredPosts = _posts
     .filter((post) => {
       // 1️⃣ Region filter
-      if (post.region?.length && country && !post.region.includes(country)) {
+      if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
         return false
       }
 
@@ -223,7 +222,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
       }
 
       if (selectedCategory !== 'all') {
-        if (!post.filter_type?.includes(selectedCategory)) {
+        if (!post?.workDetails?.filter_type?.includes(selectedCategory)) {
           return false
         }
       }
@@ -308,7 +307,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
                 filteredPosts.map((p) => (
                   <div key={p.key} onPointerDown={() => saveState()}>
                     <ContentPostCard
-                      href={`/${selectedTag}/${p.case_study_title}`}
+                      href={`/${p?.workDetails?.url}/${p.case_study_title}`}
                       page="work"
                       {...p}
                     />
@@ -361,7 +360,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
               // Tag selected → count safely
               const total = _posts.filter((post) => {
                 // region filter
-                if (post.region?.length && country && !post.region.includes(country)) {
+                if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
                   return false
                 }
 
@@ -375,7 +374,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
 
                 // dropdown category filter
                 if (selectedCategory !== 'all') {
-                  if (!post.filter_type?.includes(selectedCategory)) {
+                  if (!post?.workDetails?.filter_type?.includes(selectedCategory)) {
                     return false
                   }
                 }
