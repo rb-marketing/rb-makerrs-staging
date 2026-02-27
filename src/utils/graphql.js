@@ -20,6 +20,11 @@ node {
   altText
 }    
 `
+
+const WORK_DETAILS_QUERY = `
+  workJson
+`
+
 const TAXANOMY_QUERY = `
     nodes {
         name
@@ -66,8 +71,12 @@ const WORK_POST_QUERY = `
       }
       companies {
         ${TAXANOMY_QUERY}
-      }      
+      }   
+      workDetails {
+        ${WORK_DETAILS_QUERY}
+      }   
     }
+   
 `
 
 const GLOBAL_LP_POST_QUERY = `

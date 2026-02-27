@@ -49,6 +49,7 @@ export const formatPlayPosts = (works = []) =>
     tags: w?.tags?.nodes ?? [],
     company: w?.companies?.nodes?.length ? w?.companies?.nodes[0] : null,
     featuredImage: formatWpImage(w?.featuredImage?.node),
+workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]")
   }))
 export const formateBlogPostFunc = (node) => ({
   slug: node?.slug,
