@@ -13,6 +13,7 @@ import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { aboutSchema } from '@/components/schema/about-schema'
 import { WorkDropdown } from '@/components/dropdown/work-dropdown'
+import workPageOrder from '@/utils/workOrder'
 
 const getCountryFromCookie = () => {
   if (typeof document === 'undefined') return null
@@ -57,6 +58,11 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const [visiblePosts, setVisiblePosts] = useState(9)
   const scrollRef = React.useRef(null)
   const [country, setCountry] = useState(null)
+  const currentTabOrder = workPageOrder[selectedTag] || [];
+  const orderMap = currentTabOrder.reduce((acc, title, index) => {
+    acc[title] = index;
+    return acc;
+  }, {});
 
   useEffect(() => {
     const detectedCountry = getCountryFromCookie()
@@ -229,6 +235,11 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
 
       // 3️⃣ No tag selected → show post
       return true
+    })
+    .sort((a, b) => {
+      const indexA = orderMap[a.name] ?? Infinity;
+      const indexB = orderMap[b.name] ?? Infinity;
+      return indexA - indexB;
     })
     .slice(0, visiblePosts)
 
