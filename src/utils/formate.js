@@ -61,7 +61,9 @@ export const formatWpImage = (image) => ({
     tabs: w.tags?.nodes?.map(tag => tag.name) || [],
     tags: w.categories?.nodes?.map(cat => cat.name) || [],
     case_study_title: w.slug,
-    workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]")
+    workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]"),
+    logo: w?.workDetails?.logo?.sourceUrl || "",
+    banner: w?.workDetails?.banner?.sourceUrl || ""
   }))
 
 export const formateBlogPostFunc = (node) => ({

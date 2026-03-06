@@ -568,69 +568,7 @@ const selectedSchema = slugToSchema[article.slug] || [];
       )}
 
       <GetUpdates />
-      <section className="py-25">
-        <div className="container">
-          <h2 className="text-title md:text-title-md mb-8 font-everett">
-            Recently Added Articles
-          </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pt-8">
-            {relatedArticle.map(
-              ({ title, date, slug, author, categories, featuredImage, tags }) => (
-                <div key={slug}>
-                  <Link 
-                    href={`/${tags[0]?.name || 'blog'}/${slug}`} 
-                    className="h-[384px] block md:h-[272px] overflow-hidden relative mb-4"
-                  >
-                    <div className="w-full h-full overflow-hidden group">
-                      <img 
-                        src="/img/blog-thumb.jpg"
-                        {...featuredImage}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
-                        alt=""
-                        
-                      />
-                      
-                    </div>
-                    <div className="absolute bottom-5 left-5 flex gap-1">
-                      {categories.map((c) => (
-                        <div
-                          className=" capitalize border border-white rounded-full py-2 px-4 text-[12px] font-semibold text-white"
-                          key={c.slug}
-                        >
-                          {c.name}
-                        </div>
-                      ))}
-                    </div>
-                  </Link>
-
-                  <div>
-                  {/* <div className="flex gap-2 mb-4">
-                      <span className="text-[14px] md:text-[16px]">{date}</span>
-                      <span className="text-[14px] md:text-[16px]">|</span>
-                      <span className="text-[14px] md:text-[16px]">
-                        {author}
-                      </span>
-                    </div> */}
-
-                    <h3 className="text-[16px] md:text-[24px] leading-[120%] font-semibold mb-8 tracking-[-0.96px]">
-                      {title}
-                    </h3>
-
-                    <Link 
-                     href={`/${tags[0]?.name || 'blog'}/${slug}`} 
-                      className="inline-flex gap-2 items-center text-black underline hover:text-rb-link-green font-semibold"
-                    >
-                      Continue reading
-                      <LineArrow className=" max-w-[20px]" />
-                    </Link>
-                  </div>
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </section>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}

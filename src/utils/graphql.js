@@ -23,6 +23,9 @@ node {
 
 const WORK_DETAILS_QUERY = `
   workJson
+  logo {
+    sourceUrl
+  }
 `
 
 const TAXANOMY_QUERY = `
