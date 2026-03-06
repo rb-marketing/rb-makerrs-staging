@@ -13,6 +13,8 @@ import { SEO } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
 import { useLenis } from '@studio-freight/react-lenis'
 import { useRouter } from 'next/router'
+import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
+import { formatPlayPosts } from '@/utils/formate'
 import {
   LinkedinShareButton,
   TwitterShareButton,
@@ -603,7 +605,7 @@ const selectedSchema = slugToSchema[article.slug] || [];
                   </Link>
 
                   <div>
-                    {/* <div className="flex gap-2 mb-4">
+                  {/* <div className="flex gap-2 mb-4">
                       <span className="text-[14px] md:text-[16px]">{date}</span>
                       <span className="text-[14px] md:text-[16px]">|</span>
                       <span className="text-[14px] md:text-[16px]">
@@ -637,11 +639,13 @@ const selectedSchema = slugToSchema[article.slug] || [];
   )
 }
 export const getStaticPaths = async () => {
-  const { data } = await getAllBlogs()
-  const paths = (data?.posts?.nodes || []).map(({ slug, tags }) => {
-    const tag = tags?.nodes?.[0]?.slug || 'blog'
+  const { data } = await getPlayWorks()
+
+  const works = formatPlayPosts(data?.works?.nodes)
+  const paths = (works || []).map(({ case_study_title, workDetails }) => {
+    const tag = workDetails?.url || 'featured'
     return {
-      params: { work: tag, slug: slug },
+      params: { create: tag, slug: case_study_title },
     }
   })
 
@@ -653,56 +657,33 @@ export const getStaticPaths = async () => {
 
 
 export async function getStaticProps({ params }) {
-  console.log(params,"params")
-  const { slug, work } = params
-  const { data, status } = await getBlog(slug)
-  const actualTag = data?.post?.tags?.nodes?.[0]?.slug || 'blog'
+  const { slug, create } = params
+  const { data, status } = await getPlayWorkDetails(slug)
 
-   // Case 1: Post not found → redirect or 404
-   if (!data?.post) {
+  if (!data?.work) {
     return { notFound: true }
-   }
-
-  //Case 2: Tag in URL doesn't match the post's actual tag → 404
-  if (actualTag?.toLowerCase() !== tags?.toLowerCase()) {
-   return { notFound: true }
   }
 
-  if (status !== 'success') {
+  const workJson = JSON.parse(data?.work?.workDetails?.workJson || "{}")
+
+  const actualTag = workJson?.url || "featured"
+
+  if (actualTag.toLowerCase() !== create.toLowerCase()) {
+    return { notFound: true }
+  }
+
+  if (status !== "success") {
     return {
       redirect: {
-        destination: `/${tags}`,
+        destination: `/${create}`,
         permanent: false,
       },
     }
   }
 
-  const relatedArticle = await getRelatedBlogs(
-    data.post?.slug,
-    // data.post?.tags?.nodes?.map((t) => t.slug) || []
-  )
-  
-  let toc = {}
-  const content = await rehype()
-    .data('settings', { fragment: true })
-    .use(rehypeSlug)
-    .use(rehypeToc, {
-      headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
-      customizeTOC: (tree) => {
-        toc = tree
-        return false
-      },
-    })
-    .process(data.post?.content || '')
-
   return {
     props: {
-      article: {
-        ...formateBlogPostFunc(data.post),
-        content: String(content),
-      },
-      tocTree: toc?.children?.length ? processTree(toc.children[0]) : null,
-      relatedArticle: relatedArticle.map(formateBlogPostFunc),
+      article: data.work,
     },
   }
 }

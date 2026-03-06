@@ -53,7 +53,7 @@ videoDetails {
     publish
 }
 workDetails {
-  videolink
+ ${WORK_DETAILS_QUERY}
 }
 `
 const WORK_POST_QUERY = `
