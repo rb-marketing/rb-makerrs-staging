@@ -7,11 +7,12 @@ import { useLenis } from '@studio-freight/react-lenis'
 import { useRouter } from 'next/router'
 import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
 import { formatPlayPosts } from '@/utils/formate'
+import { CommercialSection } from '@/components/pages/work'
 
 const ArticleSingle = ({ article }) => {
   const blogRef = useRef()
   const router = useRouter()
-
+  const workJsonObj = JSON.parse(article?.workDetails?.workJson || "{}");
   const articleUrl = `https://www.makerrs.com${router.asPath}`
   const logo = useMemo(()=>{
     return {
@@ -150,7 +151,7 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
         url={seoUrl}
       />
        <WorkHeroSection
-        title={'Launching a Sports Brand logo with a 3D Billboard'}
+        title={article?.title}
           logo={logo}
           socials={socials}
           tags={tags}
@@ -160,18 +161,18 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
         <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
           <div className="container">
             <div className="cs-content max-w-[914px]">
-              <div className="mt-9 md:mb-20">
                 <div
                   ref={blogRef}
                   className="work-content-main max-w-[914px]"
                   dangerouslySetInnerHTML={{ __html: article?.content }}
                 ></div>
-              </div>
             </div>
           </div>
-
-          <div className="fixed bottom-12 left-0 right-0 flex justify-center md:hidden">
-            <Button onClick={tocTrigger}>Table of Contents</Button>
+          <div>
+            <CommercialSection
+            sources={workJsonObj.sources}
+            type={workJsonObj.commercials_type}
+          />
           </div>
         </section>
     </>
