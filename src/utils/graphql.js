@@ -26,6 +26,9 @@ const WORK_DETAILS_QUERY = `
   logo {
     sourceUrl
   }
+  banner { 
+    sourceUrl
+  }
 `
 
 const TAXANOMY_QUERY = `
@@ -54,6 +57,9 @@ videoDetails {
     duration
     fps
     publish
+}
+categories {
+  ${TAXANOMY_QUERY}
 }
 workDetails {
  ${WORK_DETAILS_QUERY}
