@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { LineArrow, Twitter, Whatsapp, Linkedin } from '@/components/icons'
 import { Button } from '@/components/ui'
-import { SEO, WorkHeroSection } from '@/components/shared'
+import { SEO, WorkHeroSection, StatsSection } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
 import { useLenis } from '@studio-freight/react-lenis'
 import { useRouter } from 'next/router'
@@ -13,6 +13,7 @@ const ArticleSingle = ({ article }) => {
   const blogRef = useRef()
   const router = useRouter()
   const workJsonObj = JSON.parse(article?.workDetails?.workJson || "{}");
+  const stats = workJsonObj?.stats_data || []
   const articleUrl = `https://www.makerrs.com${router.asPath}`
   const logo = useMemo(()=>{
     return {
@@ -168,7 +169,14 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
                 ></div>
             </div>
           </div>
-          <div>
+          {stats?.length > 0 && (
+              <StatsSection
+                tag={workJsonObj?.stats_title}
+                className="mt-6 md:mt-20"
+                data={stats}
+              />
+            )}
+          <div className='md:mt-20'>
             <CommercialSection
             sources={workJsonObj.sources}
             type={workJsonObj.commercials_type}

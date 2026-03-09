@@ -84,7 +84,14 @@ export const StatsSection = ({
           >
             <div className={`${i == 2 && 'lg:ml-[20%]'}`}>
               <div className="lg:w-fit lg:mx-auto">
-                <RollupNumber {...s.countUpProps} />
+                <RollupNumber value={s.value}
+                  suffix={
+                    <div className="inline-flex">
+                      {s.suffix}
+                      {s.symbol && <span className="text-rb-red">{s.symbol}</span>}
+                    </div>
+                  }
+                />
                 <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
                   {s.text}
                 </div>
