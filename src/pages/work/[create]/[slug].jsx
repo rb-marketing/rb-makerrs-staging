@@ -157,14 +157,13 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
           image={banner}
           // specifyWidth={specifyWidth}
         />
-      <article>
-        <section className="pb-10 pt-3 md:pt-0 md:pb-20">
+        <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
           <div className="container">
-            <div className="flex -mx-4 flex-wrap">
-              <div className="w-full md:w-3/4 px-4">
+            <div className="cs-content max-w-[914px]">
+              <div className="mt-9 md:mb-20">
                 <div
                   ref={blogRef}
-                  className="blog-content-main max-w-[914px]"
+                  className="work-content-main max-w-[914px]"
                   dangerouslySetInnerHTML={{ __html: article?.content }}
                 ></div>
               </div>
@@ -175,7 +174,6 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
             <Button onClick={tocTrigger}>Table of Contents</Button>
           </div>
         </section>
-      </article>
     </>
   )
 }
