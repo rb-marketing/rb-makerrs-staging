@@ -237,10 +237,15 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
       return true
     })
     .sort((a, b) => {
-      const indexA = orderMap[a.name] ?? Infinity;
-      const indexB = orderMap[b.name] ?? Infinity;
-      return indexA - indexB;
+      if (!selectedTag) return 0;
+
+      const orderA = a.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
+      const orderB = b.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
+
+      return orderA - orderB;
     })
+
+
     .slice(0, visiblePosts)
 
   return (
