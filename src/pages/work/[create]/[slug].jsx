@@ -59,8 +59,28 @@ const ArticleSingle = ({ article }) => {
     const headings = [...blogRef.current?.querySelectorAll('h2[id]')]
     const figcaption = [...blogRef.current?.querySelectorAll('figcaption')]
     const sub_headings = [...blogRef.current?.querySelectorAll('h2, h3')]
+    const sub_heading_h4 = [...blogRef.current?.querySelectorAll('h4')]
     const img_center = [...blogRef.current?.querySelectorAll('.wp-image-1064')]
     const tableFigures = [...blogRef.current?.querySelectorAll('.wp-block-table')];
+    const paragraph = [...blogRef.current?.querySelectorAll('p')]
+    const ol_tag = [...blogRef.current?.querySelectorAll('ol')]
+    const li_tag = [...blogRef.current?.querySelectorAll('li')]
+
+    ol_tag.forEach((ol)=>{
+      ol.classList.add('list-decimal', 'ml-10', 'space-y-4', 'mb-[30px]')
+    })
+
+    li_tag.forEach((li)=>{
+      li.classList.add('font-opensans','text-[20px]','text-rb-black/80','leading-[28px]','max-md:text-[16px]','max-md:leading-[150%]','max-md:tracking-[-0.5px]','!mb-7.5','pl-2')
+    })
+
+    paragraph.forEach((para) => {
+      para.style.marginBottom = "30px";
+    });
+
+    sub_heading_h4.forEach((heading_four)=>{
+      heading_four.classList.add('mb-4','md:mb-6','md:!text-[32px]','!text-black','md:!leading-10','!tracking-normal','!text-xl')
+    })
 
    sub_headings.forEach((sub_heading) => {
       sub_heading.style.paddingTop = '28px';
