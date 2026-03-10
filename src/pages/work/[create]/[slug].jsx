@@ -58,7 +58,7 @@ const ArticleSingle = ({ article }) => {
   useEffect(() => {
     const headings = [...blogRef.current?.querySelectorAll('h2[id]')]
     const figcaption = [...blogRef.current?.querySelectorAll('figcaption')]
-    const sub_headings = [...blogRef.current?.querySelectorAll('.wp-block-heading')]
+    const sub_headings = [...blogRef.current?.querySelectorAll('h2, h3')]
     const img_center = [...blogRef.current?.querySelectorAll('.wp-image-1064')]
     const tableFigures = [...blogRef.current?.querySelectorAll('.wp-block-table')];
 
