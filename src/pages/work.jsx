@@ -13,6 +13,7 @@ import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { aboutSchema } from '@/components/schema/about-schema'
 import { WorkDropdown } from '@/components/dropdown/work-dropdown'
+import workPageOrder from '@/utils/workOrder'
 
 const getCountryFromCookie = () => {
   if (typeof document === 'undefined') return null
@@ -24,8 +25,7 @@ const getCountryFromCookie = () => {
 const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const router = useRouter()
   const { category } = router.query;
-  const _posts = workPosts
-
+  const _posts = works
   const caseStudyTags = [
     {
       name: 'Featured',
@@ -58,6 +58,11 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const [visiblePosts, setVisiblePosts] = useState(9)
   const scrollRef = React.useRef(null)
   const [country, setCountry] = useState(null)
+  const currentTabOrder = workPageOrder[selectedTag] || [];
+  const orderMap = currentTabOrder.reduce((acc, title, index) => {
+    acc[title] = index;
+    return acc;
+  }, {});
 
   useEffect(() => {
     const detectedCountry = getCountryFromCookie()
@@ -159,7 +164,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
     sessionStorage.setItem('work-selectedTag', tagUrl)
 
     // Shallow route update
-    router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
+    // router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
 
     // Scroll to posts
     setTimeout(() => {
@@ -208,7 +213,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
   const filteredPosts = _posts
     .filter((post) => {
       // 1️⃣ Region filter
-      if (post.region?.length && country && !post.region.includes(country)) {
+      if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
         return false
       }
 
@@ -223,7 +228,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
       }
 
       if (selectedCategory !== 'all') {
-        if (!post.filter_type?.includes(selectedCategory)) {
+        if (!post?.workDetails?.filter_type?.includes(selectedCategory)) {
           return false
         }
       }
@@ -231,6 +236,16 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
       // 3️⃣ No tag selected → show post
       return true
     })
+    .sort((a, b) => {
+      if (!selectedTag) return 0;
+
+      const orderA = a.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
+      const orderB = b.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
+
+      return orderA - orderB;
+    })
+
+
     .slice(0, visiblePosts)
 
   return (
@@ -308,7 +323,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
                 filteredPosts.map((p) => (
                   <div key={p.key} onPointerDown={() => saveState()}>
                     <ContentPostCard
-                      href={`/${selectedTag}/${p.case_study_title}`}
+                      href={`/${p?.workDetails?.url}/${p.case_study_title}`}
                       page="work"
                       {...p}
                     />
@@ -361,7 +376,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
               // Tag selected → count safely
               const total = _posts.filter((post) => {
                 // region filter
-                if (post.region?.length && country && !post.region.includes(country)) {
+                if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
                   return false
                 }
 
@@ -375,7 +390,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
 
                 // dropdown category filter
                 if (selectedCategory !== 'all') {
-                  if (!post.filter_type?.includes(selectedCategory)) {
+                  if (!post?.workDetails?.filter_type?.includes(selectedCategory)) {
                     return false
                   }
                 }

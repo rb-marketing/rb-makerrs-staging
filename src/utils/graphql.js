@@ -20,6 +20,17 @@ node {
   altText
 }    
 `
+
+const WORK_DETAILS_QUERY = `
+  workJson
+  logo {
+    sourceUrl
+  }
+  banner { 
+    sourceUrl
+  }
+`
+
 const TAXANOMY_QUERY = `
     nodes {
         name
@@ -47,8 +58,11 @@ videoDetails {
     fps
     publish
 }
+categories {
+  ${TAXANOMY_QUERY}
+}
 workDetails {
-  videolink
+ ${WORK_DETAILS_QUERY}
 }
 `
 const WORK_POST_QUERY = `
@@ -66,8 +80,12 @@ const WORK_POST_QUERY = `
       }
       companies {
         ${TAXANOMY_QUERY}
-      }      
+      }   
+      workDetails {
+        ${WORK_DETAILS_QUERY}
+      }   
     }
+   
 `
 
 const GLOBAL_LP_POST_QUERY = `

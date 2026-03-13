@@ -41,15 +41,31 @@ export const formatWpImage = (image) => ({
  * @param {works} formate work play list data
  * @returns
  */
-export const formatPlayPosts = (works = []) =>
-  works.map((w) => ({
-    title: w.title,
-    slug: w.slug,
-    categories: w?.categories?.nodes ?? [],
-    tags: w?.tags?.nodes ?? [],
-    company: w?.companies?.nodes?.length ? w?.companies?.nodes[0] : null,
-    featuredImage: formatWpImage(w?.featuredImage?.node),
+// export const formatPlayPosts = (works = []) =>
+//   works.map((w) => ({
+//     title: w.title,
+//     slug: w.slug,
+//     categories: w?.categories?.nodes ?? [],
+//     tags: w?.tags?.nodes ?? [],
+//     company: w?.companies?.nodes?.length ? w?.companies?.nodes[0] : null,
+//     featuredImage: formatWpImage(w?.featuredImage?.node),
+// workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]")
+//   }))
+  export const formatPlayPosts = (works = []) =>
+  works.map((w, index) => ({
+    key: index,
+    name: w.title || "",
+    company: w?.companies?.nodes?.length ? w?.companies?.nodes[0].name : null,
+    image: w?.featuredImage?.node?.sourceUrl || "",
+    alt: w.featuredImage?.alt || w.title || "",
+    tabs: w.tags?.nodes?.map(tag => tag.name) || [],
+    tags: w.categories?.nodes?.map(cat => cat.name) || [],
+    case_study_title: w.slug,
+    workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]"),
+    logo: w?.workDetails?.logo?.sourceUrl || "",
+    banner: w?.workDetails?.banner?.sourceUrl || ""
   }))
+
 export const formateBlogPostFunc = (node) => ({
   slug: node?.slug,
   title: node?.title,
