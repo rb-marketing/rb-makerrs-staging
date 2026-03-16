@@ -15,28 +15,28 @@ const ArticleSingle = ({ article }) => {
   const workJsonObj = JSON.parse(article?.workDetails?.workJson || "{}");
   const stats = workJsonObj?.stats_data || []
   const articleUrl = `https://www.makerrs.com${router.asPath}`
-  const logo = useMemo(()=>{
+  const logo = useMemo(() => {
     return {
       src: article?.workDetails?.logo?.sourceUrl,
       width: 150,
       height: 70,
     }
-  },[])
+  }, [])
   const tags = useMemo(() => {
     return article?.categories?.nodes?.map(cat => cat.name) || [];
   }, []);
-  const banner = useMemo(()=>{
+  const banner = useMemo(() => {
     return {
       src: article?.workDetails?.banner?.sourceUrl,
       width: 150,
       height: 70,
     }
-  },[])
+  }, [])
   const tocTrigger = () => {
     settoc((state) => !state)
   }
 
-   const socials = [
+  const socials = [
     {
       key: 0,
       href: `https://twitter.com/intent/tweet?text=${articleUrl}`,
@@ -66,29 +66,29 @@ const ArticleSingle = ({ article }) => {
     const ol_tag = [...blogRef.current?.querySelectorAll('ol')]
     const li_tag = [...blogRef.current?.querySelectorAll('li')]
 
-    ol_tag.forEach((ol)=>{
+    ol_tag.forEach((ol) => {
       ol.classList.add('list-decimal', 'ml-10', 'space-y-4', 'mb-[30px]')
     })
 
-    li_tag.forEach((li)=>{
-      li.classList.add('font-opensans','text-[20px]','text-rb-black/80','leading-[28px]','max-md:text-[16px]','max-md:leading-[150%]','max-md:tracking-[-0.5px]','!mb-7.5','pl-2')
+    li_tag.forEach((li) => {
+      li.classList.add('font-opensans', 'text-[20px]', 'text-rb-black/80', 'leading-[28px]', 'max-md:text-[16px]', 'max-md:leading-[150%]', 'max-md:tracking-[-0.5px]', '!mb-7.5', 'pl-2')
     })
 
     paragraph.forEach((para) => {
       para.style.marginBottom = "30px";
     });
 
-    sub_heading_h4.forEach((heading_four)=>{
-      heading_four.classList.add('mb-4','md:mb-6','md:!text-[32px]','!text-black','md:!leading-10','!tracking-normal','!text-xl')
+    sub_heading_h4.forEach((heading_four) => {
+      heading_four.classList.add('mb-4', 'md:mb-6', 'md:!text-[32px]', '!text-black', 'md:!leading-10', '!tracking-normal', '!text-xl')
     })
 
-   sub_headings.forEach((sub_heading) => {
+    sub_headings.forEach((sub_heading) => {
       sub_heading.style.paddingTop = '28px';
       sub_heading.style.paddingBottom = '10px';
 
       // add required classes
-      sub_heading.classList.add('uppercase','text-rb-black','!text-sm','md:!text-xl','!font-semibold',
-        'flex','items-center','!font-opensans');
+      sub_heading.classList.add('uppercase', 'text-rb-black', '!text-sm', 'md:!text-xl', '!font-semibold',
+        'flex', 'items-center', '!font-opensans');
 
       // prevent duplicate span
       if (!sub_heading.querySelector('.heading-line')) {
@@ -131,7 +131,7 @@ const ArticleSingle = ({ article }) => {
           td.style.fontSize = fontSize;
         });
       });
-      
+
       figcaption.forEach((figcaption) => {
         figcaption.style.textAlign = 'center'
         figcaption.classList.add('relative', 'bottom-5')
@@ -160,7 +160,7 @@ const ArticleSingle = ({ article }) => {
       window.removeEventListener('scroll', scroll)
     }
   }, [])
-const seoUrl = `https://www.makerrs.com${router.asPath}`
+  const seoUrl = `https://www.makerrs.com${router.asPath}`
 
 
   return (
@@ -168,48 +168,48 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
       <SEO
         title={article?.seoTitle}
         description={article?.seoDesc}
-        image={ article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs-og.jpg'}
+        image={article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs-og.jpg'}
         url={seoUrl}
       />
-       <WorkHeroSection
+      <WorkHeroSection
         title={article?.title}
-          logo={logo}
-          socials={socials}
-          tags={tags}
-          image={banner}
-          // specifyWidth={specifyWidth}
-        />
-        <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
-          <div className="container">
-            <div className="cs-content max-w-[914px]">
-                <div
-                  ref={blogRef}
-                  className="work-content-main max-w-[914px]"
-                  dangerouslySetInnerHTML={{ __html: article?.content }}
-                ></div>
-            </div>
+        logo={logo}
+        socials={socials}
+        tags={tags}
+        image={banner}
+      // specifyWidth={specifyWidth}
+      />
+      <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
+        <div className="container">
+          <div className="cs-content max-w-[914px]">
+            <div
+              ref={blogRef}
+              className="work-content-main max-w-[914px]"
+              dangerouslySetInnerHTML={{ __html: article?.content }}
+            ></div>
           </div>
-          {stats?.length > 0 && (
-              <StatsSection
-                tag={workJsonObj?.stats_title}
-                className="mt-6 md:mt-20"
-                data={stats}
-              />
-            )}
-          <div className='md:mt-20'>
-            <CommercialSection
+        </div>
+        {stats?.length > 0 && (
+          <StatsSection
+            tag={workJsonObj?.stats_title}
+            className="mt-6 md:mt-20"
+            data={stats}
+          />
+        )}
+        <div className='md:mt-20'>
+          <CommercialSection
             sources={workJsonObj.sources}
             type={workJsonObj.commercials_type}
           />
-          </div>
-        </section>
+        </div>
+      </section>
     </>
   )
 }
 export const getStaticPaths = async () => {
   const { data } = await getPlayWorks()
 
-  const works = formatPlayPosts(data?.works?.nodes)
+  const works = formatPlayPosts(data?.works?.nodes || [])
   const paths = (works || []).map(({ case_study_title, workDetails }) => {
     const tag = workDetails?.url || 'featured'
     return {
@@ -232,7 +232,15 @@ export async function getStaticProps({ params }) {
     return { notFound: true }
   }
 
-  const workJson = JSON.parse(data?.work?.workDetails?.workJson || "{}")
+
+  let workJson = {}
+
+  try {
+    workJson = JSON.parse(data?.work?.workDetails?.workJson || "{}")
+  } catch {
+    workJson = {}
+  }
+
 
   const actualTag = workJson?.url || "featured"
 

@@ -1,5 +1,7 @@
 import dayjs from 'dayjs'
-import { getReadTime } from './readTime'
+import {
+  getReadTime
+} from './readTime'
 const BLOG_DATE_FORMATE = 'MMM DD, YYYY'
 const DATE_FORMATE = 'DD/MM/YYYY'
 /**
@@ -51,20 +53,31 @@ export const formatWpImage = (image) => ({
 //     featuredImage: formatWpImage(w?.featuredImage?.node),
 // workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]")
 //   }))
-  export const formatPlayPosts = (works = []) =>
-  works.map((w, index) => ({
-    key: index,
-    name: w.title || "",
-    company: w?.companies?.nodes?.length ? w?.companies?.nodes[0].name : null,
-    image: w?.featuredImage?.node?.sourceUrl || "",
-    alt: w.featuredImage?.alt || w.title || "",
-    tabs: w.tags?.nodes?.map(tag => tag.name) || [],
-    tags: w.categories?.nodes?.map(cat => cat.name) || [],
-    case_study_title: w.slug,
-    workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]"),
-    logo: w?.workDetails?.logo?.sourceUrl || "",
-    banner: w?.workDetails?.banner?.sourceUrl || ""
-  }))
+export const formatPlayPosts = (works = []) =>
+  works.map((w, index) => {
+
+    let workJson = {}
+
+    try {
+      workJson = JSON.parse(w?.workDetails?.workJson || "{}")
+    } catch (e) {
+      workJson = {}
+    }
+
+    return {
+      key: index,
+      name: w.title || "",
+      company: w?.companies?.nodes?.length ? w?.companies?.nodes[0].name : null,
+      image: w?.featuredImage?.node?.sourceUrl || "",
+      alt: w?.featuredImage?.alt || w.title || "",
+      tabs: w?.tags?.nodes?.map(tag => tag.name) || [],
+      tags: w?.categories?.nodes?.map(cat => cat.name) || [],
+      case_study_title: w.slug,
+      workDetails: workJson,
+      logo: w?.workDetails?.logo?.sourceUrl || "",
+      banner: w?.workDetails?.banner?.sourceUrl || ""
+    }
+  })
 
 export const formateBlogPostFunc = (node) => ({
   slug: node?.slug,
@@ -88,4 +101,6 @@ export const formateBlogPostFunc = (node) => ({
   readTime: node?.content ? getReadTime(node?.content) : null,
 })
 export const formatBlogPosts = (edges) =>
-  edges.map(({ node }) => formateBlogPostFunc(node))
+  edges.map(({
+    node
+  }) => formateBlogPostFunc(node))
