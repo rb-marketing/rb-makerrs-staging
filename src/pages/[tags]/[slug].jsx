@@ -629,10 +629,10 @@ const selectedSchema = slugToSchema[article.slug] || [];
           </div>
         </div>
       </section>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
-      ></script>
+      ></script> */}
     </>
   )
 }

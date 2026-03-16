@@ -141,7 +141,7 @@ export const WorkHeroSection = ({
               />
             </div>
             <div className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!image ? 'hidden' : ''}`}>
-              <img src={image?.src} alt={alt} srcset=""/>
+              <img src={image?.src} alt={alt} srcSet=""/>
             </div>
           </>
         }
