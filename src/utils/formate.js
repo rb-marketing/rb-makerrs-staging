@@ -75,7 +75,9 @@ export const formatPlayPosts = (works = []) =>
       case_study_title: w.slug,
       workDetails: workJson,
       logo: w?.workDetails?.logo?.sourceUrl || "",
-      banner: w?.workDetails?.banner?.sourceUrl || ""
+      banner: w?.workDetails?.banner?.sourceUrl || "",
+      seo_title: w?.workDetails?.seoTitle || "",
+      seo_desc: w?.workDetails?.seoDesc || ""
     }
   })
 

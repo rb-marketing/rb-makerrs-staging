@@ -29,6 +29,8 @@ const WORK_DETAILS_QUERY = `
   banner { 
     sourceUrl
   }
+  seoTitle
+  seoDesc
 `
 
 const TAXANOMY_QUERY = `
