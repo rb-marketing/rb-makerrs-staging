@@ -166,8 +166,8 @@ const ArticleSingle = ({ article }) => {
   return (
     <>
       <SEO
-        title={article?.seoTitle}
-        description={article?.seoDesc}
+        title={article?.workDetails?.seoTitle}
+        description={article?.workDetails?.seoDesc}
         image={article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs-og.jpg'}
         url={seoUrl}
       />
