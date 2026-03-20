@@ -67,7 +67,7 @@ const ArticleSingle = ({ article }) => {
     const li_tag = [...blogRef.current?.querySelectorAll('li')]
 
     ol_tag.forEach((ol) => {
-      ol.classList.add('list-decimal', 'ml-10', 'space-y-4', 'mb-[30px]')
+      ol.classList.add('list-decimal', 'ml-5', 'space-y-4', 'mb-[30px]')
     })
 
     li_tag.forEach((li) => {
