@@ -76,7 +76,7 @@ export const StatsSection = ({
   <section className={`bg-white overflow-hidden ${className}`}>
     <div className="container">
       <LineHeading className="mb-6 md:mb-7.5">{tag}</LineHeading>
-      <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none mx-5">
+      <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none mx-5 md:!ml-0 md:relative md:right-8">
         {(data?.length ? data : stats).map((s, i) => (
           <div
             className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${styles.statline}`}
@@ -92,7 +92,7 @@ export const StatsSection = ({
                     </div>
                   }
                 />
-                <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 font-medium font-everett">
+                <div className="text-sm leading-[17px] md:text-2xl md:leading-7 tracking-normal md:tracking-[-0.96px] text-rb-black mt-0 md:mt-3 md:ml-[6px] font-medium font-everett">
                   {s.text}
                 </div>
               </div>
