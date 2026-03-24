@@ -1,9 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { LineArrow, Twitter, Whatsapp, Linkedin } from '@/components/icons'
-import { Button } from '@/components/ui'
-import { SEO, WorkHeroSection, StatsSection } from '@/components/shared'
-import { TOC } from '@/components/shared/TOC'
-import { useLenis } from '@studio-freight/react-lenis'
+import { Twitter, Linkedin } from '@/components/icons'
+import { SEO, WorkHeroSection, StatsSection, Testimonials } from '@/components/shared'
 import { useRouter } from 'next/router'
 import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
 import { formatPlayPosts } from '@/utils/formate'
@@ -65,7 +62,12 @@ const ArticleSingle = ({ article }) => {
     const paragraph = [...blogRef.current?.querySelectorAll('p')]
     const ol_tag = [...blogRef.current?.querySelectorAll('ol')]
     const li_tag = [...blogRef.current?.querySelectorAll('li')]
+    const images = [...blogRef.current?.querySelectorAll('.wp-block-image img')];
 
+    images.forEach((img) => {
+      img.style.setProperty('width', '78.8rem', 'important');
+      img.style.setProperty('max-width', '78.8rem', 'important');
+    });
     ol_tag.forEach((ol) => {
       ol.classList.add('list-decimal', 'ml-5', 'space-y-4', 'mb-[30px]')
     })
@@ -177,9 +179,9 @@ const ArticleSingle = ({ article }) => {
         socials={socials}
         tags={tags}
         image={banner}
-      // specifyWidth={specifyWidth}
+        specifyWidth={workJsonObj?.logo_width}
       />
-      <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
+      <section className={`bg-white overflow-hidden pb-[60px] ${workJsonObj && workJsonObj?.testimonials?.length > 0 ? 'md:!pb-[120px]': 'md:!pb-[56px] !pb-[24px]'}`}>
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div
@@ -202,6 +204,15 @@ const ArticleSingle = ({ article }) => {
             type={workJsonObj.commercials_type}
           />
         </div>
+        {
+          workJsonObj?.testimonials && workJsonObj?.testimonials?.length > 0 && (
+            <Testimonials
+              title={workJsonObj?.testimonial_title}
+              className="md:pt-[48px] pt-[36px]"
+              testimonialData={workJsonObj?.testimonials}
+            />
+          )
+        }
       </section>
     </>
   )

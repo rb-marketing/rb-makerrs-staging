@@ -11,7 +11,7 @@ export const WorkHeroSection = ({
   mobileVideo,
   title = null,
   image = null,
-  specifyWidth = 'max-w-[160px] md:max-w-full',
+  specifyWidth = '150',
 }) => {
   const router = useRouter()
   const articleUrl = `https://www.makerrs.com${router.asPath}`
@@ -35,7 +35,7 @@ export const WorkHeroSection = ({
               alt=""
               loading="lazy"
               {...logo}
-              className={`${specifyWidth}`}
+              // width={`${specifyWidth}`}
             />
             <h1 className="text-black font-medium mt-6 uppercase text-3xl md:text-[54px] lg:leading-14 font-everett">{title}</h1>
             <div className="flex flex-wrap gap-2 mb-7.5 md:mb-0 mt-10 text-xs leading-5 font-semibold text-rb-black">
