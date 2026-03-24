@@ -182,7 +182,7 @@ const ArticleSingle = ({ article }) => {
         socials={socials}
         tags={tags}
         image={banner}
-      // specifyWidth={specifyWidth}
+        specifyWidth={workJsonObj?.logo_width}
       />
       <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
         <div className="container">
