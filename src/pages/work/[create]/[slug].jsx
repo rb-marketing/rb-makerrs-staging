@@ -1,9 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { LineArrow, Twitter, Whatsapp, Linkedin } from '@/components/icons'
-import { Button } from '@/components/ui'
-import { SEO, WorkHeroSection, StatsSection } from '@/components/shared'
-import { TOC } from '@/components/shared/TOC'
-import { useLenis } from '@studio-freight/react-lenis'
+import { Twitter, Linkedin } from '@/components/icons'
+import { SEO, WorkHeroSection, StatsSection, Testimonials } from '@/components/shared'
 import { useRouter } from 'next/router'
 import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
 import { formatPlayPosts } from '@/utils/formate'
@@ -184,7 +181,7 @@ const ArticleSingle = ({ article }) => {
         image={banner}
         specifyWidth={workJsonObj?.logo_width}
       />
-      <section className="bg-white overflow-hidden md:pb-[56px] pb-[36px]">
+      <section className={`bg-white overflow-hidden pb-[60px] ${workJsonObj && workJsonObj?.testimonials?.length > 0 ? 'md:!pb-[120px]': 'md:!pb-[56px] !pb-[24px]'}`}>
         <div className="container">
           <div className="cs-content max-w-[914px]">
             <div
@@ -207,6 +204,15 @@ const ArticleSingle = ({ article }) => {
             type={workJsonObj.commercials_type}
           />
         </div>
+        {
+          workJsonObj?.testimonials && workJsonObj?.testimonials?.length > 0 && (
+            <Testimonials
+              title={workJsonObj?.testimonial_title}
+              className="md:pt-[48px] pt-[36px]"
+              testimonialData={workJsonObj?.testimonials}
+            />
+          )
+        }
       </section>
     </>
   )

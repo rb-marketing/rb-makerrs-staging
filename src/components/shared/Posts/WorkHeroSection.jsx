@@ -35,7 +35,7 @@ export const WorkHeroSection = ({
               alt=""
               loading="lazy"
               {...logo}
-              width={`${specifyWidth}`}
+              // width={`${specifyWidth}`}
             />
             <h1 className="text-black font-medium mt-6 uppercase text-3xl md:text-[54px] lg:leading-14 font-everett">{title}</h1>
             <div className="flex flex-wrap gap-2 mb-7.5 md:mb-0 mt-10 text-xs leading-5 font-semibold text-rb-black">
