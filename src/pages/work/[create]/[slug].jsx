@@ -65,7 +65,12 @@ const ArticleSingle = ({ article }) => {
     const paragraph = [...blogRef.current?.querySelectorAll('p')]
     const ol_tag = [...blogRef.current?.querySelectorAll('ol')]
     const li_tag = [...blogRef.current?.querySelectorAll('li')]
+    const images = [...blogRef.current?.querySelectorAll('.wp-block-image img')];
 
+    images.forEach((img) => {
+      img.style.setProperty('width', '78.8rem', 'important');
+      img.style.setProperty('max-width', '78.8rem', 'important');
+    });
     ol_tag.forEach((ol) => {
       ol.classList.add('list-decimal', 'ml-5', 'space-y-4', 'mb-[30px]')
     })
