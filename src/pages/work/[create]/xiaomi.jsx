@@ -102,7 +102,7 @@ function Xiaomi() {
   return (
     <>
       <SEO
-        title="Case Study: Xiaomi Redmi Buds 5C | Makerrs"
+        title="Case Study: Xiaomi Redmi Buds 5C |   Makerrs"
         description="Explore how Makerrs, a holistic marketing communication & creative advertising agency, crafted an impactful creative advertising campaign for Metro Wholesale using b2c marketing campaign strategy."
         url="https://www.makerrs.com/work/brand-campaign-agency-india/xiaomi"
       />
