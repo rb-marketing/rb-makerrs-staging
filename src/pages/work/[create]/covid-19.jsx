@@ -23,7 +23,7 @@ const pageData = {
     commercials: {
         title: (
             <>
-                Portfolio of video projects that&nbsp;elevated brands and exceeded
+                Portfolio of video projects that&nbsp;elevated brands and exceeded 
                 client expectations.
             </>
         ),
