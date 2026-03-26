@@ -137,7 +137,7 @@ function Vymo() {
                 institutions that have built enduring relationships, that span
                 generations, with local SMEs. However, new large banks tapping
                 into the SME market present a challenge to the very existence of
-                these smaller, community-centric Commercial banks.
+                these smaller, community-centric Commercial banks. 
               </p>
               <p className=" mb-6 md:mb-7.5 !leading-[150%]">
                 Enter Vymo, a sales engagement platform that can help Commercial
