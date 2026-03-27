@@ -84,7 +84,7 @@ function Covid() {
                 // mobileVideo={mobileVideo}
                 image={image}
             />
-            <section className="bg-white md:pb-[5.3rem] pb-[24px] md:pt-0 overflow-hidden">
+            <section className="bg-white md:pb-[5.3rem]  pb-[24px] md:pt-0 overflow-hidden">
                 <div className="container">
                     <div className="cs-content max-w-[914px]">
                         <div className="mt-9 md:mb-20">
