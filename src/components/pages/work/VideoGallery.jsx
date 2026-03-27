@@ -19,6 +19,7 @@ export const VideoGallery = ({
     name: sName,
     company: sComapany,
     thumbnail,
+    url
   } = sources[selected]
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -65,7 +66,7 @@ export const VideoGallery = ({
             preload="auto"
             muted={isMuted}
             controls
-            url={`https://vimeo.com/${vimeoId}`}
+            url={vimeoId !== undefined ? `https://vimeo.com/${vimeoId}`:url}
             // url={`https://vimeo.com/1084669972/1fbba55efb?share=copy`}
             width="100%"
             height="100%"
