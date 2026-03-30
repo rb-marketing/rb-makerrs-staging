@@ -19,6 +19,7 @@ export const VideoGallery = ({
     name: sName,
     company: sComapany,
     thumbnail,
+    url
   } = sources[selected]
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -65,7 +66,7 @@ export const VideoGallery = ({
             preload="auto"
             muted={isMuted}
             controls
-            url={`https://vimeo.com/${vimeoId}`}
+            url={vimeoId !== undefined ? `https://vimeo.com/${vimeoId}`:url}
             // url={`https://vimeo.com/1084669972/1fbba55efb?share=copy`}
             width="100%"
             height="100%"
@@ -198,12 +199,12 @@ export const VideoGallery = ({
                     <div className="uppercase font-everett text-xs leading-[15px] md:text-xl md:leading-4.5">
                       {name}
                     </div>
-                    <div
+                    {/* <div
                       className={`uppercase font-everett text-[10px] leading-2.5 md:text-base md:leading-4.5 mt-1 
         ${isWhiteText ? 'text-white' : 'text-rb-black/60'}`}
                     >
                       {company}
-                    </div>
+                    </div> */}
                   </button>
                 </SwiperSlide>
               )
