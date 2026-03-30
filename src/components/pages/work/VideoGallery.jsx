@@ -199,12 +199,12 @@ export const VideoGallery = ({
                     <div className="uppercase font-everett text-xs leading-[15px] md:text-xl md:leading-4.5">
                       {name}
                     </div>
-                    <div
+                    {/* <div
                       className={`uppercase font-everett text-[10px] leading-2.5 md:text-base md:leading-4.5 mt-1 
         ${isWhiteText ? 'text-white' : 'text-rb-black/60'}`}
                     >
                       {company}
-                    </div>
+                    </div> */}
                   </button>
                 </SwiperSlide>
               )
