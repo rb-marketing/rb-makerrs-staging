@@ -540,7 +540,7 @@ export const Footer = ({ hasContactForm }) => {
                         Get in Touch
                       </Link>
                       <Link
-                        href="/collab"
+                        href="/freelance-gigs"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >

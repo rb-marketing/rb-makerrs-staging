@@ -1,17 +1,17 @@
 import { TwitterShareButton, LinkedinShareButton } from 'react-share';
 import { useRouter } from 'next/router'
-import { Twitter, Linkedin} from '@/components/icons'
+import { Twitter, Linkedin } from '@/components/icons'
 
 export const WorkHeroSection = ({
   logo,
-  alt='',
+  alt = '',
   socials = [],
   tags = [],
   desktopVideo,
   mobileVideo,
   title = null,
   image = null,
-  specifyWidth = '150',
+  // specifyWidth = '150',
 }) => {
   const router = useRouter()
   const articleUrl = `https://www.makerrs.com${router.asPath}`
@@ -31,12 +31,15 @@ export const WorkHeroSection = ({
       <div className="container">
         <div className="rb-row md:mt-8.5 mb-12 md:mb-16">
           <div className="w-full md:w-9/12 text-2xl md:leading-9.5 text-rb-black/80">
-            <img
-              alt=""
-              loading="lazy"
-              {...logo}
-              // width={`${specifyWidth}`}
-            />
+
+            {logo?.src && (
+              <img
+                alt=""
+                loading="lazy"
+                {...logo}
+                style={{ maxWidth: '150px', height: 'auto' }}
+              />
+            )}
             <h1 className="text-black font-medium mt-6 uppercase text-3xl md:text-[54px] lg:leading-14 font-everett">{title}</h1>
             <div className="flex flex-wrap gap-2 mb-7.5 md:mb-0 mt-10 text-xs leading-5 font-semibold text-rb-black">
               {tags.map((t, i) => (
@@ -65,33 +68,33 @@ export const WorkHeroSection = ({
                   <div key={key}>
                     {
                       href.includes('twitter') &&
-                       <TwitterShareButton
-                          url={`https://twitter.com/intent/tweet?text=${articleUrl}`}
+                      <TwitterShareButton
+                        url={`https://twitter.com/intent/tweet?text=${articleUrl}`}
+                      >
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={`https://twitter.com/intent/tweet?text=${articleUrl}`}
+                          className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#000] hover:border-[#000]"
                         >
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://twitter.com/intent/tweet?text=${articleUrl}`}
-                            className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#000] hover:border-[#000]"
-                          >
-                            <Twitter />
-                          </a>
-                        </TwitterShareButton>
+                          <Twitter />
+                        </a>
+                      </TwitterShareButton>
                     }
                     {
                       type === 'linkedin' &&
-                        <LinkedinShareButton
-                          url={articleUrl}
+                      <LinkedinShareButton
+                        url={articleUrl}
+                      >
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={articleUrl}
+                          className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#006699] hover:border-[#006699]"
                         >
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={articleUrl}
-                            className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#006699] hover:border-[#006699]"
-                          >
-                            <Linkedin />
-                          </a>
-                        </LinkedinShareButton>
+                          <Linkedin />
+                        </a>
+                      </LinkedinShareButton>
                     }
                   </div>
                 ))}
@@ -141,7 +144,7 @@ export const WorkHeroSection = ({
               />
             </div>
             <div className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!image ? 'hidden' : ''}`}>
-              <img src={image?.src} alt={alt} srcSet=""/>
+              <img src={image?.src} alt={alt} srcSet="" />
             </div>
           </>
         }

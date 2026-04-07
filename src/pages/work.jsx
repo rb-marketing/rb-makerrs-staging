@@ -283,7 +283,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
           <div className="relative mt-0 py-6">
             <div
               ref={scrollRef}
-              className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:gap-12"
+              className="flex gap-3 overflow-x-auto overflow-y-hidden no-scrollbar md:justify-center md:gap-12"
             >
               {caseStudyTags.map((tag) => (
                 <a
