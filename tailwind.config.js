@@ -5,6 +5,13 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    "md:w-[78.7rem]",
+    "w-[calc(100%_+_2rem)]",
+    "space-y-6",
+    "space-x-4",
+    "w-[15rem]"
+  ],
   theme: {
     extend: {
       colors: {
