@@ -1098,7 +1098,7 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                           name="PrimaryServices"
                           title="Primary Service*"
                           options={primaryCategoryList}
-                          placeholder="Enter Services"
+                          placeholder="Select Service"
                           required
                           outerClassName="w-full"
                         />
@@ -1116,7 +1116,7 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                               service.primary_category ===
                               PrimaryServices?.value
                           ).sort((a, b) => a.label.localeCompare(b.label))}
-                          placeholder="Select Secondary Service"
+                          placeholder="Select Service"
                           required
                           outerClassName="w-full"
                         />
