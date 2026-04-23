@@ -54,6 +54,10 @@ const schema = object({
       'Your password must have six characters and must contain one lower case letter and one number.',
       passwordValidation
     ),
+  Otherservices: object()
+    .shape({ label: string(), value: string() })
+    .nullable()
+    .required('Secondary service is required'),
   // Otherservices: array()
   //   .of(string())
   //   .test('Otherservices', 'Services is required', fileRequiredValidation),
@@ -82,7 +86,7 @@ const defaultValues = {
   Password: '',
 
   PrimaryServices: null,
-  Otherservices: [],
+  Otherservices: null,
   Worklink: [],
 
   Currency: null,
@@ -122,90 +126,482 @@ const subHeadingDescArray = [
   // 'We ensure your personal information is protected and used responsibly.',
 ]
 
+const primaryCategoryList = [
+  { label: 'Strategy & Marketing', value: 'marketing_strategy' },
+  { label: 'Gen AI', value: 'gen_ai' },
+  { label: 'Interactive & Tech', value: 'interactive_tech' },
+  { label: 'Digital & Media', value: 'digital_media' },
+  { label: 'Creative & Copy', value: 'creative_copy' },
+  { label: 'Design', value: 'design' },
+  { label: 'Film, Video & Podcast', value: 'film_video_podcast' },
+]
+
 const primaryServiceList = [
-  { label: '360 Shooter', value: '6745a962-c98d-400e-b322-8426f02feb6d' },
-  { label: '3D Graphics', value: 'dbb91ccc-351b-4aa1-b929-3e9bb5f66c63' },
-  { label: 'Animator - 2D', value: 'b9c2bb87-a700-4738-90ff-842ed9fb2624' },
-  { label: 'Animator - 3D', value: '86358ac8-0f22-4587-bf08-e657630f957a' },
-  { label: 'Art Assistant', value: '455c126c-1358-4108-af5a-346c185680fd' },
-  { label: 'Art Director', value: 'b9bb799b-7690-4cac-8a3a-fe1d1d400f8d' },
   {
-    label: 'Assistant Cinematographer',
-    value: '6ff270bf-a2b0-4b5e-8173-6c8031fa6b21',
+    label: 'B2B Marketer',
+    value: '9081d86e-c0ce-4cdf-a512-1d53be51e831',
+    primary_category: 'marketing_strategy',
+  },
+  {
+    label: 'B2C Marketer',
+    value: '4c647e8b-70c9-48ab-8ef7-d153bc553f76',
+    primary_category: 'marketing_strategy',
+  },
+  {
+    label: 'Brand Strategist',
+    value: '68ed94e7-bf47-46a2-905d-b0107cdf3f03',
+    primary_category: 'marketing_strategy',
+  },
+  {
+    label: 'Content Strategy',
+    value: '58b04c30-353e-487b-b862-b5683c9a6c2e',
+    primary_category: 'marketing_strategy',
+  },
+  {
+    label: 'Social Media Strategy',
+    value: '06214bee-08a1-4087-bb5c-9d1f44c00cfb',
+    primary_category: 'marketing_strategy',
+  },
+  {
+    label: 'Gen-AI Creative Director',
+    value: 'e6ce0efa-6d07-4c4e-bcff-fea69b94dbdf',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Prompt Designer / Prompt Engineer',
+    value: '2c8aed96-5f59-4e35-9af2-a1b8603c7ac5',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Gen-AI Video Artist',
+    value: 'c2805dcc-fad6-4970-a3ff-d47f99c0936b',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Model Operator (Text-to-Video / Image-to-Video)',
+    value: '0fd15298-8c33-4970-a1dd-b69504240109',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Workflow Designer',
+    value: 'ac1cc705-cdf3-4aa1-92ae-2ab96364ea68',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Tool Specialist',
+    value: 'a47fad04-7f80-43db-8b9c-a7bbc44b3639',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Video Editor',
+    value: '614fa51f-1433-403e-af64-ed97e0503b37',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Compositor',
+    value: '867d2bb7-a2b5-4f61-ab6e-094035c61f0f',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Custom Model Trainer',
+    value: '009b8c4a-5427-4c09-bd98-fbd886b0ce0a',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Automation Engineer (batch renders, pipelines)',
+    value: 'adb39df4-11dc-4995-979a-bb0396e46d0d',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Platform Optimisation Specialist (social & digital formats)',
+    value: '5e44d2d4-fa87-444d-bb3a-3422c38018bb',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Styleframe Designer',
+    value: 'a13dbcc9-e13e-4a9e-990b-56f3c76afc15',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'AI Art Director',
+    value: 'c3c757d7-f5df-4a9c-b659-639a7d76b9f4',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'Look Development Artist',
+    value: '6416ac75-dc92-4378-baad-4189145ca66c',
+    primary_category: 'gen_ai',
+  },
+  {
+    label: 'UI Designer',
+    value: '728b4963-535a-40cf-933f-6a98b2da32c3',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'Website Design',
+    value: '17262a11-5095-4277-895e-13f69807d051',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'Website Development',
+    value: '041dc3b4-0a4f-4a55-a9cb-d1c961b901cb',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'Front end developer',
+    value: '2c0faf0a-0ef3-4803-a909-8a42cefc5218',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'Back end developer',
+    value: '043c4bb5-bf5c-43a8-9e96-5126a888f349',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'Unreal Specialist',
+    value: 'b7f018a2-b6f8-445f-9e83-982dab70c6bc',
+    primary_category: 'interactive_tech',
+  },
+  {
+    label: 'SEO',
+    value: '7dd68dfb-fbbc-4f32-a3ca-98d3f969992a',
+    primary_category: 'digital_media',
+  },
+  {
+    label: 'Performance Marketing',
+    value: '7320ff7d-d815-4f66-8b5f-edd02a0065b2',
+    primary_category: 'digital_media',
+  },
+  {
+    label: 'Media Planning',
+    value: '0a6b0650-ddf3-47be-983e-b9b1a22cc656',
+    primary_category: 'digital_media',
+  },
+  {
+    label: 'Influencer Marketing',
+    value: 'acf59798-c9c7-42f1-803e-c8ff13f9b620',
+    primary_category: 'digital_media',
+  },
+  {
+    label: 'Creative Director',
+    value: '1060db4c-f5ab-4570-a1e1-7068ee72a1b8',
+    primary_category: 'creative_copy',
+  },
+  {
+    label: 'Copy Writer',
+    value: 'cce068b3-b717-43f1-916a-ccb5035cce14',
+    primary_category: 'creative_copy',
+  },
+  {
+    label: 'Content Writer',
+    value: '8bdba8b2-fe09-46e2-94f3-f343629cf246',
+    primary_category: 'creative_copy',
+  },
+  {
+    label: 'Illustrator',
+    value: 'dec2c456-c092-4815-ae8c-5d0028d4ebbd',
+    primary_category: 'design',
+  },
+  {
+    label: 'Logo Design',
+    value: '984f9e8a-79aa-4d62-9fe5-5beedc8cc18f',
+    primary_category: 'design',
+  },
+  {
+    label: 'Brand Identity',
+    value: 'ccfa7cfa-ea6c-4844-9b68-472ced2d6cba',
+    primary_category: 'design',
+  },
+  {
+    label: 'Environmental graphics',
+    value: '9b105af4-2cc3-46ea-b655-c6107616b29a',
+    primary_category: 'design',
+  },
+  {
+    label: 'Brand Mascots & Avatars',
+    value: 'abd48d4a-480c-4ee2-9154-869c568749cb',
+    primary_category: 'design',
+  },
+  {
+    label: 'Presentation Design',
+    value: 'cc7a896e-932a-44f8-93dc-f2f442d5c332',
+    primary_category: 'design',
+  },
+  {
+    label: '2D Character Design',
+    value: '5f4c36d6-9633-4d3b-bead-2b3be4d83741',
+    primary_category: 'design',
+  },
+  {
+    label: 'Storyboard Artist',
+    value: 'b68ca24a-2204-4152-991b-06ff795952fe',
+    primary_category: 'design',
+  },
+  {
+    label: 'Director',
+    value: 'e7f18df3-3a9e-486f-ac8e-a8bf1d63dd51',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Cinematographer',
+    value: '02fbf950-30bc-44fc-adb2-696dde388cf3',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Hair & Makeup',
+    value: '3554dec1-3d05-44fb-80e0-f7853a634267',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Sound Recordist',
+    value: '694ff797-b8a2-4cf8-b731-7b8102fdd23c',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Producer',
+    value: '3151008f-7631-4631-ac3f-c240dddaccb3',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: '3D Character Design',
+    value: '00e4452b-6fb7-4f2b-943d-67184c3061fd',
+    primary_category: 'design',
+  },
+  {
+    label: 'Concept Artist',
+    value: '4f9d6f06-5991-4917-ba71-a116edaa277c',
+    primary_category: 'design',
+  },
+  {
+    label: 'Graphic Design',
+    value: '08a031ae-073e-4f7a-8eeb-494d4ccafc5b',
+    primary_category: 'design',
+  },
+  {
+    label: '3D Design',
+    value: 'dbb91ccc-351b-4aa1-b929-3e9bb5f66c63',
+    primary_category: 'design',
+  },
+  {
+    label: 'Claymation Artist',
+    value: '2e92ff11-9cd7-443e-8abf-dcb7a44b4d52',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Creative Producer',
+    value: '24b52d0f-3ffc-4b0a-b956-1cefda26966e',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Foley Artist',
+    value: 'f8283296-7a8f-4a72-a8d1-b291d6a14a4b',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Music Director',
+    value: 'a5e866ca-2f6e-4e19-a693-1d618bfa1171',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Art Director',
+    value: 'b9bb799b-7690-4cac-8a3a-fe1d1d400f8d',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Stylist',
+    value: 'a4835b90-8d7d-4489-90bd-70564b7ca138',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Live Mixer',
+    value: 'fabaa457-5d9f-4ad8-bc40-9bdf3fdc277b',
+    primary_category: 'film_video_podcast',
   },
   {
     label: 'Assistant Director',
     value: 'd3a1eca3-62fe-4345-a20d-a7c4cd33dade',
+    primary_category: 'film_video_podcast',
   },
-  { label: 'Boom Operator', value: '9a75bdcb-093b-4780-8027-9ccbe86b4e2f' },
-  { label: 'Camera Assistant', value: '7392a88e-4859-45ff-909a-180a8a0d3d87' },
-  { label: 'Camera Operator', value: '5228d76f-eb17-4d54-ba49-4b0ac500ad41' },
-  { label: 'Casting Director', value: 'e714c0c3-96c7-4fa2-95ac-5708bd0e03b0' },
-  { label: 'Choreographer', value: 'afbb8a6f-1ba6-4f83-802e-95fad59bcd1b' },
-  { label: 'Cinematographer', value: '02fbf950-30bc-44fc-adb2-696dde388cf3' },
-  { label: 'Colourist', value: 'de6b8b59-1448-4799-8db1-028caa0455fa' },
-  { label: 'Concept Artist', value: '4f9d6f06-5991-4917-ba71-a116edaa277c' },
-  { label: 'Costumer', value: 'c7c69211-33a5-4ef0-b66e-e13ca8cfe7a4' },
-  { label: 'Creative Director', value: '1060db4c-f5ab-4570-a1e1-7068ee72a1b8' },
-  { label: 'Digital Marketing', value: '6159b493-c5cd-4819-a159-8f65b21f416b' },
-  { label: 'Director', value: 'e7f18df3-3a9e-486f-ac8e-a8bf1d63dd51' },
   {
-    label: 'Directors Assistant',
-    value: 'f1fb82c7-14c8-49ba-9bc5-e956e073c173',
+    label: 'Camera Assistant',
+    value: '7392a88e-4859-45ff-909a-180a8a0d3d87',
+    primary_category: 'film_video_podcast',
   },
-  { label: 'Drone Operator', value: 'fa6e1395-f13b-4706-b608-896433e06226' },
-  { label: 'Editor', value: '6c211723-8705-45ae-9295-6749998d0561' },
-  { label: 'Focus Puller', value: '885d0c0f-4cb2-4048-8791-9a5aeef8ca1d' },
-  { label: 'Gaffer', value: '396b8a88-3cbe-4704-bfd7-a79c502cf09e' },
-  { label: 'Generator Team', value: 'a35c5ff6-3d69-49de-960c-2eefededf086' },
-  { label: 'Graphic Designer', value: '08a031ae-073e-4f7a-8eeb-494d4ccafc5b' },
-  { label: 'Grip', value: '7a7aa64c-606e-44aa-804d-c0203204565d' },
-  { label: 'Hair & Makeup', value: '3554dec1-3d05-44fb-80e0-f7853a634267' },
-  { label: 'Key Grip', value: 'f65eac16-2e1e-4a3b-a8e1-f5bc555875c7' },
-  { label: 'Light Assistant', value: '2490b1ae-6270-4fec-8f91-28f59a1c6a56' },
-  { label: 'Light Technician', value: '705573e0-1f9f-4ea9-8429-7ab068e8ca18' },
-  { label: 'Line Producer', value: '960a853b-ff27-4495-9fee-ea13421838c4' },
-  { label: 'Live editor', value: 'bbb6739f-4973-4ea8-acb0-62f78bb495b4' },
-  { label: 'Live Mixer', value: 'fabaa457-5d9f-4ad8-bc40-9bdf3fdc277b' },
   {
-    label: 'Location Scout/Manager',
-    value: 'b9fda61f-8a24-4792-a937-6be28d609f86',
+    label: 'Light Technician ',
+    value: '705573e0-1f9f-4ea9-8429-7ab068e8ca18',
+    primary_category: 'film_video_podcast',
   },
-  { label: 'Music Producer', value: '61658b8a-290f-4cfd-a317-50cdd5a318fe' },
-  { label: 'Photographer', value: '872f4ac2-8c3e-472d-af28-81f4c9eca3fb' },
-  { label: 'Producer', value: '3151008f-7631-4631-ac3f-c240dddaccb3' },
+  {
+    label: 'Gaffer',
+    value: '396b8a88-3cbe-4704-bfd7-a79c502cf09e',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Light Assistant',
+    value: '2490b1ae-6270-4fec-8f91-28f59a1c6a56',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Grip',
+    value: '7a7aa64c-606e-44aa-804d-c0203204565d',
+    primary_category: 'film_video_podcast',
+  },
   {
     label: 'Production Assistant',
     value: 'd5af0b6b-72f3-43c4-acd4-4e5a38614cd5',
+    primary_category: 'film_video_podcast',
   },
   {
-    label: 'Production Manager',
-    value: 'f6338610-b2e1-479b-a829-f420649ddd83',
+    label: 'Line Producer',
+    value: '960a853b-ff27-4495-9fee-ea13421838c4',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Generator Team',
+    value: 'a35c5ff6-3d69-49de-960c-2eefededf086',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Focus Puller',
+    value: '885d0c0f-4cb2-4048-8791-9a5aeef8ca1d',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Drone Operator',
+    value: 'fa6e1395-f13b-4706-b608-896433e06226',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Live editor',
+    value: 'bbb6739f-4973-4ea8-acb0-62f78bb495b4',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Camera Operator',
+    value: '5228d76f-eb17-4d54-ba49-4b0ac500ad41',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Art Assistant',
+    value: '455c126c-1358-4108-af5a-346c185680fd',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Styling Assistant',
+    value: '0d8c5bfb-85ab-450e-b02e-6d65f871ec06',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Choreographer',
+    value: 'afbb8a6f-1ba6-4f83-802e-95fad59bcd1b',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Directors Assistant',
+    value: 'f1fb82c7-14c8-49ba-9bc5-e956e073c173',
+    primary_category: 'film_video_podcast',
   },
   {
     label: 'Production/Set designer',
     value: 'b86864cb-9fb1-4e6a-94c1-11e044d2b57b',
-  },
-  { label: 'SFX Artist', value: '35bf1216-b2ca-41f9-a257-953d1e153f5c' },
-  { label: 'Sound Designer', value: 'f8817019-93bb-4fd5-b764-306496928755' },
-  { label: 'Sound Recordist', value: '694ff797-b8a2-4cf8-b731-7b8102fdd23c' },
-  { label: 'Storyboard Artist', value: 'b68ca24a-2204-4152-991b-06ff795952fe' },
-  { label: 'Styling Assistant', value: '0d8c5bfb-85ab-450e-b02e-6d65f871ec06' },
-  { label: 'Stylist', value: 'a4835b90-8d7d-4489-90bd-70564b7ca138' },
-  {
-    label: 'Talent - On Screen',
-    value: '41815ded-aa0e-4627-9fdc-e4d5f8bbde54',
+    primary_category: 'film_video_podcast',
   },
   {
-    label: 'Talent - Voiceover',
-    value: 'f0c09791-c9f1-4e84-b2be-3d283806c51b',
+    label: 'Production Manager',
+    value: 'f6338610-b2e1-479b-a829-f420649ddd83',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Casting Director',
+    value: 'e714c0c3-96c7-4fa2-95ac-5708bd0e03b0',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Key Grip',
+    value: 'f65eac16-2e1e-4a3b-a8e1-f5bc555875c7',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Boom Operator',
+    value: '9a75bdcb-093b-4780-8027-9ccbe86b4e2f',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Animator - 2D',
+    value: 'b9c2bb87-a700-4738-90ff-842ed9fb2624',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Animator - 3D',
+    value: '86358ac8-0f22-4587-bf08-e657630f957a',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Assistant Cinematographer',
+    value: '6ff270bf-a2b0-4b5e-8173-6c8031fa6b21',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Music Producer',
+    value: '61658b8a-290f-4cfd-a317-50cdd5a318fe',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Photographer',
+    value: '872f4ac2-8c3e-472d-af28-81f4c9eca3fb',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'SFX Artist',
+    value: '35bf1216-b2ca-41f9-a257-953d1e153f5c',
+    primary_category: 'film_video_podcast',
   },
   {
     label: 'Transcriptionist (Subtitling)',
     value: '3d9fa5b1-b36c-4ec4-aa64-9ee729685f02',
+    primary_category: 'film_video_podcast',
   },
-  { label: 'VFX Artist', value: '5df6d4e3-532f-4592-9c4d-c5f42f87cb07' },
-  { label: 'Writer', value: '04ea725f-30cd-4487-a1ed-4a153eb733fe' },
+  {
+    label: 'VFX Artist',
+    value: '5df6d4e3-532f-4592-9c4d-c5f42f87cb07',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Editor',
+    value: '6c211723-8705-45ae-9295-6749998d0561',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Sound Designer',
+    value: 'f8817019-93bb-4fd5-b764-306496928755',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Talent - On Screen',
+    value: '41815ded-aa0e-4627-9fdc-e4d5f8bbde54',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Talent - Voiceover',
+    value: 'f0c09791-c9f1-4e84-b2be-3d283806c51b',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: '360 Videography',
+    value: '6745a962-c98d-400e-b322-8426f02feb6d',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Colorist',
+    value: 'de6b8b59-1448-4799-8db1-028caa0455fa',
+    primary_category: 'film_video_podcast',
+  },
+  {
+    label: 'Location/Scout Manager',
+    value: 'b9fda61f-8a24-4792-a937-6be28d609f86',
+    primary_category: 'film_video_podcast',
+  },
 ]
 
 export const CollabFormRecreate = ({ modalTrigger }) => {
@@ -213,7 +609,7 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
   const [headingCount, setHeadingCount] = useState(0)
   const [countryData, setCountryData] = useState(null)
   const [cityData, setCityData] = useState([])
-  const [isContinueDisabled, setIsContinueDisabled] = useState(true);
+  const [isContinueDisabled, setIsContinueDisabled] = useState(true)
 
   const router = useRouter()
 
@@ -260,7 +656,6 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
     'TNC',
   ])
 
-
   // useEffect(() => {
   //   const isPhoneValid = Phone && Phone.length > 7;
   //   setIsContinueDisabled(!isPhoneValid);
@@ -270,15 +665,10 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
       setIsContinueDisabled(false)
     } else if (Phone.length > 7 && Country?.value != 'India') {
       setIsContinueDisabled(false)
-    }
-
-    else {
+    } else {
       setIsContinueDisabled(true)
     }
   }, [Phone, Country])
-
-
-
 
   useEffect(() => {
     methods.setValue('City', null)
@@ -318,11 +708,10 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setMessage('');
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [message]);
-
+      setMessage('')
+    }, 5000)
+    return () => clearTimeout(timer)
+  }, [message])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -355,6 +744,10 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
     }
     fetchData()
   }, [Country?.value])
+
+  useEffect(() => {
+    methods.setValue('Otherservices', null)
+  }, [PrimaryServices?.value])
 
   const modalChange = () => {
     if (headingCount < 2) {
@@ -390,7 +783,7 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
     },
     services: [
       {
-        job_type_id: PrimaryServices?.value,
+        job_type_id: Otherservices?.value,
         currency_code: Currency?.value,
         min_fee: MinimumFee,
         // max_fee: '50000',
@@ -401,7 +794,6 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
       url: item,
     })),
   }
-
 
   // const onSubmit = async (e) => {
   //   // e.preventDefault();
@@ -420,7 +812,6 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
   //       },
   //       body: JSON.stringify({ 'g-recaptcha-response': token }),
   //     });
-
 
   //     console.log('response', response)
   //     // const verificationResult = await response.json();
@@ -463,14 +854,14 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
   // };
 
   const onSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const siteKey = '6LfsAwApAAAAAJFgAQaO7_xrrt6Y61thOQqmOuD4';
-    const verifyURL = 'https://4u1pwvf8k3.execute-api.ap-south-1.amazonaws.com/dev'
-
+    const siteKey = '6LfsAwApAAAAAJFgAQaO7_xrrt6Y61thOQqmOuD4'
+    const verifyURL =
+      'https://4u1pwvf8k3.execute-api.ap-south-1.amazonaws.com/dev'
 
     try {
-      const token = await grecaptcha.execute(siteKey, { action: 'submit' });
+      const token = await grecaptcha.execute(siteKey, { action: 'submit' })
 
       // Verify CAPTCHA token
       const response = await fetch(verifyURL, {
@@ -478,9 +869,8 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 'token': token }),
-      });
-
+        body: JSON.stringify({ token: token }),
+      })
 
       // console.log('response', response)
       // const verificationResult = await response.json();
@@ -498,37 +888,35 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
       })
         .then((r) => r.json())
         .then((res) => {
-
           // toast.success(res.message)
           if (res.success) {
-            router.push('/thankyou');
+            router.push('/thankyou')
           }
           if (!res.success) {
             if (res.message === 'Email id already existing in our records.') {
-              setMessage('Email Id already registered. Please sign in to continue.');
-            }
-            else if (res.message) {
+              setMessage(
+                'Email Id already registered. Please sign in to continue.'
+              )
+            } else if (res.message) {
               setMessage(res.message)
-            }
-            else {
-              setMessage('Sign up failed. Please try again.');
+            } else {
+              setMessage('Sign up failed. Please try again.')
             }
           }
         })
         .catch((err) => {
-          console.log(err);
-          setMessage('Sign up failed. Please try again.');
-        });
+          console.log(err)
+          setMessage('Sign up failed. Please try again.')
+        })
 
       //   }
       //  else {
       //   console.error('CAPTCHA verification failed.');
       // }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:', error)
     }
-  };
-
+  }
 
   return (
     <>
@@ -538,10 +926,11 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
             <div className="flex">
               <div className="stages active">
                 <span
-                  className={`flex items-center cursor-pointer ${Country && City && Identify && Phone && FullName
-                    ? 'pointer-events-auto '
-                    : 'pointer-events-none '
-                    }`}
+                  className={`flex items-center cursor-pointer ${
+                    Country && City && Identify && Phone && FullName
+                      ? 'pointer-events-auto '
+                      : 'pointer-events-none '
+                  }`}
                   onClick={() => stepsChanger(1)}
                 >
                   <div className="number">1</div>
@@ -553,15 +942,16 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
               <div className={`stages ${headingCount >= 1 ? 'active' : ''}`}>
                 <div className="dash"></div>
                 <span
-                  className={`flex items-center cursor-pointer ${PrimaryServices &&
+                  className={`flex items-center cursor-pointer ${
+                    PrimaryServices &&
                     // Otherservices &&
                     Currency &&
                     MinimumFee &&
                     // Worklink &&
                     Duration
-                    ? 'pointer-events-auto '
-                    : 'pointer-events-none '
-                    }`}
+                      ? 'pointer-events-auto '
+                      : 'pointer-events-none '
+                  }`}
                   onClick={() => stepsChanger(2)}
                 >
                   <div className="number">2</div>
@@ -573,10 +963,11 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
               <div className={`stages ${headingCount >= 2 ? 'active' : ''}`}>
                 <div className="dash"></div>
                 <span
-                  className={`flex items-center cursor-pointer ${Email && Password && TNC
-                    ? 'pointer-events-auto '
-                    : 'pointer-events-none '
-                    }`}
+                  className={`flex items-center cursor-pointer ${
+                    Email && Password && TNC
+                      ? 'pointer-events-auto '
+                      : 'pointer-events-none '
+                  }`}
                   onClick={() => stepsChanger(3)}
                 >
                   <div className="number">3</div>
@@ -590,7 +981,9 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
               CLOSE
             </Button>
           </div>
-          <div className={`fixed -top-20 error-popup ${message ? 'active' : ''}`}>
+          <div
+            className={`fixed -top-20 error-popup ${message ? 'active' : ''}`}
+          >
             {message === 'Signing you up, Please wait...' ? (
               <img
                 src={`${process.env.NEXT_PUBLIC_HOST_URL}/img/collab/signup-loader.gif`}
@@ -685,10 +1078,11 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                               labelClassName="!w-[30%] mr-2"
                               inputClassname="px-3 md:px-4 pointer-none"
                             /> */}
-                            <div className="w-[25%] h-[57.6px] md:h-[73.6px] mr-2 p-4 md:p-6 font-normal text-base md:text-input-large placeholder:text-rb-black/40 text-rb-black border border-rb-border-grey rounded-lg px-3 md:px-4 pointer-none">{`${callingCode && '+' + callingCode
-                              }`}</div>
+                            <div className="w-[25%] h-[57.6px] md:h-[73.6px] mr-2 p-4 md:p-6 font-normal text-base md:text-input-large placeholder:text-rb-black/40 text-rb-black border border-rb-border-grey rounded-lg px-3 md:px-4 pointer-none">{`${
+                              callingCode && '+' + callingCode
+                            }`}</div>
                             <PhoneInput
-                              countryCode = {callingCode}
+                              countryCode={callingCode}
                               name="Phone"
                               label=""
                               placeholder="Enter your Phone Number"
@@ -702,16 +1096,29 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                       <>
                         <SelectReact
                           name="PrimaryServices"
-                          title="Primary Services*"
-                          options={primaryServiceList}
+                          title="Primary Service*"
+                          options={primaryCategoryList}
                           placeholder="Enter Services"
                           required
                           outerClassName="w-full"
                         />
 
-                        <SelectTagsInput
-                          name="Otherservices"
+                        {/* <SelectTagsInput
+                          name="Secondary Service"
                           options={primaryServiceList}
+                        /> */}
+
+                        <SelectReact
+                          name="Otherservices"
+                          title="Secondary Service*"
+                          options={primaryServiceList.filter(
+                            (service) =>
+                              service.primary_category ===
+                              PrimaryServices?.value
+                          ).sort((a, b) => a.label.localeCompare(b.label))}
+                          placeholder="Select Secondary Service"
+                          required
+                          outerClassName="w-full"
                         />
 
                         <div className="col-span-2">
@@ -762,15 +1169,16 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                           onClick={modalChange}
                           type="button"
                           suffix={<LineArrow hover />}
-                          className={`w-full md:w-auto mt-6 mb-6 md:mb-9 md:mt-9 ${PrimaryServices &&
+                          className={`w-full md:w-auto mt-6 mb-6 md:mb-9 md:mt-9 ${
+                            PrimaryServices &&
                             // Otherservices &&
                             Currency &&
                             MinimumFee &&
                             // Worklink &&
                             Duration
-                            ? 'pointer-events-auto opacity-100'
-                            : 'pointer-events-none opacity-[0.32]'
-                            }`}
+                              ? 'pointer-events-auto opacity-100'
+                              : 'pointer-events-none opacity-[0.32]'
+                          }`}
                         >
                           CONTINUE
                         </Button>
@@ -813,10 +1221,11 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                           onClick={onSubmit}
                           type="submit"
                           suffix={<LineArrow hover />}
-                          className={`w-full md:w-[297px] mt-6 mb-6 md:mb-9 md:mt-9 col-span-2 ${Email && Password && TNC
-                            ? 'pointer-events-auto opacity-100'
-                            : 'pointer-events-none opacity-[0.32]'
-                            }`}
+                          className={`w-full md:w-[297px] mt-6 mb-6 md:mb-9 md:mt-9 col-span-2 ${
+                            Email && Password && TNC
+                              ? 'pointer-events-auto opacity-100'
+                              : 'pointer-events-none opacity-[0.32]'
+                          }`}
                         >
                           SIGN UP
                         </Button>
@@ -829,10 +1238,16 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
                         onClick={modalChange}
                         type="button"
                         suffix={<LineArrow hover />}
-                        className={`w-full md:w-auto mt-6 mb-6 md:mb-9 md:mt-9 ${Country && City && Identify && Phone && FullName && !isContinueDisabled
-                          ? 'pointer-events-auto opacity-100'
-                          : 'pointer-events-none opacity-[0.32]'
-                          }`}
+                        className={`w-full md:w-auto mt-6 mb-6 md:mb-9 md:mt-9 ${
+                          Country &&
+                          City &&
+                          Identify &&
+                          Phone &&
+                          FullName &&
+                          !isContinueDisabled
+                            ? 'pointer-events-auto opacity-100'
+                            : 'pointer-events-none opacity-[0.32]'
+                        }`}
                       >
                         CONTINUE
                       </Button>
@@ -861,4 +1276,3 @@ export const CollabFormRecreate = ({ modalTrigger }) => {
     </>
   )
 }
-
