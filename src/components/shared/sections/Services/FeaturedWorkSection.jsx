@@ -35,8 +35,8 @@ export const FeaturedWorkSection = ({
 
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-x-6 mt-12 md:mt-20">
-          {posts.map((p, i) => (
-            <ContentPostCard type={'md'} key={p.key} {...p} />
+          {posts.map(({ key, ...p }) => (
+            <ContentPostCard key={key} type={'md'} {...p} />
           ))}
         </div>
 

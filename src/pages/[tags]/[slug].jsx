@@ -11,7 +11,7 @@ import Link from 'next/link'
 import processTree from '@/utils/processTree'
 import { SEO } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
-import { useLenis } from '@studio-freight/react-lenis'
+import { useLenis } from 'lenis/react'
 import { useRouter } from 'next/router'
 import {
   LinkedinShareButton,

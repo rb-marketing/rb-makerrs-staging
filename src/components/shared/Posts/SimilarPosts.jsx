@@ -13,8 +13,8 @@ export const SimilarPosts = ({ posts = [], tag = '', className = '' }) => {
           expectations.
         </h3> */}
         <div className="grid grid-cols-1  md:grid-cols-3 gap-12 md:gap-6">
-          {_posts.map((p) => (
-            <ContentPostCard key={p.key} {...p} />
+          {_posts.map(({ key, ...p }) => (
+            <ContentPostCard key={key} {...p} />
           ))}
         </div>
       </div>

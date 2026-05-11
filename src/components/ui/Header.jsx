@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '@/styles/Header.module.scss'
 import { Button } from './Button'
-import { useLenis } from '@studio-freight/react-lenis'
+import { useLenis } from 'lenis/react'
 import { gsap } from 'gsap'
 import useBaseUrl from '@/utils/baseUrl'
 

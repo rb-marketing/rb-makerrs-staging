@@ -2,7 +2,7 @@ import { teamSchema } from '@/components/schema/team-schema'
 import { LineHeading, RollupNumber } from '@/components/shared'
 import { SEO } from '@/components/shared/SEO'
 import styles from '@/styles/sections/StatsSection.module.scss'
-import { useLenis } from '@studio-freight/react-lenis'
+import { useLenis } from 'lenis/react'
 import Script from 'next/script'
 import { Fragment, useEffect, useState } from 'react'
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";

@@ -39,7 +39,7 @@ function Select({
         {...props}
         {...field}
       >
-        <option value="" disabled selected>
+        <option value="" disabled>
           {placeholder}
         </option>
 

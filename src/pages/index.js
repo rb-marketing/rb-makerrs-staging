@@ -511,32 +511,34 @@ const LandPage = ({playWorks , articles}) => {
       repeat: -1,
     })
 
-    singleLetterTimeline
-      .to(
-        `.${styles.letterRoll}`,
+    if (document.querySelector(`.${styles.letterRoll}`)) {
+      singleLetterTimeline
+        .to(
+          `.${styles.letterRoll}`,
 
-        {
-          yPercent: 0,
-          delay: 2,
-        }
-      )
+          {
+            yPercent: 0,
+            delay: 2,
+          }
+        )
 
-      .to(
-        `.${styles.letterRoll}`,
+        .to(
+          `.${styles.letterRoll}`,
 
-        {
-          yPercent: 100,
-        },
-        '+=1'
-      )
-      .to(
-        `.${styles.letterRoll}`,
+          {
+            yPercent: 100,
+          },
+          '+=1'
+        )
+        .to(
+          `.${styles.letterRoll}`,
 
-        {
-          yPercent: 0,
-        },
-        '+=2'
-      )
+          {
+            yPercent: 0,
+          },
+          '+=2'
+        )
+    }
 
     const letterTimeline = gsap.timeline()
     letterTimeline.to(

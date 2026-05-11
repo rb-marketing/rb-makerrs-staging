@@ -104,14 +104,13 @@ function PopupSubscribeForm({ setIsPopupOpen, isPopupOpen, setIsClosed }) {
                                 defaultValue="6LdNeDUUAAAAAG5l7cJfv1AA5OKLslkrOa_xXxLs"
                             />
                             {/* <!-- Do not edit the below Zoho Campaigns hidden tags --> */}
-                            <input type="hidden" id="fieldBorder" defaultValue="" onLoad="" />
+                            <input type="hidden" id="fieldBorder" defaultValue="" />
                             <input
                                 type="hidden"
                                 name="zc_trackCode"
                                 id="zc_trackCode"
                                 defaultValue="ZCFORMVIEW"
-                                onLoad=""
-                            />
+                                                           />
                             <input
                                 type="hidden"
                                 name="viewFrom"

@@ -546,10 +546,10 @@ const Career = () => {
               </svg>
             </Button>
           </div>
-          {/* <LineHeading className="mb-7">WE ARE HIRING</LineHeading> */}
+          <LineHeading className="mb-7">WE ARE HIRING</LineHeading>
 
           <h2 className="text-title md:text-title-md font-bold md:mb-18 mb-6">
-            <a href="https://www.linkedin.com/company/makerrsagency/jobs/" target="_blank" className="group-hover:text-rb-link-green underline">
+            <a href="https://www.linkedin.com/company/makerrsagency/jobs/" target="_blank" className="hover:text-blue-600">
               Click here
             </a>{" "}
             to explore open positions

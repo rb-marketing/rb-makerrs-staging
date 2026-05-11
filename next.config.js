@@ -1,8 +1,8 @@
-const { NextFederationPlugin } = require('@module-federation/nextjs-mf')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  turbopack: {},
 
   webpack: (config, options) => {
     const { isServer } = options
