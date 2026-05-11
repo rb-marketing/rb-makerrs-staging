@@ -12,7 +12,6 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.2.2",
-    "@module-federation/nextjs-mf": "^8.8.65",
     "@radix-ui/react-accordion": "^1.2.12",
     "ajv": "^8.18.0",
     "ajv-keywords": "^5.1.0",

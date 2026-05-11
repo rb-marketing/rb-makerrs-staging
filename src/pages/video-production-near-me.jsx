@@ -650,10 +650,10 @@ const CrewsServices = ({ setisPopupOpen }) => {
           </div>
           <div className="md:mt-18">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-              {ourOfferings.map((item) => {
+              {ourOfferings.map((item, index) => {
                 return (
                   <div
-                    key={item.id}
+                    key={index}
                     className={`bg-rb-service-grey  md:p-8 px-4 py-6 ${styles.offeringcard}`}
                   >
                     <div className="flex flex-col justify-between min-h-full">

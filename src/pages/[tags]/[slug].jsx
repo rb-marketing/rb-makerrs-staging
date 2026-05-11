@@ -31,16 +31,6 @@ EmployerBrandingExamplesFAQ, EmployerBrandingCompaniesFAQ, EmployerBrandingBestP
 ElementsEmployerBrandingFAQ, EmployerBrandingMistakesFAQ, EmployerBrandingChallengesFAQ,
 B2BEmployerBrandingFAQ, ImproveEmployerBrandingFAQ, EmployerBrandingContentFAQ, EmployerBrandingStorytellingFAQ } from '@/content/services'
 
-import { StartupExplainerVideosSchema, HowToMakeExplainerVideosSchema, ExplainerVideosHelpBusinessesSchema,
-ThreeDExplainerSchema, DifferentTypesSchema, TechExplainerVideosSchema, WhiteboardSchema, HealthcareSchema, BestAnimatedExplainerSchema, 
-BestExplainerVideosSchema, WhatAreExplainerVideosSchema, ExplainerVideosServicesSchema, SaasExplainerVideosSchema, 
-TopExplainerVideosCompanySchema, B2BExplainerVideosSchema, CustomExplainerVideosSchema, CorporateExplainerVideosSchema,
-CaseStudyVideosSchema, MarketingCaseStudySchema, SaasCaseStudySchema, AwardWinningCaseStudySchema, CorporateCaseStudySchema, BestCaseStudyVideosSchema,
-CustomerCaseStudySchema, ElementsEmployerBrandingSchema, EmployerBrandingSchema, EmployerBrandingBestPracticesSchema,
-EmployerBrandingCompaniesSchema, EmployerBrandingExamplesSchema, EmployerBrandingVideoSchema, EmployerBrandingFrameworkSchema,
-WhyIsEmployerBrandingImportantSchema, EmployerBrandingStrategySchema
- } from '@/components/schema/blog-schema'
-
 const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
 
   const lenis = useLenis()
@@ -210,46 +200,7 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
   'storytelling-for-modern-teams': EmployerBrandingStorytellingFAQ
 };
 
-const slugToSchema = {
-  'startup-explainer-videos': StartupExplainerVideosSchema,
-  'how-to-make-explainer-videos': HowToMakeExplainerVideosSchema,
-  'explainer-videos-help-businesses': ExplainerVideosHelpBusinessesSchema,
-  '3d-explainer-videos': ThreeDExplainerSchema,
-  'types': DifferentTypesSchema,
-  'tech-explainer-videos': TechExplainerVideosSchema,
-  'whiteboard-explainer-videos': WhiteboardSchema,
-  'healthcare-marketing': HealthcareSchema,
-  'best-animated-explainer': BestAnimatedExplainerSchema,
-  'best-explainer-videos': BestExplainerVideosSchema,
-  'what-are-explainer-videos': WhatAreExplainerVideosSchema,
-  'explainer-video-services': ExplainerVideosServicesSchema,
-  'top-explainer-video-companies': TopExplainerVideosCompanySchema,
-  'saas-explainer-videos': SaasExplainerVideosSchema,
-  'b2b-explainer-videos': B2BExplainerVideosSchema,
-  'custom-b2b-explainer-videos': CustomExplainerVideosSchema,
-  'corporate-explainer-videos': CorporateExplainerVideosSchema,
-  //case-study
-  'case-study-video-strategy': CaseStudyVideosSchema,
-  'marketing-case-study-videos': MarketingCaseStudySchema,
-  'saas-case-study-videos': SaasCaseStudySchema,
-  'award-winning-case-study-videos': AwardWinningCaseStudySchema,
-  'corporate-video-case-studies': CorporateCaseStudySchema,
-  'best-case-study-videos': BestCaseStudyVideosSchema,
-  'customer-case-study-videos': CustomerCaseStudySchema,
-  //Employer Branding
-  'elements-of-employer-branding': ElementsEmployerBrandingSchema,
-  'employer-branding-guide': EmployerBrandingSchema,
-  'best-practices-to-attract-top-talent': EmployerBrandingBestPracticesSchema,
-  'employer-branding-companies': EmployerBrandingCompaniesSchema,
-  'employer-branding-campaigns-2026': EmployerBrandingExamplesSchema,
-  'employer-branding-video': EmployerBrandingVideoSchema,
-  'employer-branding-framework': EmployerBrandingFrameworkSchema,
-  'why-is-employer-branding-important': WhyIsEmployerBrandingImportantSchema,
-  'employer-branding-strategy': EmployerBrandingStrategySchema,
-}
-
 const selectedFAQ = slugToFAQMap[article.slug] || [];
-const selectedSchema = slugToSchema[article.slug] || [];
 
   return (
     <>
@@ -629,10 +580,6 @@ const selectedSchema = slugToSchema[article.slug] || [];
           </div>
         </div>
       </section>
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
-      ></script> */}
     </>
   )
 }

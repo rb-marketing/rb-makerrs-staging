@@ -60,14 +60,14 @@ export const VideoGallery = ({
         {hasWindow && sComapany !== 'SLB' && (
           <ReactPlayer
             className={styles.reactplayer}
-            playsinline
+            playsInline
             loop
             playing={isPlaying}
             preload="auto"
             muted={isMuted}
             controls
-            url={vimeoId !== undefined ? `https://vimeo.com/${vimeoId}`:url}
-            // url={`https://vimeo.com/1084669972/1fbba55efb?share=copy`}
+            src={vimeoId !== undefined ? `https://vimeo.com/${vimeoId}`:url}
+            // src={`https://vimeo.com/1084669972/1fbba55efb?share=copy`}
             width="100%"
             height="100%"
             light={`${thumbnail?.src}`}

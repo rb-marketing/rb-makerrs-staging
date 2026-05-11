@@ -164,8 +164,8 @@ export default function CreateContent() {
               </Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-16 md:mt-18">
-              {_posts.slice(0, visiblePosts).map((p) => (
-                <ContentCard key={p.key} {...p} />
+              {_posts.slice(0, visiblePosts).map(({ key, ...p }) => (
+                <ContentCard key={key} {...p} />
               ))}
             </div>
             {visiblePosts < totalPosts && (

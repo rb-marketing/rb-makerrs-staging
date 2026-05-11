@@ -141,12 +141,12 @@ export const VideoMetaModal = ({
                     <ReactPlayer
                       width="100%"
                       height="100%"
-                      playsinline
+                      playsInline
                       loop
                       playing
                       controls
                       key={activeVideo?.workDetails?.videolink}
-                      url={video?.workDetails?.videolink}
+                      src={video?.workDetails?.videolink}
                     />
                   )}
                 </div>
@@ -302,11 +302,11 @@ export const VideoMetaModal = ({
                         ></iframe>
                       ) : (
                         <ReactPlayer
-                          url={activeVideo?.workDetails?.videolink}
+                          src={activeVideo?.workDetails?.videolink}
                           key={activeVideo?.workDetails?.videolink}
                           width="100%"
                           height="100%"
-                          playsinline
+                          playsInline
                           playing
                           loop
                           controls

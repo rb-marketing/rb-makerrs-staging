@@ -344,7 +344,7 @@ const Campaign = ({ setisPopupOpen }) => {
         }
         iconClassName="w-15 h-15"
         cards={campaignCards}
-        sectionStyle={{ 'padding-bottom': 0 }}
+        sectionStyle={{ paddingBottom: 0 }}
       />
 
       <div className="pt-10 md:pt-15">

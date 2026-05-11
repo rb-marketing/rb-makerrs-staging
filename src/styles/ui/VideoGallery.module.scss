@@ -1,10 +1,38 @@
 .playerwrapper {
   position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  /*
+   * react-player v3 no longer renders its own wrapper element when the `wrapper`
+   * prop is omitted, so its output (the `.react-player__preview` div in light
+   * mode, or the player iframe/video once playing) lands directly inside this
+   * box and must be positioned to fill it. The legacy `padding-top` ratio hack
+   * relied on react-player's old wrapper being absolutely positioned, which no
+   * longer exists in v3.
+   */
+  > * {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  iframe,
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+  video {
+    object-fit: cover;
+  }
 }
 
 .reactplayer {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
 }

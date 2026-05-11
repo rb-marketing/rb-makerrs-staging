@@ -9,7 +9,12 @@ import { CommercialSection } from '@/components/pages/work'
 const ArticleSingle = ({ article }) => {
   const blogRef = useRef()
   const router = useRouter()
-  const workJsonObj = JSON.parse(article?.workDetails?.workJson || "{}");
+  let workJsonObj = {}
+  try {
+    workJsonObj = JSON.parse(article?.workDetails?.workJson || "{}")
+  } catch {
+    workJsonObj = {}
+  }
   const stats = workJsonObj?.stats_data || []
   const articleUrl = `https://www.makerrs.com${router.asPath}`
   const logo = useMemo(() => {
