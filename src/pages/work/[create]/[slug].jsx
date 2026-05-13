@@ -60,49 +60,13 @@ const ArticleSingle = ({ article }) => {
   useEffect(() => {
     const headings = [...blogRef.current?.querySelectorAll('h2[id]')]
     const figcaption = [...blogRef.current?.querySelectorAll('figcaption')]
-    const sub_headings = [...blogRef.current?.querySelectorAll('h2, h3')]
-    const sub_heading_h4 = [...blogRef.current?.querySelectorAll('h4')]
     const img_center = [...blogRef.current?.querySelectorAll('.wp-image-1064')]
     const tableFigures = [...blogRef.current?.querySelectorAll('.wp-block-table')];
-    const paragraph = [...blogRef.current?.querySelectorAll('p')]
-    const ol_tag = [...blogRef.current?.querySelectorAll('ol')]
-    const li_tag = [...blogRef.current?.querySelectorAll('li')]
     const images = [...blogRef.current?.querySelectorAll('.wp-block-image img')];
 
     images.forEach((img) => {
       img.style.setProperty('width', '78.8rem', 'important');
       img.style.setProperty('max-width', '78.8rem', 'important');
-    });
-    ol_tag.forEach((ol) => {
-      ol.classList.add('list-decimal', 'ml-5', 'space-y-4', 'mb-[30px]')
-    })
-
-    li_tag.forEach((li) => {
-      li.classList.add('font-opensans', 'text-[20px]', 'text-rb-black/80', 'leading-[28px]', 'max-md:text-[16px]', 'max-md:leading-[150%]', 'max-md:tracking-[-0.5px]', '!mb-7.5', 'pl-2')
-    })
-
-    paragraph.forEach((para) => {
-      para.style.marginBottom = "30px";
-    });
-
-    sub_heading_h4.forEach((heading_four) => {
-      heading_four.classList.add('mb-4', 'md:mb-6', 'md:!text-[32px]', '!text-black', 'md:!leading-10', '!tracking-normal', '!text-xl')
-    })
-
-    sub_headings.forEach((sub_heading) => {
-      sub_heading.style.paddingTop = '28px';
-      sub_heading.style.paddingBottom = '10px';
-
-      // add required classes
-      sub_heading.classList.add('uppercase', 'text-rb-black', '!text-sm', 'md:!text-xl', '!font-semibold',
-        'flex', 'items-center', '!font-opensans');
-
-      // prevent duplicate span
-      if (!sub_heading.querySelector('.heading-line')) {
-        const line = document.createElement('span');
-        line.className = 'heading-line h-px w-7.5 md:w-headingLine block mr-3 bg-rb-black';
-        sub_heading.prepend(line);
-      }
     });
 
     const scroll = () => {
