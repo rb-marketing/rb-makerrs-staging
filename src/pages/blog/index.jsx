@@ -224,7 +224,8 @@ const Articles = ({ featuredPost, posts: { edges, pageInfo } }) => {
                             fill
                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                             priority={idx < 3}
-                            loading={idx < 3 ? undefined : 'lazy'}
+                            loading="eager"
+                            fetchPriority={idx < 3 ? 'high' : 'auto'}
                             className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                           />
                         ) : null}

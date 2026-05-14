@@ -45,6 +45,7 @@ const nextConfig = {
   },
 
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -55,7 +56,6 @@ const nextConfig = {
         hostname: 'secure.gravatar.com',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
   },
 }
 
