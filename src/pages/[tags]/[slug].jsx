@@ -21,56 +21,129 @@ import {
 } from 'react-share'
 import Script from 'next/script'
 import { Accordion } from '@/components/ui'
-import { AIblogFAQ, AnimatedblogFAQ, ExplainerVideos, BestExplainerVideos, ExplainerVideosServices,
-  ExplainerVideosCompany, SaasExplainerVideos, B2BExplainerVideos, CustomExplainerVideos, CorporateExplainerVideos,
-  AnimatedExplainerFAQ, TechExplainerVideosFAQ, ProductFAQ, DifferentTypesFAQ, HealthcareFAQ,
- ThreeDExplainerFAQ, HowCreateFAQ, WhiteboardFAQ, FunnyExplainerFAQ, BenefitsExplainerFAQ,
-ExplainerVideosHelpBusinessesFAQ, HowToMakeExplainerVideosFAQ, StartupExplainerVideosFAQ, CustomerCaseStudyFAQ, BestCaseStudyFAQ, CorporateCaseStudyFAQ, AwardWinningCaseStudyFAQ,
-SaasCaseStudyFAQ, MarketingCaseStudyFAQ, CaseStudyVideosFAQ, EmployerBrandingStrategyFAQ,
-WhyIsEmployerBrandingImportantFAQ, EmployerBrandingFrameworkFAQ, EmployerBrandingVideoFAQ,
-EmployerBrandingExamplesFAQ, EmployerBrandingCompaniesFAQ, EmployerBrandingBestPracticesFAQ, EmployerBrandingFAQ,
-ElementsEmployerBrandingFAQ, EmployerBrandingMistakesFAQ, EmployerBrandingChallengesFAQ,
-B2BEmployerBrandingFAQ, ImproveEmployerBrandingFAQ, EmployerBrandingContentFAQ, EmployerBrandingStorytellingFAQ } from '@/content/services'
+import {
+  AIblogFAQ,
+  AnimatedblogFAQ,
+  ExplainerVideos,
+  BestExplainerVideos,
+  ExplainerVideosServices,
+  ExplainerVideosCompany,
+  SaasExplainerVideos,
+  B2BExplainerVideos,
+  CustomExplainerVideos,
+  CorporateExplainerVideos,
+  AnimatedExplainerFAQ,
+  TechExplainerVideosFAQ,
+  ProductFAQ,
+  DifferentTypesFAQ,
+  HealthcareFAQ,
+  ThreeDExplainerFAQ,
+  HowCreateFAQ,
+  WhiteboardFAQ,
+  FunnyExplainerFAQ,
+  BenefitsExplainerFAQ,
+  ExplainerVideosHelpBusinessesFAQ,
+  HowToMakeExplainerVideosFAQ,
+  StartupExplainerVideosFAQ,
+  CustomerCaseStudyFAQ,
+  BestCaseStudyFAQ,
+  CorporateCaseStudyFAQ,
+  AwardWinningCaseStudyFAQ,
+  SaasCaseStudyFAQ,
+  MarketingCaseStudyFAQ,
+  CaseStudyVideosFAQ,
+  EmployerBrandingStrategyFAQ,
+  WhyIsEmployerBrandingImportantFAQ,
+  EmployerBrandingFrameworkFAQ,
+  EmployerBrandingVideoFAQ,
+  EmployerBrandingExamplesFAQ,
+  EmployerBrandingCompaniesFAQ,
+  EmployerBrandingBestPracticesFAQ,
+  EmployerBrandingFAQ,
+  ElementsEmployerBrandingFAQ,
+  EmployerBrandingMistakesFAQ,
+  EmployerBrandingChallengesFAQ,
+  B2BEmployerBrandingFAQ,
+  ImproveEmployerBrandingFAQ,
+  EmployerBrandingContentFAQ,
+  EmployerBrandingStorytellingFAQ,
+} from '@/content/services'
 
 const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
-
-  const lenis = useLenis()
   const blogRef = useRef()
+  const headingsRef = useRef([])
   const router = useRouter()
 
   const [activeToc, setActiveToc] = useState('')
+
+  const computeActiveToc = () => {
+    const headings = headingsRef.current
+    if (!headings.length) return
+    const triggerY = 140
+    let active = headings[0].id
+    for (let i = 0; i < headings.length; i++) {
+      const top = headings[i].getBoundingClientRect().top
+      if (top - triggerY <= 0) active = headings[i].id
+      else break
+    }
+
+    // Imperative DOM update — bypass React re-render path entirely
+    if (typeof document !== 'undefined') {
+      const tocRoot = document.querySelector('.toc-content')
+      if (tocRoot) {
+        tocRoot.querySelectorAll('a[data-toc-id]').forEach((a) => {
+          const isMatch = a.getAttribute('data-toc-id') === active
+          a.classList.toggle('active', isMatch)
+          a.setAttribute('data-active', isMatch ? 'true' : 'false')
+          if (isMatch) {
+            a.style.color = '#13c33f'
+            a.style.paddingLeft = '16px'
+            a.style.fontWeight = ''
+          } else {
+            a.style.color = ''
+            a.style.paddingLeft = ''
+            a.style.fontWeight = ''
+          }
+        })
+      }
+    }
+
+    setActiveToc((prev) => (prev === active ? prev : active))
+  }
+
+  const lenis = useLenis()
   const [toc, settoc] = useState(false)
-  const [faq, setFaqs] = useState([]);
+  const [faq, setFaqs] = useState([])
   // console.log(tocTree)
   const tocTrigger = () => {
     settoc((state) => !state)
   }
-// dynamic faq content from blog
-// useEffect(() => {
-//   const wrapper = blogRef.current.querySelector('.schema-faq.wp-block-yoast-faq-block')
+  // dynamic faq content from blog
+  // useEffect(() => {
+  //   const wrapper = blogRef.current.querySelector('.schema-faq.wp-block-yoast-faq-block')
 
-//   const faqs = wrapper && [...wrapper?.querySelectorAll('.schema-faq-section')]
-//     .map((section, index) => {
-//       const question = section.querySelector('.schema-faq-question')?.innerText.trim()
-//       const answer = section.querySelector('.schema-faq-answer')?.innerHTML.trim()
+  //   const faqs = wrapper && [...wrapper?.querySelectorAll('.schema-faq-section')]
+  //     .map((section, index) => {
+  //       const question = section.querySelector('.schema-faq-question')?.innerText.trim()
+  //       const answer = section.querySelector('.schema-faq-answer')?.innerHTML.trim()
 
-//       return question && answer? { key: index + 1, title: question, content: answer}: null
-//     })
-//   setFaqs(faqs)
-//   if(wrapper){
-//     wrapper.style.display = 'none'
-//   }
-  
-// }, [])
+  //       return question && answer? { key: index + 1, title: question, content: answer}: null
+  //     })
+  //   setFaqs(faqs)
+  //   if(wrapper){
+  //     wrapper.style.display = 'none'
+  //   }
 
-
+  // }, [])
 
   useEffect(() => {
     const headings = [...blogRef.current?.querySelectorAll('h2[id]')]
     const figcaption = [...blogRef.current?.querySelectorAll('figcaption')]
     const sub_headings = [...blogRef.current?.querySelectorAll('h3[id]')]
     const img_center = [...blogRef.current?.querySelectorAll('.wp-image-1064')]
-    const tableFigures = [...blogRef.current?.querySelectorAll('.wp-block-table')];
+    const tableFigures = [
+      ...blogRef.current?.querySelectorAll('.wp-block-table'),
+    ]
 
     const scroll = () => {
       const windowScrollTop =
@@ -81,66 +154,102 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
       }
 
       tableFigures.forEach((tableWrapper) => {
-        const table = tableWrapper.querySelector('table');
-        if (!table) return;
-        table.style.border = '1px solid black';
-        table.style.borderCollapse = 'collapse';
-        table.style.width = '100%';
-        table.style.marginBottom = '24px';
-        table.style.tableLayout = 'fixed';
-        table.style.wordWrap = 'break-word';
-        table.style.overflowWrap = 'break-word';
-        const isMobile = window.innerWidth <= 768;
-        const fontSize = isMobile ? '13px' : '16px';
-        const cellPadding = isMobile ? '3px' : '12px';
+        const table = tableWrapper.querySelector('table')
+        if (!table) return
+        table.style.border = '1px solid black'
+        table.style.borderCollapse = 'collapse'
+        table.style.width = '100%'
+        table.style.marginBottom = '24px'
+        table.style.tableLayout = 'fixed'
+        table.style.wordWrap = 'break-word'
+        table.style.overflowWrap = 'break-word'
+        const isMobile = window.innerWidth <= 768
+        const fontSize = isMobile ? '13px' : '16px'
+        const cellPadding = isMobile ? '3px' : '12px'
         table.querySelectorAll('th').forEach((th) => {
-          th.style.border = '1px solid black';
-          th.style.padding = cellPadding;
-          th.style.fontSize = fontSize;
-        });
+          th.style.border = '1px solid black'
+          th.style.padding = cellPadding
+          th.style.fontSize = fontSize
+        })
         table.querySelectorAll('td').forEach((td) => {
-          td.style.border = '1px solid black';
-          td.style.padding = cellPadding;
-          td.style.verticalAlign = 'top';
-          td.style.fontSize = fontSize;
-        });
-      });
-      
+          td.style.border = '1px solid black'
+          td.style.padding = cellPadding
+          td.style.verticalAlign = 'top'
+          td.style.fontSize = fontSize
+        })
+      })
+
       figcaption.forEach((figcaption) => {
         figcaption.style.textAlign = 'center'
         figcaption.classList.add('relative', 'bottom-5')
       })
 
       img_center.forEach((img) => {
-        img.classList.add('relative', 'left-[13%]');
-      });
+        img.classList.add('relative', 'left-[13%]')
+      })
 
       sub_headings.forEach((sub_heading) => {
-        sub_heading.style.paddingTop = '28px',
-          sub_heading.style.paddingBottom = '10px'
+        ;((sub_heading.style.paddingTop = '28px'),
+          (sub_heading.style.paddingBottom = '10px'))
       })
 
       headings.forEach((h) => {
         h.style.paddingTop = '28px'
-        if (
-          windowScrollTop + 50 >
-          h.getBoundingClientRect().top + windowScrollTop
-        ) {
-          if (actives.indexOf(h.id) === -1) {
-            actives.push(h.id)
-          }
+      })
+    }
+    scroll()
+  }, [])
+
+  // TOC active tracking — uses same DOM query as the verified working test.
+  // setInterval polling because rAF / scroll events / IO have all failed under
+  // this stack (lenis + React 19 + Next 16).
+  useEffect(() => {
+    let lastActive = ''
+
+    const update = () => {
+      const headings = [
+        ...document.querySelectorAll(
+          '.blog-content-main h2[id], .blog-content-main h3[id]'
+        ),
+      ].sort(
+        (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+      )
+      if (!headings.length) return
+
+      const triggerY = 140
+      let active = headings[0].id
+      for (const h of headings) {
+        if (h.getBoundingClientRect().top - triggerY <= 0) active = h.id
+        else break
+      }
+
+      if (active === lastActive) return
+      lastActive = active
+
+      document.querySelectorAll('a[data-toc-id]').forEach((a) => {
+        const isMatch = a.getAttribute('data-toc-id') === active
+        a.classList.toggle('active', isMatch)
+        a.setAttribute('data-active', isMatch ? 'true' : 'false')
+        if (isMatch) {
+          a.style.color = '#13c33f'
+          a.style.paddingLeft = '16px'
+        } else {
+          a.style.color = ''
+          a.style.paddingLeft = ''
         }
       })
-      if (actives.length) setActiveToc(actives[actives.length - 1])
+
+      setActiveToc(active)
     }
-    if (headings.length) setActiveToc(headings[0].id)
-    window.addEventListener('scroll', scroll)
-    return () => {
-      window.removeEventListener('scroll', scroll)
-    }
+
+    update()
+    const intervalId = setInterval(update, 100)
+
+    return () => clearInterval(intervalId)
   }, [])
-const articleUrl = `https://www.makerrs.com${router.asPath}`
-const seoUrl = `https://www.makerrs.com${router.asPath}`
+  const cleanPath = (router.asPath || '').split('#')[0].split('?')[0]
+  const articleUrl = `https://www.makerrs.com${cleanPath}`
+  const seoUrl = `https://www.makerrs.com${cleanPath}`
 
   const copyPageUrl = () => {
     navigator.clipboard.writeText(window.location.href)
@@ -154,61 +263,64 @@ const seoUrl = `https://www.makerrs.com${router.asPath}`
   }
 
   const slugToFAQMap = {
-  'what-are-explainer-videos': ExplainerVideos,
-  'best-explainer-videos': BestExplainerVideos,
-  'explainer-video-services': ExplainerVideosServices,
-  'top-explainer-video-companies': ExplainerVideosCompany,
-  'saas-explainer-videos': SaasExplainerVideos,
-  'b2b-explainer-videos': B2BExplainerVideos,
-  'custom-b2b-explainer-videos': CustomExplainerVideos,
-  'corporate-explainer-videos': CorporateExplainerVideos,
-  'ai-explainer-video-tools-trends': AIblogFAQ,
-  'animated-explainer-videos': AnimatedblogFAQ,
-  'best-animated-explainer': AnimatedExplainerFAQ,
-  'tech-explainer-videos': TechExplainerVideosFAQ,
-  'product': ProductFAQ,
-  'types': DifferentTypesFAQ,
-  'healthcare-marketing': HealthcareFAQ,
-  '3d-explainer-videos': ThreeDExplainerFAQ,
-  'how-to-create': HowCreateFAQ,
-  'whiteboard-explainer-videos': WhiteboardFAQ,
-  'funny-explainer-videos': FunnyExplainerFAQ,
-  'benefits-of-explainer-videos': BenefitsExplainerFAQ,
-  'explainer-videos-help-businesses': ExplainerVideosHelpBusinessesFAQ,
-  'how-to-make-explainer-videos': HowToMakeExplainerVideosFAQ,
-  'startup-explainer-videos': StartupExplainerVideosFAQ,
-  'customer-case-study-videos': CustomerCaseStudyFAQ,
-  'best-case-study-videos': BestCaseStudyFAQ,
-  'corporate-video-case-studies': CorporateCaseStudyFAQ,
-  'award-winning-case-study-videos': AwardWinningCaseStudyFAQ,
-  'saas-case-study-videos': SaasCaseStudyFAQ,
-  'marketing-case-study-videos': MarketingCaseStudyFAQ,
-  'case-study-video-strategy': CaseStudyVideosFAQ,
-  'employer-branding-strategy': EmployerBrandingStrategyFAQ,
-  'why-is-employer-branding-important': WhyIsEmployerBrandingImportantFAQ,
-  'employer-branding-framework': EmployerBrandingFrameworkFAQ,
-  'employer-branding-video': EmployerBrandingVideoFAQ,
-  'employer-branding-campaigns-2026': EmployerBrandingExamplesFAQ,
-  'employer-branding-companies': EmployerBrandingCompaniesFAQ,
-  'best-practices-to-attract-top-talent': EmployerBrandingBestPracticesFAQ,
-  'employer-branding-guide': EmployerBrandingFAQ,
-  'elements-of-employer-branding': ElementsEmployerBrandingFAQ,
-  'employer-branding-mistakes': EmployerBrandingMistakesFAQ,
-  'employer-branding-solutions': EmployerBrandingChallengesFAQ,
-  'b2b-employer-branding-campaigns-and-videos': B2BEmployerBrandingFAQ,
-  'improve-employer-branding': ImproveEmployerBrandingFAQ,
-  'employer-branding-content': EmployerBrandingContentFAQ,
-  'storytelling-for-modern-teams': EmployerBrandingStorytellingFAQ
-};
+    'what-are-explainer-videos': ExplainerVideos,
+    'best-explainer-videos': BestExplainerVideos,
+    'explainer-video-services': ExplainerVideosServices,
+    'top-explainer-video-companies': ExplainerVideosCompany,
+    'saas-explainer-videos': SaasExplainerVideos,
+    'b2b-explainer-videos': B2BExplainerVideos,
+    'custom-b2b-explainer-videos': CustomExplainerVideos,
+    'corporate-explainer-videos': CorporateExplainerVideos,
+    'ai-explainer-video-tools-trends': AIblogFAQ,
+    'animated-explainer-videos': AnimatedblogFAQ,
+    'best-animated-explainer': AnimatedExplainerFAQ,
+    'tech-explainer-videos': TechExplainerVideosFAQ,
+    product: ProductFAQ,
+    types: DifferentTypesFAQ,
+    'healthcare-marketing': HealthcareFAQ,
+    '3d-explainer-videos': ThreeDExplainerFAQ,
+    'how-to-create': HowCreateFAQ,
+    'whiteboard-explainer-videos': WhiteboardFAQ,
+    'funny-explainer-videos': FunnyExplainerFAQ,
+    'benefits-of-explainer-videos': BenefitsExplainerFAQ,
+    'explainer-videos-help-businesses': ExplainerVideosHelpBusinessesFAQ,
+    'how-to-make-explainer-videos': HowToMakeExplainerVideosFAQ,
+    'startup-explainer-videos': StartupExplainerVideosFAQ,
+    'customer-case-study-videos': CustomerCaseStudyFAQ,
+    'best-case-study-videos': BestCaseStudyFAQ,
+    'corporate-video-case-studies': CorporateCaseStudyFAQ,
+    'award-winning-case-study-videos': AwardWinningCaseStudyFAQ,
+    'saas-case-study-videos': SaasCaseStudyFAQ,
+    'marketing-case-study-videos': MarketingCaseStudyFAQ,
+    'case-study-video-strategy': CaseStudyVideosFAQ,
+    'employer-branding-strategy': EmployerBrandingStrategyFAQ,
+    'why-is-employer-branding-important': WhyIsEmployerBrandingImportantFAQ,
+    'employer-branding-framework': EmployerBrandingFrameworkFAQ,
+    'employer-branding-video': EmployerBrandingVideoFAQ,
+    'employer-branding-campaigns-2026': EmployerBrandingExamplesFAQ,
+    'employer-branding-companies': EmployerBrandingCompaniesFAQ,
+    'best-practices-to-attract-top-talent': EmployerBrandingBestPracticesFAQ,
+    'employer-branding-guide': EmployerBrandingFAQ,
+    'elements-of-employer-branding': ElementsEmployerBrandingFAQ,
+    'employer-branding-mistakes': EmployerBrandingMistakesFAQ,
+    'employer-branding-solutions': EmployerBrandingChallengesFAQ,
+    'b2b-employer-branding-campaigns-and-videos': B2BEmployerBrandingFAQ,
+    'improve-employer-branding': ImproveEmployerBrandingFAQ,
+    'employer-branding-content': EmployerBrandingContentFAQ,
+    'storytelling-for-modern-teams': EmployerBrandingStorytellingFAQ,
+  }
 
-const selectedFAQ = slugToFAQMap[article.slug] || [];
+  const selectedFAQ = slugToFAQMap[article.slug] || []
 
   return (
     <>
       <SEO
         title={article?.seoTitle}
         description={article?.seoDesc}
-        image={ article?.featuredImage?.src ?? 'https://www.makerrs.com/img/makerrs-og.jpg'}
+        image={
+          article?.featuredImage?.src ??
+          'https://www.makerrs.com/img/makerrs-og.jpg'
+        }
         url={seoUrl}
       />
       <article>
@@ -249,9 +361,7 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
                   </svg>
                 </>
               )}
-              <span
-                className="font-semibold text-[12px] md:text-[16px]"
-              >
+              <span className="font-semibold text-[12px] md:text-[16px]">
                 {article?.title}
               </span>
             </div>
@@ -336,38 +446,39 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
 
               <div className="w-full md:w-1/4 px-4">
                 <div
-                  className={`  md:opacity-100 md:visible md:sticky md:top-18 md:h-auto fixed inset-0 w-full h-full bg-black/30 md:bg-transparent z-[9999] px-6 md:px-0 duration-300 ease-out ${toc ? 'opacity-1 visible' : 'opacity-0 invisible'
-                    }`}
+                  className={`  md:opacity-100 md:visible md:sticky md:top-18 md:h-auto fixed inset-0 w-full h-full bg-black/30 md:bg-transparent z-[9999] px-6 md:px-0 duration-300 ease-out ${
+                    toc ? 'opacity-1 visible' : 'opacity-0 invisible'
+                  }`}
                 >
                   {tocTree?.children?.length > 1 && (
-                   <div className="md:border md:border-black/20 rounded-lg mb-4 bg-white mt-10 md:mt-0">
-                    <div className="py-4 px-5 text-[14px] font-semibold md:border-b md:border-b-black/20 flex justify-between items-center">
-                      Table of contents
-                      <button
-                        onClick={tocTrigger}
-                        className="w-6 h-6 inline-flex items-center justify-center md:hidden"
-                      >
-                        <svg
-                          width="10"
-                          height="10"
-                          viewBox="0 0 10 10"
-                          fill="none"
+                    <div className="md:border md:border-black/20 rounded-lg mb-4 bg-white mt-10 md:mt-0">
+                      <div className="py-4 px-5 text-[14px] font-semibold md:border-b md:border-b-black/20 flex justify-between items-center">
+                        Table of contents
+                        <button
+                          onClick={tocTrigger}
+                          className="w-6 h-6 inline-flex items-center justify-center md:hidden"
                         >
-                          <path
-                            d="M9 1L1 9M1 1L9 9"
-                            stroke="black"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                    <div
-                      className="py-4 px-5 text-[14px] font-semibold toc-content flex flex-col gap-4 max-h-[60vh] overflow-y-auto rb-scrollbar"
-                      data-lenis-prevent
-                    >
-                       {/* <div>
+                          <svg
+                            width="10"
+                            height="10"
+                            viewBox="0 0 10 10"
+                            fill="none"
+                          >
+                            <path
+                              d="M9 1L1 9M1 1L9 9"
+                              stroke="black"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      <div
+                        className="py-4 px-5 text-[14px] font-semibold toc-content flex flex-col gap-4 max-h-[60vh] overflow-y-auto rb-scrollbar"
+                        data-lenis-prevent
+                      >
+                        {/* <div>
                       <a href="#!" className="active">
                         Active Listening
                       </a>
@@ -387,14 +498,14 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
                     <div>
                       <a href="#!">Adaptability</a>
                     </div> */}
-                      <TOC
-                        lenis={lenis}
-                        isRoot
-                        isActive={(id) => id === activeToc}
-                        {...tocTree}
-                      />
+                        <TOC
+                          lenis={lenis}
+                          isRoot
+                          isActive={(id) => id === activeToc}
+                          {...tocTree}
+                        />
+                      </div>
                     </div>
-                  </div>
                   )}
 
                   <div className="hidden md:block">
@@ -403,18 +514,16 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
                     </h3>
 
                     <div className="flex gap-4 relative max-w-fit">
-                       <LinkedinShareButton
-                          url={articleUrl}
+                      <LinkedinShareButton url={articleUrl}>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={articleUrl}
+                          className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#006699] hover:border-[#006699]"
                         >
-                          <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={articleUrl}
-                            className="border border-rb-dune rounded-full w-10 h-10 inline-flex justify-center items-center border-rb-dune/80 text-rb-dune/80 transition-all hover:text-[#006699] hover:border-[#006699]"
-                          >
-                            <Linkedin />
-                          </a>
-                        </LinkedinShareButton>
+                          <Linkedin />
+                        </a>
+                      </LinkedinShareButton>
 
                       <TwitterShareButton
                         url={`https://twitter.com/intent/tweet?text=${articleUrl}`}
@@ -494,30 +603,29 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
         </section>
       </article>
 
-      { selectedFAQ?.length > 0 && (
-          <section className="pb-12 md:pb-24 md:pt-12">
-            <div className="container">
-              <div className="rb-row">
-                <div className="w-full md:w-5/12">
-                  <div className="static md:sticky top-[100px]">
-                    <h3 className="max-w-[400px] mb-8 text-title-md-tight font-everett text-rb-black !text-[26px] md:!text-[52px]">
-                      Frequently Asked Questions
-                    </h3>
-                  </div>
-                </div>
-                <div className="w-full md:w-7/12">
-                  <Accordion
-                    data={
-                      selectedFAQ.map((c) => ({
-                      key: `${c.key}`,
-                      heading: c?.title,
-                      content: c?.content,
-                    }))}
-                  />
+      {selectedFAQ?.length > 0 && (
+        <section className="pb-12 md:pb-24 md:pt-12">
+          <div className="container">
+            <div className="rb-row">
+              <div className="w-full md:w-5/12">
+                <div className="static md:sticky top-[100px]">
+                  <h3 className="max-w-[400px] mb-8 text-title-md-tight font-everett text-rb-black !text-[26px] md:!text-[52px]">
+                    Frequently Asked Questions
+                  </h3>
                 </div>
               </div>
+              <div className="w-full md:w-7/12">
+                <Accordion
+                  data={selectedFAQ.map((c) => ({
+                    key: `${c.key}`,
+                    heading: c?.title,
+                    content: c?.content,
+                  }))}
+                />
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
       )}
 
       <GetUpdates />
@@ -529,21 +637,27 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pt-8">
             {relatedArticle.map(
-              ({ title, date, slug, author, categories, featuredImage, tags }) => (
+              ({
+                title,
+                date,
+                slug,
+                author,
+                categories,
+                featuredImage,
+                tags,
+              }) => (
                 <div key={slug}>
-                  <Link 
-                    href={`/${tags[0]?.name || 'blog'}/${slug}`} 
+                  <Link
+                    href={`/${tags[0]?.name || 'blog'}/${slug}`}
                     className="h-[384px] block md:h-[272px] overflow-hidden relative mb-4"
                   >
                     <div className="w-full h-full overflow-hidden group">
-                      <img 
+                      <img
                         src="/img/blog-thumb.jpg"
                         {...featuredImage}
                         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                         alt=""
-                        
                       />
-                      
                     </div>
                     <div className="absolute bottom-5 left-5 flex gap-1">
                       {categories.map((c) => (
@@ -570,8 +684,8 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
                       {title}
                     </h3>
 
-                    <Link 
-                     href={`/${tags[0]?.name || 'blog'}/${slug}`} 
+                    <Link
+                      href={`/${tags[0]?.name || 'blog'}/${slug}`}
                       className="inline-flex gap-2 items-center text-black underline hover:text-rb-link-green font-semibold"
                     >
                       Continue reading
@@ -602,20 +716,19 @@ export const getStaticPaths = async () => {
   }
 }
 
-
 export async function getStaticProps({ params }) {
   const { slug, tags } = params
   const { data, status } = await getBlog(slug)
   const actualTag = data?.post?.tags?.nodes?.[0]?.slug || 'blog'
 
-   // Case 1: Post not found → redirect or 404
-   if (!data?.post) {
+  // Case 1: Post not found → redirect or 404
+  if (!data?.post) {
     return { notFound: true }
-   }
+  }
 
   //Case 2: Tag in URL doesn't match the post's actual tag → 404
   if (actualTag?.toLowerCase() !== tags?.toLowerCase()) {
-   return { notFound: true }
+    return { notFound: true }
   }
 
   if (status !== 'success') {
@@ -628,10 +741,10 @@ export async function getStaticProps({ params }) {
   }
 
   const relatedArticle = await getRelatedBlogs(
-    data.post?.slug,
+    data.post?.slug
     // data.post?.tags?.nodes?.map((t) => t.slug) || []
   )
-  
+
   let toc = {}
   const content = await rehype()
     .data('settings', { fragment: true })
@@ -657,6 +770,4 @@ export async function getStaticProps({ params }) {
   }
 }
 
-
 export default ArticleSingle
-

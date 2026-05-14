@@ -333,6 +333,7 @@ html.lenis {
     font-weight: 500;
     line-height: 120%;
     letter-spacing: -1.28px;
+    margin-top: 48px;
     margin-bottom: 24px;
     @apply font-everett max-w-fit;
   }
@@ -342,6 +343,7 @@ html.lenis {
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    margin-top: 40px;
     margin-bottom: 24px;
     @apply font-everett max-w-fit;
   }
@@ -351,8 +353,15 @@ html.lenis {
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    margin-top: 32px;
     margin-bottom: 24px;
     @apply font-everett max-w-fit;
+  }
+
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child {
+    margin-top: 0;
   }
 
   p {
@@ -572,6 +581,17 @@ html.lenis {
         opacity: 1;
       }
     }
+  }
+
+  /* hard-override in case Tailwind @apply or specificity fails */
+  a.active,
+  a.active:link,
+  a.active:visited {
+    color: #13c33f !important;
+    padding-left: 16px !important;
+  }
+  a.active::before {
+    opacity: 1 !important;
   }
 }
 

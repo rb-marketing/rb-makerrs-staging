@@ -685,7 +685,7 @@ export const Header = () => {
                     id="firstlink"
                   >
                     <Link
-                      href="/work/featured"
+                      href="/work"
                       className="text-[40px] md:text-[64px] leading-[100%] font-everett tracking-[-2.7px]"
                     >
                       WORK
