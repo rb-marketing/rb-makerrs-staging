@@ -30,8 +30,8 @@ const ArticleSingle = ({ article }) => {
   const banner = useMemo(() => {
     return {
       src: article?.workDetails?.banner?.sourceUrl,
-      width: 150,
-      height: 70,
+      width: article?.workDetails?.banner?.mediaDetails?.width || 1600,
+      height: article?.workDetails?.banner?.mediaDetails?.height || 900,
     }
   }, [])
   const tocTrigger = () => {

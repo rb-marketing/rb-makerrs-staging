@@ -26,8 +26,12 @@ const WORK_DETAILS_QUERY = `
   logo {
     sourceUrl
   }
-  banner { 
+  banner {
     sourceUrl
+    mediaDetails {
+      width
+      height
+    }
   }
   seoTitle
   seoDesc

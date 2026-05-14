@@ -8,6 +8,7 @@ import { getBlogs } from '@/utils/graphql'
 import { formatBlogPosts } from '@/utils/formate'
 import { blogSchema } from '@/components/schema/blog-schema'
 import Script from 'next/script'
+import Image from 'next/image'
 import { Dropdown } from '@/components/dropdown/dropdown'
 import { useRouter } from 'next/router'
 
@@ -149,12 +150,16 @@ const Articles = ({ featuredPost, posts: { edges, pageInfo } }) => {
                   target="_blank"
                   className="overflow-hidden group"
                 >
-                  <img
-                    {...featuredPost?.featuredImage}
-                    src={featuredPost?.featuredImage.src}
-                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-300"
-                    alt=""
-                  />
+                  {featuredPost?.featuredImage?.src ? (
+                    <Image
+                      src={featuredPost.featuredImage.src}
+                      alt={featuredPost?.featuredImage?.alt || ''}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      priority
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-300"
+                    />
+                  ) : null}
 
                   <div className="absolute bottom-5 left-5 flex gap-1">
                     {featuredPost?.categories?.map((c) => (
@@ -206,18 +211,23 @@ const Articles = ({ featuredPost, posts: { edges, pageInfo } }) => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 pt-8">
             {filteredPosts.slice(0, visiblePosts).map(
-              ({ date, author, featuredImage, slug, categories, title, tags }) => (
+              ({ date, author, featuredImage, slug, categories, title, tags }, idx) => (
                 <div key={slug}>
                 <a href={`/${tags[0]?.name || 'blog'}/${slug}`} target="_blank"
                   className="text-black hover:text-black">
                     <div className="h-[384px] block md:h-[272px] overflow-hidden relative mb-4">
-                      <div className="w-full h-full overflow-hidden group">
-                        <img
-                          alt=""
-                          {...featuredImage}
-                          src={featuredImage.src}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
-                        />
+                      <div className="w-full h-full overflow-hidden group relative">
+                        {featuredImage?.src ? (
+                          <Image
+                            alt={featuredImage?.alt || ''}
+                            src={featuredImage.src}
+                            fill
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            priority={idx < 3}
+                            loading={idx < 3 ? undefined : 'lazy'}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
+                          />
+                        ) : null}
                       </div>
                       <div className="absolute bottom-5 left-5 flex gap-1">
                         {categories.map((c) => (

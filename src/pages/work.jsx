@@ -320,11 +320,12 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-24 mt-8">
               {filteredPosts.length > 0 ? (
-                filteredPosts.map(({ key, ...post }) => (
+                filteredPosts.map(({ key, ...post }, idx) => (
                   <div key={key} onPointerDown={() => saveState()}>
                     <ContentPostCard
                       href={`/${post?.workDetails?.url}/${post.case_study_title}`}
                       page="work"
+                      priority={idx < 3}
                       {...post}
                     />
                   </div>

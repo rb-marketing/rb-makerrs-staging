@@ -1,5 +1,6 @@
 import { TwitterShareButton, LinkedinShareButton } from 'react-share';
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import { Twitter, Linkedin } from '@/components/icons'
 
 export const WorkHeroSection = ({
@@ -144,7 +145,18 @@ export const WorkHeroSection = ({
               />
             </div>
             <div className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!image ? 'hidden' : ''}`}>
-              <img src={image?.src} alt={alt} srcSet="" />
+              {image?.src && (
+                <Image
+                  src={image.src}
+                  alt={alt}
+                  width={image?.width || 1600}
+                  height={image?.height || 900}
+                  sizes="(min-width: 1280px) 1200px, 100vw"
+                  priority
+                  fetchPriority="high"
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              )}
             </div>
           </>
         }

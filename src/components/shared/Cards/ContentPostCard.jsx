@@ -1,4 +1,5 @@
 import { cx } from 'class-variance-authority'
+import Image from 'next/image'
 export const ContentPostCard = ({
   className = '',
   type = 'md', //md, lg
@@ -8,7 +9,8 @@ export const ContentPostCard = ({
   image,
   tags = [],
   cursorText = 'view',
-  page=''
+  page='',
+  priority = false,
 }) => (
   <a
     href={`/work${href}`}
@@ -22,11 +24,19 @@ export const ContentPostCard = ({
         type == 'lg' && 'md:aspect-[1260/494]'
       )}
     >
-      <img
-        src={image}
-        alt=""
-        className="h-full w-full object-cover md:group-hover:scale-105 transition-all"
-      />
+      {image ? (
+        <Image
+          src={image}
+          alt=""
+          fill
+          sizes={type === 'lg'
+            ? '(min-width: 768px) 1260px, 100vw'
+            : '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'}
+          priority={priority}
+          loading={priority ? undefined : 'lazy'}
+          className="h-full w-full object-cover md:group-hover:scale-105 transition-all"
+        />
+      ) : null}
       <div
         className={`flex flex-wrap text-white justify-start absolute left-4 bottom-4.5 md:bottom-5 md:left-5 z-[1] mr-2 font-semibold text-xs ${
           type === 'md' ? 'gap-3 gap-x-2  lg:max-w-[70%]' : 'gap-3 md:gap-2'

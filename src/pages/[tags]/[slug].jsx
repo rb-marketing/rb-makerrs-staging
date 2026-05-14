@@ -8,6 +8,7 @@ import { Button } from '@/components/ui'
 import { getAllBlogs, getBlog, getRelatedBlogs } from '@/utils/graphql'
 import { formateBlogPostFunc } from '@/utils/formate'
 import Link from 'next/link'
+import Image from 'next/image'
 import processTree from '@/utils/processTree'
 import { SEO } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
@@ -308,12 +309,15 @@ const selectedFAQ = slugToFAQMap[article.slug] || [];
           </div>
 
           <div className="pt-10 md:pt-18">
-            <div className="h-[180px] md:h-[556px] overflow-hidden">
-              <img
-                src="/img/blog-inner-thumb.jpg"
-                {...article?.featuredImage}
+            <div className="h-[180px] md:h-[556px] overflow-hidden relative">
+              <Image
+                src={article?.featuredImage?.src || '/img/blog-inner-thumb.jpg'}
+                alt={article?.featuredImage?.alt || ''}
+                fill
+                sizes="(min-width: 1280px) 1200px, 100vw"
+                priority
+                fetchPriority="high"
                 className="w-full h-full object-cover"
-                alt=""
               />
             </div>
           </div>

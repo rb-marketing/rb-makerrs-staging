@@ -43,6 +43,20 @@ const nextConfig = {
   experimental: {
     middlewarePrefetch: 'strict',
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'blogs.makerrs.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'secure.gravatar.com',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+  },
 }
 
 module.exports = nextConfig

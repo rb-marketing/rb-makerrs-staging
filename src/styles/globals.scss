@@ -424,18 +424,7 @@ html.lenis {
     padding-left: 20px;
 
     li {
-      @apply font-opensans;
-      font-size: 20px;
-      line-height: 28px;
-      color: rgba(0, 0, 0, 0.8);
-      padding-left: 8px;
-      margin-bottom: 30px;
-
-      @media (max-width: 767px) {
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.5px;
-      }
+      margin-bottom: 4px;
     }
   }
   ul {
