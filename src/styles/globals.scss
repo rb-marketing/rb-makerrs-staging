@@ -15,12 +15,11 @@
 // <weight>: Use a value from 100 to 900
 
 .font-inter {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   // font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: 'slnt' 0;
 }
 
 @layer components {
@@ -45,7 +44,7 @@
       margin-right: -12px;
       width: auto;
 
-      >div {
+      > div {
         padding-left: 12px;
         padding-right: 12px;
       }
@@ -89,7 +88,6 @@
 .blog-content-main img.audio-control-icon {
   margin-bottom: 12px !important;
 }
-
 
 //slider
 .swiper-overflow-visible {
@@ -147,6 +145,11 @@
 
 html.lenis {
   height: auto;
+}
+.ig_video figcaption.wp-element-caption {
+  text-align: center;
+  position: relative;
+  top: -15px;
 }
 
 .lenis.lenis-smooth {
@@ -273,7 +276,7 @@ html.lenis {
       min-width: 250px;
       @apply md:right-[-40px] md:translate-x-full md:translate-y-4;
 
-      >div {
+      > div {
         width: 100%;
       }
 
@@ -600,7 +603,7 @@ html.lenis {
 
   li {
     margin-bottom: 24px;
-    color: hsla(0, 3%, 6%, .8);
+    color: hsla(0, 3%, 6%, 0.8);
     letter-spacing: -0.4px;
   }
 }
@@ -692,13 +695,13 @@ html.lenis {
 
 // drop_down styles
 .rb-select-blogs {
-  appearance: none; 
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-size: 37px 9px;
   background-position: right 16px;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg width='23' height='13' viewBox='0 0 23 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.4454 1.72272L11.7227 11.4454L1.99994 1.72272' stroke='%2307ef5a' stroke-width='2.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); 
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='13' viewBox='0 0 23 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.4454 1.72272L11.7227 11.4454L1.99994 1.72272' stroke='%2307ef5a' stroke-width='2.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 @keyframes movetopBottom {
@@ -715,12 +718,12 @@ html.lenis {
 } */
 
 .rb-select-blogs:focus {
-  outline: none; 
+  outline: none;
   border: 1px solid rgb(156 163 175);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
   height: 100px;
 }
 
@@ -844,10 +847,9 @@ html.lenis {
     }
 
     &.active {
-
       .number,
       .dash {
-        @apply bg-rb-link-green
+        @apply bg-rb-link-green;
       }
 
       .desc {
@@ -912,7 +914,7 @@ html.lenis {
     border-radius: 6px;
     margin-right: 8px;
     border-radius: 32px;
-    background: rgba(7,239,90,0.7);
+    background: rgba(7, 239, 90, 0.7);
 
     .tag-title {
       line-height: 1;
@@ -969,7 +971,7 @@ html.lenis {
     }
   }
 
-  input:checked~label {
+  input:checked ~ label {
     &:after {
       @apply border-rb-black bg-rb-black;
     }
@@ -1000,9 +1002,12 @@ html.lenis {
   //   #fff;
   border-radius: 8px;
   border: 1px solid rgba(17, 16, 16, 0.2);
-  background: linear-gradient(0deg,
+  background:
+    linear-gradient(
+      0deg,
       rgba(17, 16, 16, 0.05) 0%,
-      rgba(17, 16, 16, 0.05) 100%),
+      rgba(17, 16, 16, 0.05) 100%
+    ),
     #fff;
 
   padding: 8px 16px;
@@ -1085,10 +1090,6 @@ body.disable-scroll {
     right: inherit;
   }
 }
-
-
-
-
 
 ::-webkit-scrollbar {
   width: 5px; /* width of the entire scrollbar */
@@ -1292,14 +1293,14 @@ body.disable-scroll {
   }
 }
 
-.custom-font { 
-  p{
-    color: hsla(0, 3%, 6%, .8);
+.custom-font {
+  p {
+    color: hsla(0, 3%, 6%, 0.8);
   }
-  li{
-    color: hsla(0, 3%, 6%, .8);
-    
-    h3{
+  li {
+    color: hsla(0, 3%, 6%, 0.8);
+
+    h3 {
       color: rgb(17, 16, 16);
     }
   }
@@ -1314,7 +1315,7 @@ a:hover {
 }
 
 .camaign-cards {
-  h4{
+  h4 {
     margin-top: 0;
     font-size: 1.25rem;
   }
@@ -1322,27 +1323,22 @@ a:hover {
 
 .careers-stat:nth-last-of-type(2) {
   &::after {
-      visibility: hidden;
-    }
+    visibility: hidden;
+  }
 }
 
-.blogs-dd{
-  .dd-field{
+.blogs-dd {
+  .dd-field {
     width: auto;
     padding-right: 2.5rem;
     min-width: 250px;
   }
 }
 
-
-
-
-
 /* Work Case study styles */
 
 .work-content-main {
-
-  color: rgba(0,0,0,.8);
+  color: rgba(0, 0, 0, 0.8);
 
   p {
     @apply font-opensans;
@@ -1606,5 +1602,12 @@ a:hover {
       height: auto;
       margin-bottom: 20px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .ig_video video {
+    height: 600px;
+    width: 335px;
   }
 }
