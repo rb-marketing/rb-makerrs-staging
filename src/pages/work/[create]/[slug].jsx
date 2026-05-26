@@ -63,10 +63,16 @@ const ArticleSingle = ({ article }) => {
     const img_center = [...blogRef.current?.querySelectorAll('.wp-image-1064')]
     const tableFigures = [...blogRef.current?.querySelectorAll('.wp-block-table')];
     const images = [...blogRef.current?.querySelectorAll('.wp-block-image img')];
+    const figures = [...blogRef.current?.querySelectorAll('figure.wp-block-image')];
+
+    figures.forEach((figure) => {
+      figure.style.setProperty('width', '78.8rem', 'important');
+      figure.style.setProperty('max-width', '78.8rem', 'important');
+    });
 
     images.forEach((img) => {
-      img.style.setProperty('width', '78.8rem', 'important');
-      img.style.setProperty('max-width', '78.8rem', 'important');
+      img.style.setProperty('width', '100%', 'important');
+      img.style.setProperty('max-width', '100%', 'important');
     });
 
     const scroll = () => {

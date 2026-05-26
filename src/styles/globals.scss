@@ -1417,6 +1417,18 @@ a:hover {
     max-width: 100%;
   }
 
+  figure.wp-block-image {
+    @media (min-width: 768px) {
+      width: 78.8rem !important;
+      max-width: 78.8rem !important;
+    }
+
+    img {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
   .verticle {
     @apply max-w-fit;
     img {
