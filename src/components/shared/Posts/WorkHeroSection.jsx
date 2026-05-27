@@ -1,4 +1,4 @@
-import { TwitterShareButton, LinkedinShareButton } from 'react-share';
+import { TwitterShareButton, LinkedinShareButton } from 'react-share'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { Twitter, Linkedin } from '@/components/icons'
@@ -12,7 +12,7 @@ export const WorkHeroSection = ({
   mobileVideo,
   title = null,
   image = null,
-  // specifyWidth = '150',
+  specifyWidth = null,
 }) => {
   const router = useRouter()
   const articleUrl = `https://www.makerrs.com${router.asPath}`
@@ -28,25 +28,47 @@ export const WorkHeroSection = ({
   }
 
   return (
-    <section className={`bg-white pt-10 md:pt-16 overflow-hidden ${image ? 'pb-7.5' : ''}`}>
+    <section
+      className={`bg-white pt-10 md:pt-16 overflow-hidden ${image ? 'pb-7.5' : ''}`}
+    >
       <div className="container">
         <div className="rb-row md:mt-8.5 mb-12 md:mb-16">
           <div className="w-full md:w-9/12 text-2xl md:leading-9.5 text-rb-black/80">
-
-            {logo?.src && (
-              <img
-                alt=""
-                loading="lazy"
-                {...logo}
-                style={{ maxWidth: '150px', height: 'auto' }}
-              />
-            )}
-            <h1 className="text-black font-medium mt-6 uppercase text-3xl md:text-[54px] lg:leading-14 font-everett">{title}</h1>
+            {logo?.src && (() => {
+              const w = parseInt(logo?.width) || 150
+              const desktopMax = w
+              const mobileMax = logo?.mobileWidth
+                ? parseInt(logo.mobileWidth)
+                : Math.min(w, 160)
+              const imgStyle = { height: 'auto', width: '100%' }
+              return (
+                <>
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src={logo.src}
+                    className={specifyWidth || 'block md:hidden'}
+                    style={{ ...imgStyle, maxWidth: `${mobileMax}px` }}
+                  />
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src={logo.src}
+                    className="hidden md:block"
+                    style={{ ...imgStyle, maxWidth: `${desktopMax}px` }}
+                  />
+                </>
+              )
+            })()}
+            <h1 className="text-black font-medium mt-6 uppercase text-3xl md:text-[54px] lg:leading-14 font-everett">
+              {title}
+            </h1>
             <div className="flex flex-wrap gap-2 mb-7.5 md:mb-0 mt-10 text-xs leading-5 font-semibold text-rb-black">
               {tags.map((t, i) => (
                 <div
-                  className={`inline-block px-3 py-1.5 md:px-4 md:py-2 border rounded-full border-rb-dune h-max ${i >= 4 ? 'hidden md:inline-block' : ''
-                    }`}
+                  className={`inline-block px-3 py-1.5 md:px-4 md:py-2 border rounded-full border-rb-dune h-max ${
+                    i >= 4 ? 'hidden md:inline-block' : ''
+                  }`}
                   key={i}
                 >
                   {t}
@@ -67,8 +89,7 @@ export const WorkHeroSection = ({
               <div className="flex gap-2 md:gap-4 flex-wrap relative">
                 {socials.map(({ key, href, icon, color, type }) => (
                   <div key={key}>
-                    {
-                      href.includes('twitter') &&
+                    {href.includes('twitter') && (
                       <TwitterShareButton
                         url={`https://twitter.com/intent/tweet?text=${articleUrl}`}
                       >
@@ -81,12 +102,9 @@ export const WorkHeroSection = ({
                           <Twitter />
                         </a>
                       </TwitterShareButton>
-                    }
-                    {
-                      type === 'linkedin' &&
-                      <LinkedinShareButton
-                        url={articleUrl}
-                      >
+                    )}
+                    {type === 'linkedin' && (
+                      <LinkedinShareButton url={articleUrl}>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -96,13 +114,13 @@ export const WorkHeroSection = ({
                           <Linkedin />
                         </a>
                       </LinkedinShareButton>
-                    }
+                    )}
                   </div>
                 ))}
 
                 <a
                   data-rb-cursor-state="invisible"
-                  href='#'
+                  href="#"
                   onClick={copyPageUrl}
                   className={`relative w-10 h-10 rounded-full overflow-hidden bg-white border border-rb-dune/80 text-rb-dune/80 hover:text-[var(--text-color)] hover:border-[var(--text-color)] transition-all grid place-content-center`}
                 >
@@ -126,7 +144,9 @@ export const WorkHeroSection = ({
         </div>
         {
           <>
-            <div className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!desktopVideo || !mobileVideo ? 'hidden' : ''}`}>
+            <div
+              className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!desktopVideo && !mobileVideo ? 'hidden' : ''}`}
+            >
               <video
                 autoPlay
                 loop
@@ -144,7 +164,9 @@ export const WorkHeroSection = ({
                 className="w-full h-full md:h-auto object-cover block md:hidden"
               />
             </div>
-            <div className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!image ? 'hidden' : ''}`}>
+            <div
+              className={`relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)] md:w-full -mx-4 md:mx-0 ${!image ? 'hidden' : ''}`}
+            >
               {image?.src && (
                 <Image
                   src={image.src}

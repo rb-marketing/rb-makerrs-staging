@@ -38,8 +38,7 @@ export const RollupNumber = ({ value, prefix, suffix, className = '' }) => {
             </Fragment>
           ) : (
             <div
-              // className={styles.digit}
-              className={`${styles.digit} ${parseInt(d) === 1 ? 'lg:-ml-3' : ''}`}
+              className={styles.digit}
               data-digit={d}
               key={i}
               data-place={splitText.length - i - 1}

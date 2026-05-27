@@ -448,6 +448,7 @@ export async function getStaticProps() {
     props: {
       works,
     },
+    revalidate: 60,
   }
 }
 export default WorkPage;

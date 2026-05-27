@@ -25,6 +25,10 @@ const WORK_DETAILS_QUERY = `
   workJson
   logo {
     sourceUrl
+    mediaDetails {
+      width
+      height
+    }
   }
   banner {
     sourceUrl

@@ -72,11 +72,12 @@ export const StatsSection = ({
   className = '',
   data = [],
   tag = 'OUR PRODUCTION BACKYARD',
+  gridClassName = 'md:right-[4em]',
 }) => (
   <section className={`bg-white overflow-hidden ${className}`}>
     <div className="container">
       <LineHeading className="mb-6 md:mb-7.5">{tag}</LineHeading>
-      <div className="grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none mx-5 md:!ml-0 md:relative md:right-8">
+      <div className={`grid lg:flex grid-cols-2 gap-x-5 md:gap-x-[124px] gap-y-12 md:gap-y-6 max-w-full md:max-w-none mx-5 md:!ml-0 md:relative ${gridClassName}`}>
         {(data?.length ? data : stats).map((s, i) => (
           <div
             className={`w-full lg:w-1/4 text-[42px] leading-14 tracking-[-1.44px] md:text-stat group relative ${styles.statline}`}
