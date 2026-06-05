@@ -105,6 +105,41 @@ export const SolutionsSection = () => {
     } catch {}
   }
   useEffect(() => {
+    const videos = containerRef.current?.querySelectorAll('[data-lazy-video]')
+    if (!videos?.length) return
+    let observer
+
+    const setupObserver = () => {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(({ target: video, isIntersecting }) => {
+            if (isIntersecting) {
+              // Assign poster only when the slide is about to play so the
+              // browser doesn't download all poster images at page load.
+              if (video.dataset.poster && !video.getAttribute('poster')) {
+                video.setAttribute('poster', video.dataset.poster)
+              }
+              video.play().catch(() => {})
+            } else {
+              video.pause()
+            }
+          })
+        },
+        { threshold: 0.25 }
+      )
+      videos.forEach((v) => observer.observe(v))
+    }
+
+    if (document.readyState === 'complete') {
+      setupObserver()
+    } else {
+      window.addEventListener('load', setupObserver, { once: true })
+    }
+
+    return () => observer?.disconnect()
+  }, [])
+
+  useEffect(() => {
     const container = containerRef.current
     const contents = document.querySelectorAll('.content-track > div')
     const sections = document.querySelectorAll('[data-solutionsection]')
@@ -269,12 +304,15 @@ export const SolutionsSection = () => {
                     <div className="w-full md:w-1/2 md:pr-7 pt-11 md:pt-0 ">
                       {/* <img alt={s.title} {...s?.image} className="w-full" /> */}
                       <video
-                        autoPlay
                         playsInline
                         muted
                         loop
-                        alt={s.title}
-                        {...s?.video}
+                        src={s.video.src}
+                        width={s.video.width}
+                        height={s.video.height}
+                        data-poster={s.video.poster}
+                        preload="none"
+                        data-lazy-video
                         className="w-full h-full object-cover"
                       ></video>
                     </div>

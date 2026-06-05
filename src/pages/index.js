@@ -564,6 +564,7 @@ const LandPage = ({playWorks , articles}) => {
     e.stopPropagation()
   }
   const videoRef = useRef(null)
+  const [heroVideoReady, setHeroVideoReady] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [hasReachedTop, setHasReachedTop] = useState(false)
   const [herovideoOpen, setHerovideoOpen] = useState(false)
@@ -606,6 +607,18 @@ const LandPage = ({playWorks , articles}) => {
     }
   }, [])
 
+  // Mount the hero video only after window.load so the <video> element
+  // never exists in the DOM during the LCP window. The <img> poster below
+  // becomes the LCP candidate instead, which downloads ~10x faster.
+  useEffect(() => {
+    const ready = () => setHeroVideoReady(true)
+    if (document.readyState === 'complete') {
+      ready()
+    } else {
+      window.addEventListener('load', ready, { once: true })
+    }
+  }, [])
+
   return (
     <>
       <SEO
@@ -634,15 +647,27 @@ const LandPage = ({playWorks , articles}) => {
             </div>
 
             <div className="banner relative h-[50%] w-full overflow-hidden">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                src="/creative_agency_banner.mp4"
-                poster="/img/home/creative_agency_banner.webp"
+              {/* Poster image is always present — this becomes the LCP element.
+                  fetchPriority="high" tells the browser to load it first. */}
+              <img
+                src="/img/home/creative_agency_banner.webp"
+                alt=""
+                fetchPriority="high"
                 className="absolute top-0 left-0 w-full h-full object-cover"
-              ></video>
+              />
+              {/* Video mounts only after window.load — zero impact on LCP.
+                  It covers the poster once it starts playing. */}
+              {heroVideoReady && (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  src="/creative_agency_banner.mp4"
+                  preload="none"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+              )}
               <div className={` ${styles.title}`}>
                 <div className={` ${styles.textblend} md:whitespace-nowrap`}>
                   TO BORDERLESS BRANDS
@@ -790,12 +815,8 @@ const LandPage = ({playWorks , articles}) => {
 export default LandPage
 
 export async function getStaticProps() {
-  const {
-    status,
-    data: { works },
-  } = await getPlaySliderData()
-  // console.log(status)
-  const playWorks = works?.nodes?.map((n) => ({
+  const playResult = await getPlaySliderData()
+  const playWorks = playResult?.data?.works?.nodes?.map((n) => ({
     key: n?.slug,
     type: 'play',
     title: n?.title,
@@ -804,14 +825,13 @@ export async function getStaticProps() {
       width: n?.workDetails?.previewLink?.mediaDetails?.width ?? '',
       height: n?.workDetails?.previewLink?.mediaDetails?.height ?? '',
     },
-    // href: `/work/play?work=${n?.slug}`,
     href: `?work=${n?.slug}`,
-  }))
-  const { data } = await getLatestArticle()
+  })) ?? []
+  const articleResult = await getLatestArticle()
   return {
     props: {
       playWorks,
-      articles: data?.posts?.nodes?.map(formateBlogPostFunc),
+      articles: articleResult?.data?.posts?.nodes?.map(formateBlogPostFunc) ?? [],
     },
   }
 }

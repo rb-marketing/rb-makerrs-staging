@@ -121,7 +121,7 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
 
-      <Script id="zoho-chat" strategy="afterInteractive">
+      <Script id="zoho-chat" strategy="lazyOnload">
         {`
           var $zoho=$zoho || {};
           $zoho.salesiq = $zoho.salesiq || {
@@ -162,14 +162,15 @@ export default function App({ Component, pageProps }) {
         </AppContext>
       </ReactLenis>
       <Script
-        type="text/javascript"
+        id="zoho-crm-zcga"
+        strategy="lazyOnload"
         src="https://crmplus.zoho.com/crm/javascript/zcga.js"
-      ></Script>
+      />
+      {/* TODO: move to individual contact/collab pages only — reCAPTCHA on every
+          page blocks interactivity. For now deferred to lazyOnload. */}
       <Script
         src="https://www.google.com/recaptcha/api.js?render=6LfsAwApAAAAAJFgAQaO7_xrrt6Y61thOQqmOuD4"
-        strategy="afterInteractive"
-        async
-        defer
+        strategy="lazyOnload"
       />
     </>
   )
