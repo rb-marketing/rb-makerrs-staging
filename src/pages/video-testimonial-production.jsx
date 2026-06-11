@@ -829,7 +829,16 @@ const CaseStudyVideoProduction = () => {
       content: (
         <>
           <div className="mb-5">
-            As experts who have produced hundreds of case study videos across industries, geographies and video formats - with every new brief, we’re always on the lookout to try something new. This has helped us come up with a tried-and-tested process that enables us to deliver impactful case study videos for your brand. Our typical workflow starts with a clear brief, followed by research, concepts, script, design, production, post-production, reviews, and versioning. But what’s unique about how we do it, is our proprietary platform that facilitates efficient cloud-based workflows. Here’s a quick run-through of how it helps:
+            As experts who have produced hundreds of case study videos across
+            industries, geographies and video formats - with every new brief,
+            we’re always on the lookout to try something new. This has helped us
+            come up with a tried-and-tested process that enables us to deliver
+            impactful case study videos for your brand. Our typical workflow
+            starts with a clear brief, followed by research, concepts, script,
+            design, production, post-production, reviews, and versioning. But
+            what’s unique about how we do it, is our proprietary platform that
+            facilitates efficient cloud-based workflows. Here’s a quick
+            run-through of how it helps:
           </div>
           <ul>
             <li className="mb-5">
@@ -948,7 +957,7 @@ const CaseStudyVideoProduction = () => {
     },
   ]
 
- const icons = [
+  const icons = [
     {
       id: 0,
       name: 'cain.webp',
@@ -1395,7 +1404,7 @@ const CaseStudyVideoProduction = () => {
                       height={24}
                       width={24}
                     />
-                    <span>End-to-end video case study creation</span>
+                    <span>Case study production across 100 countries</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <img
@@ -1430,11 +1439,12 @@ const CaseStudyVideoProduction = () => {
                 muted
                 loop
                 playsInline
-                src="/img/services/videos/hero.mp4"
+                src="/img/Kia-Orig.mp4"
                 poster="/img/services/videos/hero.png"
                 className="w-[100%] max-w-[100%] mt-8 block md:hidden"
                 width="1920"
                 height="1068"
+                preload="none"
               ></video>
 
               <div className="absolute bottom-4 right-4 z-10 backdrop-blur-2xl bg-rb-black/50 rounded-[32px] py-[17px] px-4.5 pl-[20px] overflow-hidden md:hidden block">
@@ -1500,11 +1510,12 @@ const CaseStudyVideoProduction = () => {
             muted
             loop
             playsInline
-            src="/img/services/videos/hero.mp4"
+            src="/img/Kia-Orig.mp4"
             poster="/img/services/videos/hero.png"
             className="w-full hidden md:block web-vid"
             width="1920"
             height="1068"
+            preload="none"
           ></video>
         </div>
       </section>
@@ -1857,6 +1868,7 @@ const CaseStudyVideoProduction = () => {
             className="w-full"
             width="1920"
             height="1068"
+            preload="none"
           ></video>
         </div>
       </VideoModal>
