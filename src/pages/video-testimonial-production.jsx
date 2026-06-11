@@ -1377,21 +1377,20 @@ const CaseStudyVideoProduction = () => {
             <div className="w-full lg:w-[725px] opacity-100">
               <h1 className="hero-text md:text-[94px] md:leading-[94px] font-everett font-medium md:tracking-[-1.88px]  uppercase text-[56px] leading-[1.07] tracking-[-1.96px] flex flex-col">
                 <div className="flex flex-wrap gap-x-3 items-center">
-                  <span>Case Study</span>
+                  <span>Global Case</span>
                 </div>
 
                 <div className="flex items-center gap-x-3 md:gap-x-4">
-                  <span className="md:block hidden">videos</span>
-                  <span className="md:hidden block">videos that</span>
+                  <span>Study</span>
+                  <span className="md:hidden">Videos</span>
                   <div
                     className={`content aspect-[1920/1068] origin-top ${styles.content} hidden md:inline-block max-h-[79px]`}
                     ref={containerRef}
                   ></div>
                 </div>
 
-                <div>
-                  <span className="md:block hidden">that convert</span>
-                  <span className="md:hidden block">convert</span>
+                <div className="hidden md:block">
+                  <span>Videos</span>
                 </div>
               </h1>
 
@@ -1413,7 +1412,7 @@ const CaseStudyVideoProduction = () => {
                       height={24}
                       width={24}
                     />
-                    <span>Case study videos across formats</span>
+                    <span>End to end case study creation</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <img
