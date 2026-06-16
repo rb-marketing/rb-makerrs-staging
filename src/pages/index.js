@@ -22,7 +22,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 1,
-      name: 'infosys-logo.jpg',
+      name: 'infosys-logo.webp',
       width: '90',
       height: '30',
       alt: 'Infosys',
@@ -37,7 +37,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 3,
-      name: 'pudingding.png',
+      name: 'pudingding.webp',
       width: '100',
       height: '30',
       alt: 'pudingding',
@@ -82,7 +82,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 9,
-      name: 'mumbai-indians.png',
+      name: 'mumbai-indians.webp',
       width: '100px',
       // height: '40px',
       alt: 'mumbai-indians',
@@ -138,14 +138,14 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 17,
-      name: 'exicom.png',
+      name: 'exicom.webp',
       width: '163',
       height: '44',
       alt: 'exicom',
     },
     {
       id: 18,
-      name: 'treebo.png',
+      name: 'treebo.webp',
       width: '163',
       height: '44',
       alt: 'treebo',
@@ -250,7 +250,7 @@ const LandPage = ({playWorks , articles}) => {
       company: 'DARUIESTE ARIPI',
       image: {
         srcSet:
-          `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+          `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -266,7 +266,7 @@ const LandPage = ({playWorks , articles}) => {
       image: {
         srcSet:
 
-          `/img/testimonials/kuncheria_marattukalam.jpg 533w, /img/testimonials/kuncheria_marattukalam.jpg 1066w`,
+          `/img/testimonials/kuncheria_marattukalam.webp 533w, /img/testimonials/kuncheria_marattukalam.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -320,7 +320,7 @@ const LandPage = ({playWorks , articles}) => {
       image: {
         srcSet:
 
-          `/img/testimonials/rinku-agarwal.png 533w, /img/testimonials/rinku-agarwal.png 1066w`,
+          `/img/testimonials/rinku-agarwal.webp 533w, /img/testimonials/rinku-agarwal.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -333,7 +333,7 @@ const LandPage = ({playWorks , articles}) => {
       company: 'P.U. DINGDING',
       image: {
         srcSet:
-          `/img/testimonials/nakul_1.jpg 533w, /img/testimonials/nakul_1.jpg 1066w`,
+          `/img/testimonials/nakul_1.webp 533w, /img/testimonials/nakul_1.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -649,12 +649,27 @@ const LandPage = ({playWorks , articles}) => {
             <div className="banner relative h-[50%] w-full overflow-hidden">
               {/* Poster image is always present — this becomes the LCP element.
                   fetchPriority="high" tells the browser to load it first. */}
-              <img
-                src="/img/home/creative_agency_banner.webp"
-                alt=""
-                fetchPriority="high"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcSet="/img/home/creative_agency_banner-480.avif 480w, /img/home/creative_agency_banner-768.avif 768w, /img/home/creative_agency_banner-1280.avif 1280w, /img/home/creative_agency_banner-1920.avif 1920w"
+                  sizes="100vw"
+                />
+                <source
+                  type="image/webp"
+                  srcSet="/img/home/creative_agency_banner-480.webp 480w, /img/home/creative_agency_banner-768.webp 768w, /img/home/creative_agency_banner-1280.webp 1280w, /img/home/creative_agency_banner-1920.webp 1920w"
+                  sizes="100vw"
+                />
+                <img
+                  src="/img/home/creative_agency_banner-768.webp"
+                  alt=""
+                  width="1920"
+                  height="1080"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+              </picture>
               {/* Video mounts only after window.load — zero impact on LCP.
                   It covers the poster once it starts playing. */}
               {heroVideoReady && (

@@ -51,7 +51,7 @@ export const VideoMetaModal = ({
       if (open) {
         video.src = video.src
         video.muted = false
-        video.play()
+        video.play().catch((err) => { if (err.name !== 'AbortError') throw err })
       } else {
         video.muted = true
         video.pause()

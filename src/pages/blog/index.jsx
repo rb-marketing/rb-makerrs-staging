@@ -14,17 +14,22 @@ import { useRouter } from 'next/router'
 
 const PAGE_LIMIT = 70;
 
-const Articles = ({ featuredPost, posts: { edges, pageInfo } }) => {
+const Articles = ({
+  featuredPost,
+  posts: { edges = [], pageInfo = {} } = {},
+}) => {
   const [state, setState] = useState({
     pageInfo: {
-      endCursor: pageInfo.endCursor,
-      hasNextPage: pageInfo.hasNextPage,
+      endCursor: pageInfo?.endCursor,
+      hasNextPage: pageInfo?.hasNextPage,
     },
     posts: edges,
   })
 
   const loadMore = async () => {
-   const { data: { posts },} = await getBlogs(state.pageInfo.endCursor, PAGE_LIMIT); 
+    const { data } = await getBlogs(state.pageInfo.endCursor, PAGE_LIMIT)
+    const posts = data?.posts
+    if (!posts) return
 
     setState((prev) => ({
       pageInfo: posts.pageInfo,
@@ -301,6 +306,20 @@ const Articles = ({ featuredPost, posts: { edges, pageInfo } }) => {
 export async function getStaticProps() {
   try {
     const { data } = await getBlogs(null, PAGE_LIMIT)
+    if (!data?.posts) {
+      return {
+        props: {
+          featuredPost: null,
+          posts: {
+            edges: [],
+            pageInfo: {
+              endCursor: null,
+              hasNextPage: false,
+            },
+          },
+        },
+      }
+    }
 
     // Format blog posts
     const formatedPosts = formatBlogPosts(data.posts?.edges)
@@ -342,7 +361,13 @@ export async function getStaticProps() {
     return {
       props: {
         featuredPost: null,
-        posts: null,
+        posts: {
+          edges: [],
+          pageInfo: {
+            endCursor: null,
+            hasNextPage: false,
+          },
+        },
       },
     }
   }

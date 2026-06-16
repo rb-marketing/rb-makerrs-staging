@@ -1510,7 +1510,7 @@ const RecruitmentVideoProduction = () => {
                 className="w-[100%] max-w-[100%] mt-8 block md:hidden"
                 width="1920"
                 height="1068"
-              ></video>
+               preload="none"></video>
 
               <div className="absolute bottom-4 right-4 z-10 backdrop-blur-2xl bg-rb-black/50 rounded-[32px] py-[17px] px-4.5 pl-[20px] overflow-hidden md:hidden block">
                 <div className="flex items-center gap-2 justify-center text-white ">
@@ -1580,7 +1580,7 @@ const RecruitmentVideoProduction = () => {
             className="w-full hidden md:block web-vid"
             width="1920"
             height="1068"
-          ></video>
+           preload="none"></video>
         </div>
       </section>
 
@@ -1936,7 +1936,7 @@ const RecruitmentVideoProduction = () => {
             className="w-full"
             width="1920"
             height="1068"
-          ></video>
+           preload="none"></video>
         </div>
       </VideoModal>
     </>

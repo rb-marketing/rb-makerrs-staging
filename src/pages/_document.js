@@ -3,6 +3,13 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="en">
+      {/* Preconnect to critical third-party origins */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.google.com" />
+      <link rel="dns-prefetch" href="https://salesiq.zohopublic.com" />
+      <link rel="dns-prefetch" href="https://crmplus.zoho.com" />
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"

@@ -41,7 +41,7 @@ export const VideoModal = ({
     if (video) {
       if (open) {
         video.muted = false
-        video.play()
+        video.play().catch((err) => { if (err.name !== 'AbortError') throw err })
       } else {
         video.muted = true
         video.pause()

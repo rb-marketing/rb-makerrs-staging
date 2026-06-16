@@ -1102,7 +1102,7 @@ const VideosServices = ({ setisPopupOpen }) => {
                 loop
                 muted
                 playsInline
-              ></video>
+               preload="none"></video>
             </div>
           </div>
         </div>
@@ -1166,7 +1166,7 @@ const VideosServices = ({ setisPopupOpen }) => {
             className="w-full"
             width="1920"
             height="1080"
-          ></video>
+           preload="none"></video>
         </div>
       </VideoModal>
       {/* <Script id="schema" type="application/ld+json">

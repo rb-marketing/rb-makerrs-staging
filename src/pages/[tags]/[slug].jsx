@@ -741,8 +741,8 @@ export async function getStaticProps({ params }) {
   }
 
   const relatedArticle = await getRelatedBlogs(
-    data.post?.slug
-    // data.post?.tags?.nodes?.map((t) => t.slug) || []
+    data.post?.slug,
+    data.post?.tags?.nodes?.map((t) => t.slug) || []
   )
 
   let toc = {}

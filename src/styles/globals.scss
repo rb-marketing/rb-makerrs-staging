@@ -503,6 +503,12 @@ html.lenis {
   }
 
   .wp-block-columns {
+    @apply flex flex-col gap-4 md:flex-row md:flex-wrap;
+
+    > .wp-block-column {
+      @apply w-full md:flex-1 min-w-0;
+    }
+
     &.two-columns {
       @apply md:grid md:grid-cols-2 md:gap-2 max-w-fit;
     }
@@ -1430,6 +1436,13 @@ a:hover {
     }
   }
 
+  .wp-block-column figure.wp-block-image {
+    @media (min-width: 768px) {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
   .verticle {
     @apply max-w-fit;
     img {
@@ -1559,6 +1572,12 @@ a:hover {
   }
 
   .wp-block-columns {
+    @apply flex flex-col gap-4 md:flex-row md:flex-wrap;
+
+    > .wp-block-column {
+      @apply w-full md:flex-1 min-w-0;
+    }
+
     &.two-columns {
       @apply md:grid md:grid-cols-2 md:gap-2 max-w-fit;
     }

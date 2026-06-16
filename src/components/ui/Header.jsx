@@ -531,8 +531,10 @@ export const Header = () => {
                   ></video> */}
                   <img
                     className="nav-menu-image w-full h-full rounded-lg"
-                    src="/img/home/hamburger_image_new.png"
+                    src="/img/home/hamburger_image_new.webp"
                     alt="Menu preview"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

@@ -275,7 +275,7 @@ export const TechnologyPlatform = () => {
             src="img/technology/hero.mp4"
             poster="/img/who-we-are/rb_cloud_platform_thumbnail.png"
             className="web-vid w-full h-full object-cover relative"
-          ></video>
+           preload="none"></video>
         </div>
 
         <video
@@ -286,7 +286,7 @@ export const TechnologyPlatform = () => {
           src="img/technology/hero.mp4"
           poster="/img/who-we-are/rb_cloud_platform_thumbnail.png"
           className="block md:hidden w-full h-full object-cover"
-        ></video>
+         preload="none"></video>
       </div>
 
       <div className="container pt-15 md:pt-30 md:pb-15">
@@ -486,7 +486,7 @@ export const TechnologyPlatform = () => {
             className="w-full"
             width="1920"
             height="1080"
-          ></video>
+           preload="none"></video>
         </div>
       </VideoModal>
 

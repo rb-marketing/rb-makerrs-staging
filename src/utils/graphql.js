@@ -304,8 +304,20 @@ export const getAllTags = () => {
   `)
 }
 export const getRelatedBlogs = async (slug, tagSlug) => {
-  const { data: similarData } = await getWpQuery(
-    `
+  const { data: latestData } = await getWpQuery(`
+  query getLatestBlogs {
+    posts(first:4, where: {orderby: {field: DATE, order: DESC}}) {
+      nodes{
+        ${POST_QUERY}
+      }
+    }
+  }
+  `)
+
+  let similarData = null
+  if (tagSlug?.length) {
+    ;({ data: similarData } = await getWpQuery(
+      `
   query getBlogsByTag($tagSlug: [String]) {
     posts(first:4, where: {tagSlugIn: $tagSlug, orderby: {field: DATE, order: DESC}}) {
       nodes{
@@ -314,17 +326,10 @@ export const getRelatedBlogs = async (slug, tagSlug) => {
     }
   }
   `,
-    { tagSlug }
-  )
-  const { data: latestData } = await getWpQuery(`
-  query getLatestBlogs($tagSlug: [String]) {
-    posts(first:4, where: {orderby: {field: DATE, order: DESC}}) {
-      nodes{
-        ${POST_QUERY}
-      }
-    }
+      { tagSlug }
+    ))
   }
-  `)
+
   const relatedBlogs = [
     ...(latestData?.posts?.nodes ?? []),
     ...(similarData?.posts?.nodes ?? []),

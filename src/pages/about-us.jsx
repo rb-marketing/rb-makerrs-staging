@@ -429,7 +429,7 @@ const WhoWeAre = () => {
                   className="w-full md:block translate-x-[-0.225px] translate-y-0 rotate-0 scale-100 rounded-[70px]"
                   width="1920"
                   height="1080"
-                ></video>
+                 preload="none"></video>
               </div>
             </div>
             <span className="md:translate-x-[20px] inline-block">Agency</span>
@@ -781,7 +781,7 @@ const WhoWeAre = () => {
             className="w-full"
             width="1920"
             height="1080"
-          ></video>
+           preload="none"></video>
         </div>
       </VideoModal>
       <Script id="schema" type="application/ld+json">

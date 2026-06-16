@@ -84,12 +84,12 @@ export default function App({ Component, pageProps }) {
         </script>
       </Head> */}
 
-      {/* Google Analytics */}
+      {/* Google Analytics — lazyOnload keeps these off the critical path */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-WVV0NLBNQL"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="gtag-main" strategy="afterInteractive">
+      <Script id="gtag-main" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -98,7 +98,7 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
 
-      <Script id="gtm" strategy="afterInteractive">
+      <Script id="gtm" strategy="lazyOnload">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -110,9 +110,9 @@ export default function App({ Component, pageProps }) {
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-808494106"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="gtag-ads" strategy="afterInteractive">
+      <Script id="gtag-ads" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
