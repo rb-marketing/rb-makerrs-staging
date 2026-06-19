@@ -233,7 +233,7 @@ const AIvideoAgency = () => {
     },
     {
       id: 21,
-      name: 'komatsu.png',
+      name: 'komatsu.webp',
       width: '140',
       height: '44',
       alt: 'komatsu',
