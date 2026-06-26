@@ -1,5 +1,7 @@
+import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import { SEO } from '@/components/shared/SEO'
-import { SolutionsSection, Marquee, VideoModal, RollupNumber, Testimonials } from '@/components/shared'
+import { Marquee, VideoModal, RollupNumber } from '@/components/shared'
 import { Button, Accordion } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 import { LineHeading, RevealText } from '@/components/shared'
@@ -8,7 +10,16 @@ import { gsap } from 'gsap'
 import statsStyles from '@/styles/sections/StatsSection.module.scss'
 import styles from '@/styles/home.module.scss'
 import Link from 'next/link'
-import { ArticleSection } from '@/components/shared/sections/ArticleSection'
+
+const SolutionsSection = dynamic(() =>
+  import('@/components/shared/sections/Solutions').then(m => ({ default: m.SolutionsSection }))
+)
+const Testimonials = dynamic(() =>
+  import('@/components/shared/sections/Testimonials').then(m => ({ default: m.Testimonials }))
+)
+const ArticleSection = dynamic(() =>
+  import('@/components/shared/sections/ArticleSection/ArticleSection').then(m => ({ default: m.ArticleSection }))
+)
 import { getLatestArticle, getPlaySliderData } from '@/utils/graphql'
 import { formateBlogPostFunc } from '@/utils/formate'
 const LandPage = ({playWorks , articles}) => {
@@ -506,56 +517,65 @@ const LandPage = ({playWorks , articles}) => {
     }
     window.addEventListener('resize', resize)
 
-    let singleLetterTimeline = gsap.timeline({
-      ease: 'power2.out',
-      repeat: -1,
-    })
+    let singleLetterTimeline
+    let letterTimeline
 
-    if (document.querySelector(`.${styles.letterRoll}`)) {
-      singleLetterTimeline
-        .to(
-          `.${styles.letterRoll}`,
+    const startHeroAnimations = () => {
+      singleLetterTimeline = gsap.timeline({
+        ease: 'power2.out',
+        repeat: -1,
+      })
 
-          {
-            yPercent: 0,
-            delay: 2,
-          }
-        )
+      if (document.querySelector(`.${styles.letterRoll}`)) {
+        singleLetterTimeline
+          .to(
+            `.${styles.letterRoll}`,
+            {
+              yPercent: 0,
+              delay: 2,
+            }
+          )
+          .to(
+            `.${styles.letterRoll}`,
+            {
+              yPercent: 100,
+            },
+            '+=1'
+          )
+          .to(
+            `.${styles.letterRoll}`,
+            {
+              yPercent: 0,
+            },
+            '+=2'
+          )
+      }
 
-        .to(
-          `.${styles.letterRoll}`,
-
-          {
-            yPercent: 100,
+      letterTimeline = gsap.timeline()
+      letterTimeline.to(
+        `.${styles.rtol}, .${styles.ltor}`,
+        {
+          x: 0,
+          duration: 0.6,
+          stagger: {
+            each: 0.256,
           },
-          '+=1'
-        )
-        .to(
-          `.${styles.letterRoll}`,
-
-          {
-            yPercent: 0,
-          },
-          '+=2'
-        )
+        },
+        0
+      )
     }
 
-    const letterTimeline = gsap.timeline()
-    letterTimeline.to(
-      `.${styles.rtol}, .${styles.ltor}`,
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: {
-          each: 0.256,
-        },
-      },
-      0
-    )
+    if (document.readyState === 'complete') {
+      startHeroAnimations()
+    } else {
+      window.addEventListener('load', startHeroAnimations, { once: true })
+    }
+
     return () => {
+      window.removeEventListener('load', startHeroAnimations)
       window.removeEventListener('resize', resize)
-      letterTimeline.kill()
+      singleLetterTimeline?.kill()
+      letterTimeline?.kill()
       mm.kill()
     }
   }, [])
@@ -607,20 +627,36 @@ const LandPage = ({playWorks , articles}) => {
     }
   }, [])
 
-  // Mount the hero video only after window.load so the <video> element
-  // never exists in the DOM during the LCP window. The <img> poster below
-  // becomes the LCP candidate instead, which downloads ~10x faster.
+  // Mount the hero video after window.load + a short delay so:
+  // 1. The video never exists in the DOM during the LCP window (poster = LCP)
+  // 2. The 0.6s GSAP text animation completes before the video starts playing,
+  //    ensuring "text first, then video" as required.
   useEffect(() => {
-    const ready = () => setHeroVideoReady(true)
+    let t
+    const ready = () => { t = setTimeout(() => setHeroVideoReady(true), 1000) }
     if (document.readyState === 'complete') {
       ready()
     } else {
       window.addEventListener('load', ready, { once: true })
     }
+    return () => clearTimeout(t)
   }, [])
 
   return (
     <>
+      <Head>
+        {/* Preload AVIF for browsers that support it — avoids double-download when
+            the <picture> also picks AVIF from its <source type="image/avif"> */}
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href="/img/home/creative_agency_banner-768.avif"
+          imageSrcSet="/img/home/creative_agency_banner-480.avif 480w, /img/home/creative_agency_banner-768.avif 768w, /img/home/creative_agency_banner-1280.avif 1280w, /img/home/creative_agency_banner-1920.avif 1920w"
+          imageSizes="100vw"
+          fetchPriority="high"
+        />
+      </Head>
       <SEO
         title="Branding, Video and Podcast Production Agency | Makerrs"
         description="Top agency for branding services, video production, podcast production and video crew services. Global creative partner to borderless brands and enterprises."
@@ -666,7 +702,6 @@ const LandPage = ({playWorks , articles}) => {
                   width="1920"
                   height="1080"
                   fetchPriority="high"
-                  decoding="async"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </picture>

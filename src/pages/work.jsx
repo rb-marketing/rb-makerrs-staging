@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import Head from 'next/head'
 import { getPlayWorks } from '@/utils/graphql'
 import { formatPlayPosts } from '@/utils/formate'
 import { useRouter } from 'next/router'
-import { workPosts } from '@/utils/dummy'
 import {
   SEO,
   TrustedBrandsSection,
@@ -250,6 +250,11 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href="/img/who-we-are/about-pill.webp" fetchPriority="high" />
+        {/* Preload first work card LCP image — identified via PSI as consistently first in viewport */}
+        <link rel="preload" as="image" href="/img/work/infosys-global-employer-brand.webp" fetchPriority="high" />
+      </Head>
       <SEO
         title="Top Branding, Video Production & Podcast Solutions | Makerrs"
         description="Get great brand design, scalable video production, branded podcast production, and winning creative campaigns for your borderless business."
@@ -448,7 +453,7 @@ export async function getStaticProps() {
     props: {
       works,
     },
-    revalidate: 60,
+    revalidate: 3600,
   }
 }
 export default WorkPage;

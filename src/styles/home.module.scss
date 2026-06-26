@@ -38,11 +38,9 @@
 
 .rtol {
   transform: translateX(10%);
-  opacity: 0;
 }
 .ltor {
   transform: translateX(-10%);
-  opacity: 0;
 
   @media (max-width: 768px) {
     font-size: 40px;

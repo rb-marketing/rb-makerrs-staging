@@ -29,11 +29,12 @@ export const ContentPostCard = ({
           src={image}
           alt=""
           fill
+          unoptimized
           sizes={type === 'lg'
             ? '(min-width: 768px) 1260px, 100vw'
             : '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'}
           priority={priority}
-          loading="eager"
+          loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : 'auto'}
           className="h-full w-full object-cover md:group-hover:scale-105 transition-all"
         />

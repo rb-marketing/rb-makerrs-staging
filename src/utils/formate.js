@@ -2,6 +2,7 @@ import dayjs from 'dayjs'
 import {
   getReadTime
 } from './readTime'
+import workImageManifest from './workImageManifest.json'
 const BLOG_DATE_FORMATE = 'MMM DD, YYYY'
 const DATE_FORMATE = 'DD/MM/YYYY'
 /**
@@ -68,7 +69,7 @@ export const formatPlayPosts = (works = []) =>
       key: index,
       name: w.title || "",
       company: w?.companies?.nodes?.length ? w?.companies?.nodes[0].name : null,
-      image: w?.featuredImage?.node?.sourceUrl || "",
+      image: workImageManifest[w.slug] || w?.featuredImage?.node?.sourceUrl || "",
       alt: w?.featuredImage?.alt || w.title || "",
       tabs: w?.tags?.nodes?.map(tag => tag.name) || [],
       tags: w?.categories?.nodes?.map(cat => cat.name) || [],

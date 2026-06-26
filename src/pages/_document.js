@@ -4,10 +4,12 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Preconnect to critical third-party origins */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.google.com" />
+        {/* Google Fonts preconnect — stylesheet loaded async (non-render-blocking) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* dns-prefetch for deferred third-party scripts (not preconnect — they load after interaction) */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://salesiq.zohopublic.com" />
         <link rel="dns-prefetch" href="https://crmplus.zoho.com" />
 
@@ -42,6 +44,13 @@ export default function Document() {
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+
+        {/* Load Google Fonts async — avoids render-blocking the initial paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap';document.head.appendChild(l);})();`
+          }}
+        />
 
         {/* <script
           id="ruttl-site-embed-script"

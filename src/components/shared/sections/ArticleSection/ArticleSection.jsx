@@ -51,6 +51,7 @@ export const ArticleSection = ({
 }) => {
   const [hoveredSlide, setHoveredSlide] = useState()
   const [enter, setEnter] = useState(false)
+  const [hasHovered, setHasHovered] = useState(false)
   const cursor = useRef()
   useEffect(() => {
     const pointerMove = (e) => {
@@ -69,6 +70,7 @@ export const ArticleSection = ({
   }, [])
   const onPointerEnter = (index) => {
     setEnter(true)
+    setHasHovered(true)
     setHoveredSlide(index)
     gsap.to(cursor.current, {
       alpha: 1,
@@ -134,7 +136,7 @@ export const ArticleSection = ({
           className="w-[200px] h-[160px] fixed pointer-events-none overflow-hidden left-[-90px] top-[-62px]  opacity-0 z-[2] hidden md:block"
           ref={cursor}
         >
-          {articles.map(({ featuredImage, id }, index) => (
+          {hasHovered && articles.map(({ featuredImage, id }, index) => (
             <img
               {...featuredImage}
               key={index}

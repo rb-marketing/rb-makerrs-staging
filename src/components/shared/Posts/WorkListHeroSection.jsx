@@ -47,9 +47,10 @@ export const WorkListHeroSection = ({
             <img
               className="max-w-[158px] md:max-w-[281px] block ml-6 md:ml-10 relative bottom-[5px] md:bottom-[4px]"
               src={pillImg ? pillImg : '/img/pill-marq.webp'}
-              width="562"
-              height="210"
+              width="422"
+              height="158"
               alt=""
+              fetchPriority="high"
             />
           )}
 

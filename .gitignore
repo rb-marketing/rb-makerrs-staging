@@ -33,3 +33,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated at build time by scripts/download-work-images.mjs
+
+# Tool caches & local dev
+.npm
+.playwright-mcp
+lighthouse
+.claude
+.mcp.json
+
+# env files (all variants)
+.env
+.env.local
+.env.development
+.env.production

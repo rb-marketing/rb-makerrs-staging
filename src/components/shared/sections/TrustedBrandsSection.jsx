@@ -12,7 +12,7 @@ export const icons = [
   },
   {
     id: 1,
-    name: 'infosys-logo.jpg',
+    name: 'infosys-logo.webp',
     width: '90',
     height: '30',
     alt: 'Infosys',
@@ -27,21 +27,21 @@ export const icons = [
   },
   {
     id: 3,
-    name: 'pudingding.png',
+    name: 'pudingding.webp',
     width: '100',
     height: '30',
     alt: 'pudingding'
   },
   {
     id: 4,
-    name: 'taneria.png',
+    name: 'taneria.webp',
     width: '132',
     height: '36',
     alt: 'Taneria',
   },
   {
     id: 5,
-    name: 'general-electric.png',
+    name: 'general-electric.webp',
     width: '200',
     height: '150',
     alt: 'general-electric',
@@ -56,9 +56,8 @@ export const icons = [
     },
      {
       id: 7,
-      name: 'itc.png',
+      name: 'itc.webp',
       width: '60px',
-      // height: '30px',
       alt: 'itc',
     },
     {
@@ -70,14 +69,13 @@ export const icons = [
     },
      {
       id: 9,
-      name: 'mumbai-indians.png',
+      name: 'mumbai-indians.webp',
       width: '100px',
-      // height: '40px',
       alt: 'mumbai-indians',
     },
     {
       id: 10,
-      name: 'sequoia.png',
+      name: 'sequoia.webp',
       width: '167',
       height: '52',
       alt: 'sequoia',
@@ -91,7 +89,7 @@ export const icons = [
     },
     {
       id: 12,
-      name: 'Tanishq.png',
+      name: 'Tanishq.webp',
       width: '80',
       height: '67',
       alt: 'Tanishq',
@@ -110,9 +108,9 @@ export const icons = [
       height: '52',
       alt: 'slb',
     },
-     {
+    {
       id: 15,
-      name: 'dara.png',
+      name: 'dara.webp',
       width: '200',
       height: '150',
       alt: 'dara',
@@ -125,28 +123,28 @@ export const icons = [
       alt: 'vymo-logo',
     }, {
       id: 17,
-      name: 'exicom.png',
+      name: 'exicom.webp',
       width: '163',
       height: '44',
       alt: 'exicom',
     },
     {
       id: 18,
-      name: 'treebo.png',
+      name: 'treebo.webp',
       width: '163',
       height: '44',
       alt: 'treebo',
     },
     {
       id: 19,
-      name: 'virtusa.png',
+      name: 'virtusa.webp',
       width: '120',
       height: '44',
       alt: 'virtusa',
     },
     {
       id: 20,
-      name: 'bagmane.png',
+      name: 'bagmane.webp',
       width: '140',
       height: '44',
       alt: 'bagmane',
@@ -160,7 +158,7 @@ export const icons = [
     },
     {
       id: 22,
-      name: 'aarki.png',
+      name: 'aarki.webp',
       width: '140',
       height: '44',
       alt: 'aarki',

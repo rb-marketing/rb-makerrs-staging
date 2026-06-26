@@ -155,6 +155,8 @@ const getWpQuery = async (query, variables) => {
     data: null,
   }
   try {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 10000)
     const result = await fetch(WP_HOST, {
       method: 'POST',
       headers: {
@@ -164,18 +166,14 @@ const getWpQuery = async (query, variables) => {
         query,
         ...options,
       }),
+      signal: controller.signal,
     })
-    // console.log(result.status)
+    clearTimeout(timeout)
     if (result.ok) {
       resBody.status = 'success'
       resBody.data = (await result.json())?.data
     }
   } catch (error) {
-    // console.log({
-    //   query,
-    //   ...options,
-    // })
-
     console.log(`Error at : ${WP_HOST}`, JSON.stringify(error))
     resBody.status = 'error'
     resBody.data = null
