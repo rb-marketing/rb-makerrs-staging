@@ -958,7 +958,7 @@ const VideosServices = ({ setisPopupOpen }) => {
       <div className="pt-8 md:pt-0">
         <FeaturedWorkSection
           posts={_posts}
-          href="/work/videos"
+          href="/work?tab=videos"
           title="Explore Our Video Portfolio"
           btnposition="bottom"
         />
@@ -995,7 +995,7 @@ const VideosServices = ({ setisPopupOpen }) => {
 
           <Button
               className="w-fit mx-auto mt-[30px] md:mt-15"
-              href="/work/videos"
+              href="/work?tab=videos"
               suffix={<LineArrow />}
             >
               Explore more

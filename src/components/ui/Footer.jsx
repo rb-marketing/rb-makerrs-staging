@@ -493,28 +493,28 @@ export const Footer = ({ hasContactForm }) => {
                     <div className={styles.title}>WORK</div>
                     <div className={styles.links}>
                       <Link
-                        href="/work/design"
+                        href="/work?tab=design"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >
                         Design
                       </Link>
                       <Link
-                        href="/work/videos"
+                        href="/work?tab=videos"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >
                         Video
                       </Link>
                       <Link
-                        href="/work/podcast"
+                        href="/work?tab=podcast"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >
                         Podcast
                       </Link>
                       <Link
-                        href="/work/campaign"
+                        href="/work?tab=campaign"
                         data-rb-cursor-state="invisible"
                         className="max-w-max"
                       >

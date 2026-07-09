@@ -19,7 +19,7 @@ const INIT_MODAL = {
 export const FeaturedPlayWorkSection = ({
   title = 'Here’s a portfolio of work that worked',
   works = [],
-  href = '/work/play',
+  href = '/work',
   featuredTitle,
   tags,
   stickyBg,

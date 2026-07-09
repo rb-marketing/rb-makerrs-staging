@@ -399,7 +399,7 @@ const filteredCards = explorecards.filter(card => card.href !== router.pathname)
       <div className="md:pt-15">
         <FeaturedWorkSection
           posts={_posts}
-          href="/work/design"
+          href="/work?tab=design"
           title="Explore Our Podcast Work"
           showbtn = {false}
         />

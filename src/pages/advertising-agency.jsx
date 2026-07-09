@@ -376,7 +376,7 @@ const Campaign = ({ setisPopupOpen }) => {
       <div className="pt-8 md:pt-15">
         <FeaturedWorkSection
           posts={_posts}
-          href="/work/campaign"
+          href="/work?tab=campaign"
           title="Explore Our Campaign Work"
           btnposition='bottom'
         />

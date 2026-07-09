@@ -896,7 +896,7 @@ const BrandIdentityDesign = () => {
           our brand collateral projects{' '}
 
           <a
-            href="https://www.makerrs.com/work/design"
+            href="https://www.makerrs.com/work?tab=design"
             className="text-black underline hover:text-rb-link-green"
             target="_blank"
           >
@@ -1490,7 +1490,7 @@ const BrandIdentityDesign = () => {
       <div className="md:pt-20">
         <FeaturedWorkSection
           posts={brandIdentityDesignPosts}
-          href="/work/design"
+          href="/work?tab=design"
           title="EXPLORE BRAND IDENTITY PROJECTS"
           pageName="servicebrand"
         />

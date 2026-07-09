@@ -44,7 +44,7 @@ export const services = [
       '06. Environmental Graphics',
     ],
     detail: '/services/design',
-    // work: '/work/design',
+    // work: '/work?tab=design',
   },
   {
     key: 'campaign',
@@ -68,7 +68,7 @@ export const services = [
       '06. Outdoor & Offline',
     ],
     detail: '/services/campaign',
-    work: '/work/campaign',
+    work: '/work?tab=campaign',
   },
   {
     key: 'content',
@@ -638,15 +638,15 @@ export const TNC = [
     content: (
       <>
         Yes. Explore our Campaign portfolio{' '}
-        <Link href="/work/campaign" className="underline text-rb-red">
+        <Link href="/work?tab=campaign" className="underline text-rb-red">
           here
         </Link>
         {''}, Videos portfolio {''}
-        <Link href="/work/videos" className="underline text-rb-red">
+        <Link href="/work?tab=videos" className="underline text-rb-red">
           here
         </Link>
         {''}, and our Technology portfolio{' '}
-        <Link href="/work/technology" className="underline text-rb-red">
+        <Link href="/work" className="underline text-rb-red">
           here
         </Link>
         .

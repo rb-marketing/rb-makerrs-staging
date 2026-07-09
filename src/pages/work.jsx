@@ -22,38 +22,44 @@ const getCountryFromCookie = () => {
   return match ? match[1] : null
 }
 
-const WorkPage = ({ works, selectedvalue = 'featured' }) => {
+const caseStudyTags = [
+  {
+    name: 'Featured',
+    url: 'featured',
+  },
+  {
+    name: 'Design',
+    url: 'design',
+  },
+  {
+    name: 'Video',
+    url: 'videos',
+  },
+  {
+    name: 'Podcast',
+    url: 'podcast',
+  },
+  {
+    name: 'Campaign',
+    url: 'campaign',
+  },
+]
+
+const DEFAULT_TAB = 'featured'
+
+const isValidTab = (tab) => caseStudyTags.some((t) => t.url === tab)
+
+const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
   const router = useRouter()
-  const { category } = router.query;
   const _posts = works
-  const caseStudyTags = [
-    {
-      name: 'Featured',
-      url: 'featured',
-    },
-    {
-      name: 'Design',
-      url: 'design',
-    },
-    {
-      name: 'Video',
-      url: 'videos',
-    },
-    {
-      name: 'Podcast',
-      url: 'podcast',
-    },
-    {
-      name: 'Campaign',
-      url: 'campaign',
-    },
-  ]
   const categoryOptions = [
     { name: 'ALL WORK', slug: 'all' },
     { name: 'B2B WORK', slug: 'b2b' },
     { name: 'B2C WORK', slug: 'b2c' },
   ]
-  const [selectedTag, setSelectedTag] = useState(null)
+  const [selectedTag, setSelectedTag] = useState(
+    isValidTab(selectedvalue) ? selectedvalue : DEFAULT_TAB
+  )
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [visiblePosts, setVisiblePosts] = useState(9)
   const scrollRef = React.useRef(null)
@@ -69,27 +75,25 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
     setCountry(detectedCountry)
   }, [])
 
+  // ?tab= wins over the last tab kept in sessionStorage, so an inbound link
+  // always lands on the tab it names. Query params are only readable once the
+  // router has hydrated them on this statically generated page.
   useEffect(() => {
-    const storedVisible = sessionStorage.getItem('work-visiblePosts')
-    const storedTag = sessionStorage.getItem('work-selectedTag')
+    if (!router.isReady) return
 
-    if (storedTag === selectedTag && storedVisible) {
-      setVisiblePosts(parseInt(storedVisible, 10))
+    if (isValidTab(router.query.tab)) {
+      setSelectedTag(router.query.tab)
+      return
     }
-    if (storedTag) setSelectedTag(storedTag)
-    if (!router.query.work) {
-      if (
-        selectedvalue &&
-        caseStudyTags.some((tag) => tag.url === selectedvalue)
-      ) {
-        setSelectedTag(selectedvalue)
-      } else if (!storedTag) {
-        setSelectedTag('featured')
-      }
-    } else {
-      setSelectedTag(router.query.work)
+
+    const storedTag = sessionStorage.getItem('work-selectedTag')
+    if (isValidTab(storedTag)) {
+      setSelectedTag(storedTag)
+      return
     }
-  }, [router.query.work, selectedvalue])
+
+    setSelectedTag(isValidTab(selectedvalue) ? selectedvalue : DEFAULT_TAB)
+  }, [router.isReady, router.query.tab, selectedvalue])
 
   const saveState = (scrollOverride) => {
     const scroll =
@@ -118,13 +122,10 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
     const restore = () => {
       const navEntries = performance.getEntriesByType('navigation')
       const isReload = navEntries.length && navEntries[0].type === 'reload'
-      const storedTag = sessionStorage.getItem('work-selectedTag')
       const storedScroll = sessionStorage.getItem('work-scroll')
       const storedCategory = sessionStorage.getItem('work-selectedCategory')
 
-      if (storedTag) {
-        setSelectedTag(storedTag)
-      }
+      // The tab itself is resolved from ?tab= / sessionStorage in the effect above.
       if (storedCategory) {
         setSelectedCategory(storedCategory)
       }
@@ -163,8 +164,10 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
     sessionStorage.setItem('work-visiblePosts', '9')
     sessionStorage.setItem('work-selectedTag', tagUrl)
 
-    // Shallow route update
-    // router.push(`/work/${tagUrl}`, undefined, { shallow: true, scroll: false })
+    router.push({ pathname: '/work', query: { tab: tagUrl } }, undefined, {
+      shallow: true,
+      scroll: false,
+    })
 
     // Scroll to posts
     setTimeout(() => {
@@ -258,7 +261,7 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
       <SEO
         title="Top Branding, Video Production & Podcast Solutions | Makerrs"
         description="Get great brand design, scalable video production, branded podcast production, and winning creative campaigns for your borderless business."
-        url={`https://www.makerrs.com/work/${selectedTag || 'featured'}`}
+        url={`https://www.makerrs.com/work?tab=${selectedTag || DEFAULT_TAB}`}
         keywords="B2B Brands, Brand solutions, B2B Business, Work, Portfolio, Big Ideas, Projects, Work Showcase, Case Study, Case Studies, Creativity, Innovation, B2C Brands, B2C Business"
       />
 
@@ -293,8 +296,9 @@ const WorkPage = ({ works, selectedvalue = 'featured' }) => {
               {caseStudyTags.map((tag) => (
                 <a
                   key={tag.url}
-                  href="#"
+                  href={`/work?tab=${tag.url}`}
                   onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return
                     e.preventDefault()
                     handleTagClick(tag.url)
                   }}

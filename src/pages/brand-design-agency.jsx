@@ -456,7 +456,7 @@ const Design = ({ setisPopupOpen }) => {
       <div className="pt-8 md:pt-0">
         <FeaturedWorkSection
           posts={_posts}
-          href="/work/design"
+          href="/work?tab=design"
           title="Explore Our Design Work"
           btnposition="bottom"
         />

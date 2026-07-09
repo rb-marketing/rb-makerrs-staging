@@ -6,7 +6,7 @@ import { LineArrow } from '@/components/icons'
 export const FeaturedWorkSection = ({
   title = 'Here’s a portfolio of work that worked',
   posts = [],
-  href = '/work/play',
+  href = '/work',
   btnposition = 'right',
   showbtn = true
 }) => {
