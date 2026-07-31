@@ -46,7 +46,7 @@ export const similarPostsData = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys-logo.jpg',
+    src: '/img/logos/infosys-logo.webp',
     width: '180',
     height: '105',
   },

@@ -79,7 +79,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/vymo-thumbnail1.jpg',
+          src: '/img/case-study/vymo-thumbnail1.webp',
         },
       },
     ],

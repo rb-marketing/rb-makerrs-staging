@@ -1,6 +1,6 @@
 export const partners = [
   {
-    icon: '/img/logos/the-media-ant.png',
+    icon: '/img/logos/the-media-ant.webp',
     title: 'The Media Ant',
     content:
       'The Media Ant is a pioneering platform for media buying. They provide access to a vast array of media options across 8 platforms, making marketing campaign planning and management accessible and efficient.',

@@ -21,53 +21,54 @@ import {
 } from 'react-share'
 import Script from 'next/script'
 import { Accordion } from '@/components/ui'
-import {
-  AIblogFAQ,
-  AnimatedblogFAQ,
-  ExplainerVideos,
-  BestExplainerVideos,
-  ExplainerVideosServices,
-  ExplainerVideosCompany,
-  SaasExplainerVideos,
-  B2BExplainerVideos,
-  CustomExplainerVideos,
-  CorporateExplainerVideos,
-  AnimatedExplainerFAQ,
-  TechExplainerVideosFAQ,
-  ProductFAQ,
-  DifferentTypesFAQ,
-  HealthcareFAQ,
-  ThreeDExplainerFAQ,
-  HowCreateFAQ,
-  WhiteboardFAQ,
-  FunnyExplainerFAQ,
-  BenefitsExplainerFAQ,
-  ExplainerVideosHelpBusinessesFAQ,
-  HowToMakeExplainerVideosFAQ,
-  StartupExplainerVideosFAQ,
-  CustomerCaseStudyFAQ,
-  BestCaseStudyFAQ,
-  CorporateCaseStudyFAQ,
-  AwardWinningCaseStudyFAQ,
-  SaasCaseStudyFAQ,
-  MarketingCaseStudyFAQ,
-  CaseStudyVideosFAQ,
-  EmployerBrandingStrategyFAQ,
-  WhyIsEmployerBrandingImportantFAQ,
-  EmployerBrandingFrameworkFAQ,
-  EmployerBrandingVideoFAQ,
-  EmployerBrandingExamplesFAQ,
-  EmployerBrandingCompaniesFAQ,
-  EmployerBrandingBestPracticesFAQ,
-  EmployerBrandingFAQ,
-  ElementsEmployerBrandingFAQ,
-  EmployerBrandingMistakesFAQ,
-  EmployerBrandingChallengesFAQ,
-  B2BEmployerBrandingFAQ,
-  ImproveEmployerBrandingFAQ,
-  EmployerBrandingContentFAQ,
-  EmployerBrandingStorytellingFAQ,
-} from '@/content/services'
+
+const FAQ_SLUG_KEYS = {
+  'what-are-explainer-videos': 'ExplainerVideos',
+  'best-explainer-videos': 'BestExplainerVideos',
+  'explainer-video-services': 'ExplainerVideosServices',
+  'top-explainer-video-companies': 'ExplainerVideosCompany',
+  'saas-explainer-videos': 'SaasExplainerVideos',
+  'b2b-explainer-videos': 'B2BExplainerVideos',
+  'custom-b2b-explainer-videos': 'CustomExplainerVideos',
+  'corporate-explainer-videos': 'CorporateExplainerVideos',
+  'ai-explainer-video-tools-trends': 'AIblogFAQ',
+  'animated-explainer-videos': 'AnimatedblogFAQ',
+  'best-animated-explainer': 'AnimatedExplainerFAQ',
+  'tech-explainer-videos': 'TechExplainerVideosFAQ',
+  product: 'ProductFAQ',
+  types: 'DifferentTypesFAQ',
+  'healthcare-marketing': 'HealthcareFAQ',
+  '3d-explainer-videos': 'ThreeDExplainerFAQ',
+  'how-to-create': 'HowCreateFAQ',
+  'whiteboard-explainer-videos': 'WhiteboardFAQ',
+  'funny-explainer-videos': 'FunnyExplainerFAQ',
+  'benefits-of-explainer-videos': 'BenefitsExplainerFAQ',
+  'explainer-videos-help-businesses': 'ExplainerVideosHelpBusinessesFAQ',
+  'how-to-make-explainer-videos': 'HowToMakeExplainerVideosFAQ',
+  'startup-explainer-videos': 'StartupExplainerVideosFAQ',
+  'customer-case-study-videos': 'CustomerCaseStudyFAQ',
+  'best-case-study-videos': 'BestCaseStudyFAQ',
+  'corporate-video-case-studies': 'CorporateCaseStudyFAQ',
+  'award-winning-case-study-videos': 'AwardWinningCaseStudyFAQ',
+  'saas-case-study-videos': 'SaasCaseStudyFAQ',
+  'marketing-case-study-videos': 'MarketingCaseStudyFAQ',
+  'case-study-video-strategy': 'CaseStudyVideosFAQ',
+  'employer-branding-strategy': 'EmployerBrandingStrategyFAQ',
+  'why-is-employer-branding-important': 'WhyIsEmployerBrandingImportantFAQ',
+  'employer-branding-framework': 'EmployerBrandingFrameworkFAQ',
+  'employer-branding-video': 'EmployerBrandingVideoFAQ',
+  'employer-branding-campaigns-2026': 'EmployerBrandingExamplesFAQ',
+  'employer-branding-companies': 'EmployerBrandingCompaniesFAQ',
+  'best-practices-to-attract-top-talent': 'EmployerBrandingBestPracticesFAQ',
+  'employer-branding-guide': 'EmployerBrandingFAQ',
+  'elements-of-employer-branding': 'ElementsEmployerBrandingFAQ',
+  'employer-branding-mistakes': 'EmployerBrandingMistakesFAQ',
+  'employer-branding-solutions': 'EmployerBrandingChallengesFAQ',
+  'b2b-employer-branding-campaigns-and-videos': 'B2BEmployerBrandingFAQ',
+  'improve-employer-branding': 'ImproveEmployerBrandingFAQ',
+  'employer-branding-content': 'EmployerBrandingContentFAQ',
+  'storytelling-for-modern-teams': 'EmployerBrandingStorytellingFAQ',
+}
 
 const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
   const blogRef = useRef()
@@ -262,55 +263,22 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
     }, 2000)
   }
 
-  const slugToFAQMap = {
-    'what-are-explainer-videos': ExplainerVideos,
-    'best-explainer-videos': BestExplainerVideos,
-    'explainer-video-services': ExplainerVideosServices,
-    'top-explainer-video-companies': ExplainerVideosCompany,
-    'saas-explainer-videos': SaasExplainerVideos,
-    'b2b-explainer-videos': B2BExplainerVideos,
-    'custom-b2b-explainer-videos': CustomExplainerVideos,
-    'corporate-explainer-videos': CorporateExplainerVideos,
-    'ai-explainer-video-tools-trends': AIblogFAQ,
-    'animated-explainer-videos': AnimatedblogFAQ,
-    'best-animated-explainer': AnimatedExplainerFAQ,
-    'tech-explainer-videos': TechExplainerVideosFAQ,
-    product: ProductFAQ,
-    types: DifferentTypesFAQ,
-    'healthcare-marketing': HealthcareFAQ,
-    '3d-explainer-videos': ThreeDExplainerFAQ,
-    'how-to-create': HowCreateFAQ,
-    'whiteboard-explainer-videos': WhiteboardFAQ,
-    'funny-explainer-videos': FunnyExplainerFAQ,
-    'benefits-of-explainer-videos': BenefitsExplainerFAQ,
-    'explainer-videos-help-businesses': ExplainerVideosHelpBusinessesFAQ,
-    'how-to-make-explainer-videos': HowToMakeExplainerVideosFAQ,
-    'startup-explainer-videos': StartupExplainerVideosFAQ,
-    'customer-case-study-videos': CustomerCaseStudyFAQ,
-    'best-case-study-videos': BestCaseStudyFAQ,
-    'corporate-video-case-studies': CorporateCaseStudyFAQ,
-    'award-winning-case-study-videos': AwardWinningCaseStudyFAQ,
-    'saas-case-study-videos': SaasCaseStudyFAQ,
-    'marketing-case-study-videos': MarketingCaseStudyFAQ,
-    'case-study-video-strategy': CaseStudyVideosFAQ,
-    'employer-branding-strategy': EmployerBrandingStrategyFAQ,
-    'why-is-employer-branding-important': WhyIsEmployerBrandingImportantFAQ,
-    'employer-branding-framework': EmployerBrandingFrameworkFAQ,
-    'employer-branding-video': EmployerBrandingVideoFAQ,
-    'employer-branding-campaigns-2026': EmployerBrandingExamplesFAQ,
-    'employer-branding-companies': EmployerBrandingCompaniesFAQ,
-    'best-practices-to-attract-top-talent': EmployerBrandingBestPracticesFAQ,
-    'employer-branding-guide': EmployerBrandingFAQ,
-    'elements-of-employer-branding': ElementsEmployerBrandingFAQ,
-    'employer-branding-mistakes': EmployerBrandingMistakesFAQ,
-    'employer-branding-solutions': EmployerBrandingChallengesFAQ,
-    'b2b-employer-branding-campaigns-and-videos': B2BEmployerBrandingFAQ,
-    'improve-employer-branding': ImproveEmployerBrandingFAQ,
-    'employer-branding-content': EmployerBrandingContentFAQ,
-    'storytelling-for-modern-teams': EmployerBrandingStorytellingFAQ,
-  }
+  const [selectedFAQ, setSelectedFAQ] = useState([])
 
-  const selectedFAQ = slugToFAQMap[article.slug] || []
+  useEffect(() => {
+    const key = FAQ_SLUG_KEYS[article.slug]
+    if (!key) {
+      setSelectedFAQ([])
+      return
+    }
+    let cancelled = false
+    import('@/content/services').then((mod) => {
+      if (!cancelled) setSelectedFAQ(mod[key] || [])
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [article.slug])
 
   return (
     <>

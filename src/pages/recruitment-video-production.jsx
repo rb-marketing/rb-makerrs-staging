@@ -50,7 +50,7 @@ const RecruitmentVideoProduction = () => {
     company: 'DARUIESTE ARIPI',
     image: {
       srcSet:
-        `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+        `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -266,7 +266,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Infosys Global Leaders: Ralf Gehrig',
       featuredImage: {
-        src: '/img/recruitment-video/ralf.png',
+        src: '/img/recruitment-video/ralf.webp',
       },
       title: 'Recruitment Video for Europe Region',
       company: {
@@ -296,25 +296,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/787820271',
-          thumbnail: '/img/recruitment-video/treebo.png',
+          thumbnail: '/img/recruitment-video/treebo.webp',
           title: 'Premium Live Action Recruitment Film',
           duration: '02:55',
         },
         {
           videolink: 'https://vimeo.com/1102448563',
-          thumbnail: '/img/recruitment-video/cactus.png',
+          thumbnail: '/img/recruitment-video/cactus.webp',
           title: 'Motion Graphics Hiring Video for Cactus',
           duration: '00:47',
         },
         {
           videolink: 'https://vimeo.com/868489633',
-          thumbnail: '/img/recruitment-video/career_site.png',
+          thumbnail: '/img/recruitment-video/career_site.webp',
           title: 'Career Portal Demo Video for Global Hiring',
           duration: '02:34',
         },
         {
           videolink: 'https://vimeo.com/1031069755',
-          thumbnail: '/img/recruitment-video/colearn.png',
+          thumbnail: '/img/recruitment-video/colearn.webp',
           title: 'Live Action Video for a Hiring Campaign',
           duration: '02:10',
         },
@@ -323,7 +323,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Hotel Superhero Recruitment  Film',
       featuredImage: {
-        src: '/img/recruitment-video/treebo.png',
+        src: '/img/recruitment-video/treebo.webp',
       },
       title: 'Premium Live Action Recruitment Film',
       company: {
@@ -352,25 +352,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1102448563',
-          thumbnail: '/img/recruitment-video/cactus.png',
+          thumbnail: '/img/recruitment-video/cactus.webp',
           title: 'Motion Graphics Hiring Video for Cactus',
           duration: '00:47',
         },
         {
           videolink: 'https://vimeo.com/868489633',
-          thumbnail: '/img/recruitment-video/career_site.png',
+          thumbnail: '/img/recruitment-video/career_site.webp',
           title: 'Career Portal Demo Video for Global Hiring',
           duration: '02:34',
         },
         {
           videolink: 'https://vimeo.com/1031069755',
-          thumbnail: '/img/recruitment-video/colearn.png',
+          thumbnail: '/img/recruitment-video/colearn.webp',
           title: 'Live Action Video for a Hiring Campaign',
           duration: '02:10',
         },
         {
           videolink: 'https://vimeo.com/1039988986',
-          thumbnail: '/img/recruitment-video/shanon_hart.png',
+          thumbnail: '/img/recruitment-video/shanon_hart.webp',
           title: 'Premium Employee Testimonial Videos',
           duration: '01:00',
         },
@@ -379,7 +379,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Top Jobs at Cactus',
       featuredImage: {
-        src: '/img/recruitment-video/cactus.png',
+        src: '/img/recruitment-video/cactus.webp',
       },
       title: 'Motion Graphics Hiring Video for Cactus',
       company: {
@@ -408,25 +408,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/868489633',
-          thumbnail: '/img/recruitment-video/career_site.png',
+          thumbnail: '/img/recruitment-video/career_site.webp',
           title: 'Career Portal Demo Video for Global Hiring',
           duration: '02:34',
         },
         {
           videolink: 'https://vimeo.com/1031069755',
-          thumbnail: '/img/recruitment-video/colearn.png',
+          thumbnail: '/img/recruitment-video/colearn.webp',
           title: 'Live Action Video for a Hiring Campaign',
           duration: '02:10',
         },
         {
           videolink: 'https://vimeo.com/1039988986',
-          thumbnail: '/img/recruitment-video/shanon_hart.png',
+          thumbnail: '/img/recruitment-video/shanon_hart.webp',
           title: 'Premium Employee Testimonial Videos',
           duration: '01:00',
         },
         {
           videolink: 'https://vimeo.com/787820894',
-          thumbnail: '/img/recruitment-video/darwinbox.png',
+          thumbnail: '/img/recruitment-video/darwinbox.webp',
           title: 'Fun Recruitment Video for SAAS Startup',
           duration: '02:47',
         },
@@ -435,7 +435,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Infosys Career Site Walkthrough',
       featuredImage: {
-        src: '/img/recruitment-video/career_site.png',
+        src: '/img/recruitment-video/career_site.webp',
       },
       title: 'Career Portal Demo Video for Global Hiring',
       company: {
@@ -464,25 +464,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1031069755',
-          thumbnail: '/img/recruitment-video/colearn.png',
+          thumbnail: '/img/recruitment-video/colearn.webp',
           title: 'Live Action Video for a Hiring Campaign',
           duration: '02:10',
         },
         {
           videolink: 'https://vimeo.com/1039988986',
-          thumbnail: '/img/recruitment-video/shanon_hart.png',
+          thumbnail: '/img/recruitment-video/shanon_hart.webp',
           title: 'Premium Employee Testimonial Videos',
           duration: '01:00',
         },
         {
           videolink: 'https://vimeo.com/787820894',
-          thumbnail: '/img/recruitment-video/darwinbox.png',
+          thumbnail: '/img/recruitment-video/darwinbox.webp',
           title: 'Fun Recruitment Video for SAAS Startup',
           duration: '02:47',
         },
         {
           videolink: 'https://vimeo.com/896417275/0ef0c5e67d',
-          thumbnail: '/img/recruitment-video/thoughtworks.png',
+          thumbnail: '/img/recruitment-video/thoughtworks.webp',
           title: 'Live Action Campus Hiring Video',
           duration: '02:25',
         },
@@ -491,7 +491,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'CoLearn Teacher’s Campaign- Yuna’s Story',
       featuredImage: {
-        src: '/img/recruitment-video/colearn.png',
+        src: '/img/recruitment-video/colearn.webp',
       },
       title: 'Live Action Video for a Hiring Campaign',
       company: {
@@ -520,25 +520,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1039988986',
-          thumbnail: '/img/recruitment-video/shanon_hart.png',
+          thumbnail: '/img/recruitment-video/shanon_hart.webp',
           title: 'Premium Employee Testimonial Videos',
           duration: '01:00',
         },
         {
           videolink: 'https://vimeo.com/787820894',
-          thumbnail: '/img/recruitment-video/darwinbox.png',
+          thumbnail: '/img/recruitment-video/darwinbox.webp',
           title: 'Fun Recruitment Video for SAAS Startup',
           duration: '02:47',
         },
         {
           videolink: 'https://vimeo.com/896417275/0ef0c5e67d',
-          thumbnail: '/img/recruitment-video/thoughtworks.png',
+          thumbnail: '/img/recruitment-video/thoughtworks.webp',
           title: 'Live Action Campus Hiring Video',
           duration: '02:25',
         },
         {
           videolink: 'https://vimeo.com/1102449047',
-          thumbnail: '/img/recruitment-video/meet_your_recruiter.png',
+          thumbnail: '/img/recruitment-video/meet_your_recruiter.webp',
           title: 'Meet the recruiters - A video series',
           duration: '01:28',
         },
@@ -547,7 +547,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Infosys Global Leaders Series - Shannon Hart',
       featuredImage: {
-        src: '/img/recruitment-video/shanon_hart.png',
+        src: '/img/recruitment-video/shanon_hart.webp',
       },
       title: 'Premium Employee Testimonial Videos',
       company: {
@@ -576,25 +576,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/787820894',
-          thumbnail: '/img/recruitment-video/darwinbox.png',
+          thumbnail: '/img/recruitment-video/darwinbox.webp',
           title: 'Fun Recruitment Video for SAAS Startup',
           duration: '02:47',
         },
         {
           videolink: 'https://vimeo.com/896417275/0ef0c5e67d',
-          thumbnail: '/img/recruitment-video/thoughtworks.png',
+          thumbnail: '/img/recruitment-video/thoughtworks.webp',
           title: 'Live Action Campus Hiring Video',
           duration: '02:25',
         },
         {
           videolink: 'https://vimeo.com/1102449047',
-          thumbnail: '/img/recruitment-video/meet_your_recruiter.png',
+          thumbnail: '/img/recruitment-video/meet_your_recruiter.webp',
           title: 'Meet the recruiters - A video series',
           duration: '01:28',
         },
         {
           videolink: 'https://vimeo.com/867137618',
-          thumbnail: '/img/recruitment-video/tata_autocomp.png',
+          thumbnail: '/img/recruitment-video/tata_autocomp.webp',
           title: 'Diversity & Inclusion in Manufacturing',
           duration: '03:02',
         },
@@ -603,7 +603,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Darwinbox Recruitment Film',
       featuredImage: {
-        src: '/img/recruitment-video/darwinbox.png',
+        src: '/img/recruitment-video/darwinbox.webp',
       },
       title: 'Fun Recruitment Video for SAAS Startup',
       company: {
@@ -631,25 +631,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/896417275/0ef0c5e67d',
-          thumbnail: '/img/recruitment-video/thoughtworks.png',
+          thumbnail: '/img/recruitment-video/thoughtworks.webp',
           title: 'Live Action Campus Hiring Video',
           duration: '02:25',
         },
         {
           videolink: 'https://vimeo.com/1102449047',
-          thumbnail: '/img/recruitment-video/meet_your_recruiter.png',
+          thumbnail: '/img/recruitment-video/meet_your_recruiter.webp',
           title: 'Meet the recruiters - A video series',
           duration: '01:28',
         },
         {
           videolink: 'https://vimeo.com/867137618',
-          thumbnail: '/img/recruitment-video/tata_autocomp.png',
+          thumbnail: '/img/recruitment-video/tata_autocomp.webp',
           title: 'Diversity & Inclusion in Manufacturing',
           duration: '03:02',
         },
         {
           videolink: 'https://vimeo.com/1042874695',
-          thumbnail: '/img/recruitment-video/ai_first_case_study.png',
+          thumbnail: '/img/recruitment-video/ai_first_case_study.webp',
           title: 'Social Media Employer Branding Campaign',
           duration: '01:16',
         },
@@ -658,7 +658,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'ThoughtWorks Campus Recruitment Film',
       featuredImage: {
-        src: '/img/recruitment-video/thoughtworks.png',
+        src: '/img/recruitment-video/thoughtworks.webp',
       },
       title: 'Live Action Campus Hiring Video',
       company: {
@@ -687,25 +687,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1102449047',
-          thumbnail: '/img/recruitment-video/meet_your_recruiter.png',
+          thumbnail: '/img/recruitment-video/meet_your_recruiter.webp',
           title: 'Meet the recruiters - A video series',
           duration: '01:28',
         },
         {
           videolink: 'https://vimeo.com/867137618',
-          thumbnail: '/img/recruitment-video/tata_autocomp.png',
+          thumbnail: '/img/recruitment-video/tata_autocomp.webp',
           title: 'Diversity & Inclusion in Manufacturing',
           duration: '03:02',
         },
         {
           videolink: 'https://vimeo.com/1042874695',
-          thumbnail: '/img/recruitment-video/ai_first_case_study.png',
+          thumbnail: '/img/recruitment-video/ai_first_case_study.webp',
           title: 'Social Media Employer Branding Campaign',
           duration: '01:16',
         },
         {
           videolink: 'https://vimeo.com/1051442842',
-          thumbnail: '/img/recruitment-video/tata_cricket_film.png',
+          thumbnail: '/img/recruitment-video/tata_cricket_film.webp',
           title: 'Rap Music Video on Employee Cricket League',
           duration: '01:52',
         },
@@ -714,7 +714,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Infosys Recruiter Film',
       featuredImage: {
-        src: '/img/recruitment-video/meet_your_recruiter.png',
+        src: '/img/recruitment-video/meet_your_recruiter.webp',
       },
       title: 'Meet the recruiters - A video series',
       company: {
@@ -743,25 +743,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/867137618',
-          thumbnail: '/img/recruitment-video/tata_autocomp.png',
+          thumbnail: '/img/recruitment-video/tata_autocomp.webp',
           title: 'Diversity & Inclusion in Manufacturing',
           duration: '03:02',
         },
         {
           videolink: 'https://vimeo.com/1042874695',
-          thumbnail: '/img/recruitment-video/ai_first_case_study.png',
+          thumbnail: '/img/recruitment-video/ai_first_case_study.webp',
           title: 'Social Media Employer Branding Campaign',
           duration: '01:16',
         },
         {
           videolink: 'https://vimeo.com/1051442842',
-          thumbnail: '/img/recruitment-video/tata_cricket_film.png',
+          thumbnail: '/img/recruitment-video/tata_cricket_film.webp',
           title: 'Rap Music Video on Employee Cricket League',
           duration: '01:52',
         },
         {
           videolink: 'https://vimeo.com/1030711146',
-          thumbnail: '/img/recruitment-video/ralf.png',
+          thumbnail: '/img/recruitment-video/ralf.webp',
           title: 'Recruitment Video for Europe Region',
           duration: '01:30',
         },
@@ -770,7 +770,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'TATA AutoComp Celebrating Women',
       featuredImage: {
-        src: '/img/recruitment-video/tata_autocomp.png',
+        src: '/img/recruitment-video/tata_autocomp.webp',
       },
       title: 'Diversity & Inclusion in Manufacturing',
       company: {
@@ -799,25 +799,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1042874695',
-          thumbnail: '/img/recruitment-video/ai_first_case_study.png',
+          thumbnail: '/img/recruitment-video/ai_first_case_study.webp',
           title: 'Social Media Employer Branding Campaign',
           duration: '01:16',
         },
         {
           videolink: 'https://vimeo.com/1051442842',
-          thumbnail: '/img/recruitment-video/tata_cricket_film.png',
+          thumbnail: '/img/recruitment-video/tata_cricket_film.webp',
           title: 'Rap Music Video on Employee Cricket League',
           duration: '01:52',
         },
         {
           videolink: 'https://vimeo.com/1030711146',
-          thumbnail: '/img/recruitment-video/ralf.png',
+          thumbnail: '/img/recruitment-video/ralf.webp',
           title: 'Recruitment Video for Europe Region',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/787820271',
-          thumbnail: '/img/recruitment-video/treebo.png',
+          thumbnail: '/img/recruitment-video/treebo.webp',
           title: 'Premium Live Action Recruitment Film',
           duration: '02:55',
         },
@@ -826,7 +826,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Infosys AI-first Case Study',
       featuredImage: {
-        src: '/img/recruitment-video/ai_first_case_study.png',
+        src: '/img/recruitment-video/ai_first_case_study.webp',
       },
       title: 'Social Media Employer Branding Campaign',
       company: {
@@ -855,25 +855,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1051442842',
-          thumbnail: '/img/recruitment-video/tata_cricket_film.png',
+          thumbnail: '/img/recruitment-video/tata_cricket_film.webp',
           title: 'Rap Music Video on Employee Cricket League',
           duration: '01:52',
         },
         {
           videolink: 'https://vimeo.com/1030711146',
-          thumbnail: '/img/recruitment-video/ralf.png',
+          thumbnail: '/img/recruitment-video/ralf.webp',
           title: 'Recruitment Video for Europe Region',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/787820271',
-          thumbnail: '/img/recruitment-video/treebo.png',
+          thumbnail: '/img/recruitment-video/treebo.webp',
           title: 'Premium Live Action Recruitment Film',
           duration: '02:55',
         },
         {
           videolink: 'https://vimeo.com/1102448563',
-          thumbnail: '/img/recruitment-video/cactus.png',
+          thumbnail: '/img/recruitment-video/cactus.webp',
           title: 'Motion Graphics Hiring Video for Cactus',
           duration: '00:47',
         },
@@ -882,7 +882,7 @@ const RecruitmentVideoProduction = () => {
     {
       slug: 'Tata Women’s Cricket League',
       featuredImage: {
-        src: '/img/recruitment-video/tata_cricket_film.png',
+        src: '/img/recruitment-video/tata_cricket_film.webp',
       },
       title: 'Rap Music Video on Employee Cricket League',
       company: {
@@ -912,25 +912,25 @@ const RecruitmentVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1030711146',
-          thumbnail: '/img/recruitment-video/ralf.png',
+          thumbnail: '/img/recruitment-video/ralf.webp',
           title: 'Recruitment Video for Europe Region',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/787820271',
-          thumbnail: '/img/recruitment-video/treebo.png',
+          thumbnail: '/img/recruitment-video/treebo.webp',
           title: 'Premium Live Action Recruitment Film',
           duration: '02:55',
         },
         {
           videolink: 'https://vimeo.com/1102448563',
-          thumbnail: '/img/recruitment-video/cactus.png',
+          thumbnail: '/img/recruitment-video/cactus.webp',
           title: 'Motion Graphics Hiring Video for Cactus',
           duration: '00:47',
         },
         {
           videolink: 'https://vimeo.com/868489633',
-          thumbnail: '/img/recruitment-video/career_site.png',
+          thumbnail: '/img/recruitment-video/career_site.webp',
           title: 'Career Portal Demo Video for Global Hiring',
           duration: '02:34',
         },
@@ -1050,7 +1050,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 1,
-      name: 'infosys-logo.jpg',
+      name: 'infosys-logo.webp',
       width: '90',
       height: '30',
       alt: 'Infosys',
@@ -1065,7 +1065,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 3,
-      name: 'pudingding.png',
+      name: 'pudingding.webp',
       width: '100',
       height: '30',
       alt: 'pudingding',
@@ -1073,7 +1073,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 4,
-      name: 'taneria.png',
+      name: 'taneria-png.webp',
       width: '132',
       height: '36',
       alt: 'taneria',
@@ -1081,7 +1081,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 5,
-      name: 'general-electric.png',
+      name: 'general-electric.webp',
       width: '200',
       height: '150',
       alt: 'general-electric',
@@ -1096,7 +1096,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 7,
-      name: 'itc.png',
+      name: 'itc.webp',
       width: '60px',
       // height: '30px',
       alt: 'itc',
@@ -1110,14 +1110,14 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 9,
-      name: 'mumbai-indians.png',
+      name: 'mumbai-indians.webp',
       width: '100px',
       // height: '40px',
       alt: 'mumbai-indians',
     },
     {
       id: 10,
-      name: 'sequoia.png',
+      name: 'sequoia.webp',
       width: '167',
       height: '52',
       alt: 'sequoia',
@@ -1131,7 +1131,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 12,
-      name: 'Tanishq.png',
+      name: 'Tanishq.webp',
       width: '80',
       height: '67',
       alt: 'Tanishq',
@@ -1152,7 +1152,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 15,
-      name: 'dara.png',
+      name: 'dara.webp',
       width: '200',
       height: '150',
       alt: 'dara',
@@ -1166,28 +1166,28 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 17,
-      name: 'exicom.png',
+      name: 'exicom.webp',
       width: '163',
       height: '44',
       alt: 'exicom',
     },
     {
       id: 18,
-      name: 'treebo.png',
+      name: 'treebo.webp',
       width: '163',
       height: '44',
       alt: 'treebo',
     },
     {
       id: 19,
-      name: 'virtusa.png',
+      name: 'virtusa.webp',
       width: '120',
       height: '44',
       alt: 'virtusa',
     },
     {
       id: 20,
-      name: 'bagmane.png',
+      name: 'bagmane.webp',
       width: '140',
       height: '44',
       alt: 'bagmane',
@@ -1201,7 +1201,7 @@ const RecruitmentVideoProduction = () => {
     },
     {
       id: 22,
-      name: 'aarki.png',
+      name: 'aarki.webp',
       width: '140',
       height: '44',
       alt: 'aarki',

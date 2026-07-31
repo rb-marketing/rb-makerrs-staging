@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Marquee } from '@/components/shared'
 import { ClientInquiryForm } from '@/components/pages/contact/ClientInquiryForm'
 import { SEO } from '@/components/shared/SEO'
-import { contactSchema } from '@/components/schema/contact-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { CollabInquiryForm } from '@/components/pages/contact/CollabInquiryForm'
@@ -134,9 +134,12 @@ const Contact = () => {
           <div>{form[activeInquiry]}</div>
         </div>
       </section>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(contactSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['contact']),
+        }}
+      />
     </>
   )
 }

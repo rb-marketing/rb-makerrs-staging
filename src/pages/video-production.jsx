@@ -1,3 +1,4 @@
+import { serviceSchemas } from '@/components/schema/services'
 import styles from '@/styles/services.module.scss'
 import {
   LineHeading,
@@ -281,7 +282,7 @@ const VideosServices = ({ setisPopupOpen }) => {
       designation: 'FOUNDER',
       company: 'DARUIESTE ARIPI',
       image: {
-        srcSet: `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+        srcSet: `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -327,7 +328,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Corporate Video Production',
       featuredImage: {
-        src: '/img/corporate-video/honasa_pre-ipo_corporate_film.png',
+        src: '/img/corporate-video/honasa_pre-ipo_corporate_film.webp',
       },
       title: 'Corporate Video Production',
       company: {
@@ -356,25 +357,25 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1084658661/b2d6c34787',
-          thumbnail: '/img/case-study-video/kia.png',
+          thumbnail: '/img/case-study-video/kia.webp',
           title: 'Live Action Case Study Video',
           duration: '02:43',
         },
         {
           videolink: 'https://vimeo.com/1078406512',
-          thumbnail: '/img/corporate-video/gordon_ritter.png',
+          thumbnail: '/img/corporate-video/gordon_ritter.webp',
           title: 'Thought Leadership Video',
           duration: '10:18',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: '2D Explainer Video',
           duration: '01:29',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live Action Explainer',
           duration: '02:05',
         },
@@ -384,7 +385,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Live Action Case Study Video',
       featuredImage: {
-        src: '/img/case-study-video/kia.png',
+        src: '/img/case-study-video/kia.webp',
       },
       title: 'Live Action Case Study Video',
       company: {
@@ -414,19 +415,19 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1078406512',
-          thumbnail: '/img/corporate-video/gordon_ritter.png',
+          thumbnail: '/img/corporate-video/gordon_ritter.webp',
           title: 'Thought Leadership Video',
           duration: '10:18',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: '2D Explainer Video',
           duration: '01:29',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live Action Explainer',
           duration: '02:05',
         },
@@ -443,7 +444,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Gordon Ritter',
       featuredImage: {
-        src: '/img/corporate-video/gordon_ritter.png',
+        src: '/img/corporate-video/gordon_ritter.webp',
       },
       title: 'Thought Leadership Video',
       company: {
@@ -472,13 +473,13 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: '2D Explainer Video',
           duration: '01:29',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live Action Explainer',
           duration: '02:05',
         },
@@ -491,7 +492,7 @@ const VideosServices = ({ setisPopupOpen }) => {
         },
         {
           videolink: 'https://vimeo.com/1051442842',
-          thumbnail: '/img/recruitment-video/tata_cricket_film.png',
+          thumbnail: '/img/recruitment-video/tata_cricket_film.webp',
           title: 'Music Video',
           duration: '01:52',
         },
@@ -501,7 +502,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: '2D Explainer Video',
       featuredImage: {
-        src: '/img/explainer-video/Multiplier.png',
+        src: '/img/explainer-video/Multiplier.webp',
       },
       title: '2D Explainer Video',
       company: {
@@ -531,25 +532,25 @@ const VideosServices = ({ setisPopupOpen }) => {
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
@@ -559,7 +560,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Live Action Explainer',
       featuredImage: {
-        src: '/img/explainer-video/vymo_sme.png',
+        src: '/img/explainer-video/vymo_sme.webp',
       },
       title: 'Live Action Explainer',
       company: {
@@ -588,26 +589,26 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/explainer-video/ai_first_employees.png',
+          thumbnail: '/img/explainer-video/ai_first_employees.webp',
           title: 'Mixed Media Explainer Video Case Study',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: 'SAAS Marketing Explainer',
           duration: '01:29',
         },
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
@@ -617,7 +618,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Interactive Video',
       featuredImage: {
-        src: '/img/explainer-video/SLB.png',
+        src: '/img/explainer-video/SLB.webp',
       },
 
       title: 'Interactive Video',
@@ -649,25 +650,25 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
         {
           videolink: 'https://vimeo.com/1092041941?share=copy',
-          thumbnail: '/img/explainer-video/wipro.png',
+          thumbnail: '/img/explainer-video/wipro.webp',
           title: 'Motion Graphics Case Study for HIMSS',
           duration: '01:50',
         },
@@ -677,7 +678,7 @@ const VideosServices = ({ setisPopupOpen }) => {
     {
       slug: 'Tata Women’s Cricket League',
       featuredImage: {
-        src: '/img/recruitment-video/tata_cricket_film.png',
+        src: '/img/recruitment-video/tata_cricket_film.webp',
       },
       title: 'Music Video',
       company: {
@@ -707,25 +708,25 @@ const VideosServices = ({ setisPopupOpen }) => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1030711146',
-          thumbnail: '/img/recruitment-video/ralf.png',
+          thumbnail: '/img/recruitment-video/ralf.webp',
           title: 'Recruitment Video for Europe Region',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/787820271',
-          thumbnail: '/img/recruitment-video/treebo.png',
+          thumbnail: '/img/recruitment-video/treebo.webp',
           title: 'Premium Live Action Recruitment Film',
           duration: '02:55',
         },
         {
           videolink: 'https://vimeo.com/1102448563',
-          thumbnail: '/img/recruitment-video/cactus.png',
+          thumbnail: '/img/recruitment-video/cactus.webp',
           title: 'Motion Graphics Hiring Video for Cactus',
           duration: '00:47',
         },
         {
           videolink: 'https://vimeo.com/868489633',
-          thumbnail: '/img/recruitment-video/career_site.png',
+          thumbnail: '/img/recruitment-video/career_site.webp',
           title: 'Career Portal Demo Video for Global Hiring',
           duration: '02:34',
         },
@@ -1169,9 +1170,12 @@ const VideosServices = ({ setisPopupOpen }) => {
            preload="none"></video>
         </div>
       </VideoModal>
-      {/* <Script id="schema" type="application/ld+json">
-        {JSON.stringify(brandCrewsSchema)}
-      </Script> */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchemas['video-production']),
+        }}
+      />
     </>
   )
 }

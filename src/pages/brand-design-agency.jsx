@@ -1,4 +1,4 @@
-import { scsThinkSchema } from '@/components/schema/scs-think-schema'
+import { serviceSchemas } from '@/components/schema/services'
 import {
   ServiceCardSection,
   ServiceHeroSection,
@@ -16,7 +16,6 @@ import {
 } from '@/content/services'
 import { strategyPosts } from '@/utils/dummy'
 import { postsMapper } from '@/utils/mapper'
-import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useEffect, useState, useRef } from 'react'
 import { Accordion } from '@/components/ui'
@@ -66,7 +65,7 @@ const Design = ({ setisPopupOpen }) => {
       designation: 'COO',
       company: 'Lillia Care',
       image: {
-        srcSet: `/img/testimonials/rinku-agarwal.png 533w, /img/testimonials/rinku-agarwal.png 1066w`,
+        srcSet: `/img/testimonials/rinku-agarwal.webp 533w, /img/testimonials/rinku-agarwal.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -85,7 +84,7 @@ const Design = ({ setisPopupOpen }) => {
       designation: 'FOUNDER & DIRECTOR',
       company: 'Maratt Group',
       image: {
-        srcSet: `/img/testimonials/kuncheria_marattukalam.jpg 533w, /img/testimonials/kuncheria_marattukalam.jpg 1066w`,
+        srcSet: `/img/testimonials/kuncheria_marattukalam.webp 533w, /img/testimonials/kuncheria_marattukalam.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -97,7 +96,7 @@ const Design = ({ setisPopupOpen }) => {
       designation: ' CO-FOUNDER',
       company: 'P.U. DINGDING',
       image: {
-        srcSet: `/img/testimonials/nakul_1.jpg 533w, /img/testimonials/nakul_1.jpg 1066w`,
+        srcSet: `/img/testimonials/nakul_1.webp 533w, /img/testimonials/nakul_1.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -445,7 +444,7 @@ const Design = ({ setisPopupOpen }) => {
       <RedbangleWaySection
         data={redbanglewayThink}
         image={{
-          src: '/img/services/design_redbangle_way.png',
+          src: '/img/services/design_redbangle_way.webp',
           alt: 'design_redbangle_way',
           width: '500',
           height: '500',
@@ -501,9 +500,12 @@ const Design = ({ setisPopupOpen }) => {
           </div>
         </div>
       </section>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(scsThinkSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchemas['brand-design-agency']),
+        }}
+      />
     </>
   )
 }

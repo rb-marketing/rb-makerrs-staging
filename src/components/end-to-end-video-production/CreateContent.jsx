@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { LineArrow } from '@/components/icons'
-import { schemaccsCreate } from '@/components/schema/ccs-create-schema'
 import {
   LineHeading,
   TrustedBrandsSection,
@@ -277,9 +276,6 @@ export default function CreateContent() {
         </div>
       </div>
 
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(schemaccsCreate)}
-      </Script>
     </>
   )
 }

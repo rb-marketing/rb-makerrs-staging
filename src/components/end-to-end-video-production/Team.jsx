@@ -1,4 +1,3 @@
-import { teamSchema } from '@/components/schema/team-schema'
 import { LineHeading, RollupNumber } from '@/components/shared'
 import { SEO } from '@/components/shared/SEO'
 import styles from '@/styles/sections/StatsSection.module.scss'
@@ -622,9 +621,6 @@ const Team = () => {
           </div>
         </div>
       )}
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(teamSchema)}
-      </Script>
     </>
   )
 }

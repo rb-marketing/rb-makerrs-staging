@@ -1,4 +1,4 @@
-import { scsThinkSchema } from '@/components/schema/scs-think-schema'
+import { serviceSchemas } from '@/components/schema/services'
 import {
   ServiceCardSection,
   ServiceHeroSection,
@@ -15,7 +15,6 @@ import {
   serviceVideos,
 } from '@/content/services'
 import { postsMapper } from '@/utils/mapper'
-import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
 import { Accordion, Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
@@ -239,7 +238,7 @@ const filteredCards = explorecards.filter(card => card.href !== router.pathname)
       key: 0,
       name: 'The Lakshmi Rebecca Show: YouTube Series on Impact Businesses',
       company: 'Lakshmi Rebecca',
-      image: '/img/works/lrs.png',
+      image: '/img/works/lrs.webp',
       alt: 'Lakshmi Rebecca Show',
       tags: ['Video Content', 'YouTube Series'],
       href: '/video-podcast/podcast-lakshmi-rebecca',
@@ -437,9 +436,12 @@ const filteredCards = explorecards.filter(card => card.href !== router.pathname)
           </div>
         </div>
       </section>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(scsThinkSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchemas['podcast-production-services']),
+        }}
+      />
     </>
   )
 }

@@ -516,7 +516,13 @@ export const Header = () => {
               <div className="py-10 max-w-[430px] flex flex-col h-full">
                 <div className="mb-10">
                   <Link href="/">
-                    <img src="/makerrs_logo.webp" alt="" className="w-[190px]" />
+                    <img
+                      src="/makerrs_logo.webp"
+                      alt=""
+                      width="190"
+                      height="45"
+                      className="w-[190px]"
+                    />
                   </Link>
                 </div>
 
@@ -677,7 +683,13 @@ export const Header = () => {
                 {/* <div className="overflow-auto nav-wrapper"> */}
                 <div className="mb-12 max-w-[136px] block md:hidden">
                   <Link href="/">
-                    <img src="/makerrs_logo.webp" alt="" className="w-[190px]" />
+                    <img
+                      src="/makerrs_logo.webp"
+                      alt=""
+                      width="190"
+                      height="45"
+                      className="w-[190px]"
+                    />
                   </Link>
                 </div>
 

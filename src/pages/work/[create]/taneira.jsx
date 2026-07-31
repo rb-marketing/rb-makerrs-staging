@@ -76,7 +76,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/taneira-thumbnail1.jpg',
+          src: '/img/case-study/taneira-thumbnail1.webp',
         },
       },
       {
@@ -88,7 +88,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/taneira-thumbnail2.jpg',
+          src: '/img/case-study/taneira-thumbnail2.webp',
         },
       },
       {
@@ -100,7 +100,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/taneira-thumbnail3.jpg',
+          src: '/img/case-study/taneira-thumbnail3.webp',
         },
       },
       {
@@ -112,7 +112,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/taneira-thumbnail4.jpg',
+          src: '/img/case-study/taneira-thumbnail4.webp',
         },
       },
       {
@@ -124,7 +124,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/taneira-thumbnail5.jpg',
+          src: '/img/case-study/taneira-thumbnail5.webp',
         },
       },
     ],

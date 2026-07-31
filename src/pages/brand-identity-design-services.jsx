@@ -268,7 +268,7 @@ const BrandIdentityDesign = () => {
       company: 'Lillia Care',
       image: {
         srcSet:
-          '/img/testimonials/rinku-agarwal.png 533w, /img/testimonials/rinku-agarwal.png 1066w',
+          '/img/testimonials/rinku-agarwal.webp 533w, /img/testimonials/rinku-agarwal.webp 1066w',
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -288,7 +288,7 @@ const BrandIdentityDesign = () => {
       company: 'Maratt Group',
       image: {
         srcSet:
-          '/img/testimonials/kuncheria_marattukalam.jpg 533w, /img/testimonials/kuncheria_marattukalam.jpg 1066w',
+          '/img/testimonials/kuncheria_marattukalam.webp 533w, /img/testimonials/kuncheria_marattukalam.webp 1066w',
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -349,7 +349,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'SLB interactive explainers',
       featuredImage: {
-        src: '/img/explainer-video/SLB.png',
+        src: '/img/explainer-video/SLB.webp',
       },
 
       title: 'Interactive Explainer for oilfield services',
@@ -380,25 +380,25 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
         {
           videolink: 'https://vimeo.com/1092041941?share=copy',
-          thumbnail: '/img/explainer-video/wipro.png',
+          thumbnail: '/img/explainer-video/wipro.webp',
           title: 'Motion Graphics Case Study for HIMSS',
           duration: '01:50',
         },
@@ -407,7 +407,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Adobe eDam',
       featuredImage: {
-        src: '/img/explainer-video/adobe.png',
+        src: '/img/explainer-video/adobe.webp',
       },
       title: 'Whiteboard Explainer Video on DAM',
       company: {
@@ -435,25 +435,25 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
         {
           videolink: 'https://vimeo.com/1092041941?share=copy',
-          thumbnail: '/img/explainer-video/wipro.png',
+          thumbnail: '/img/explainer-video/wipro.webp',
           title: 'Motion Graphics Case Study for HIMSS',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live action explainer with Motion Graphics',
           duration: '02:05',
         },
@@ -462,7 +462,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Hansel / Superbeard',
       featuredImage: {
-        src: '/img/explainer-video/Hansel.png',
+        src: '/img/explainer-video/Hansel.webp',
       },
       title: 'Live Action Explainer for SAAS product',
       company: {
@@ -491,25 +491,25 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
         {
           videolink: 'https://vimeo.com/1092041941?share=copy',
-          thumbnail: '/img/explainer-video/wipro.png',
+          thumbnail: '/img/explainer-video/wipro.webp',
           title: 'Motion Graphics Case Study for HIMSS',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live action explainer with Motion Graphics',
           duration: '02:05',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/explainer-video/ai_first_employees.png',
+          thumbnail: '/img/explainer-video/ai_first_employees.webp',
           title: 'Mixed Media Explainer Video Case Study',
           duration: '01:20',
         },
@@ -518,7 +518,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'DCMO',
       featuredImage: {
-        src: '/img/explainer-video/DCMO.png',
+        src: '/img/explainer-video/DCMO.webp',
       },
       title: 'Animated Explainer for DCMO Services',
       company: {
@@ -547,25 +547,25 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092041941?share=copy',
-          thumbnail: '/img/explainer-video/wipro.png',
+          thumbnail: '/img/explainer-video/wipro.webp',
           title: 'Motion Graphics Case Study for HIMSS',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live action explainer with Motion Graphics',
           duration: '02:05',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/explainer-video/ai_first_employees.png',
+          thumbnail: '/img/explainer-video/ai_first_employees.webp',
           title: 'Mixed Media Explainer Video Case Study',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: 'SAAS Marketing Explainer',
           duration: '01:29',
         },
@@ -575,7 +575,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Wipro Animated Case Study',
       featuredImage: {
-        src: '/img/explainer-video/wipro.png',
+        src: '/img/explainer-video/wipro.webp',
       },
       title: 'Motion Graphics Case Study for HIMSS',
       company: {
@@ -604,26 +604,26 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092039633?share=copy',
-          thumbnail: '/img/explainer-video/vymo_sme.png',
+          thumbnail: '/img/explainer-video/vymo_sme.webp',
           title: 'Live action explainer with Motion Graphics',
           duration: '02:05',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/explainer-video/ai_first_employees.png',
+          thumbnail: '/img/explainer-video/ai_first_employees.webp',
           title: 'Mixed Media Explainer Video Case Study',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: 'SAAS Marketing Explainer',
           duration: '01:29',
         },
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
@@ -632,7 +632,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Vymo SMB Explainer',
       featuredImage: {
-        src: '/img/explainer-video/vymo_sme.png',
+        src: '/img/explainer-video/vymo_sme.webp',
       },
       title: 'Live action explainer with Motion Graphics',
       company: {
@@ -661,26 +661,26 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/explainer-video/ai_first_employees.png',
+          thumbnail: '/img/explainer-video/ai_first_employees.webp',
           title: 'Mixed Media Explainer Video Case Study',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: 'SAAS Marketing Explainer',
           duration: '01:29',
         },
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
@@ -689,7 +689,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Collage style explainer - Univ Upskilling (Infosys)',
       featuredImage: {
-        src: '/img/explainer-video/ai_first_employees.png',
+        src: '/img/explainer-video/ai_first_employees.webp',
       },
       title: 'Mixed Media Explainer Video Case Study',
       company: {
@@ -715,26 +715,26 @@ const BrandIdentityDesign = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1030707001',
-          thumbnail: '/img/explainer-video/Multiplier.png',
+          thumbnail: '/img/explainer-video/Multiplier.webp',
           title: 'SAAS Marketing Explainer',
           duration: '01:29',
         },
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
@@ -743,7 +743,7 @@ const BrandIdentityDesign = () => {
     {
       slug: 'Introducing Multiplier',
       featuredImage: {
-        src: '/img/explainer-video/Multiplier.png',
+        src: '/img/explainer-video/Multiplier.webp',
       },
       title: 'SAAS Marketing Explainer',
       company: {
@@ -773,25 +773,25 @@ const BrandIdentityDesign = () => {
         {
           videolink:
             'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
-          thumbnail: '/img/explainer-video/SLB.png',
+          thumbnail: '/img/explainer-video/SLB.webp',
           title: 'Interactive Explainer for oilfield services',
           duration: '09:03',
         },
         {
           videolink: 'https://vimeo.com/1092040991?share=copy',
-          thumbnail: '/img/explainer-video/adobe.png',
+          thumbnail: '/img/explainer-video/adobe.webp',
           title: 'Whiteboard Explainer Video on DAM',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/explainer-video/Hansel.png',
+          thumbnail: '/img/explainer-video/Hansel.webp',
           title: 'Live Action Explainer for SAAS product',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1092042256?share=copy',
-          thumbnail: '/img/explainer-video/DCMO.png',
+          thumbnail: '/img/explainer-video/DCMO.webp',
           title: 'Animated Explainer for DCMO Services',
           duration: '02:20',
         },
@@ -940,7 +940,7 @@ const BrandIdentityDesign = () => {
       key: 2,
       name: 'Launching an AI-powered healthcare brand in record time',
       company: 'Lillia Care',
-      image: '/img/works/lillia_img.jpg',
+      image: '/img/works/lillia_img.webp',
       alt: 'Lillia Care',
       tags: [
         'Healthtech',
@@ -955,7 +955,7 @@ const BrandIdentityDesign = () => {
       key: 41,
       name: 'Branding for an Indulgent Dessert Café',
       company: 'P.U. Dingding',
-      image: '/img/case-study/pudingding-thumbnail.jpg',
+      image: '/img/case-study/pudingding-thumbnail.webp',
       tags: ['F&B', 'Cafe', 'Brand Identity', 'Launch Video'],
       tabs: ['b2b-brand-design-agency'],
       case_study_title: 'pu-dingding-dessert-cafe-branding',
@@ -1346,7 +1346,7 @@ const BrandIdentityDesign = () => {
             loop
             playsInline
             src="/img/services/design/brand_identity_design.mp4"
-            poster="/img/services/design/brand_identity_design_pop_thumbnail.png"
+            poster="/img/services/design/brand_identity_design_pop_thumbnail.webp"
             className="w-full hidden md:block web-vid"
             width="1920"
             height="1068"
@@ -1638,9 +1638,10 @@ const BrandIdentityDesign = () => {
            preload="none"></video>
         </div>
       </VideoModal>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(explainerVideoProductionSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(explainerVideoProductionSchema) }}
+      />
     </>
   )
 }

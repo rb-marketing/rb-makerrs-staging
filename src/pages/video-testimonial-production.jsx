@@ -203,7 +203,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Kia e-Delivery Platform Case Study',
       featuredImage: {
-        src: '/img/case-study-video/kia.png',
+        src: '/img/case-study-video/kia.webp',
       },
       title: 'Premium Live Action Case Study X Kia',
       company: {
@@ -233,26 +233,26 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1092041941',
-          thumbnail: '/img/case-study-video/stockd.png',
+          thumbnail: '/img/case-study-video/stockd.webp',
           title: 'Stockd, Wipro',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1098727880/e3f71a77f1',
-          thumbnail: '/img/case-study-video/indeed_hichki.png',
+          thumbnail: '/img/case-study-video/indeed_hichki.webp',
           title: 'Integrated movie campaign case study (Indeed Hichki)',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/1098725688/e68027e196',
-          thumbnail: '/img/case-study-video/bata_capillary.png',
+          thumbnail: '/img/case-study-video/bata_capillary.webp',
           title: 'Bata Testimonial',
           duration: '03:23',
         },
         {
           videolink:
             'https://vimeo.com/1153861064/061b34dd9d?share=copy&fl=sv&fe=ci',
-          thumbnail: '/img/case-study-video/kaavu.png',
+          thumbnail: '/img/case-study-video/kaavu.webp',
           title: 'Consumer Testimonial for an F&B Experience',
           duration: '00:35',
         },
@@ -261,7 +261,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Wipro HIMSS (Stockd)',
       featuredImage: {
-        src: '/img/case-study-video/stockd.png',
+        src: '/img/case-study-video/stockd.webp',
       },
       title: 'Motion Graphics Case Study for HIMSS',
       company: {
@@ -290,26 +290,26 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1098727880/e3f71a77f1',
-          thumbnail: '/img/case-study-video/indeed_hichki.png',
+          thumbnail: '/img/case-study-video/indeed_hichki.webp',
           title: 'Integrated movie campaign case study (Indeed Hichki)',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/1098725688/e68027e196',
-          thumbnail: '/img/case-study-video/bata_capillary.png',
+          thumbnail: '/img/case-study-video/bata_capillary.webp',
           title: 'Bata Testimonial',
           duration: '03:23',
         },
         {
           videolink:
             'https://vimeo.com/1153861064/061b34dd9d?share=copy&fl=sv&fe=ci',
-          thumbnail: '/img/case-study-video/kaavu.png',
+          thumbnail: '/img/case-study-video/kaavu.webp',
           title: 'Consumer Testimonial for an F&B Experience',
           duration: '00:35',
         },
         {
           videolink: 'https://vimeo.com/1098728642/35b24a6295',
-          thumbnail: '/img/case-study-video/baggage_case_study.png',
+          thumbnail: '/img/case-study-video/baggage_case_study.webp',
           title: 'Infosys stock footage based case study (Skywise Airbus)',
           duration: '01:48',
         },
@@ -318,7 +318,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Indeed, Hichki Campaign Film',
       featuredImage: {
-        src: '/img/case-study-video/indeed_hichki.png',
+        src: '/img/case-study-video/indeed_hichki.webp',
       },
       title: 'Integrated Movie Campaign Case Study Video',
       company: {
@@ -347,26 +347,26 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1098725688/e68027e196',
-          thumbnail: '/img/case-study-video/bata_capillary.png',
+          thumbnail: '/img/case-study-video/bata_capillary.webp',
           title: 'Bata Testimonial',
           duration: '03:23',
         },
         {
           videolink:
             'https://vimeo.com/1153861064/061b34dd9d?share=copy&fl=sv&fe=ci',
-          thumbnail: '/img/case-study-video/kaavu.png',
+          thumbnail: '/img/case-study-video/kaavu.webp',
           title: 'Consumer Testimonial for an F&B Experience',
           duration: '00:35',
         },
         {
           videolink: 'https://vimeo.com/1098728642/35b24a6295',
-          thumbnail: '/img/case-study-video/baggage_case_study.png',
+          thumbnail: '/img/case-study-video/baggage_case_study.webp',
           title: 'Infosys stock footage based case study (Skywise Airbus)',
           duration: '01:48',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/case-study-video/hansel.png',
+          thumbnail: '/img/case-study-video/hansel.webp',
           title: 'Fictionalised Case Study for SAAS',
           duration: '01:30',
         },
@@ -375,7 +375,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Capillary x Bata Testimonial Video',
       featuredImage: {
-        src: '/img/case-study-video/bata_capillary.png',
+        src: '/img/case-study-video/bata_capillary.webp',
       },
       title: 'Customer Testimonial Video in Thailand',
       company: {
@@ -405,25 +405,25 @@ const CaseStudyVideoProduction = () => {
         {
           videolink:
             'https://vimeo.com/1153861064/061b34dd9d?share=copy&fl=sv&fe=ci',
-          thumbnail: '/img/case-study-video/kaavu.png',
+          thumbnail: '/img/case-study-video/kaavu.webp',
           title: 'Consumer Testimonial for an F&B Experience',
           duration: '00:35',
         },
         {
           videolink: 'https://vimeo.com/1098728642/35b24a6295',
-          thumbnail: '/img/case-study-video/baggage_case_study.png',
+          thumbnail: '/img/case-study-video/baggage_case_study.webp',
           title: 'Infosys stock footage based case study (Skywise Airbus)',
           duration: '01:48',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/case-study-video/hansel.png',
+          thumbnail: '/img/case-study-video/hansel.webp',
           title: 'Fictionalised Case Study for SAAS',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/case-study-video/ai-first-employee.png',
+          thumbnail: '/img/case-study-video/ai-first-employee.webp',
           title: 'Collage-style case study video',
           duration: '01:20',
         },
@@ -432,7 +432,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Kaavu',
       featuredImage: {
-        src: '/img/case-study-video/kaavu.png',
+        src: '/img/case-study-video/kaavu.webp',
       },
       title: 'Consumer Testimonial for an F&B Experience',
       company: {
@@ -463,25 +463,25 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1098728642/35b24a6295',
-          thumbnail: '/img/case-study-video/baggage_case_study.png',
+          thumbnail: '/img/case-study-video/baggage_case_study.webp',
           title: 'Infosys stock footage based case study (Skywise Airbus)',
           duration: '01:48',
         },
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/case-study-video/hansel.png',
+          thumbnail: '/img/case-study-video/hansel.webp',
           title: 'Fictionalised Case Study for SAAS',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/case-study-video/ai-first-employee.png',
+          thumbnail: '/img/case-study-video/ai-first-employee.webp',
           title: 'Collage-style case study video',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1084658661/b2d6c34787',
-          thumbnail: '/img/case-study-video/kia.png',
+          thumbnail: '/img/case-study-video/kia.webp',
           title: 'Kia America',
           duration: '02:43',
         },
@@ -490,7 +490,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Baggage Case Study',
       featuredImage: {
-        src: '/img/case-study-video/baggage_case_study.png',
+        src: '/img/case-study-video/baggage_case_study.webp',
       },
       title: 'Stock-footage Case Study for IT Consulting',
       company: {
@@ -519,25 +519,25 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/867141400?share=copy',
-          thumbnail: '/img/case-study-video/hansel.png',
+          thumbnail: '/img/case-study-video/hansel.webp',
           title: 'Fictionalised Case Study for SAAS',
           duration: '01:30',
         },
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/case-study-video/ai-first-employee.png',
+          thumbnail: '/img/case-study-video/ai-first-employee.webp',
           title: 'Collage-style case study video',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1084658661/b2d6c34787',
-          thumbnail: '/img/case-study-video/kia.png',
+          thumbnail: '/img/case-study-video/kia.webp',
           title: 'Kia America',
           duration: '02:43',
         },
         {
           videolink: 'https://vimeo.com/1092041941',
-          thumbnail: '/img/case-study-video/stockd.png',
+          thumbnail: '/img/case-study-video/stockd.webp',
           title: 'Stockd, Wipro',
           duration: '01:50',
         },
@@ -546,7 +546,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'Hansel',
       featuredImage: {
-        src: '/img/case-study-video/hansel.png',
+        src: '/img/case-study-video/hansel.webp',
       },
       title: 'Fictionalised Case Study for SAAS',
       company: {
@@ -575,25 +575,25 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1042874327',
-          thumbnail: '/img/case-study-video/ai-first-employee.png',
+          thumbnail: '/img/case-study-video/ai-first-employee.webp',
           title: 'Collage-style case study video',
           duration: '01:20',
         },
         {
           videolink: 'https://vimeo.com/1084658661/b2d6c34787',
-          thumbnail: '/img/case-study-video/kia.png',
+          thumbnail: '/img/case-study-video/kia.webp',
           title: 'Kia America',
           duration: '02:43',
         },
         {
           videolink: 'https://vimeo.com/1092041941',
-          thumbnail: '/img/case-study-video/stockd.png',
+          thumbnail: '/img/case-study-video/stockd.webp',
           title: 'Stockd, Wipro',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1098727880/e3f71a77f1',
-          thumbnail: '/img/case-study-video/indeed_hichki.png',
+          thumbnail: '/img/case-study-video/indeed_hichki.webp',
           title: 'Integrated movie campaign case study (Indeed Hichki)',
           duration: '02:21',
         },
@@ -602,7 +602,7 @@ const CaseStudyVideoProduction = () => {
     {
       slug: 'AI-first Employees',
       featuredImage: {
-        src: '/img/case-study-video/ai-first-employee.png',
+        src: '/img/case-study-video/ai-first-employee.webp',
       },
       title: 'Collage-style Video Case Study',
       company: {
@@ -631,25 +631,25 @@ const CaseStudyVideoProduction = () => {
       relatedVideos: [
         {
           videolink: 'https://vimeo.com/1084658661/b2d6c34787',
-          thumbnail: '/img/case-study-video/kia.png',
+          thumbnail: '/img/case-study-video/kia.webp',
           title: 'Kia America',
           duration: '02:43',
         },
         {
           videolink: 'https://vimeo.com/1092041941',
-          thumbnail: '/img/case-study-video/stockd.png',
+          thumbnail: '/img/case-study-video/stockd.webp',
           title: 'Stockd, Wipro',
           duration: '01:50',
         },
         {
           videolink: 'https://vimeo.com/1098727880/e3f71a77f1',
-          thumbnail: '/img/case-study-video/indeed_hichki.png',
+          thumbnail: '/img/case-study-video/indeed_hichki.webp',
           title: 'Integrated movie campaign case study (Indeed Hichki)',
           duration: '02:21',
         },
         {
           videolink: 'https://vimeo.com/1098725688/e68027e196',
-          thumbnail: '/img/case-study-video/bata_capillary.png',
+          thumbnail: '/img/case-study-video/bata_capillary.webp',
           title: 'Bata Testimonial',
           duration: '03:23',
         },
@@ -768,7 +768,7 @@ const CaseStudyVideoProduction = () => {
       designation: 'FOUNDER',
       company: 'DARUIESTE ARIPI',
       image: {
-        srcSet: `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+        srcSet: `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -967,7 +967,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 1,
-      name: 'infosys-logo.jpg',
+      name: 'infosys-logo.webp',
       width: '90',
       height: '30',
       alt: 'Infosys',
@@ -982,7 +982,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 3,
-      name: 'pudingding.png',
+      name: 'pudingding.webp',
       width: '100',
       height: '30',
       alt: 'pudingding',
@@ -990,7 +990,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 4,
-      name: 'taneria.png',
+      name: 'taneria-png.webp',
       width: '132',
       height: '36',
       alt: 'taneria',
@@ -998,7 +998,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 5,
-      name: 'general-electric.png',
+      name: 'general-electric.webp',
       width: '200',
       height: '150',
       alt: 'general-electric',
@@ -1013,7 +1013,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 7,
-      name: 'itc.png',
+      name: 'itc.webp',
       width: '60px',
       // height: '30px',
       alt: 'itc',
@@ -1027,14 +1027,14 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 9,
-      name: 'mumbai-indians.png',
+      name: 'mumbai-indians.webp',
       width: '100px',
       // height: '40px',
       alt: 'mumbai-indians',
     },
     {
       id: 10,
-      name: 'sequoia.png',
+      name: 'sequoia.webp',
       width: '167',
       height: '52',
       alt: 'sequoia',
@@ -1048,7 +1048,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 12,
-      name: 'Tanishq.png',
+      name: 'Tanishq.webp',
       width: '80',
       height: '67',
       alt: 'Tanishq',
@@ -1069,7 +1069,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 15,
-      name: 'dara.png',
+      name: 'dara.webp',
       width: '200',
       height: '150',
       alt: 'dara',
@@ -1083,28 +1083,28 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 17,
-      name: 'exicom.png',
+      name: 'exicom.webp',
       width: '163',
       height: '44',
       alt: 'exicom',
     },
     {
       id: 18,
-      name: 'treebo.png',
+      name: 'treebo.webp',
       width: '163',
       height: '44',
       alt: 'treebo',
     },
     {
       id: 19,
-      name: 'virtusa.png',
+      name: 'virtusa.webp',
       width: '120',
       height: '44',
       alt: 'virtusa',
     },
     {
       id: 20,
-      name: 'bagmane.png',
+      name: 'bagmane.webp',
       width: '140',
       height: '44',
       alt: 'bagmane',
@@ -1118,7 +1118,7 @@ const CaseStudyVideoProduction = () => {
     },
     {
       id: 22,
-      name: 'aarki.png',
+      name: 'aarki.webp',
       width: '140',
       height: '44',
       alt: 'aarki',
@@ -1439,7 +1439,7 @@ const CaseStudyVideoProduction = () => {
                 loop
                 playsInline
                 src="/img/Kia-Orig.mp4"
-                poster="/img/services/videos/hero.png"
+                poster="/img/services/videos/hero.webp"
                 className="w-[100%] max-w-[100%] mt-8 block md:hidden"
                 width="1920"
                 height="1068"
@@ -1510,7 +1510,7 @@ const CaseStudyVideoProduction = () => {
             loop
             playsInline
             src="/img/Kia-Orig.mp4"
-            poster="/img/services/videos/hero.png"
+            poster="/img/services/videos/hero.webp"
             className="w-full hidden md:block web-vid"
             width="1920"
             height="1068"
@@ -1863,7 +1863,7 @@ const CaseStudyVideoProduction = () => {
             loop
             playsInline
             src="/img/services/videos/hero.mp4"
-            poster="/img/services/videos/hero.png"
+            poster="/img/services/videos/hero.webp"
             className="w-full"
             width="1920"
             height="1068"

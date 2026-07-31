@@ -9,7 +9,7 @@ import { Accordion, Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
 // import { Swiper, SwiperSlide } from 'swiper/react'
 import Script from 'next/script'
-import { collabSchemna } from '@/components/schema/collab-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import { CollabFormRecreate } from '@/components/pages/collab/CollabFormRecreate'
 import { useRouter } from 'next/router'
 
@@ -232,7 +232,7 @@ const createTestimonialData = [
     company: 'India',
     image: {
       srcSet:
-        `/img/collab/arati_bhatt.jpg 533w, /img/collab/arati_bhatt.jpg 1066w`,
+        `/img/collab/arati_bhatt.webp 533w, /img/collab/arati_bhatt.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -258,7 +258,7 @@ const createTestimonialData = [
     company: 'India',
     image: {
       srcSet:
-        `/img/collab/prince_prabjyot.jpg 533w, /img/collab/prince_prabjyot.jpg 1066w`,
+        `/img/collab/prince_prabjyot.webp 533w, /img/collab/prince_prabjyot.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -271,7 +271,7 @@ const createTestimonialData = [
     company: 'India',
     image: {
       srcSet:
-        `/img/collab/arindham_debnath.jpg 533w, /img/collab/arindham_debnath.jpg 1066w`,
+        `/img/collab/arindham_debnath.webp 533w, /img/collab/arindham_debnath.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -284,7 +284,7 @@ const createTestimonialData = [
     company: 'India',
     image: {
       srcSet:
-        `/img/collab/nithin_anil.jpg 533w, /img/collab/nithin_anil.jpg 1066w`,
+        `/img/collab/nithin_anil.webp 533w, /img/collab/nithin_anil.webp 1066w`,
       sizes: '(max-width:768px) 533px, 1066px',
     },
   }
@@ -342,7 +342,7 @@ const sliderCards = [
 const collaborators = [
      {
     id: 0,
-    imgurl: `/img/collab/arati_bhatt.jpg`,
+    imgurl: `/img/collab/arati_bhatt.webp`,
     width: '153',
     height: '34',
     alt: 'collaborator6',
@@ -382,7 +382,7 @@ const collaborators = [
   },
    {
     id: 4,
-    imgurl: `/img/collab/nithin_anil.jpg`,
+    imgurl: `/img/collab/nithin_anil.webp`,
     width: '153',
     height: '34',
     alt: 'collaborator3',
@@ -412,7 +412,7 @@ const collaborators = [
   },
     {
     id: 7,
-    imgurl: `/img/collab/prince_prabjyot.jpg`,
+    imgurl: `/img/collab/prince_prabjyot.webp`,
     width: '153',
     height: '34',
     alt: 'collaborator4',
@@ -443,7 +443,7 @@ const collaborators = [
 
  {
     id: 10,
-    imgurl: `/img/collab/arindham_debnath.jpg`,
+    imgurl: `/img/collab/arindham_debnath.webp`,
     width: '153',
     height: '34',
     alt: 'collaborator5',
@@ -621,12 +621,12 @@ const Collab = () => {
             <div className="w-full md:h-full h-auto md:w-4/12">
               <picture>
                 <source
-                  srcSet={`${process.env.NEXT_PUBLIC_HOST_URL}/img/collab/b2c_collab_page.jpg`}
+                  srcSet={`${process.env.NEXT_PUBLIC_HOST_URL}/img/collab/b2c_collab_page.webp`}
                   media="(min-width:768px)"
                 />
                 <img
                   className="overflow-hidden object-cover rounded-[6px]"
-                  src={`${process.env.NEXT_PUBLIC_HOST_URL}/img/collab/b2c_collab_page-1.jpg`}
+                  src={`${process.env.NEXT_PUBLIC_HOST_URL}/img/collab/b2c_collab_page-1.webp`}
                   alt="global collaborators"
                 />
               </picture>
@@ -817,9 +817,12 @@ const Collab = () => {
       >
         <CollabFormRecreate modalTrigger={modalTrigger} />
       </div>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(collabSchemna)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['freelance-gigs']),
+        }}
+      />
     </>
   )
 }

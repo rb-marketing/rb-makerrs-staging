@@ -1,4 +1,4 @@
-import { aboutSchema } from '@/components/schema/about-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import {
   LineHeading,
   TrustedBrandsSection,
@@ -87,7 +87,7 @@ const WhoWeAre = () => {
     {
       name: 'Lakshmi Rebecca',
       title: 'CEO, Bangalore & San Francisco',
-      img: '/img/our-team/lakshmi-rebecca.png',
+      img: '/img/our-team/lakshmi-rebecca.webp',
       content: (
         <>
           Storyteller, visionary, award-winning YouTuber and ex-model.
@@ -116,7 +116,7 @@ const WhoWeAre = () => {
     {
       name: 'Sunil Patrapati',
       title: 'CTO, Bangalore & Chennai',
-      img: '/img/our-team/sunil-patrapati.png',
+      img: '/img/our-team/sunil-patrapati.webp',
       content: (
         <>
           22 years of building technology innovations across gaming, content
@@ -144,7 +144,7 @@ const WhoWeAre = () => {
     {
       name: 'Raj Dutta',
       title: 'Consulting Creative Director, Bangalore',
-      img: '/img/our-team/raj_dutta.png',
+      img: '/img/our-team/raj_dutta.webp',
       content: (
         <>
           A creative leader and writer with 23 years in the business, Raj has
@@ -164,7 +164,7 @@ const WhoWeAre = () => {
     {
       name: 'Mandira Naidoo',
       title: 'Head of Design, Bangalore',
-      img: '/img/our-team/mandira-naidoo.png',
+      img: '/img/our-team/mandira-naidoo.webp',
       content: (
         <>
           The force behind continuous creative quality improvement. She’s always
@@ -192,7 +192,7 @@ const WhoWeAre = () => {
     {
       name: 'Ayesha Mir',
       title: 'Group Account Director, Bangalore',
-      img: '/img/our-team/ayesha-mir.png',
+      img: '/img/our-team/ayesha-mir.webp',
       content: (
         <>
           A thoughtful connector of people, clients, and growth, Ayesha brings structure, empathy, and momentum to every challenge she takes on.
@@ -213,7 +213,7 @@ const WhoWeAre = () => {
     {
       name: 'Tejasvi Mani',
       title: 'Partner - Post Production, Bangalore',
-      img: '/img/our-team/tejasvi-mani.png',
+      img: '/img/our-team/tejasvi-mani.webp',
       content: (
         <>
           A problem-solver, a quiet and confident leader, and always a learner.
@@ -240,7 +240,7 @@ const WhoWeAre = () => {
     {
       name: 'Debarti Banerjee',
       title: 'VP Production & Operations, Mumbai',
-      img: '/img/our-team/debarti-banerjee.png',
+      img: '/img/our-team/debarti-banerjee.webp',
       content: (
         <>
           Deeply passionate about organisational culture, processes and animal
@@ -275,7 +275,7 @@ const WhoWeAre = () => {
       designation: 'FOUNDER',
       company: 'DARUIESTE ARIPI',
       image: {
-        srcSet: `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+        srcSet: `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -294,7 +294,7 @@ const WhoWeAre = () => {
       designation: 'FOUNDER & DIRECTOR',
       company: 'Maratt Group',
       image: {
-        srcSet: `/img/testimonials/kuncheria_marattukalam.jpg 533w, /img/testimonials/kuncheria_marattukalam.jpg 1066w`,
+        srcSet: `/img/testimonials/kuncheria_marattukalam.webp 533w, /img/testimonials/kuncheria_marattukalam.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -350,7 +350,7 @@ const WhoWeAre = () => {
       designation: 'COO',
       company: 'Lillia Care',
       image: {
-        srcSet: `/img/testimonials/rinku-agarwal.png 533w, /img/testimonials/rinku-agarwal.png 1066w`,
+        srcSet: `/img/testimonials/rinku-agarwal.webp 533w, /img/testimonials/rinku-agarwal.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -362,7 +362,7 @@ const WhoWeAre = () => {
       designation: ' CO-FOUNDER',
       company: 'P.U. DINGDING',
       image: {
-        srcSet: `/img/testimonials/nakul_1.jpg 533w, /img/testimonials/nakul_1.jpg 1066w`,
+        srcSet: `/img/testimonials/nakul_1.webp 533w, /img/testimonials/nakul_1.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -466,7 +466,7 @@ const WhoWeAre = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img
-                  src="/img/about-us/fundemental-1.png"
+                  src="/img/about-us/fundemental-1.webp"
                   alt=""
                   className="h-[192px] md:h-auto w-full object-cover"
                 />
@@ -484,7 +484,7 @@ const WhoWeAre = () => {
               </div>
               <div className="order-1 md:order-2">
                 <img
-                  src="/img/about-us/fundemental-2.png"
+                  src="/img/about-us/fundemental-2.webp"
                   alt=""
                   className="h-[192px] md:h-auto w-full object-cover"
                 />
@@ -493,7 +493,7 @@ const WhoWeAre = () => {
             <div className="grid  md:grid-cols-2 grid-cols-1">
               <div>
                 <img
-                  src="/img/about-us/fundemental-3.png"
+                  src="/img/about-us/fundemental-3.webp"
                   alt=""
                   className="h-[192px] md:h-auto w-full object-cover"
                 />
@@ -512,7 +512,7 @@ const WhoWeAre = () => {
             <div className="grid  md:grid-cols-2 grid-cols-1">
               <div>
                 <img
-                  src="/img/about-us/fundemental-4.png"
+                  src="/img/about-us/fundemental-4.webp"
                   alt=""
                   className="h-[192px] md:h-auto w-full object-cover"
                 />
@@ -784,9 +784,12 @@ const WhoWeAre = () => {
            preload="none"></video>
         </div>
       </VideoModal>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(aboutSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['about-us']),
+        }}
+      />
     </>
   )
 }

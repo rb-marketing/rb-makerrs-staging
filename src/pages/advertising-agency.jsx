@@ -1,4 +1,4 @@
-import { scsThinkSchema } from '@/components/schema/scs-think-schema'
+import { serviceSchemas } from '@/components/schema/services'
 import {
   ServiceCardSection,
   ServiceHeroSection,
@@ -17,7 +17,6 @@ import {
 } from '@/content/services'
 import { campaignPosts, explorecards } from '@/utils/dummy'
 import { postsMapper } from '@/utils/mapper'
-import Script from 'next/script'
 import { useEffect, useRef, useState } from 'react'
 import { Accordion, Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
@@ -58,7 +57,7 @@ const Campaign = ({ setisPopupOpen }) => {
       company: 'L74 CRAFT CIDERS',
       image: {
         srcSet:
-          '/img/testimonials/kalp-patel_ayush-patel-1.jpg 533w, /img/testimonials/kalp-patel_ayush-patel-1.jpg 1066w',
+          '/img/testimonials/kalp-patel_ayush-patel-1.webp 533w, /img/testimonials/kalp-patel_ayush-patel-1.webp 1066w',
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -419,9 +418,12 @@ const Campaign = ({ setisPopupOpen }) => {
           </div>
         </div>
       </section>
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(scsThinkSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchemas['advertising-agency']),
+        }}
+      />
     </>
   )
 }

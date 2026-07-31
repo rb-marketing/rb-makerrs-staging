@@ -2,28 +2,28 @@ import React, { useState, useEffect, useRef } from 'react'
 import Script from 'next/script'
 import { LineHeading, SEO, Testimonials, VideoModal } from '@/components/shared'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { csrSchema } from '@/components/schema/csr-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import { SliderButton } from '@/components/ui'
 
 const catList = [
   {
     id: 0,
-    thumbnail: '/img/impact/cat_1.png',
+    thumbnail: '/img/impact/cat_1-png.webp',
     alt: 'Cat',
   },
   {
     id: 1,
-    thumbnail: '/img/impact/cat_3.png',
+    thumbnail: '/img/impact/cat_3.webp',
     alt: 'Cat',
   },
   {
     id: 2,
-    thumbnail: '/img/impact/cat_4.png',
+    thumbnail: '/img/impact/cat_4.webp',
     alt: 'Cat',
   },
   {
     id: 3,
-    thumbnail: '/img/impact/cat_5.png',
+    thumbnail: '/img/impact/cat_5.webp',
     alt: 'Cat',
   },
 ]
@@ -130,7 +130,7 @@ const TestimonialData = [
     company: 'Enable India',
     image: {
       srcSet:
-        '/img/testimonials/Shanti.jpg 533w, /img/testimonials/Shanti.jpg 1066w',
+        '/img/testimonials/Shanti.webp 533w, /img/testimonials/Shanti.webp 1066w',
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -143,7 +143,7 @@ const TestimonialData = [
     company: 'Afforestt',
     image: {
       srcSet:
-        '/img/testimonials/shubhendu-sharma.jpg 533w, /img/testimonials/shubhendu-sharma.jpg 1066w',
+        '/img/testimonials/shubhendu-sharma.webp 533w, /img/testimonials/shubhendu-sharma.webp 1066w',
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -155,7 +155,7 @@ const TestimonialData = [
     company: 'Frontier Markets',
     image: {
       srcSet:
-        '/img/testimonials/Ajaita-Shah.jpg 533w, /img/testimonials/Ajaita-Shah.jpg 1066w',
+        '/img/testimonials/Ajaita-Shah.webp 533w, /img/testimonials/Ajaita-Shah.webp 1066w',
       sizes: '(max-width:768px) 533px, 1066px',
     },
   },
@@ -337,9 +337,12 @@ export const CSRPage = () => {
         />
       </section>
 
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(csrSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['impact']),
+        }}
+      />
     </>
   )
 }

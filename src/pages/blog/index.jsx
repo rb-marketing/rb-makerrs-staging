@@ -6,7 +6,7 @@ import { ArrowButton, Button } from '@/components/ui'
 import React, { useState, useEffect } from 'react'
 import { getBlogs } from '@/utils/graphql'
 import { formatBlogPosts } from '@/utils/formate'
-import { blogSchema } from '@/components/schema/blog-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import Script from 'next/script'
 import Image from 'next/image'
 import { Dropdown } from '@/components/dropdown/dropdown'
@@ -296,9 +296,12 @@ const Articles = ({
       </section>
 
       <GetUpdates />
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(blogSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['blog']),
+        }}
+      />
     </>
   )
 }

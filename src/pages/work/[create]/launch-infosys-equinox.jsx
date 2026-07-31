@@ -63,7 +63,7 @@ export const similarPostsData = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys_equinox_logo.png',
+    src: '/img/logos/infosys_equinox_logo.webp',
     width: '150',
     height: '90',
   },

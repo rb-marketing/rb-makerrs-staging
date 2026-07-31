@@ -12,7 +12,7 @@ import { CommercialSection } from '@/components/pages/work'
 
 const pageData = {
     logo: {
-        src: '/img/logos/infosys-logo.png',
+        src: '/img/logos/infosys-logo-png.webp',
         width: '150',
         height: '70',
     },

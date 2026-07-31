@@ -54,7 +54,7 @@ export const ServiceHeroSection = ({
             loop
             playsInline
             src="/img/home/showreel-1.mp4"
-            poster="/img/home/home-video-p.png"
+            poster="/img/home/home-video-p.webp"
             {...video}
             className="w-[150%] max-w-full md:w-full md:translate-x-0"
           ></video>

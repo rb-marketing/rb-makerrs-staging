@@ -1,3 +1,4 @@
+import { serviceSchemas } from '@/components/schema/services'
 import styles from '@/styles/services.module.scss'
 import {
   Marquee,
@@ -13,7 +14,6 @@ import { Button } from '@/components/ui'
 
 import { similarPosts, explorecards } from '@/utils/dummy'
 import { postsMapper } from '@/utils/mapper'
-import Script from 'next/script'
 import { Accordion } from '@/components/ui'
 import { Testimonials, WorkListHeroSection } from '@/components/shared'
 import { useState } from 'react'
@@ -217,7 +217,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
       designation: 'FOUNDER',
       company: 'DARUIESTE ARIPI',
       image: {
-        srcSet: `/img/testimonials/alina-patrahau.jpg 533w, /img/testimonials/alina-patrahau.jpg 1066w`,
+        srcSet: `/img/testimonials/alina-patrahau.webp 533w, /img/testimonials/alina-patrahau.webp 1066w`,
         sizes: '(max-width:768px) 533px, 1066px',
       },
     },
@@ -295,7 +295,7 @@ const CrewsServices = ({ setisPopupOpen }) => {
         'Local Booking & Permissions',
         'Footage Transfer: via hard disk or cloud',
       ],
-      img: '/img/services/crew/single-camera-shoot.jpg',
+      img: '/img/services/crew/single-camera-shoot.webp',
     },
     {
       title: <>Multi-camera&nbsp;</>,
@@ -329,33 +329,33 @@ const CrewsServices = ({ setisPopupOpen }) => {
   const cards = [
     {
       id: 0,
-      imgsrc: '/img/services/crew/card1.png',
+      imgsrc: '/img/services/crew/card1.webp',
       title: 'Commercial Shoot',
     },
     {
       id: 1,
-      imgsrc: '/img/services/crew/card2.png',
+      imgsrc: '/img/services/crew/card2.webp',
       title: 'Corporate Film',
     },
 
     {
       id: 2,
-      imgsrc: '/img/services/crew/card3.png',
+      imgsrc: '/img/services/crew/card3.webp',
       title: 'Case Study Video',
     },
     {
       id: 3,
-      imgsrc: '/img/services/crew/card4.png',
+      imgsrc: '/img/services/crew/card4.webp',
       title: 'Testimonial Video Shoot',
     },
     {
       id: 4,
-      imgsrc: '/img/services/crew/card5.png',
+      imgsrc: '/img/services/crew/card5.webp',
       title: 'Podcast Production',
     },
     {
       id: 5,
-      imgsrc: '/img/services/crew/card6.png',
+      imgsrc: '/img/services/crew/card6.webp',
       title: 'Drone footage',
     },
     {
@@ -365,17 +365,17 @@ const CrewsServices = ({ setisPopupOpen }) => {
     },
     {
       id: 7,
-      imgsrc: '/img/services/crew/card8.png',
+      imgsrc: '/img/services/crew/card8.webp',
       title: 'Event Shoot',
     },
     {
       id: 8,
-      imgsrc: '/img/services/crew/card9.png',
+      imgsrc: '/img/services/crew/card9.webp',
       title: 'Multi-location Shoot',
     },
     {
       id: 9,
-      imgsrc: '/img/services/crew/card10.png',
+      imgsrc: '/img/services/crew/card10.webp',
       title: 'Product Shoot',
     },
     {
@@ -390,12 +390,12 @@ const CrewsServices = ({ setisPopupOpen }) => {
     },
     {
       id: 12,
-      imgsrc: '/img/services/crew/card13.png',
+      imgsrc: '/img/services/crew/card13.webp',
       title: 'Documentary Footage',
     },
     {
       id: 13,
-      imgsrc: '/img/services/crew/card14.png',
+      imgsrc: '/img/services/crew/card14.webp',
       title: 'BTS Footage',
     },
   ]
@@ -760,9 +760,12 @@ const CrewsServices = ({ setisPopupOpen }) => {
            preload="none"></video>
         </div>
       </VideoModal>
-      {/* <Script id="schema" type="application/ld+json">
-        {JSON.stringify(brandCrewsSchema)}
-      </Script> */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchemas['video-production-near-me']),
+        }}
+      />
     </>
   )
 }

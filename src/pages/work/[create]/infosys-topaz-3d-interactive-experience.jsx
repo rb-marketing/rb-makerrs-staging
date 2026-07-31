@@ -25,7 +25,7 @@ export const similarPostsData = [
     key: 1,
     name: 'Launching an AI-powered healthcare brand in record time',
     company: 'Lillia Care',
-    image: '/img/works/lillia_img.jpg',
+    image: '/img/works/lillia_img.webp',
     alt: 'Lillia Care',
     tags: ['Healthtech', 'Brand Identity', 'Website Design', 'Website Development'],
     href: '/work/b2b-brand-design-agency/lillia-care-brand-launch',
@@ -47,7 +47,7 @@ export const similarPostsData = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys-logo.png',
+    src: '/img/logos/infosys-logo-png.webp',
     width: '150',
     height: '70',
   },

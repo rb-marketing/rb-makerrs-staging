@@ -13,14 +13,14 @@ import { useRouter } from 'next/router'
 import { VideoGallery } from '@/components/pages/work/VideoGallery'
 const pageData = {
     logo: {
-        src: '/img/logos/lsr_sign.png',
+        src: '/img/logos/lsr_sign.webp',
 
         alt: 'sign',
         width: '300',
         height: '200',
     },
     specifyWidth: 'md:!w-[200px] !w-[180px]',
-    image: '/img/case-study/lrs-banner.png',
+    image: '/img/case-study/lrs-banner.webp',
     tags: ['Video Content', 'YouTube Series'],
     commercials: {
         type: 'projectLoom',
@@ -34,7 +34,7 @@ const pageData = {
                 thumbnail: {
                     width: 446,
                     height: 265,
-                    src: '/img/case-study/indiahikes.png',
+                    src: '/img/case-study/indiahikes.webp',
                 },
             },
             {
@@ -46,7 +46,7 @@ const pageData = {
                 thumbnail: {
                     width: 446,
                     height: 265,
-                    src: '/img/case-study/industree.png',
+                    src: '/img/case-study/industree.webp',
                 },
             },
             {
@@ -58,7 +58,7 @@ const pageData = {
                 thumbnail: {
                     width: 446,
                     height: 265,
-                    src: '/img/case-study/kalki.png',
+                    src: '/img/case-study/kalki.webp',
                 },
             },
             {
@@ -70,7 +70,7 @@ const pageData = {
                 thumbnail: {
                     width: 446,
                     height: 265,
-                    src: '/img/case-study/frontier-markets.png',
+                    src: '/img/case-study/frontier-markets.webp',
                 },
             },
             {
@@ -82,7 +82,7 @@ const pageData = {
                 thumbnail: {
                     width: 446,
                     height: 265,
-                    src: '/img/case-study/garv.png',
+                    src: '/img/case-study/garv.webp',
                 },
             },
         ],
@@ -226,7 +226,7 @@ function LRSTalkShow() {
                             <div className="flex items-center space-x-4">
                                 <div className="flex flex-col items-center">
                                   <img
-                                        src="/img/case-study/lrs-img-2.png"
+                                        src="/img/case-study/lrs-img-2.webp"
                                         alt="lrs"
                                         className="md:h-[28rem] md:w-[41rem]"
                                     />
@@ -235,7 +235,7 @@ function LRSTalkShow() {
                                 <div className="flex flex-col items-center">
                                   
                                         <img
-                                        src="/img/case-study/lrs-img-1.png"
+                                        src="/img/case-study/lrs-img-1.webp"
                                         alt="lrs"
                                         className="md:h-[28rem] md:w-[41rem]"
                                     />
@@ -282,7 +282,7 @@ function LRSTalkShow() {
 
                         <div className="relative aspect-auto md:aspect-auto w-[calc(100%_+_2rem)]  md:w-[78.7rem] -mx-4 md:mx-0 md:mt-[64px]">
                             <img
-                                src="/img/case-study/lrs-img-3.png"
+                                src="/img/case-study/lrs-img-3.webp"
                                 alt="lrs"
                                 srcset=""
                             />

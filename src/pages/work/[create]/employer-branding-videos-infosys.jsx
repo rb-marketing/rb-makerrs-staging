@@ -81,7 +81,7 @@ export const stats = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys-logo.png',
+    src: '/img/logos/infosys-logo-png.webp',
     width: '150',
     height: '70',
   },
@@ -91,7 +91,7 @@ const pageData = {
     'Global Video Production',
     'Interview Video',
   ],
-  image: '/img/case-study/infosys_eb_banner_visual.png',
+  image: '/img/case-study/infosys_eb_banner_visual.webp',
   commercials: {
     title: (
       <>
@@ -112,7 +112,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/brittney_salama.jpg',
+          src: '/img/case-study/brittney_salama.webp',
         },
       },
       {
@@ -124,7 +124,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/shannon_hart.jpg',
+          src: '/img/case-study/shannon_hart.webp',
         },
       },
       {
@@ -136,7 +136,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/irina_kose.jpg',
+          src: '/img/case-study/irina_kose.webp',
         },
       },
       {
@@ -148,7 +148,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/frederic_beynel.jpg',
+          src: '/img/case-study/frederic_beynel.webp',
         },
       },
       {
@@ -160,7 +160,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/luiz_marques.jpg',
+          src: '/img/case-study/luiz_marques.webp',
         },
       },
       {
@@ -172,7 +172,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/natasza_kopczynska.jpg',
+          src: '/img/case-study/natasza_kopczynska.webp',
         },
       },
       {
@@ -184,7 +184,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/vinash_mistry.jpg',
+          src: '/img/case-study/vinash_mistry.webp',
         },
       },
       {
@@ -196,7 +196,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/weyinmi_slim.jpg',
+          src: '/img/case-study/weyinmi_slim.webp',
         },
       },
       {
@@ -208,7 +208,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/charlotte_ferriday.jpg',
+          src: '/img/case-study/charlotte_ferriday.webp',
         },
       },
       {
@@ -220,7 +220,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/umar_tariq.jpg',
+          src: '/img/case-study/umar_tariq.webp',
         },
       },
       {
@@ -232,7 +232,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/juhi_dubey.jpg',
+          src: '/img/case-study/juhi_dubey.webp',
         },
       },
       {
@@ -244,7 +244,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/michelle_roman.jpg',
+          src: '/img/case-study/michelle_roman.webp',
         },
       },
       {
@@ -256,7 +256,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/antonia_rizakou.jpg',
+          src: '/img/case-study/antonia_rizakou.webp',
         },
       },
       {
@@ -268,7 +268,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/tamara_certain.jpg',
+          src: '/img/case-study/tamara_certain.webp',
         },
       },
       {
@@ -280,7 +280,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/osagioduwa_evbuomwan.jpg',
+          src: '/img/case-study/osagioduwa_evbuomwan.webp',
         },
       },
       {
@@ -292,7 +292,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/sandra_jackson.jpg',
+          src: '/img/case-study/sandra_jackson.webp',
         },
       },
     ],
@@ -386,7 +386,7 @@ function InfosysWb() {
               <div className="flex items-center space-x-4">
                 <div className="flex flex-col items-center">
                   <img
-                    src="/img/case-study/approch_img_1.png"
+                    src="/img/case-study/approch_img_1.webp"
                     alt="Puding GIF 2"
                     className="md:h-[28rem] md:w-[41rem]"
                   />
@@ -394,7 +394,7 @@ function InfosysWb() {
 
                 <div className="flex flex-col items-center">
                   <img
-                    src="/img/case-study/approch_img_2.png"
+                    src="/img/case-study/approch_img_2.webp"
                     alt="Puding GIF"
                     className="md:h-[28rem] md:w-[41rem]"
                   />
@@ -435,27 +435,27 @@ function InfosysWb() {
             <div className="mt-6 w-full ">
               <div className="flex justify-center  hidden md:block md:flex  space-x-4 md:w-[78.7rem] ">
                 <img
-                  src="/img/case-study/creative_excution_1.png"
+                  src="/img/case-study/creative_excution_1.webp"
                   alt="creative_excution 1"
                   className="w-[15rem] object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src="/img/case-study/creative_excution_5.png"
+                  src="/img/case-study/creative_excution_5.webp"
                   alt="creative_excution 2"
                   className="w-[15rem] object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src="/img/case-study/creative_excution_3.png"
+                  src="/img/case-study/creative_excution_3.webp"
                   alt="creative_excution 3"
                   className="w-[15rem] object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src="/img/case-study/creative_excution_2.png"
+                  src="/img/case-study/creative_excution_2.webp"
                   alt="creative_excution 4"
                   className="w-[15rem] object-cover rounded-lg shadow-md"
                 />
                 <img
-                  src="/img/case-study/creative_excution_4.png"
+                  src="/img/case-study/creative_excution_4.webp"
                   alt="creative_excution 5"
                   className="w-[15rem] object-cover rounded-lg shadow-md"
                 />
@@ -466,7 +466,7 @@ function InfosysWb() {
                     alt=""
                     loading="lazy"
                     className=" w-[15rem] object-cover rounded-lg shadow-md"
-                    src="/img/case-study/creative_excution_3.png"
+                    src="/img/case-study/creative_excution_3.webp"
                   />
                 </div>
                 <div className="row-start-1 row-span-2 md:col-start-3 md:row-span-3 relative">
@@ -474,7 +474,7 @@ function InfosysWb() {
                     alt=""
                     loading="lazy"
                     className=" w-[15rem] object-cover rounded-lg shadow-md"
-                    src="/img/case-study/creative_excution_1.png"
+                    src="/img/case-study/creative_excution_1.webp"
                   />
                 </div>
                 <div className="row-start-4 md:row-start-3 col-start-2 row-span-2  relative">
@@ -482,7 +482,7 @@ function InfosysWb() {
                     alt=""
                     loading="lazy"
                     className=" w-[15rem] object-cover rounded-lg shadow-md"
-                    src="/img/case-study/creative_excution_2.png"
+                    src="/img/case-study/creative_excution_2.webp"
                   />
                 </div>
                 <div className="row-start-5 row-span-2 col-start-1 relative">
@@ -490,7 +490,7 @@ function InfosysWb() {
                     alt=""
                     loading="lazy"
                     className=" w-[15rem] object-cover rounded-lg shadow-md"
-                    src="/img/case-study/creative_excution_4.png"
+                    src="/img/case-study/creative_excution_4.webp"
                   />
                 </div>
                 <div className="row-start-2 col-start-2 md:col-start-4  relative row-span-2 md:-translate-y-6">
@@ -498,7 +498,7 @@ function InfosysWb() {
                     alt=""
                     loading="lazy"
                     className=" w-[15rem] object-cover rounded-lg shadow-md"
-                    src="/img/case-study/creative_excution_5.png"
+                    src="/img/case-study/creative_excution_5.webp"
                   />
                 </div>
               </div>

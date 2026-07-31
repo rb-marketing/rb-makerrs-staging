@@ -56,7 +56,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 4,
-      name: 'taneria.png',
+      name: 'taneria-png.webp',
       width: '132',
       height: '36',
       alt: 'taneria',
@@ -64,7 +64,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 5,
-      name: 'general-electric.png',
+      name: 'general-electric.webp',
       width: '200',
       height: '150',
       alt: 'general-electric',
@@ -79,7 +79,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 7,
-      name: 'itc.png',
+      name: 'itc.webp',
       width: '60px',
       // height: '30px',
       alt: 'itc',
@@ -100,7 +100,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 10,
-      name: 'sequoia.png',
+      name: 'sequoia.webp',
       width: '167',
       height: '52',
       alt: 'sequoia',
@@ -114,7 +114,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 12,
-      name: 'Tanishq.png',
+      name: 'Tanishq.webp',
       width: '80',
       height: '67',
       alt: 'Tanishq',
@@ -135,7 +135,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 15,
-      name: 'dara.png',
+      name: 'dara.webp',
       width: '200',
       height: '150',
       alt: 'dara',
@@ -163,14 +163,14 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 19,
-      name: 'virtusa.png',
+      name: 'virtusa.webp',
       width: '120',
       height: '44',
       alt: 'virtusa',
     },
     {
       id: 20,
-      name: 'bagmane.png',
+      name: 'bagmane.webp',
       width: '140',
       height: '44',
       alt: 'bagmane',
@@ -184,7 +184,7 @@ const LandPage = ({playWorks , articles}) => {
     },
     {
       id: 22,
-      name: 'aarki.png',
+      name: 'aarki.webp',
       width: '140',
       height: '44',
       alt: 'aarki',
@@ -883,5 +883,6 @@ export async function getStaticProps() {
       playWorks,
       articles: articleResult?.data?.posts?.nodes?.map(formateBlogPostFunc) ?? [],
     },
+    revalidate: 3600,
   }
 }

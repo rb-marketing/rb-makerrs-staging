@@ -1,4 +1,4 @@
-import { aboutSchema } from '@/components/schema/about-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import {
   RedbangleWaySection,
   RollupNumber,
@@ -174,7 +174,7 @@ export const TechnologyPlatform = () => {
     key: 'clients',
     label: 'For Clients',
     title: 'OUR PLATFORM FOR CLIENTS',
-    image: { src: '/img/services/for_clients.png' },
+    image: { src: '/img/services/for_clients.webp' },
     content:
       'Manage briefs, projects and assets in one place.',
     steps: [
@@ -192,7 +192,7 @@ export const TechnologyPlatform = () => {
     key: 'collaborators',
     label: 'For Collaborators',
     title: 'OUR PLATFORM FOR COLLABORATORS',
-    image: { src: '/img/services/for_collaborators.png' },
+    image: { src: '/img/services/for_collaborators.webp' },
     content:
       'Workflows designed for freelancers and specialised studios.',
     steps: [
@@ -210,7 +210,7 @@ export const TechnologyPlatform = () => {
     key: 'forUs',
     label: 'For Us',
     title: 'OUR PLATFORM FOR US',
-    image: { src: '/img/services/for_us.png' },
+    image: { src: '/img/services/for_us.webp' },
     content:
       'A platform for our creative agency and collaborative.',
     steps: [
@@ -273,7 +273,7 @@ export const TechnologyPlatform = () => {
             loop
             playsInline
             src="img/technology/hero.mp4"
-            poster="/img/who-we-are/rb_cloud_platform_thumbnail.png"
+            poster="/img/who-we-are/rb_cloud_platform_thumbnail.webp"
             className="web-vid w-full h-full object-cover relative"
            preload="none"></video>
         </div>
@@ -284,7 +284,7 @@ export const TechnologyPlatform = () => {
           loop
           playsInline
           src="img/technology/hero.mp4"
-          poster="/img/who-we-are/rb_cloud_platform_thumbnail.png"
+          poster="/img/who-we-are/rb_cloud_platform_thumbnail.webp"
           className="block md:hidden w-full h-full object-cover"
          preload="none"></video>
       </div>
@@ -490,9 +490,12 @@ export const TechnologyPlatform = () => {
         </div>
       </VideoModal>
 
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(aboutSchema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['creative-cloud-technology']),
+        }}
+      />
     </>
   )
 }

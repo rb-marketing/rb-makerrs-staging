@@ -11,7 +11,7 @@ import {
 import { ContentPostCard } from '@/components/shared/Cards/ContentPostCard'
 import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
-import { aboutSchema } from '@/components/schema/about-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import { WorkDropdown } from '@/components/dropdown/work-dropdown'
 import workPageOrder from '@/utils/workOrder'
 
@@ -334,7 +334,7 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
                     <ContentPostCard
                       href={`/${post?.workDetails?.url}/${post.case_study_title}`}
                       page="work"
-                      priority={idx < 3}
+                      priority={idx < 3 && post.isLocalImage}
                       {...post}
                     />
                   </div>
@@ -443,8 +443,10 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
-      ></script>
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['work']),
+        }}
+      />
     </>
   )
 }

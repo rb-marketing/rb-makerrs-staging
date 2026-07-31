@@ -68,7 +68,7 @@ export const similarPostsData = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys-logo.jpg',
+    src: '/img/logos/infosys-logo.webp',
     width: '180',
     height: '105',
   },
@@ -100,7 +100,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_1.jpg',
+          src: '/img/case-study/infosys_eb_1.webp',
         },
       },
       {
@@ -112,7 +112,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_2.jpg',
+          src: '/img/case-study/infosys_eb_2.webp',
         },
       },
       {
@@ -124,7 +124,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_3.jpg',
+          src: '/img/case-study/infosys_eb_3.webp',
         },
       },
       {
@@ -136,7 +136,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_4.jpg',
+          src: '/img/case-study/infosys_eb_4.webp',
         },
       },
       {
@@ -148,7 +148,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_5.jpg',
+          src: '/img/case-study/infosys_eb_5.webp',
         },
       },
       {
@@ -160,7 +160,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_6.jpg',
+          src: '/img/case-study/infosys_eb_6.webp',
         },
       },
       {
@@ -172,7 +172,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_7.jpg',
+          src: '/img/case-study/infosys_eb_7.webp',
         },
       },
       {
@@ -184,7 +184,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_8.jpg',
+          src: '/img/case-study/infosys_eb_8.webp',
         },
       },
       {
@@ -196,7 +196,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_9.jpg',
+          src: '/img/case-study/infosys_eb_9.webp',
         },
       },
       {
@@ -208,7 +208,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_10.jpg',
+          src: '/img/case-study/infosys_eb_10.webp',
         },
       },
       {
@@ -220,7 +220,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_11.jpg',
+          src: '/img/case-study/infosys_eb_11.webp',
         },
       },
       {
@@ -232,7 +232,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_12.jpg',
+          src: '/img/case-study/infosys_eb_12.webp',
         },
       },
       {
@@ -244,7 +244,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_13.jpg',
+          src: '/img/case-study/infosys_eb_13.webp',
         },
       },
       {
@@ -256,7 +256,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_14.jpg',
+          src: '/img/case-study/infosys_eb_14.webp',
         },
       },
       {
@@ -268,7 +268,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_15.jpg',
+          src: '/img/case-study/infosys_eb_15.webp',
         },
       },
       {
@@ -280,7 +280,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/infosys_eb_16.jpg',
+          src: '/img/case-study/infosys_eb_16.webp',
         },
       },
     ],

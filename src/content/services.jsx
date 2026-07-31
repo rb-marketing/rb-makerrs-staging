@@ -535,24 +535,24 @@ export const aboutServices = [
     id: 0,
     title: 'B2B Global Services',
     desc: 'End–to-end creative solutions for global B2B enterprises.',
-    img: '/img/who-we-are/B2B.jpg',
-    imgmweb: '/img/who-we-are/B2B.jpg',
+    img: '/img/who-we-are/B2B.webp',
+    imgmweb: '/img/who-we-are/B2B.webp',
     alt: 'B2B Global',
   },
   {
     id: 1,
     title: 'B2C India Services',
     desc: 'Brand Content solutions for consumer brands in India.',
-    img: '/img/who-we-are/B2C.jpg',
-    imgmweb: '/img/who-we-are/B2C.jpg',
+    img: '/img/who-we-are/B2C-jpg.webp',
+    imgmweb: '/img/who-we-are/B2C-jpg.webp',
     alt: 'B2C India',
   },
   // {
   //   id: 2,
   //   title: 'AI Products',
   //   desc: 'Artificial intelligence products that amplify brand communications.',
-  //   img: '/img/who-we-are/AI.jpg',
-  //   imgmweb: '/img/who-we-are/AI.jpg',
+  //   img: '/img/who-we-are/AI.webp',
+  //   imgmweb: '/img/who-we-are/AI.webp',
   //   alt: 'AI Products',
   //   href: '#',
   // },
@@ -756,13 +756,13 @@ export const serviceVideos = {
   get_design: {
     video: {
       src: '/img/services/service_get_design.mp4',
-      poster: '/img/services/design/design_video.png',
+      poster: '/img/services/design/design_video.webp',
       width: '1440',
       height: '810',
     },
     fullVideo: {
       src: '/img/services/service_get_design.mp4',
-      poster: '/img/services/design/design_video.png',
+      poster: '/img/services/design/design_video.webp',
       width: '1920',
       height: '1080',
     },
@@ -770,13 +770,13 @@ export const serviceVideos = {
   get_videos: {
     video: {
       src: '/img/services/videos/hero.mp4',
-      poster: '/img/services/videos/hero.png',
+      poster: '/img/services/videos/hero.webp',
       width: '1440',
       height: '810',
     },
     fullVideo: {
       src: '/img/services/videos/hero.mp4',
-      poster: '/img/services/videos/hero.png',
+      poster: '/img/services/videos/hero.webp',
       width: '1920',
       height: '1080',
     },
@@ -784,13 +784,13 @@ export const serviceVideos = {
    get_podcast: {
     video: {
       src: '/img/services/service_get_podcast.mp4',
-      poster: '/img/services/podcast/hero-poster.png',
+      poster: '/img/services/podcast/hero-poster.webp',
       width: '1440',
       height: '810',
     },
     fullVideo: {
       src: '/img/services/service_get_podcast.mp4',
-      poster: '/img/services/podcast/hero-poster.png',
+      poster: '/img/services/podcast/hero-poster.webp',
       width: '1920',
       height: '1080',
     },
@@ -798,13 +798,13 @@ export const serviceVideos = {
   get_campaign: {
     video: {
       src: '/img/services/campaign/hero.mp4',
-      poster: '/img/services/campaign/hero.png',
+      poster: '/img/services/campaign/hero.webp',
       width: '1440',
       height: '810',
     },
     fullVideo: {
       src: '/img/services/campaign/hero.mp4',
-      poster: '/img/services/campaign/hero.png',
+      poster: '/img/services/campaign/hero.webp',
       width: '1920',
       height: '1080',
     },

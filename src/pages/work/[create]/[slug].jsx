@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
 import { formatPlayPosts } from '@/utils/formate'
 import { CommercialSection } from '@/components/pages/work'
+import { buildVideoSchema } from '@/components/schema/case-study-videos'
 
 const HERO_VIDEOS = {
   'my11circle-digital-ad-film': {
@@ -29,7 +30,7 @@ const LOGO_WIDTHS = {
   'csr-video-infosys-street-child': {
     desktop: 150,
     mobile: 150,
-    src: '/img/logos/infosys-logo.jpg',
+    src: '/img/logos/infosys-logo.webp',
   },
   'interactive-explainer-slb': {
     desktop: 150,
@@ -39,7 +40,7 @@ const LOGO_WIDTHS = {
   'exicom-ev-charger-rebrand': {
     desktop: 150,
     mobile: 150,
-    src: '/img/logos/exicom_logo.png',
+    src: '/img/logos/exicom_logo.webp',
   },
   'tata-inclusion-auto-comp': {
     desktop: 150,
@@ -208,6 +209,7 @@ const ArticleSingle = ({ article }) => {
     }
   }, [])
   const seoUrl = `https://www.makerrs.com${router.asPath}`
+  const videoSchema = buildVideoSchema(router.query.slug)
 
   return (
     <>
@@ -280,6 +282,12 @@ const ArticleSingle = ({ article }) => {
       {PRESS_DATA[router.query.slug] && (
         <PressSection
           {...PRESS_DATA[router.query.slug]}
+        />
+      )}
+      {videoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
         />
       )}
     </>

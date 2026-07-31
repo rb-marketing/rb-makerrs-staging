@@ -4,6 +4,7 @@ import { ReactLenis } from 'lenis/react'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { Layout, WebsiteLayout } from '@/components/Layout'
+import { organizationSchema } from '@/components/schema/organization'
 import { AppContext } from '@/context'
 import { allowedParams } from '../hooks'
 import PopupSubscribeForm from '@/components/Layout/PopupSubscribeForm'
@@ -85,8 +86,16 @@ export default function App({ Component, pageProps }) {
   }, [])
   return (
     <>
+      {/* Site-wide Organization + WebSite graph. Plain <script> rather than
+          next/script so it is present in the server-rendered HTML. Page-level
+          schema references this entity by @id — never redeclares it. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
       {/* <Head>
-        
+
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-WVV0NLBNQL"

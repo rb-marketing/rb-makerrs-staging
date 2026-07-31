@@ -65,11 +65,18 @@ export const formatPlayPosts = (works = []) =>
       workJson = {}
     }
 
+    // Local manifest images are pre-compressed WebP; the WordPress fallback is a
+    // full-size original served as-is (<Image> runs unoptimized here because
+    // /_next/image isn't available on Netlify). Callers use isLocalImage to avoid
+    // preloading the heavy remote fallback — see work.jsx.
+    const localImage = workImageManifest[w.slug]
+
     return {
       key: index,
       name: w.title || "",
       company: w?.companies?.nodes?.length ? w?.companies?.nodes[0].name : null,
-      image: workImageManifest[w.slug] || w?.featuredImage?.node?.sourceUrl || "",
+      image: localImage || w?.featuredImage?.node?.sourceUrl || "",
+      isLocalImage: Boolean(localImage),
       alt: w?.featuredImage?.alt || w.title || "",
       tabs: w?.tags?.nodes?.map(tag => tag.name) || [],
       tags: w?.categories?.nodes?.map(cat => cat.name) || [],

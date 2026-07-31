@@ -46,7 +46,7 @@ export const similarPostsData = [
 
 const pageData = {
   logo: {
-    src: '/img/logos/mumbai-indians.png',
+    src: '/img/logos/mumbai-indians.webp',
     width: '150',
     height: '90',
   },

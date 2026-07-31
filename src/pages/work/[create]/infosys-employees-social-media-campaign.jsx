@@ -47,7 +47,7 @@ tags: ['Ed-tech', 'Digital Campaign', 'Marketing Video', 'Product Launch Video']
 
 const pageData = {
   logo: {
-    src: '/img/logos/infosys-logo.jpg',
+    src: '/img/logos/infosys-logo.webp',
     width: '150',
     height: '105',
   },
@@ -80,7 +80,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/food_procurement.jpg',
+          src: '/img/case-study/food_procurement.webp',
         },
       },
       {
@@ -92,7 +92,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/financial_services.jpg',
+          src: '/img/case-study/financial_services.webp',
         },
       },
       {
@@ -104,7 +104,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/fashion_retail.jpg',
+          src: '/img/case-study/fashion_retail.webp',
         },
       },
       {
@@ -116,7 +116,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/education_and_learning.jpg',
+          src: '/img/case-study/education_and_learning.webp',
         },
       },
       {
@@ -128,7 +128,7 @@ const pageData = {
         thumbnail: {
           width: 446,
           height: 265,
-          src: '/img/case-study/beauty_and_cosmetics.jpg',
+          src: '/img/case-study/beauty_and_cosmetics.webp',
         },
       }
     ],

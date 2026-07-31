@@ -3,7 +3,7 @@ import { LineArrow } from '@/components/icons'
 import { LineHeading, Marquee, SEO, RollupNumber } from '@/components/shared'
 import { Button } from '@/components/ui'
 import { useFilterObserver } from '@/hooks'
-import { schemaCareer } from '@/components/schema/career-schema'
+import { pageSchemas } from '@/components/schema/pages'
 import Script from 'next/script'
 import axios from 'axios'
 import statsStyles from '@/styles/sections/StatsSection.module.scss'
@@ -704,9 +704,12 @@ const Career = () => {
         </div>
       </div>
 
-      <Script id="schema" type="application/ld+json">
-        {JSON.stringify(schemaCareer)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchemas['careers']),
+        }}
+      />
     </div>
   )
 }
