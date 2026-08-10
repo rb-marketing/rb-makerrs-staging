@@ -22,6 +22,14 @@ const getCountryFromCookie = () => {
   return match ? match[1] : null
 }
 
+// Some case studies are India-only on one tab but still Global-visible on
+// another (see workOverrides.js) — tabRegions carries that per-tab override,
+// falling back to the post-level region when no tab-specific one is set.
+const isHiddenByRegion = (post, tab, country) => {
+  const region = post?.workDetails?.tabRegions?.[tab] ?? post?.workDetails?.region
+  return Boolean(region?.length && country && !region.includes(country))
+}
+
 const caseStudyTags = [
   {
     name: 'Featured',
@@ -216,7 +224,7 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
   const filteredPosts = _posts
     .filter((post) => {
       // 1️⃣ Region filter
-      if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
+      if (isHiddenByRegion(post, selectedTag, country)) {
         return false
       }
 
@@ -386,7 +394,7 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
               // Tag selected → count safely
               const total = _posts.filter((post) => {
                 // region filter
-                if (post?.workDetails?.region?.length && country && !post?.workDetails?.region.includes(country)) {
+                if (isHiddenByRegion(post, selectedTag, country)) {
                   return false
                 }
 

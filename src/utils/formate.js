@@ -3,6 +3,7 @@ import {
   getReadTime
 } from './readTime'
 import workImageManifest from './workImageManifest.json'
+import { workVisibilityOverrides } from './workOverrides'
 const BLOG_DATE_FORMATE = 'MMM DD, YYYY'
 const DATE_FORMATE = 'DD/MM/YYYY'
 /**
@@ -54,6 +55,69 @@ export const formatWpImage = (image) => ({
 //     featuredImage: formatWpImage(w?.featuredImage?.node),
 // workDetails: JSON.parse(w?.workDetails?.workJson ?? "[]")
 //   }))
+const TAB_LABELS = {
+  featured: 'Featured',
+  design: 'Design',
+  videos: 'Videos',
+  campaign: 'Campaign',
+}
+
+// The four tabs the visibility sheet governs. Ordering within each is tiered
+// so the sheet always wins: sheet-numbered entries sort by their real number,
+// sheet-listed-but-blank entries sort next, and any case study the sheet
+// never mentions — still appearing purely because of its own pre-existing
+// WordPress tab_order — sorts last, below every sheet-covered entry.
+const SHEET_TABS = ['featured', 'design', 'videos', 'campaign']
+const DOC_BLANK_TIER = 100000
+const WP_ONLY_TIER_BASE = 1000000
+
+// Applies the manually-curated India/Global visibility + ordering sheet on top
+// of (or in place of, if WP data is missing/malformed) the CMS-driven fields.
+//
+// A case study's region is normally whole-post (one `region` array), but some
+// entries are India-only on one tab while still Global-visible on another
+// (e.g. removed from Global Featured but kept on Global Design) — tab_order
+// alone can't express that, so tabRegions carries a per-tab region override
+// that the /work page filter consults ahead of the post-level `region`.
+const applyVisibilityOverride = (slug, tabs, workJson) => {
+  const override = workVisibilityOverrides[slug]
+
+  let nextTabs = tabs
+  const nextTabOrder = { ...workJson.tab_order }
+  const tabRegions = {}
+
+  if (override) {
+    for (const [tabKey, cfg] of Object.entries(override.tabs)) {
+      const label = TAB_LABELS[tabKey]
+      const hasTab = nextTabs.some(t => t.toLowerCase() === tabKey)
+
+      if (cfg.show) {
+        if (!hasTab) nextTabs = [...nextTabs, label]
+        // No order given in the sheet → rank after every sheet-numbered
+        // entry in this tab, not wherever a stale WP tab_order would put it.
+        nextTabOrder[tabKey] = cfg.order != null ? cfg.order : DOC_BLANK_TIER
+        tabRegions[tabKey] = cfg.region ?? override.region
+      } else if (hasTab) {
+        nextTabs = nextTabs.filter(t => t.toLowerCase() !== tabKey)
+      }
+    }
+  }
+
+  // Case studies the sheet never mentions for a given tab still render there
+  // (untouched, per the sheet's scope) but must rank below every sheet-driven
+  // entry, so push any of their own pre-existing WP tab_order into the lowest tier.
+  for (const tabKey of SHEET_TABS) {
+    if (override?.tabs?.[tabKey]) continue
+    if (!nextTabs.some(t => t.toLowerCase() === tabKey)) continue
+    if (nextTabOrder[tabKey] != null) nextTabOrder[tabKey] += WP_ONLY_TIER_BASE
+  }
+
+  return {
+    tabs: nextTabs,
+    workJson: { ...workJson, region: override?.region ?? workJson.region, tab_order: nextTabOrder, tabRegions },
+  }
+}
+
 export const formatPlayPosts = (works = []) =>
   works.map((w, index) => {
 
@@ -64,6 +128,9 @@ export const formatPlayPosts = (works = []) =>
     } catch (e) {
       workJson = {}
     }
+
+    const rawTabs = w?.tags?.nodes?.map(tag => tag.name) || []
+    const { tabs, workJson: finalWorkJson } = applyVisibilityOverride(w.slug, rawTabs, workJson)
 
     // Local manifest images are pre-compressed WebP; the WordPress fallback is a
     // full-size original served as-is (<Image> runs unoptimized here because
@@ -78,10 +145,10 @@ export const formatPlayPosts = (works = []) =>
       image: localImage || w?.featuredImage?.node?.sourceUrl || "",
       isLocalImage: Boolean(localImage),
       alt: w?.featuredImage?.alt || w.title || "",
-      tabs: w?.tags?.nodes?.map(tag => tag.name) || [],
+      tabs,
       tags: w?.categories?.nodes?.map(cat => cat.name) || [],
       case_study_title: w.slug,
-      workDetails: workJson,
+      workDetails: finalWorkJson,
       logo: w?.workDetails?.logo?.sourceUrl || "",
       banner: w?.workDetails?.banner?.sourceUrl || "",
       seo_title: w?.workDetails?.seoTitle || "",
