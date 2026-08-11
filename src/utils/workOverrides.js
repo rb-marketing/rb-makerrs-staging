@@ -1,4 +1,4 @@
-// Generated from "Case Studies Visibility - Sheet1.csv" (2026-08-10).
+// Generated from "Case Studies Visibility - Sheet1 (1).csv" (2026-08-10) + Slack follow-ups from Aaisha Singhal (AbisPro/Thelagram/Multiplier-Cobalt swap).
 // Overrides WP tag membership, tab_order, and region per case study slug so the
 // /work page reflects the sheet without depending on WordPress ACF edits.
 //
@@ -31,21 +31,20 @@ export const workVisibilityOverrides = {
       campaign: { show: true, order: 3 },
     },
   },
-  // Global Leaders: a Hiring Campaign
-  'infosys-global-employer-brand': {
+  // Gordon Ritter on the Future of Software
+  'thought-leadership-vymo-gordon-ritter': {
     region: [],
     tabs: {
-      featured: { show: true, order: 7 },
-      videos: { show: true, order: 15 },
-      campaign: { show: true, order: 1 },
+      featured: { show: true, order: 2 },
+      videos: { show: true, order: 2 },
     },
   },
-  // Action-packed launch film for Redmi Buds 6
-  'xiaomi-buds': {
-    region: ["IN"],
+  // Launching an AI-powered healthcare brand in record time
+  'lillia-care-brand-launch': {
+    region: [],
     tabs: {
-      featured: { show: true },
-      campaign: { show: true },
+      featured: { show: true, order: 3 },
+      design: { show: true, order: 1 },
     },
   },
   // Never sweat the first game Campaign Films
@@ -64,12 +63,87 @@ export const workVisibilityOverrides = {
       campaign: { show: true },
     },
   },
-  // Launching an AI-powered healthcare brand in record time
-  'lillia-care-brand-launch': {
+  // Sales Digitisation Campaign – Interactive Explainer
+  'interactive-explainer-slb': {
     region: [],
     tabs: {
-      featured: { show: true, order: 3 },
-      design: { show: true, order: 1 },
+      featured: { show: true, order: 4 },
+      videos: { show: true, order: 7 },
+    },
+  },
+  // Cancer Care Non Profit Film, Romania
+  'dara-explainer-video': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 5 },
+      videos: { show: true, order: 16 },
+    },
+  },
+  // Campaign Explainer Video for HRM SAAS product
+  'multiplier-explainer-video': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 6 },
+      videos: { show: true, order: 5 },
+    },
+  },
+  // Exicom Brand Refresh: Choose Smart. Charge Smart.
+  'exicom-ev-charger-rebrand': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 7 },
+      design: { show: true, order: 2 },
+    },
+  },
+  // Global Leaders: a Hiring Campaign
+  'infosys-global-employer-brand': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 8 },
+      videos: { show: true, order: 15 },
+      campaign: { show: true, order: 1 },
+    },
+  },
+  // Powering education in war-torn Ukraine, with Street Child
+  'csr-video-infosys-street-child': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 9 },
+      videos: { show: true, order: 19 },
+    },
+  },
+  // Crafting a Unified Employer Brand Across Continents
+  'global-employer-branding': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 10 },
+      videos: { show: true, order: 6 },
+      campaign: { show: true, order: 7 },
+    },
+  },
+  // Immersive 3D Walkthrough for Infosys Topaz
+  '3d-interactive-experience-infosys-topaz': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 11 },
+      design: { show: true, order: 5 },
+      videos: { show: true, order: 12 },
+    },
+  },
+  // Crafting a Symbol of Success in Hospitality
+  'medalio-hotel-brand-identity': {
+    region: [],
+    tabs: {
+      featured: { show: true, order: 12 },
+      design: { show: true, order: 3 },
+    },
+  },
+  // Action-packed launch film for Redmi Buds 6
+  'xiaomi-buds': {
+    region: ["IN"],
+    tabs: {
+      featured: { show: true },
+      campaign: { show: true },
     },
   },
   // Branding and Launch Campaign for a Dessert Cafe
@@ -80,70 +154,13 @@ export const workVisibilityOverrides = {
       campaign: { show: true },
     },
   },
-  // Cancer Care Non Profit Film, Romania
-  'dara-explainer-video': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 6 },
-      videos: { show: true, order: 16 },
-    },
-  },
-  // Crafting a Symbol of Success in Hospitality
-  'medalio-hotel-brand-identity': {
-    region: [],
-    tabs: {
-      featured: { show: true },
-      design: { show: true, order: 3 },
-    },
-  },
-  // Powering education in war-torn Ukraine, with Street Child
-  'csr-video-infosys-street-child': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 8 },
-      videos: { show: true, order: 19 },
-    },
-  },
-  // Sales Digitisation Campaign – Interactive Explainer
-  'interactive-explainer-slb': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 4 },
-      videos: { show: true, order: 7 },
-    },
-  },
-  // Exicom Brand Refresh: Choose Smart. Charge Smart.
-  'exicom-ev-charger-rebrand': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 6 },
-      design: { show: true, order: 2 },
-    },
-  },
-  // Gordon Ritter on the Future of Software
-  'thought-leadership-vymo-gordon-ritter': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 2 },
-      videos: { show: true, order: 2 },
-    },
-  },
   // Augmented Reality that brought the automobile alive
   'bajaj-pulsar-augmented-reality': {
     region: ["IN"],
     tabs: {
       featured: { show: true },
-      design: { show: true, order: 7, region: [] },
+      design: { show: true, order: 9, region: [] },
       campaign: { show: true },
-    },
-  },
-  // Immersive 3D Walkthrough for Infosys Topaz
-  '3d-interactive-experience-infosys-topaz': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 10 },
-      design: { show: true, order: 5 },
-      videos: { show: true, order: 12 },
     },
   },
   // Transforming relationships for SME banks in U.S.A
@@ -155,43 +172,12 @@ export const workVisibilityOverrides = {
       campaign: { show: true, order: 2, region: [] },
     },
   },
-  // Crafting a Unified Employer Brand Across Continents
-  'global-employer-branding': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 9 },
-      videos: { show: true, order: 6 },
-      campaign: { show: true, order: 7 },
-    },
-  },
-  // Campaign Explainer Video for HRM SAAS product
-  'multiplier-explainer-video': {
-    region: [],
-    tabs: {
-      featured: { show: true, order: 5 },
-      videos: { show: true, order: 9 },
-    },
-  },
   // AI-Powered Campaign That Inspires Employees To Imagine Their Best Selves
   'employee-wellbeing-ai-experience': {
     region: ["IN"],
     tabs: {
       featured: { show: true },
       campaign: { show: true },
-    },
-  },
-  // Branding for an Indulgent Dessert Café
-  'pu-dingding-cafe': {
-    region: [],
-    tabs: {
-      design: { show: true, order: 7 },
-    },
-  },
-  // Nationwide Activation Celebrating Customer Obsession
-  'axis-bank-activation-campaign': {
-    region: [],
-    tabs: {
-      design: { show: true, order: 9 },
     },
   },
   // Social Media Campaign: Meet the AI-First Employees
@@ -203,33 +189,47 @@ export const workVisibilityOverrides = {
       campaign: { show: true, order: 5 },
     },
   },
-  // Launching a Sports Brand logo with a 3D Billboard
-  '3d-logo-animation-mumbai-indians': {
-    region: ["IN"],
-    tabs: {
-      design: { show: true },
-      videos: { show: true },
-    },
-  },
-  // A Design Gallery on Sustainability
-  'infosys-sustainability-gallery': {
+  // ABIS Pro Brand Identity: Goodness. Guaranteed.
+  'abis-pro-meats': {
     region: [],
     tabs: {
-      design: { show: true, order: 8 },
+      design: { show: true, order: 6 },
     },
   },
   // Office Branding for Biocon’s Global Headquarters
   'biocon-office-branding': {
     region: [],
     tabs: {
-      design: { show: true, order: 6 },
+      design: { show: true, order: 7 },
     },
   },
-  // ABIS Pro Brand Identity: Goodness. Guaranteed.
-  'abis-pro-meats': {
+  // Branding for an Indulgent Dessert Café
+  'pu-dingding-cafe': {
+    region: [],
+    tabs: {
+      design: { show: true, order: 8 },
+    },
+  },
+  // A Design Gallery on Sustainability
+  'infosys-sustainability-gallery': {
+    region: [],
+    tabs: {
+      design: { show: true, order: 10 },
+    },
+  },
+  // Nationwide Activation Celebrating Customer Obsession
+  'axis-bank-activation-campaign': {
+    region: [],
+    tabs: {
+      design: { show: true, order: 11 },
+    },
+  },
+  // Launching a Sports Brand logo with a 3D Billboard
+  '3d-logo-animation-mumbai-indians': {
     region: ["IN"],
     tabs: {
       design: { show: true },
+      videos: { show: true },
     },
   },
   // HIRING STEM EDUCATORS FOR INDONESIA
@@ -257,7 +257,7 @@ export const workVisibilityOverrides = {
   'abstract-animation-video-infosys-cobalt-launch': {
     region: [],
     tabs: {
-      videos: { show: true, order: 5 },
+      videos: { show: true, order: 9 },
     },
   },
   // How Hansel Helps Brands Boost Conversions
@@ -554,6 +554,13 @@ export const workVisibilityOverrides = {
     region: ["IN"],
     tabs: {
       campaign: { show: true },
+    },
+  },
+  // Branding for a Desi Street Food Restaurant
+  'thelagram-restaurant': {
+    region: ["IN"],
+    tabs: {
+      design: { show: true },
     },
   },
 }
