@@ -390,17 +390,21 @@ query getFeaturedPlayWorks($tags:[String]) {
     }
   )
 
-export const getLatestArticle = () =>
-  getWpQuery(`
+// Curated for the homepage blog section (not literally "latest" — client asked
+// for these 3 specific posts, in this order) — see HOMEPAGE_ARTICLE_SLUGS.
+const HOMEPAGE_ARTICLE_SLUGS = ['podcast-strategy', 'winning-brand-strategy', 'corporate-video-case-studies']
+
+export const getLatestArticle = async () => {
+  const result = await getWpQuery(`
   query getAllBlogs{
-    posts(first:3, where: {orderby: {field: DATE, order: DESC}}){
+    posts(where: {nameIn: ${JSON.stringify(HOMEPAGE_ARTICLE_SLUGS)}}){
       nodes{
         slug
         title
         date
         excerpt
-        author {  
-          ${AUTHOR_QUERY}  
+        author {
+          ${AUTHOR_QUERY}
         }
         featuredImage {
           ${FEATURED_IMAGE_QUERY}
@@ -412,3 +416,13 @@ export const getLatestArticle = () =>
     }
   }
   `)
+
+  // WPGraphQL's nameIn doesn't preserve input order — re-sort to match
+  // HOMEPAGE_ARTICLE_SLUGS so the section renders in the order requested.
+  const nodes = result?.data?.posts?.nodes
+  if (nodes) {
+    nodes.sort((a, b) => HOMEPAGE_ARTICLE_SLUGS.indexOf(a.slug) - HOMEPAGE_ARTICLE_SLUGS.indexOf(b.slug))
+  }
+
+  return result
+}
