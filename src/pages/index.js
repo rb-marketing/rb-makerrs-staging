@@ -200,8 +200,8 @@ const LandPage = ({playWorks , articles}) => {
       },
       text: (
         <span className="md:max-w-[188px]">
-          count <br />
-          of brands
+          brands <br />
+          partnered with
         </span>
       ),
     },
@@ -217,7 +217,7 @@ const LandPage = ({playWorks , articles}) => {
       },
       text: (
         <>
-          video <br />numbers
+          videos <br />and campaigns
         </>
       ),
     },
