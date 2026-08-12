@@ -65,6 +65,56 @@
 }
 
 
+// Separator between two stats in <StatsSection>'s single-row (lg+) layout.
+// It is a real flex item rather than a pseudo-element on the stat: giving it
+// flex-grow makes every gap in the row identical, so the 1px rule painted at
+// its centre always sits exactly midway between the two stats it separates,
+// whatever their caption widths are. `.statline` above stays untouched — the
+// landing pages render their own stat markup against it.
+// max-width caps how far apart the stats drift on wide screens, so the row
+// stays a readable group ending short of the container edge (matching the
+// other case studies' stat rows) instead of stretching edge to edge.
+.divider {
+  flex: 1 1 0;
+  align-self: center;
+  position: relative;
+  min-width: 64px;
+  max-width: 150px;
+  height: 40px;
+
+  &::before {
+    @apply bg-rb-cotton-seed;
+
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+  }
+}
+
+// Same separator for the tablet (md → lg) 2-column grid, where the real
+// `.divider` elements are display:none. Both grid columns are equal width and
+// their content is left-aligned, so half of the 64px column gap centres it.
+.gridline {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    position: relative;
+
+    &::after {
+      @apply bg-rb-cotton-seed;
+
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 40px;
+      top: 50%;
+      right: -32px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 .statlinecorporate {
   &::after {
     @apply bg-rb-cotton-seed;

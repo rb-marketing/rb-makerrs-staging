@@ -1,6 +1,12 @@
 .root {
   display: inline-flex;
-  @apply flex-wrap xl:flex-nowrap;
+  // RollupNumber.jsx always adds a `flex-nowrap` utility class to this same
+  // element, but it was silently losing to this module's own `flex-wrap`
+  // rule depending on CSS injection order — the value+suffix pair (e.g.
+  // "20 days") would wrap onto two lines below the xl breakpoint even though
+  // every call site already opts into no-wrap. Matching that intent here
+  // instead of fighting it removes the conflict regardless of load order.
+  @apply flex-nowrap;
   &[data-init='false'] {
     opacity: 0;
   }

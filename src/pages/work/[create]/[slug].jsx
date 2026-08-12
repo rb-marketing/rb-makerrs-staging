@@ -248,9 +248,12 @@ const ArticleSingle = ({ article }) => {
             tag={workJsonObj?.stats_title}
             className="mt-6 md:mt-20"
             data={stats}
+            // Evenly-distributed row is opt-in for this case study only; the
+            // other stat sections stay on the original layout.
+            evenRow={router.query.slug === 'case-study-videos-infosys-wsj'}
             gridClassName={
               router.query.slug === 'case-study-videos-infosys-wsj'
-                ? 'md:right-2'
+                ? ''
                 : router.query.slug === 'global-employer-branding'
                   ? 'md:right-[2em]'
                   : 'md:right-[4em]'
