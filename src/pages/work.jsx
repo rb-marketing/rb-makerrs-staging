@@ -30,6 +30,19 @@ const isHiddenByRegion = (post, tab, country) => {
   return Boolean(region?.length && country && !region.includes(country))
 }
 
+// India and Global sort independently: Global follows the sheet's numbered
+// "Order of Appearance" column, while India follows the sheet's literal
+// top-to-bottom row order (numbered and unordered rows interleaved exactly
+// as they appear) — two different sequences for the same tab, so India
+// visitors read from indiaTabOrder instead of tab_order.
+const getTabOrder = (post, tab, country) => {
+  if (country === 'IN') {
+    const indiaOrder = post?.workDetails?.indiaTabOrder?.[tab]
+    if (indiaOrder != null) return indiaOrder
+  }
+  return post?.workDetails?.tab_order?.[tab] ?? Number.MAX_SAFE_INTEGER
+}
+
 const caseStudyTags = [
   {
     name: 'Featured',
@@ -250,8 +263,8 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
     .sort((a, b) => {
       if (!selectedTag) return 0;
 
-      const orderA = a.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
-      const orderB = b.workDetails?.tab_order?.[selectedTag] ?? Number.MAX_SAFE_INTEGER;
+      const orderA = getTabOrder(a, selectedTag, country);
+      const orderB = getTabOrder(b, selectedTag, country);
 
       return orderA - orderB;
     })

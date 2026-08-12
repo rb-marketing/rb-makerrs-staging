@@ -84,6 +84,7 @@ const applyVisibilityOverride = (slug, tabs, workJson) => {
 
   let nextTabs = tabs
   const nextTabOrder = { ...workJson.tab_order }
+  const nextIndiaTabOrder = {}
   const tabRegions = {}
 
   if (override) {
@@ -96,6 +97,9 @@ const applyVisibilityOverride = (slug, tabs, workJson) => {
         // No order given in the sheet → rank after every sheet-numbered
         // entry in this tab, not wherever a stale WP tab_order would put it.
         nextTabOrder[tabKey] = cfg.order != null ? cfg.order : DOC_BLANK_TIER
+        // India ordering is independent of Global — it follows the sheet's
+        // literal row sequence, not the "Order of Appearance" numbers.
+        if (cfg.indiaOrder != null) nextIndiaTabOrder[tabKey] = cfg.indiaOrder
         tabRegions[tabKey] = cfg.region ?? override.region
       } else if (hasTab) {
         nextTabs = nextTabs.filter(t => t.toLowerCase() !== tabKey)
@@ -114,7 +118,13 @@ const applyVisibilityOverride = (slug, tabs, workJson) => {
 
   return {
     tabs: nextTabs,
-    workJson: { ...workJson, region: override?.region ?? workJson.region, tab_order: nextTabOrder, tabRegions },
+    workJson: {
+      ...workJson,
+      region: override?.region ?? workJson.region,
+      tab_order: nextTabOrder,
+      indiaTabOrder: nextIndiaTabOrder,
+      tabRegions,
+    },
   }
 }
 
