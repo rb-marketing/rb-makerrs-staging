@@ -21,20 +21,29 @@ node {
 }    
 `
 
+// WPGraphQL for ACF v2 turned image fields into connections, so logo/banner
+// resolve to AcfMediaItemConnectionEdge and the media lives under `node`.
+// Asking for the old flat shape makes the WHOLE query fail validation — WP
+// answers 200 with {errors:[...]} and no data, which silently emptied
+// getStaticPaths and 404'd every case study. Read these via acfMedia().
 const WORK_DETAILS_QUERY = `
   workJson
   logo {
-    sourceUrl
-    mediaDetails {
-      width
-      height
+    node {
+      sourceUrl
+      mediaDetails {
+        width
+        height
+      }
     }
   }
   banner {
-    sourceUrl
-    mediaDetails {
-      width
-      height
+    node {
+      sourceUrl
+      mediaDetails {
+        width
+        height
+      }
     }
   }
   seoTitle
@@ -139,11 +148,18 @@ categories {
 tags {
   ${TAXANOMY_QUERY}
 }
-blog_additional_data {
+blogAdditionalData {
   seoDesc
   seoTitle
 }
 `
+
+// A build fans ~75 case study queries at WordPress at once, and detail queries
+// have been measured at 5s+ under that concurrency — close enough to the old
+// 10s abort that builds routinely lost a random subset of pages. Every loss
+// used to become a permanent 404, so give WP room and retry before giving up.
+const WP_TIMEOUT_MS = 30000
+const WP_MAX_RETRIES = 2
 
 const getWpQuery = async (query, variables) => {
   let options = {}
@@ -154,29 +170,52 @@ const getWpQuery = async (query, variables) => {
     status: 'error',
     data: null,
   }
-  try {
-    const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 10000)
-    const result = await fetch(WP_HOST, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query,
-        ...options,
-      }),
-      signal: controller.signal,
-    })
-    clearTimeout(timeout)
-    if (result.ok) {
-      resBody.status = 'success'
-      resBody.data = (await result.json())?.data
+
+  for (let attempt = 0; attempt <= WP_MAX_RETRIES; attempt++) {
+    try {
+      const controller = new AbortController()
+      const timeout = setTimeout(() => controller.abort(), WP_TIMEOUT_MS)
+      const result = await fetch(WP_HOST, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query,
+          ...options,
+        }),
+        signal: controller.signal,
+      })
+      clearTimeout(timeout)
+      if (result.ok) {
+        const payload = await result.json()
+        // GraphQL reports schema/validation failures as HTTP 200 with an
+        // `errors` array and no `data`. Treating that as success is what let a
+        // WordPress plugin update silently empty every works query — the build
+        // then prerendered zero case studies and 404'd the lot. Fail instead.
+        if (payload?.errors?.length || !payload?.data) {
+          console.log(
+            `WP GraphQL errors at : ${WP_HOST}`,
+            JSON.stringify(payload?.errors || 'no data returned').slice(0, 500)
+          )
+        } else {
+          resBody.status = 'success'
+          resBody.data = payload.data
+          return resBody
+        }
+      } else {
+        console.log(`WP query HTTP ${result.status} at : ${WP_HOST}`)
+      }
+    } catch (error) {
+      console.log(`Error at : ${WP_HOST}`, error?.name || String(error))
     }
-  } catch (error) {
-    console.log(`Error at : ${WP_HOST}`, JSON.stringify(error))
+
     resBody.status = 'error'
     resBody.data = null
+
+    if (attempt < WP_MAX_RETRIES) {
+      await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)))
+    }
   }
 
   return resBody

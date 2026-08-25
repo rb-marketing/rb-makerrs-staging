@@ -41,6 +41,15 @@ export const formatWpImage = (image) => ({
 })
 
 /**
+ * Unwraps an ACF image field. WPGraphQL for ACF v2 returns a connection edge
+ * ({ node: {...} }) where v1 returned the media item directly, and the plugin
+ * version is not ours to pin — so accept either rather than breaking the whole
+ * site the next time it moves.
+ * @param {*} field workDetails.logo / workDetails.banner
+ */
+export const acfMedia = (field) => field?.node ?? field ?? null
+
+/**
  *
  * @param {works} formate work play list data
  * @returns
@@ -159,8 +168,8 @@ export const formatPlayPosts = (works = []) =>
       tags: w?.categories?.nodes?.map(cat => cat.name) || [],
       case_study_title: w.slug,
       workDetails: finalWorkJson,
-      logo: w?.workDetails?.logo?.sourceUrl || "",
-      banner: w?.workDetails?.banner?.sourceUrl || "",
+      logo: acfMedia(w?.workDetails?.logo)?.sourceUrl || "",
+      banner: acfMedia(w?.workDetails?.banner)?.sourceUrl || "",
       seo_title: w?.workDetails?.seoTitle || "",
       seo_desc: w?.workDetails?.seoDesc || ""
     }

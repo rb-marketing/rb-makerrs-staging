@@ -9,7 +9,7 @@ import {
 } from '@/components/shared'
 import { useRouter } from 'next/router'
 import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
-import { formatPlayPosts } from '@/utils/formate'
+import { formatPlayPosts, acfMedia } from '@/utils/formate'
 import { CommercialSection } from '@/components/pages/work'
 import { buildVideoSchema } from '@/components/schema/case-study-videos'
 
@@ -82,15 +82,17 @@ const ArticleSingle = ({ article }) => {
     return [raw.slice(0, idx), raw.slice(idx + SPLIT_MARKER.length)]
   }, [article?.content])
   const articleUrl = `https://www.makerrs.com${router.asPath}`
+  const logoMedia = acfMedia(article?.workDetails?.logo)
+  const bannerMedia = acfMedia(article?.workDetails?.banner)
   const logo = useMemo(() => {
     const override = LOGO_WIDTHS[router.query.slug?.toLowerCase()]
     return {
-      src: override?.src ?? article?.workDetails?.logo?.sourceUrl,
+      src: override?.src ?? logoMedia?.sourceUrl,
       width:
         override?.desktop ??
-        Math.min(article?.workDetails?.logo?.mediaDetails?.width ?? 150, 150),
+        Math.min(logoMedia?.mediaDetails?.width ?? 150, 150),
       mobileWidth: override?.mobile ?? null,
-      height: article?.workDetails?.logo?.mediaDetails?.height ?? 70,
+      height: logoMedia?.mediaDetails?.height ?? 70,
     }
   }, [article, router.query.slug])
   const tags = useMemo(() => {
@@ -98,9 +100,9 @@ const ArticleSingle = ({ article }) => {
   }, [])
   const banner = useMemo(() => {
     return {
-      src: article?.workDetails?.banner?.sourceUrl,
-      width: article?.workDetails?.banner?.mediaDetails?.width || 1600,
-      height: article?.workDetails?.banner?.mediaDetails?.height || 900,
+      src: bannerMedia?.sourceUrl,
+      width: bannerMedia?.mediaDetails?.width || 1600,
+      height: bannerMedia?.mediaDetails?.height || 900,
     }
   }, [])
   const tocTrigger = () => {
@@ -296,8 +298,21 @@ const ArticleSingle = ({ article }) => {
     </>
   )
 }
+// Case study pages are static, but WordPress content changes without a
+// redeploy — and a page that somehow lands on a 404 must be able to recover on
+// its own rather than staying dead until the next build.
+const REVALIDATE_SECONDS = 300
+
 export const getStaticPaths = async () => {
-  const { data } = await getPlayWorks()
+  const { data, status } = await getPlayWorks()
+
+  // Falling through to an empty path list would silently hand every case study
+  // to on-demand rendering instead of prerendering it. Fail the build instead.
+  if (status !== 'success') {
+    throw new Error(
+      'getStaticPaths: WordPress query failed — refusing to build /work with no case study paths'
+    )
+  }
 
   const works = formatPlayPosts(data?.works?.nodes || [])
   const paths = (works || []).map(({ case_study_title, workDetails }) => {
@@ -317,8 +332,19 @@ export async function getStaticProps({ params }) {
   const { slug, create } = params
   const { data, status } = await getPlayWorkDetails(slug)
 
+  // A WordPress failure is NOT "this case study doesn't exist". Returning
+  // notFound here cached a 404 for the path with nothing to expire it, which is
+  // how a single build-time blip left ~60 of 75 case studies dead in production
+  // while the very same pages rendered fine on demand. Throw instead: the build
+  // fails loudly, and on-demand rendering 500s without poisoning the ISR cache.
+  if (status !== 'success') {
+    throw new Error(
+      `getStaticProps: WordPress query failed for work "${slug}" — refusing to cache a 404`
+    )
+  }
+
   if (!data?.work) {
-    return { notFound: true }
+    return { notFound: true, revalidate: REVALIDATE_SECONDS }
   }
 
   let workJson = {}
@@ -332,22 +358,14 @@ export async function getStaticProps({ params }) {
   const actualTag = workJson?.url || 'featured'
 
   if (actualTag.toLowerCase() !== create.toLowerCase()) {
-    return { notFound: true }
-  }
-
-  if (status !== 'success') {
-    return {
-      redirect: {
-        destination: `/${create}`,
-        permanent: false,
-      },
-    }
+    return { notFound: true, revalidate: REVALIDATE_SECONDS }
   }
 
   return {
     props: {
       article: data.work,
     },
+    revalidate: REVALIDATE_SECONDS,
   }
 }
 
