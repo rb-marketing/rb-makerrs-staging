@@ -22,7 +22,7 @@ const ArticleSection = dynamic(() =>
 )
 import { getLatestArticle, getPlaySliderData } from '@/utils/graphql'
 import { formateBlogPostFunc } from '@/utils/formate'
-const LandPage = ({playWorks , articles}) => {
+const LandPage = ({ playWorks, articles }) => {
   const groupIcons = [
     {
       id: 0,
@@ -755,7 +755,7 @@ const LandPage = ({playWorks , articles}) => {
           </div>
         </div>
         <div className="mt-12 ">
-          <Marquee duration={65}>
+          <Marquee duration={150}>
             <div className="flex items-center h-[80px] md:h-[70px]">
               {groupIcons.map(({ name, id, ...rest }) => (
                 <div key={id} className="mx-6 md:mx-12 filter grayscale">
