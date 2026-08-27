@@ -46,6 +46,13 @@ export const icons = [
     height: '150',
     alt: 'general-electric',
   },
+    {
+      id: 23,
+      name: 'aakash-logo.webp',
+      width: '91',
+      height: '52',
+      alt: 'Aakash',
+    },
    {
       id: 6,
       name: 'darwinbox.webp',
