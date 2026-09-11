@@ -18,7 +18,7 @@ import { GetUpdatesForm } from '@/components/shared/sections/GetUpdatesSection/G
 import styles from '@/styles/home.module.scss'
 import { Button } from '@/components/ui'
 import { LineArrow } from '@/components/icons'
-import { explainerVideoProductionSchema } from '@/components/schema/explainer-video-production-services'
+import { buildFaqSchema } from '@/components/schema/faq'
 import { useRouter } from 'next/router'
 
 const INIT_MODAL = {
@@ -1640,7 +1640,7 @@ const BrandIdentityDesign = () => {
       </VideoModal>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(explainerVideoProductionSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(brandIdentityDesignFaq)) }}
       />
     </>
   )

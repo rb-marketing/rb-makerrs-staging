@@ -60,7 +60,7 @@ const PRESS_DATA = {
   },
 }
 
-const ArticleSingle = ({ article }) => {
+const ArticleSingle = ({ article, videoSchema = null }) => {
   const blogRef = useRef()
   const router = useRouter()
   let workJsonObj = {}
@@ -211,7 +211,6 @@ const ArticleSingle = ({ article }) => {
     }
   }, [])
   const seoUrl = `https://www.makerrs.com${router.asPath}`
-  const videoSchema = buildVideoSchema(router.query.slug)
 
   return (
     <>
@@ -292,7 +291,11 @@ const ArticleSingle = ({ article }) => {
       {videoSchema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+          // Descriptions can come from WordPress; escaping `<` stops a stray
+          // `</script>` in that text from closing the tag early.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(videoSchema).replace(/</g, '\\u003c'),
+          }}
         />
       )}
     </>
@@ -361,9 +364,14 @@ export async function getStaticProps({ params }) {
     return { notFound: true, revalidate: REVALIDATE_SECONDS }
   }
 
+  // Built here rather than in the component so the schema data (and the
+  // Vimeo metadata file) stays server-side instead of shipping in the bundle.
+  const videoSchema = await buildVideoSchema({ slug, create, work: data.work })
+
   return {
     props: {
       article: data.work,
+      videoSchema,
     },
     revalidate: REVALIDATE_SECONDS,
   }
