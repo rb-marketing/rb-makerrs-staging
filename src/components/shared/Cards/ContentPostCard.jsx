@@ -1,5 +1,6 @@
 import { cx } from 'class-variance-authority'
 import Image from 'next/image'
+import { isWpImage, WP_IMAGE_QUALITY } from '@/utils/wpImage'
 export const ContentPostCard = ({
   className = '',
   type = 'md', //md, lg
@@ -29,7 +30,10 @@ export const ContentPostCard = ({
           src={image}
           alt=""
           fill
-          unoptimized
+          // WordPress images convert to WebP; local /img files are already
+          // pre-compressed WebP and are served as-is
+          unoptimized={!isWpImage(image)}
+          quality={WP_IMAGE_QUALITY}
           sizes={type === 'lg'
             ? '(min-width: 768px) 1260px, 100vw'
             : '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'}

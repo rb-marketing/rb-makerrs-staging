@@ -12,6 +12,7 @@ import { getPlayWorks, getPlayWorkDetails } from '@/utils/graphql'
 import { formatPlayPosts, acfMedia } from '@/utils/formate'
 import { CommercialSection } from '@/components/pages/work'
 import { buildVideoSchema } from '@/components/schema/case-study-videos'
+import { optimizeWpHtml } from '@/utils/wpImage'
 
 const HERO_VIDEOS = {
   'my11circle-digital-ad-film': {
@@ -370,7 +371,8 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      article: data.work,
+      // WordPress <img>s in the case study body load as WebP via the optimizer
+      article: { ...data.work, content: optimizeWpHtml(data.work.content) },
       videoSchema,
     },
     revalidate: REVALIDATE_SECONDS,

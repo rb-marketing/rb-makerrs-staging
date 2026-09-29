@@ -5,6 +5,7 @@ import styles from '@/styles/ui/VideoGallery.module.scss'
 import { LineHeading } from '@/components/shared'
 import { LineArrow } from '@/components/icons'
 
+import { WpImg } from '@/components/shared/WpImg'
 export const VideoGallery = ({
   sources = [],
   isWhiteText = false,
@@ -93,7 +94,8 @@ export const VideoGallery = ({
                 className="absolute inset-0 z-10 cursor-pointer"
                 onClick={() => setIsPlaying(true)}
               >
-                <img
+                <WpImg
+                  wpSizes="(min-width: 768px) 300px, 50vw"
                   src={thumbnail?.src}
                   alt={sName}
                   className="w-full h-full object-cover"
@@ -187,7 +189,8 @@ export const VideoGallery = ({
                     onClick={() => handleThumbnailClick(i)}
                   >
                     <div className="relative aspect-[297/176] w-full overflow-hidden mb-3">
-                      <img
+                      <WpImg
+                        wpSizes="(min-width: 768px) 300px, 50vw"
                         {...thumbnail}
                         alt={name}
                         className="w-full h-full object-cover absolute group-data-[playing=true]:opacity-60 transition-all"

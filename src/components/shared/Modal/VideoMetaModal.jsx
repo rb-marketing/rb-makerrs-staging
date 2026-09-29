@@ -8,6 +8,7 @@ import dayjs from 'dayjs'
 import { LineArrow } from '@/components/icons'
 import { Button } from '@/components/ui'
 import { useRouter } from 'next/router'
+import { WpImg } from '@/components/shared/WpImg'
 export const VideoMetaModal = ({
   loading,
   open,
@@ -388,7 +389,7 @@ export const VideoMetaModal = ({
                                   className="text-left w-full cursor-pointer"
                                 >
                                   <div className="relative aspect-[297/176] w-full overflow-hidden mb-3">
-                                    <img
+                                    <WpImg
                                       src={vid.thumbnail}
                                       alt={vid.title}
                                       width={446}
@@ -541,7 +542,8 @@ export const VideoMetaModal = ({
                                 className="text-left w-full"
                               >
                                 <div className="relative w-full w-[237px] h-[140px] md:aspect-[237/140] overflow-hidden mb-2">
-                                  <img
+                                  <WpImg
+                                    wpSizes="240px"
                                     src={vid.thumbnail}
                                     alt={vid.title}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform group-data-[playing=true]:opacity-60 transition-all"

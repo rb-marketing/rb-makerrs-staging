@@ -1,6 +1,8 @@
 import { TwitterShareButton, LinkedinShareButton } from 'react-share'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { WpImg } from '@/components/shared/WpImg'
+import { WP_IMAGE_QUALITY } from '@/utils/wpImage'
 import { Twitter, Linkedin } from '@/components/icons'
 
 export const WorkHeroSection = ({
@@ -43,17 +45,19 @@ export const WorkHeroSection = ({
               const imgStyle = { height: 'auto', width: '100%' }
               return (
                 <>
-                  <img
+                  <WpImg
                     alt=""
                     loading="lazy"
                     src={logo.src}
+                    wpSizes={`${mobileMax}px`}
                     className={specifyWidth || 'block md:hidden'}
                     style={{ ...imgStyle, maxWidth: `${mobileMax}px` }}
                   />
-                  <img
+                  <WpImg
                     alt=""
                     loading="lazy"
                     src={logo.src}
+                    wpSizes={`${desktopMax}px`}
                     className="hidden md:block"
                     style={{ ...imgStyle, maxWidth: `${desktopMax}px` }}
                   />
@@ -174,6 +178,7 @@ export const WorkHeroSection = ({
                   width={image?.width || 1600}
                   height={image?.height || 900}
                   sizes="(min-width: 1280px) 1200px, 100vw"
+                  quality={WP_IMAGE_QUALITY}
                   priority
                   fetchPriority="high"
                   style={{ width: '100%', height: 'auto' }}

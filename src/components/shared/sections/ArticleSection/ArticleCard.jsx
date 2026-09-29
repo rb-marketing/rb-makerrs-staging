@@ -1,3 +1,4 @@
+import { WpImg } from '@/components/shared/WpImg'
 function ArticleCard({ title, featuredImage, href, author, date, excerpt }) {
   return (
     <a
@@ -5,7 +6,8 @@ function ArticleCard({ title, featuredImage, href, author, date, excerpt }) {
       className="flex flex-col  rounded-xl overflow-hidden border border-rb-stroke"
     >
       <div className="aspect-[313/168] relative w-full overflow-hidden">
-        <img
+        <WpImg
+          wpSizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           alt=""
           {...featuredImage}
           loading="lazy"

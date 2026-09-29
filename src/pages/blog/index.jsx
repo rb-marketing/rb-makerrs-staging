@@ -9,6 +9,7 @@ import { formatBlogPosts } from '@/utils/formate'
 import { pageSchemas } from '@/components/schema/pages'
 import Script from 'next/script'
 import Image from 'next/image'
+import { WP_IMAGE_QUALITY } from '@/utils/wpImage'
 import { Dropdown } from '@/components/dropdown/dropdown'
 import { useRouter } from 'next/router'
 
@@ -161,6 +162,7 @@ const Articles = ({
                       alt={featuredPost?.featuredImage?.alt || ''}
                       fill
                       sizes="(min-width: 768px) 50vw, 100vw"
+                      quality={WP_IMAGE_QUALITY}
                       priority
                       className="w-full h-full object-cover group-hover:scale-[1.03] transition-all duration-300"
                     />
@@ -228,6 +230,7 @@ const Articles = ({
                             src={featuredImage.src}
                             fill
                             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            quality={WP_IMAGE_QUALITY}
                             priority={idx < 3}
                             loading="eager"
                             fetchPriority={idx < 3 ? 'high' : 'auto'}

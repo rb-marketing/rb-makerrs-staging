@@ -8,6 +8,7 @@ import ArticleCard from './ArticleCard'
 import { LineArrow } from '@/components/icons'
 import { Button } from '@/components/ui'
 
+import { WpImg } from '@/components/shared/WpImg'
 // const articles = [
 //   {
 //     id: 0,
@@ -137,7 +138,8 @@ export const ArticleSection = ({
           ref={cursor}
         >
           {hasHovered && articles.map(({ featuredImage, id }, index) => (
-            <img
+            <WpImg
+              wpSizes="200px"
               {...featuredImage}
               key={index}
               alt=""

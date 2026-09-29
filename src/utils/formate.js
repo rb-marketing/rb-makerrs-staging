@@ -151,10 +151,9 @@ export const formatPlayPosts = (works = []) =>
     const rawTabs = w?.tags?.nodes?.map(tag => tag.name) || []
     const { tabs, workJson: finalWorkJson } = applyVisibilityOverride(w.slug, rawTabs, workJson)
 
-    // Local manifest images are pre-compressed WebP; the WordPress fallback is a
-    // full-size original served as-is (<Image> runs unoptimized here because
-    // /_next/image isn't available on Netlify). Callers use isLocalImage to avoid
-    // preloading the heavy remote fallback — see work.jsx.
+    // Local manifest images are pre-compressed WebP and served as-is; the
+    // WordPress fallback is converted to WebP by the image optimizer (see
+    // ContentPostCard).
     const localImage = workImageManifest[w.slug]
 
     return {

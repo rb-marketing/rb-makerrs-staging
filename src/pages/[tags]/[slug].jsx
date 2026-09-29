@@ -10,6 +10,8 @@ import { formateBlogPostFunc } from '@/utils/formate'
 import Link from 'next/link'
 import Image from 'next/image'
 import processTree from '@/utils/processTree'
+import { optimizeWpHtml, WP_IMAGE_QUALITY } from '@/utils/wpImage'
+import { WpImg } from '@/components/shared/WpImg'
 import { SEO } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
 import { useLenis } from 'lenis/react'
@@ -393,6 +395,7 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
                 alt={article?.featuredImage?.alt || ''}
                 fill
                 sizes="(min-width: 1280px) 1200px, 100vw"
+                quality={WP_IMAGE_QUALITY}
                 priority
                 fetchPriority="high"
                 className="w-full h-full object-cover"
@@ -620,9 +623,11 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
                     className="h-[384px] block md:h-[272px] overflow-hidden relative mb-4"
                   >
                     <div className="w-full h-full overflow-hidden group">
-                      <img
+                      <WpImg
                         src="/img/blog-thumb.jpg"
                         {...featuredImage}
+                        wpSizes="(min-width: 768px) 33vw, 100vw"
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                         alt=""
                       />
@@ -730,7 +735,8 @@ export async function getStaticProps({ params }) {
     props: {
       article: {
         ...formateBlogPostFunc(data.post),
-        content: String(content),
+        // WordPress <img>s in the post body load as WebP via the optimizer
+        content: optimizeWpHtml(String(content)),
       },
       tocTree: toc?.children?.length ? processTree(toc.children[0]) : null,
       relatedArticle: relatedArticle.map(formateBlogPostFunc),

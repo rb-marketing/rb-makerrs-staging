@@ -355,7 +355,7 @@ const WorkPage = ({ works, selectedvalue = DEFAULT_TAB }) => {
                     <ContentPostCard
                       href={`/${post?.workDetails?.url}/${post.case_study_title}`}
                       page="work"
-                      priority={idx < 3 && post.isLocalImage}
+                      priority={idx < 3}
                       {...post}
                     />
                   </div>

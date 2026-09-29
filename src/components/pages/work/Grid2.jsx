@@ -1,3 +1,4 @@
+import { WpImg } from '@/components/shared/WpImg'
 export const Grid2 = ({
   image1 = {},
   image2 = {},
@@ -7,7 +8,8 @@ export const Grid2 = ({
 }) => (
   <div className="grid grid-cols-5 gap-[5px] md:gap-2.5 w-[768px] md:w-full mt-15 md:mt-[70px] px-4 md:px-0">
     <div className="relative aspect-[280/440] mt-13 md:mt-25">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 20vw, 160px"
         alt=""
         loading="lazy"
         className="object-cover absolute h-full w-full left-0 top-0"
@@ -15,7 +17,8 @@ export const Grid2 = ({
       />
     </div>
     <div className="relative aspect-[280/440]">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 20vw, 160px"
         alt=""
         loading="lazy"
         className="object-cover absolute h-full w-full left-0 top-0"
@@ -23,7 +26,8 @@ export const Grid2 = ({
       />
     </div>
     <div className="relative aspect-[280/440] mt-13 md:mt-25">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 20vw, 160px"
         alt=""
         loading="lazy"
         className="object-cover absolute h-full w-full left-0 top-0"
@@ -31,7 +35,8 @@ export const Grid2 = ({
       />
     </div>
     <div className="relative aspect-[280/440]">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 20vw, 160px"
         alt=""
         loading="lazy"
         className="object-cover absolute h-full w-full left-0 top-0"
@@ -39,7 +44,8 @@ export const Grid2 = ({
       />
     </div>
     <div className="relative aspect-[280/440] mt-13 md:mt-25">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 20vw, 160px"
         alt=""
         loading="lazy"
         className="object-cover absolute h-full w-full left-0 top-0"

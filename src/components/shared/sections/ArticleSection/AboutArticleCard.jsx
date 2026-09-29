@@ -1,3 +1,4 @@
+import { WpImg } from '@/components/shared/WpImg'
 function AboutArticleCard({ title, featuredImage, href, author, date, excerpt, image, alt }) {
 
   return (
@@ -6,7 +7,8 @@ function AboutArticleCard({ title, featuredImage, href, author, date, excerpt, i
       className="flex flex-col  rounded-xl overflow-hidden border border-rb-stroke"
     >
       <div className="aspect-[313/168] relative w-full overflow-hidden">
-        <img
+        <WpImg
+          wpSizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           alt={alt}
           // {...featuredImage}
           src={image}         

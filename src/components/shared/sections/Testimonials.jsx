@@ -2,6 +2,7 @@ import { ArrowButtonSlider } from '@/components/sliders/ArrowButtonSlider'
 import { SwiperSlide } from 'swiper/react'
 import { LineHeading } from '../Heading'
 import { cx } from 'class-variance-authority'
+import { WpImg } from '@/components/shared/WpImg'
 export const testimonialsDefault = [
   {
     key: 0,
@@ -171,7 +172,8 @@ export const Testimonials = ({
                 <div
                   className={`relative w-full md:w-5/12 flex-shrink-0 ${imageCustomClass}`}
                 >
-                  <img
+                  <WpImg
+                    wpSizes="(min-width: 768px) 42vw, 100vw"
                     {...t?.image}
                     alt={t.name}
                     className={cx(

@@ -1,7 +1,9 @@
+import { WpImg } from '@/components/shared/WpImg'
 export const PlayCard = ({ poster, name, company, src, ...rest }) => (
   <button className="text-left group flex flex-col h-full" aria-label={name} {...rest}>
     <div className="aspect-[162/96] md:aspect-[297/176] relative w-full overflow-hidden">
-      <img
+      <WpImg
+        wpSizes="(min-width: 768px) 300px, 50vw"
         src={src}
         alt=""
         className="absolute h-full w-full object-cover left-0 top-0 group-hover:scale-105 transition-all duration-300"
