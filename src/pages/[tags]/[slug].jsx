@@ -10,7 +10,7 @@ import { formateBlogPostFunc } from '@/utils/formate'
 import Link from 'next/link'
 import Image from 'next/image'
 import processTree from '@/utils/processTree'
-import { optimizeWpHtml, WP_IMAGE_QUALITY } from '@/utils/wpImage'
+import { isWpWebp, optimizeWpHtml, WP_IMAGE_QUALITY } from '@/utils/wpImage'
 import { WpImg } from '@/components/shared/WpImg'
 import { SEO } from '@/components/shared'
 import { TOC } from '@/components/shared/TOC'
@@ -23,6 +23,8 @@ import {
 } from 'react-share'
 import Script from 'next/script'
 import { Accordion } from '@/components/ui'
+import { rehypeExtractFaqs, FAQ_PLACEHOLDER } from '@/utils/blogFaq'
+import { buildFaqSchema } from '@/components/schema/faq'
 
 const FAQ_SLUG_KEYS = {
   'what-are-explainer-videos': 'ExplainerVideos',
@@ -34,22 +36,22 @@ const FAQ_SLUG_KEYS = {
   'custom-b2b-explainer-videos': 'CustomExplainerVideos',
   'corporate-explainer-videos': 'CorporateExplainerVideos',
   'ai-explainer-video-tools-trends': 'AIblogFAQ',
-  'animated-explainer-videos': 'AnimatedblogFAQ',
+  'best-animated-explainer-videos': 'AnimatedblogFAQ',
   'best-animated-explainer': 'AnimatedExplainerFAQ',
   'tech-explainer-videos': 'TechExplainerVideosFAQ',
-  product: 'ProductFAQ',
+  'product-explainer-videos': 'ProductFAQ',
   types: 'DifferentTypesFAQ',
   'healthcare-marketing': 'HealthcareFAQ',
   '3d-explainer-videos': 'ThreeDExplainerFAQ',
-  'how-to-create': 'HowCreateFAQ',
+  'explainer-videos-how-to-create': 'HowCreateFAQ',
   'whiteboard-explainer-videos': 'WhiteboardFAQ',
   'funny-explainer-videos': 'FunnyExplainerFAQ',
   'benefits-of-explainer-videos': 'BenefitsExplainerFAQ',
-  'explainer-videos-help-businesses': 'ExplainerVideosHelpBusinessesFAQ',
+  'how-explainer-videos-help-businesses': 'ExplainerVideosHelpBusinessesFAQ',
   'how-to-make-explainer-videos': 'HowToMakeExplainerVideosFAQ',
   'startup-explainer-videos': 'StartupExplainerVideosFAQ',
   'customer-case-study-videos': 'CustomerCaseStudyFAQ',
-  'best-case-study-videos': 'BestCaseStudyFAQ',
+  'b2b-video-case-studies': 'BestCaseStudyFAQ',
   'corporate-video-case-studies': 'CorporateCaseStudyFAQ',
   'award-winning-case-study-videos': 'AwardWinningCaseStudyFAQ',
   'saas-case-study-videos': 'SaasCaseStudyFAQ',
@@ -58,7 +60,7 @@ const FAQ_SLUG_KEYS = {
   'employer-branding-strategy': 'EmployerBrandingStrategyFAQ',
   'why-is-employer-branding-important': 'WhyIsEmployerBrandingImportantFAQ',
   'employer-branding-framework': 'EmployerBrandingFrameworkFAQ',
-  'employer-branding-video': 'EmployerBrandingVideoFAQ',
+  'employer-branding-video-guide': 'EmployerBrandingVideoFAQ',
   'employer-branding-campaigns-2026': 'EmployerBrandingExamplesFAQ',
   'employer-branding-companies': 'EmployerBrandingCompaniesFAQ',
   'best-practices-to-attract-top-talent': 'EmployerBrandingBestPracticesFAQ',
@@ -72,7 +74,13 @@ const FAQ_SLUG_KEYS = {
   'storytelling-for-modern-teams': 'EmployerBrandingStorytellingFAQ',
 }
 
-const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
+const ArticleSingle = ({
+  article,
+  relatedArticle,
+  tocTree,
+  faqs = [],
+  faqSchema = null,
+}) => {
   const blogRef = useRef()
   const headingsRef = useRef([])
   const router = useRouter()
@@ -269,7 +277,7 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
 
   useEffect(() => {
     const key = FAQ_SLUG_KEYS[article.slug]
-    if (!key) {
+    if (!key || faqs.length) {
       setSelectedFAQ([])
       return
     }
@@ -280,7 +288,24 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
     return () => {
       cancelled = true
     }
-  }, [article.slug])
+  }, [article.slug, faqs.length])
+
+  const faqItems = faqs.length
+    ? faqs.map((c) => ({
+        key: c.key,
+        heading: c.title,
+        content: (
+          <div
+            className="blog-faq-answer"
+            dangerouslySetInnerHTML={{ __html: c.content }}
+          />
+        ),
+      }))
+    : selectedFAQ.map((c) => ({
+        key: `${c.key}`,
+        heading: c?.title,
+        content: c?.content,
+      }))
 
   return (
     <>
@@ -396,6 +421,7 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
                 fill
                 sizes="(min-width: 1280px) 1200px, 100vw"
                 quality={WP_IMAGE_QUALITY}
+                unoptimized={isWpWebp(article?.featuredImage?.src)}
                 priority
                 fetchPriority="high"
                 className="w-full h-full object-cover"
@@ -408,11 +434,35 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
           <div className="container">
             <div className="flex -mx-4 flex-wrap">
               <div className="w-full md:w-3/4 px-4">
-                <div
-                  ref={blogRef}
-                  className="blog-content-main max-w-[830px]"
-                  dangerouslySetInnerHTML={{ __html: article?.content }}
-                ></div>
+                <div ref={blogRef} className="max-w-[830px]">
+                  <div
+                    className="blog-content-main"
+                    dangerouslySetInnerHTML={{ __html: article?.content }}
+                  ></div>
+
+                  {faqItems.length > 0 && (
+                    // kept outside .blog-content-main: its h3 styles would
+                    // hit the accordion's <h3> triggers
+                    <div className="mb-6">
+                      {/* hardcoded FAQs have no heading of their own in the post */}
+                      {!faqs.length && (
+                        <div className="blog-content-main">
+                          <h2 id="frequently-asked-questions" className="!mt-12">
+                            Frequently Asked Questions
+                          </h2>
+                        </div>
+                      )}
+                      <Accordion data={faqItems} />
+                    </div>
+                  )}
+
+                  {article?.contentAfter && (
+                    <div
+                      className="blog-content-main blog-content-after"
+                      dangerouslySetInnerHTML={{ __html: article.contentAfter }}
+                    ></div>
+                  )}
+                </div>
               </div>
 
               <div className="w-full md:w-1/4 px-4">
@@ -574,29 +624,14 @@ const ArticleSingle = ({ article, relatedArticle, tocTree }) => {
         </section>
       </article>
 
-      {selectedFAQ?.length > 0 && (
-        <section className="pb-12 md:pb-24 md:pt-12">
-          <div className="container">
-            <div className="rb-row">
-              <div className="w-full md:w-5/12">
-                <div className="static md:sticky top-[100px]">
-                  <h3 className="max-w-[400px] mb-8 text-title-md-tight font-everett text-rb-black !text-[26px] md:!text-[52px]">
-                    Frequently Asked Questions
-                  </h3>
-                </div>
-              </div>
-              <div className="w-full md:w-7/12">
-                <Accordion
-                  data={selectedFAQ.map((c) => ({
-                    key: `${c.key}`,
-                    heading: c?.title,
-                    content: c?.content,
-                  }))}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            // escape "<" so answer text can't close the script tag
+            __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c'),
+          }}
+        />
       )}
 
       <GetUpdates />
@@ -719,6 +754,7 @@ export async function getStaticProps({ params }) {
   )
 
   let toc = {}
+  let wpFaqs = []
   const content = await rehype()
     .data('settings', { fragment: true })
     .use(rehypeSlug)
@@ -729,15 +765,40 @@ export async function getStaticProps({ params }) {
         return false
       },
     })
+    .use(rehypeExtractFaqs, { onExtract: (result) => (wpFaqs = result) })
     .process(data.post?.content || '')
+
+  // The accordion renders where the FAQs sat in the post, between these halves
+  const [contentBefore, contentAfter = ''] = String(content).split(
+    FAQ_PLACEHOLDER
+  )
+
+  // FAQs written in the WordPress post win; otherwise fall back to the
+  // hardcoded per-slug list. Schema is built here so it ships in the HTML.
+  const faqs = wpFaqs.map(({ title, html }, i) => ({
+    key: `${i + 1}`,
+    title,
+    content: optimizeWpHtml(html),
+  }))
+  let faqSchema = buildFaqSchema(
+    wpFaqs.map(({ title, text }) => ({ title, content: text }))
+  )
+  const faqKey = FAQ_SLUG_KEYS[data.post.slug]
+  if (!faqSchema && faqKey) {
+    const services = await import('@/content/services')
+    faqSchema = buildFaqSchema(services[faqKey])
+  }
 
   return {
     props: {
       article: {
         ...formateBlogPostFunc(data.post),
         // WordPress <img>s in the post body load as WebP via the optimizer
-        content: optimizeWpHtml(String(content)),
+        content: optimizeWpHtml(contentBefore),
+        contentAfter: optimizeWpHtml(contentAfter.trim()),
       },
+      faqs,
+      faqSchema,
       tocTree: toc?.children?.length ? processTree(toc.children[0]) : null,
       relatedArticle: relatedArticle.map(formateBlogPostFunc),
     },

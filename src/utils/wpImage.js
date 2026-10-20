@@ -7,17 +7,32 @@ import { WP_IMAGE_HOSTS } from './wpImageHosts'
 // images.qualities in next.config.js.
 export const WP_IMAGE_QUALITY = 90
 
-const RASTER = /\.(jpe?g|png|webp)$/i
+// WebP is deliberately absent: WordPress's Apache serves .webp with no
+// Content-Type header, and Amplify's image optimizer rejects such sources
+// ("400 Unsupported image format") — every WP WebP on the site broke. They are
+// already WebP, so they load directly from WordPress instead.
+const RASTER = /\.(jpe?g|png)$/i
 
-/** True for a WordPress-hosted JPG/PNG/WebP the optimizer is allowed to fetch. */
-export const isWpImage = (src) => {
-  if (typeof src !== 'string' || !src) return false
+const wpUrl = (src) => {
+  if (typeof src !== 'string' || !src) return null
   try {
     const url = new URL(src)
-    return url.protocol === 'https:' && WP_IMAGE_HOSTS.includes(url.hostname) && RASTER.test(url.pathname)
+    return url.protocol === 'https:' && WP_IMAGE_HOSTS.includes(url.hostname) ? url : null
   } catch {
-    return false
+    return null
   }
+}
+
+/** True for a WordPress-hosted JPG/PNG the optimizer is allowed to fetch. */
+export const isWpImage = (src) => {
+  const url = wpUrl(src)
+  return !!url && RASTER.test(url.pathname)
+}
+
+/** True for a WordPress WebP, which <Image> must render `unoptimized` (see RASTER). */
+export const isWpWebp = (src) => {
+  const url = wpUrl(src)
+  return !!url && /\.webp$/i.test(url.pathname)
 }
 
 /**

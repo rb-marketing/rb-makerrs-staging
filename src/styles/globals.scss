@@ -328,6 +328,22 @@ html.lenis {
   }
 }
 
+/* WordPress HTML rendered inside the blog FAQ accordion */
+.blog-faq-answer {
+  a {
+    @apply text-rb-black underline hover:text-rb-link-green;
+  }
+  > * + * {
+    margin-top: 16px;
+  }
+  ul {
+    @apply list-disc pl-5;
+  }
+  ol {
+    @apply list-decimal pl-5;
+  }
+}
+
 .blog-content-main {
   a {
     @apply text-rb-black underline hover:text-rb-link-green max-w-fit;
@@ -367,6 +383,19 @@ html.lenis {
   > h3:first-child,
   > h4:first-child {
     margin-top: 0;
+  }
+
+  // body copy that resumes below the inline FAQ accordion keeps its spacing
+  &.blog-content-after {
+    > h2:first-child {
+      margin-top: 48px;
+    }
+    > h3:first-child {
+      margin-top: 40px;
+    }
+    > h4:first-child {
+      margin-top: 32px;
+    }
   }
 
   p {

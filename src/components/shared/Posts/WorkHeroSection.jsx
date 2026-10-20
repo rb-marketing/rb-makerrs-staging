@@ -2,7 +2,7 @@ import { TwitterShareButton, LinkedinShareButton } from 'react-share'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { WpImg } from '@/components/shared/WpImg'
-import { WP_IMAGE_QUALITY } from '@/utils/wpImage'
+import { isWpWebp, WP_IMAGE_QUALITY } from '@/utils/wpImage'
 import { Twitter, Linkedin } from '@/components/icons'
 
 export const WorkHeroSection = ({
@@ -179,6 +179,7 @@ export const WorkHeroSection = ({
                   height={image?.height || 900}
                   sizes="(min-width: 1280px) 1200px, 100vw"
                   quality={WP_IMAGE_QUALITY}
+                  unoptimized={isWpWebp(image.src)}
                   priority
                   fetchPriority="high"
                   style={{ width: '100%', height: 'auto' }}
