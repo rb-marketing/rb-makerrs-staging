@@ -222,29 +222,128 @@ const CASE_STUDIES = {
     description:
       'Makerrs is a global video production agency that partnered with Infosys to create case study videos featuring real stories of digital transformation across industries and markets. The testimonial videos combined interviews, cinematic B-roll, motion graphics and branded storytelling to communicate complex technology solutions and business outcomes to a global audience. With a global network of video production crews across the US, Asia and Australia, we managed creative direction, production and post-production to deliver consistent, high-quality corporate videos at scale. The project produced 25 case study videos with an average 14-day turnaround, helping Infosys build brand credibility, engage business leaders and amplify its transformation stories across digital channels.',
   },
+  'recruitment-video-colearn-education': {
+    title: 'Employer Branding Campaign for EdTech',
+    description:
+      'CoLearn partnered with Makerrs, a creative agency, to create an employer branding and recruitment campaign to attract STEM educators for Indonesia. Makerrs developed hiring videos that showcased the flexibility, job satisfaction and career opportunities CoLearn offered teachers by showing real teachers and real experiences.',
+  },
+  'abstract-animation-video-infosys-cobalt-launch': {
+    title: 'Cloud Community Launch Video',
+    description:
+      'Infosys Cobalt partnered with Makerrs, a creative agency, to launch the Cobalt Cloud Community through a 2D animated video. The video introduced the multi-pronged community approach that brought together people, tools, resources and platforms. Instead of a conventional 2D character animation based explainer, Makerrs took a conceptual and high-design approach that would inspire every viewer to join the community and collaborate. The narrative offered an easy understanding of the Cobalt community and ecosystem to developers, partners and business leaders.',
+  },
+  'interactive-explainer-slb': {
+    title: 'Interactive Explainer Video to drive Technology Adoption',
+    description:
+      'SLB, formerly Schlumberger, was transforming its mining bit sales, servicing and refurbishment workflow and digitizing its internal operations. To launch its suite of digital tools and drive internal adoption, SLB partnered with Makerrs, a creative agency. What started as a brief for an hour-long product walk through video strategically changed to a much shorter, and far more engaging interactive explainer upon recommendation from Makerrs. The interactive explainer was written, animated and developed to be effective in a modular as well as a comprehensive manner. The project involved a custom storyboard, oilfield-relevant visual language, 2D animation, sound design and an American voiceover.',
+  },
+  'saas-explainer-video-hansel': {
+    title: 'Explainer Video for SAAS application Hansel',
+    description:
+      'Hansel partnered with Makerrs, a creative agency, to explain how its user drop-off management platform can help brands reduce customer drop-offs and improve ecommerce conversions through a creative marketing explainer video. Instead of a conventional 2D animated product explainer, Makerrs developed a fictional ecommerce brand, Superbeard, and used live-action to demonstrate how Hansel can optimize user journeys, improve product discovery and drive sales. Combining real actors, a custom-built set, app interface screens and product-focused storytelling, the video made a complex SaaS solution tangible and relatable for product marketers and ecommerce brands.',
+  },
+  'wipro-australia-corporate-film': {
+    title: 'Corporate Film for Wipro',
+    description:
+      'Wipro partnered with Makerrs, a creative agency, to celebrate its 20-year journey and growth in Australia through a corporate film showcasing its impact across industries and engagement with local communities. Instead of a conventional corporate video, Makerrs took a dynamic brand storytelling approach, combining engaging stock visuals, bold supers and powerful music to bring Wipro’s Australia milestones, growth and impact to life. This corporate communication campaign positions Wipro as a trusted technology partner in the region.',
+  },
+  'stock-footage-video-infosys-business-agility': {
+    title: 'Solution Marketing Video for Infosys',
+    description:
+      'Infosys partnered with Makerrs, a creative agency, to communicate its business agility solution through an energetic marketing video designed to make a complex technology proposition simple, clear and memorable. Instead of relying on a conventional corporate presentation, Makerrs crafted a bold script and paired it with curated stock footage and an engaging sound track as well as modern motion graphics to bring the idea of business agility to life. The approach focused on translating a solution pitch into a visually compelling conversation that could resonate with technology decision-makers and business leaders. The resulting marketing video reinforced Infosys as a global technology and software services partner.',
+  },
+  'dara-explainer-video': {
+    title: 'Short Film on Pediatric Cancer Care in Romania',
+    description:
+      'Daruieste Aripi partnered with Makerrs, a creative agency, to tell the story of its work transforming pediatric cancer care in Romania through a documentary film that captures the organisation’s journey from personal commitment to systemic change. Instead of creating a conventional non-profit film or institutional summary, Makerrs developed a three-act hybrid documentary that moves between poetic first-person narration, conversational storytelling and milestone-led documentary sequences to connect founder Alina Pătrăhău’s personal journey with the organisation’s broader impact. The film uses cause-and-effect storytelling to trace the evolution from the first pediatric oncology unit and national cancer registry to home care services, the DARA digital platform and contributions to Romania’s National Cancer Control Plan, while music and sound design reinforce the emotional shift from personal memory to collective vision. The resulting non-profit film positions Daruieste Aripi as a long-term force for change in pediatric oncology care and creates an emotionally resonant story for supporters, healthcare stakeholders and audiences invested in improving child cancer care in Romania.',
+  },
+  'documentary-taneira-fashion': {
+    title: 'Documentary Series on Indian Handloom Sarees',
+    description:
+      'Taneira and journalist Shoba Narayan partnered with Makerrs, a creative agency, to spotlight India’s traditional handloom craftsmanship and the artisans behind it. In collaboration with Shoba Narayan’s Project LooM, Makerrs crafted a series of documentary films that explored the history, culture and creative processes woven into some of the famous textiles from across India: Khadi, Kanjivaram, Patan Patola, Chanderi and Jamdani. Makerrs took a detailed approach, working closely with author and journalist Shoba Narayan to meet artisans, engage with historians and travel across regions known for their distinct weaving traditions and weaver communities. The result was a series of six visually rich documentary films, each focused on a unique handloom process from inception to completion. The films capture the people and the craft, and inspire viewers to choose handwoven sarees and nurture the craft.',
+  },
+  'documentary-tanishq-jewels': {
+    title: 'Documentary Series on Indian Heritage Jewellery',
+    description:
+      'Tanishq and journalist Shoba Narayan partnered with Makerrs, a creative agency, to celebrate India’s rich jewellery-making heritage through a documentary series. The documentary films showcased the traditional craftsmen, the rich histories and the process of craft. Makerrs worked closely with journalist Shoba Narayan, historians, cultural experts, royal families and generational jewellery makers to develop engaging narratives that also explored the cultural significance behind regional jewellery. The films combined intimate storytelling, artful visuals and sensitive cinematography inside traditional workshops to preserve the authenticity of the craft. Created for Tanishq’s retail spaces and digital audiences, the campaign connected contemporary consumers with India’s handcrafted jewellery heritage, generating 1M+ organic views and 1K+ conversions.',
+  },
+  'app-walkthrough-swiggy-delivery': {
+    title: 'App Walkthrough Video for Swiggy’s Delivery Executives',
+    description:
+      'Swiggy partnered with Makerrs, a creative agency, to introduce its “Outside Order Support” chat feature to delivery partners through a live-action product demo video. Instead of the typical animated app walkthrough video, Makerrs used a delivery partner-led storyline to demonstrate how the feature works in a relatable, easy-to-follow format. The video combines real-world situations with clear product demonstrations, helping busy delivery executives quickly understand how to access and use the new chat support feature while on the job. The internal communication video made a new quick commerce tool more accessible through practical, human-centred storytelling.',
+  },
+  'csr-video-infosys-street-child': {
+    title: 'CSR Film for Infosys Springboard',
+    description:
+      'Infosys partnered with Makerrs, a creative agency, to document its collaboration with Street Child in support of education for children displaced by the war in Ukraine. Makerrs developed a heartfelt CSR short film combining archival news footage, on-ground visuals from Digital Learning Centres, tutor interviews and first-hand accounts from Street Child and Infosys. The film puts the children of Ukraine and their experiences at the centre of the story, and presents the technology - Infosys Springboard, a digital learning platform - as an enabler that facilitates access to education even in the most challenging circumstances. The resulting corporate film captures the human impact of the initiative while communicating Infosys’ commitment to education, digital learning and social impact.',
+  },
+  'recruitment-video-infosys-campus': {
+    title: 'Recruitment Video for Infosys',
+    description:
+      'Infosys partnered with Makerrs, a creative agency, to create a recruitment video showcasing its culture, growth opportunities and commitments to work-life balance, reskilling, diversity and inclusion. Instead of a conventional employer branding film that would have leaders pitching the culture, Makerrs brought the message to life using two real employees and their real experiences. The recruitment video captures both their career journeys at Infosys as well as how they’ve been able to pursue their passions. The warm, people-led storytelling made the film engaging and impressive for campus hiring campaigns, allowing young talent to visualise their future work life at Infosys.',
+  },
+  'microdrama-shaanu-ka-viva': {
+    title: 'GenAI Microdrama Series for Bharat',
+    description:
+      'Makerrs created Shaanu Ka Viva, a GenAI-powered microdrama series designed to explore how generative AI can be used for engaging, culturally rooted short-form storytelling. Moving beyond conventional AI content creation, Makerrs developed a school-based comedy rooted in familiar Indian humour, everyday characters and the storytelling style of India’s Bharat audience. The series combines generative AI video production with digital storytelling to create funny, scroll-worthy episodes that feel locally relevant and entertaining. Through Shaanu Ka Viva, Makerrs experimented with an end-to-end GenAI creative workflow while demonstrating how emerging AI tools can be used to build relatable entertainment and short-form content at scale.',
+  },
+  'poetic-video-mygate': {
+    title: 'Campaign Film for MyGate',
+    description:
+      'MyGate partnered with Makerrs, a creative agency, to create a digital campaign - an ode to security guards. Security guards were MyGate’s primary users. Given the founder himself came from an army background, he recognised the need to appreciate those on the frontline. By uplifting security personnel through a brand film, MyGate was firmly establishing itself as a brand with a soul. Makerrs developed the #HeroesatMyGate idea around this brief, met with dozens of security personnel, and filmed real people working as security personnel at apartments across Bangalore. The campaign used poetic storytelling to humanize security personnel, highlight their role in residents’ lives and seamlessly connect MyGate’s technology to everyday security work. By leading with empathy and social recognition rather than a conventional product marketing video, the video campaign helped position MyGate as a partner to security guards while encouraging greater acceptance and adoption of its security management app.',
+  },
+}
+
+/**
+ * The Taneira handloom series plays from YouTube, whose oEmbed carries no
+ * duration or upload date — so they are pinned here (taken from the watch
+ * pages, Oct 2026).
+ */
+const YOUTUBE_META = {
+  ku3sQX8VI0U: { duration: 399, uploadDate: '2020-08-28' }, // Jamdani
+  GJ7XGKU2tys: { duration: 473, uploadDate: '2020-08-28' }, // Kanjivaram
+  OD1hut59HTo: { duration: 432, uploadDate: '2020-08-28' }, // Khadi
+  eC4tWBc0ixY: { duration: 478, uploadDate: '2020-08-28' }, // Patan Patola
+  wR1yN_HXwxc: { duration: 427, uploadDate: '2020-08-28' }, // Chanderi
+}
+
+/**
+ * VideoGallery swaps SLB's Vimeo player for this interactive explainer, so the
+ * schema points at the player that is actually on the page. Its Vimeo source
+ * is private (no oEmbed), so duration and date come from the client's brief.
+ */
+const SLB_PLAYER = {
+  embedUrl:
+    'https://rb-video-poc.s3.ap-south-1.amazonaws.com/slb/v2/index.html',
+  meta: { duration: 542, uploadDate: '2026-03-20' },
 }
 
 /** "1078232265/a073385a89" (unlisted, with privacy hash) or "1042873090". */
 const VIMEO_ID = /^(\d+)(?:\/([0-9a-f]+))?$/
 
-const plainText = value =>
+/** "https://youtu.be/ku3sQX8VI0U", "https://www.youtube.com/watch?v=…" etc. */
+const YOUTUBE_URL =
+  /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/
+
+const plainText = (value) =>
   String(value ?? '')
     .replace(/<[^>]*>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
 
-const absoluteUrl = src => {
+const absoluteUrl = (src) => {
   if (typeof src !== 'string' || !src) return null
   if (/^https?:\/\//.test(src)) return src
   return src.startsWith('/') ? `${SITE_URL}${src}` : null
 }
 
-const toIsoDuration = seconds => `PT${Math.floor(seconds / 60)}M${seconds % 60}S`
+const toIsoDuration = (seconds) =>
+  `PT${Math.floor(seconds / 60)}M${seconds % 60}S`
 
 // Videos added in WordPress after the vimeo-meta.json snapshot are looked up
 // live. Any failure just leaves that one video out of the schema — it must
 // never fail the page.
-const fetchVimeoMeta = async vimeoId => {
+const fetchVimeoMeta = async (vimeoId) => {
   try {
     const res = await fetch(
       `https://vimeo.com/api/oembed.json?url=${encodeURIComponent(`https://vimeo.com/${vimeoId}`)}`,
@@ -252,15 +351,47 @@ const fetchVimeoMeta = async vimeoId => {
     )
     if (!res.ok) return null
     const { duration, upload_date, thumbnail_url } = await res.json()
-    return { duration, uploadDate: upload_date?.slice(0, 10), thumbnailUrl: thumbnail_url }
+    return {
+      duration,
+      uploadDate: upload_date?.slice(0, 10),
+      thumbnailUrl: thumbnail_url,
+    }
   } catch {
     return null
   }
 }
 
 /**
+ * Mirrors VideoGallery's player choice for a source: SLB's interactive iframe,
+ * else Vimeo when `vimeoId` is set, else the YouTube `url`. Returns
+ * { embedUrl, meta } or null when the source has no recognisable player.
+ */
+const resolvePlayer = async (source) => {
+  if (source?.company === 'SLB') return SLB_PLAYER
+
+  const vimeo = String(source?.vimeoId ?? '').match(VIMEO_ID)
+  if (vimeo) {
+    const [, id, hash] = vimeo
+    return {
+      embedUrl: `https://player.vimeo.com/video/${id}${hash ? `?h=${hash}` : ''}`,
+      meta: VIMEO_META[id] ?? (await fetchVimeoMeta(source.vimeoId)),
+    }
+  }
+
+  const youtube = String(source?.url ?? '').match(YOUTUBE_URL)
+  if (youtube) {
+    return {
+      embedUrl: `https://www.youtube.com/embed/${youtube[1]}`,
+      meta: YOUTUBE_META[youtube[1]] ?? null,
+    }
+  }
+
+  return null
+}
+
+/**
  * Returns a JSON-LD @graph of VideoObjects for a case study, or null when the
- * page has no Vimeo videos. Never throws, and never returns `undefined` values
+ * page has no videos. Never throws, and never returns `undefined` values
  * (getStaticProps cannot serialise them).
  */
 export const buildVideoSchema = async ({ slug, create, work }) => {
@@ -272,15 +403,20 @@ export const buildVideoSchema = async ({ slug, create, work }) => {
       return null
     }
     // CommercialSection only renders the video gallery for this type.
-    if (workJson?.commercials_type !== 'video' || !Array.isArray(workJson.sources)) {
+    if (
+      workJson?.commercials_type !== 'video' ||
+      !Array.isArray(workJson.sources)
+    ) {
       return null
     }
 
-    // VideoGallery swaps SLB's Vimeo player for an interactive iframe, so that
-    // Vimeo id never appears on the page.
-    const sources = workJson.sources.filter(
-      source => source?.company !== 'SLB' && VIMEO_ID.test(source?.vimeoId ?? '')
+    const resolved = await Promise.all(
+      workJson.sources.map(async (source) => ({
+        source,
+        player: await resolvePlayer(source),
+      }))
     )
+    const sources = resolved.filter(({ player }) => player)
     if (!sources.length) return null
 
     const pageUrl = `${SITE_URL}/work/${create}/${slug}`
@@ -288,13 +424,13 @@ export const buildVideoSchema = async ({ slug, create, work }) => {
     const title = brief?.title ?? plainText(work?.title)
     const description =
       brief?.description ??
-      (plainText(work?.workDetails?.seoDesc) || `${title} — a video by Makerrs.`)
+      (plainText(work?.workDetails?.seoDesc) ||
+        `${title} — a video by Makerrs.`)
 
-    const videos = await Promise.all(
-      sources.map(async (source, index) => {
-        const [, id, hash] = source.vimeoId.match(VIMEO_ID)
-        const meta = VIMEO_META[id] ?? (await fetchVimeoMeta(source.vimeoId))
-        const thumbnailUrl = absoluteUrl(source.thumbnail?.src) ?? absoluteUrl(meta?.thumbnailUrl)
+    const videos = sources.map(
+      ({ source, player: { embedUrl, meta } }, index) => {
+        const thumbnailUrl =
+          absoluteUrl(source.thumbnail?.src) ?? absoluteUrl(meta?.thumbnailUrl)
 
         // uploadDate and thumbnailUrl are required by Google; without them the
         // node would be flagged invalid, so leave the video out instead.
@@ -304,25 +440,33 @@ export const buildVideoSchema = async ({ slug, create, work }) => {
         return {
           '@type': 'VideoObject',
           '@id': `${pageUrl}#video-${index + 1}`,
-          name: sources.length > 1 && sourceName ? `${title} – ${sourceName}` : title,
+          name:
+            sources.length > 1 && sourceName
+              ? `${title} – ${sourceName}`
+              : title,
           description,
           thumbnailUrl,
           uploadDate: meta.uploadDate,
           ...(Number.isInteger(meta.duration) && meta.duration > 0
             ? { duration: toIsoDuration(meta.duration) }
             : {}),
-          embedUrl: `https://player.vimeo.com/video/${id}${hash ? `?h=${hash}` : ''}`,
+          embedUrl,
           creator: { '@id': ORG_ID },
           publisher: { '@id': ORG_ID },
           inLanguage: 'en',
         }
-      })
+      }
     )
 
     const graph = videos.filter(Boolean)
-    return graph.length ? { '@context': 'https://schema.org', '@graph': graph } : null
+    return graph.length
+      ? { '@context': 'https://schema.org', '@graph': graph }
+      : null
   } catch (err) {
-    console.warn(`buildVideoSchema: skipped video schema for "${slug}"`, err?.message ?? err)
+    console.warn(
+      `buildVideoSchema: skipped video schema for "${slug}"`,
+      err?.message ?? err
+    )
     return null
   }
 }

@@ -17,7 +17,10 @@ export const SEO = ({
     <>
       <Head>
         <title>{title}</title>
-        <meta name="robots" content="noindex, nofollow" />
+        {/* Set NEXT_PUBLIC_NOINDEX=true on staging builds to keep them out of search */}
+        {process.env.NEXT_PUBLIC_NOINDEX === 'true' && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="author" content="Makerrs" />
