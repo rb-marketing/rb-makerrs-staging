@@ -162,34 +162,6 @@ const WhoWeAre = () => {
       linkedIn: 'https://www.linkedin.com/in/rajdutta/',
     },
     {
-      name: 'Mandira Naidoo',
-      title: 'Head of Design, Bangalore',
-      img: '/img/our-team/mandira-naidoo.webp',
-      content: (
-        <>
-          The force behind continuous creative quality improvement. She’s always
-          absorbing new content and trends, and nudging everyone else to up
-          their game.
-          <br />
-          <br />
-          Mandy’s got 20 years of experience in visual communication, branding,
-          and design education. She started out as an amazing artist - who won
-          early accolades and international showcases. She then switched over to
-          advertising - working with agencies like MAA and JWT. She’s tried her
-          hand at running her own boutique practice too.
-          <br />
-          <br />
-          Today, Mandy heads up design at Makerrs. In fact, she’s been doing
-          this since 2017 and is now a custodian for our Brand and part of a
-          core team that drives our culture. Mandy’s passionate about Indian
-          philosophy, travel and cats. She’s super work proud and so is her
-          entire team.
-        </>
-      ),
-      linkedIn: 'https://www.linkedin.com/in/mandiranaidoo/',
-    },
-
-    {
       name: 'Ayesha Mir',
       title: 'Group Account Director, Bangalore',
       img: '/img/our-team/ayesha-mir.webp',
